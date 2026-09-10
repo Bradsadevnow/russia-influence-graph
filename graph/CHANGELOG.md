@@ -220,3 +220,12 @@ Chain now runs document → relationship → network → organizational mechanis
 - Interpretation: Chen+Tenet is the MAIN foreign gate but not the ONLY pre-Tenet Russian contact touching the six. A Russian CONTACT (RT→Southern) is not an influence PATHWAY (Southern→Pool stays domestic). This is the metric that bridges the Tenet case to the historical-architecture work: *how many independent Russian-side entry points existed into the pre-existing American creator graph?*
 
 85 nodes / 183 edges. validate.py clean.
+
+## batch 13 (2026-09-10) — backward sweep: 1 established entry point, 5 searched-negatives
+**Sweep of the other five for a CLEAN pre-Tenet Russian-side edge (RT/Sputnik/Russian-official relationship, not mere Russia commentary). Result did NOT explode — that is the finding.**
+- **Southern edge upgraded/split** into two dated, better-provenanced edges: `e_rt_southern_contrib_2019` (April 2019 RT interview/report on her doc *Borderless*; relationship_type CONTRIBUTION) and `e_rt_southern_report_2022` (pre-war trucker-convoy live report; relationship_type LIVE_REPORT). Both verified, `domain: influence`, `pre_tenet: true`. Independent of Chen/Tenet in relationship AND time.
+- **Five `do_not_claim` negatives** (`e_rt_{pool,rubin,johnson,hansen,christiansen}_DNC`): "NOT established (not 'none')". Each records what the sweep DID find — Pool = Russia content (Putin-'moderate' segment) not a relationship; Rubin = discussed RT/disinfo; Johnson = Russia/Ukraine content; Hansen = domestic trajectory (CJR); Christiansen = domestic Chen friendship. Searched-negative ≠ proven zero.
+- **`metadata.entry_point_sweep`** records the full table; analysis.py prints it in the INDEPENDENT ENTRY POINTS section.
+- **Established independent pre-Tenet Russian entry points into the six = 1 (Southern).** Removal ladder unchanged (6/6 → 0/6 → 1/6 → 0/6). Southern's two RT edges auto-join G3.
+
+85 nodes / 189 edges. validate.py clean.

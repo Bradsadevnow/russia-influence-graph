@@ -490,6 +490,11 @@ entry_pts=sorted({EBYID[i]["target"] for i in G3})
 print(f"\n  --- INDEPENDENT RUSSIAN ENTRY POINTS (pre-Tenet, bypassing Chen/Tenet) ---")
 print(f"  G3 = direct Russian-side -> creator edges NOT via Chen/Tenet: {[EBYID[i]['id'] for i in G3] or 'none'}")
 print(f"      creators with an independent Russian entry: {[label(x) for x in entry_pts] or 'none'}  ({len(entry_pts)})")
+_sweep=g.get("metadata",{}).get("entry_point_sweep",{})
+if _sweep:
+    print("  sweep status (searched-negative is NOT proven zero):")
+    for k in ["lauren_southern","tim_pool","dave_rubin","benny_johnson","tayler_hansen","matt_christiansen"]:
+        if k in _sweep: print(f"      {label(k):<20} {_sweep[k]}")
 print(f"\n  REMOVAL LADDER (Russian->creator reach):")
 print(f"    G2                              : {len(reach_ids(SPINE+SIXEDGES))}/6")
 print(f"    G2  - Chen/Tenet                : {len(reach_ids(SPINE+SIXEDGES, drop=('lauren_chen','tenet')))}/6")

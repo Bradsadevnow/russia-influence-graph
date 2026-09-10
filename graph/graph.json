@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 12: INDEPENDENT pre-Tenet Russian-side branch — RT->Southern (contact, verified via Canadian SECU testimony), distinct from Chen/Tenet. Dugin added in a SEPARATE actor class (edge is Southern->Dugin, an interview she arranged; not a Russia->Southern conduit). do_not_claim: RT->Southern->Pool is NOT an influence pathway (Southern->Pool is a domestic appearance). Enables G3/G4 experiment + independent-entry-point count.",
+    "status": "1.0 + batch 13: backward-sweep result. Southern's RT edge SPLIT into two dated, better-provenanced edges (2019 Borderless contribution + 2022 trucker-convoy live report). The other five creators recorded as do_not_claim 'not established' (searched, none found) — NOT zero. Established independent pre-Tenet Russian entry points into the six = 1 (Southern). metadata.entry_point_sweep records the full table.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -60,7 +60,17 @@
       "do_not_claim edges are first-class negative findings; render them, never drop or silently upgrade them.",
       "The finding is convergent INDEPENDENT paths terminating in the same Russian state/Kremlin-linked network — not any single chain."
     ],
-    "normalized": "2026-09-10 — schema frozen at 1.0; fields uniform across all edges/nodes."
+    "normalized": "2026-09-10 — schema frozen at 1.0; fields uniform across all edges/nodes.",
+    "entry_point_sweep": {
+      "question": "Independent pre-Tenet Russian-side entry points into the six creators (bypassing Chen/Tenet)",
+      "lauren_southern": "established (RT contribution 2019 + live report 2022)",
+      "tim_pool": "not_established",
+      "dave_rubin": "not_established",
+      "benny_johnson": "not_established",
+      "tayler_hansen": "not_established",
+      "matt_christiansen": "not_established",
+      "note": "'not_established' is a searched negative, NOT proven zero. Count of established independent entry points = 1 (Southern)."
+    }
   },
   "nodes": [
     {
@@ -6569,39 +6579,6 @@
       "evidence_quality": "C"
     },
     {
-      "id": "e_rt_southern",
-      "source": "rt",
-      "target": "lauren_southern",
-      "evidence_class": "documented_contact",
-      "mechanism": "hosted_appearance",
-      "confidence": "high",
-      "claim": "Southern testified she did contributions to RT 'before the war' (incl. a brief 2022 trucker-convoy live report) — an INDEPENDENT, pre-Tenet Russian-side contact, distinct from the Chen/Tenet coupling. She also testified she believed Tenet was backed by a tech investor and was unaware of Russian funding.",
-      "citation": {
-        "publisher": "House of Commons of Canada — SECU committee, mtg 130 evidence",
-        "title": "Lauren Southern testimony: contributions to RT before the war (2022 trucker-convoy live report); believed Tenet was backed by a tech investor",
-        "date": "2024",
-        "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
-        "primary": true,
-        "independence_group": "canada_secu"
-      },
-      "verification": "verified",
-      "date": "2021",
-      "domain": "influence",
-      "pre_tenet": true,
-      "provenance": "observed",
-      "citations": [
-        {
-          "publisher": "House of Commons of Canada — SECU committee, mtg 130 evidence",
-          "title": "Lauren Southern testimony: contributions to RT before the war (2022 trucker-convoy live report); believed Tenet was backed by a tech investor",
-          "date": "2024",
-          "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
-          "primary": true,
-          "independence_group": "canada_secu"
-        }
-      ],
-      "evidence_quality": "A"
-    },
-    {
       "id": "e_southern_dugin",
       "source": "lauren_southern",
       "target": "dugin",
@@ -6672,6 +6649,242 @@
         }
       ],
       "date": "2026",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_southern_contrib_2019",
+      "source": "rt",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "high",
+      "claim": "April 2019: RT ran an interview/report sourcing Southern on her documentary 'Borderless' — a documented pre-Tenet RT contribution.",
+      "citations": [
+        {
+          "publisher": "RT (via Sott republish)",
+          "title": "RT interview/report sourcing Lauren Southern on her documentary 'Borderless' (April 2019)",
+          "date": "2019-04",
+          "url": "https://www.sott.net/article/410419-Why-is-no-one-talking-about-this-Big-business-fuels-EU-refugee-influx-filmmaker-Lauren-Southern-tells-RT",
+          "primary": true,
+          "independence_group": "rt_page"
+        },
+        {
+          "publisher": "House of Commons of Canada — SECU mtg 130 evidence",
+          "title": "Southern: 'I've done contributions to RT before'; trucker-convoy live report",
+          "date": "2024",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
+          "primary": true,
+          "independence_group": "canada_secu"
+        }
+      ],
+      "verification": "verified",
+      "date": "2019-04",
+      "domain": "influence",
+      "pre_tenet": true,
+      "relationship_type": "CONTRIBUTION",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "RT (via Sott republish)",
+        "title": "RT interview/report sourcing Lauren Southern on her documentary 'Borderless' (April 2019)",
+        "date": "2019-04",
+        "url": "https://www.sott.net/article/410419-Why-is-no-one-talking-about-this-Big-business-fuels-EU-refugee-influx-filmmaker-Lauren-Southern-tells-RT",
+        "primary": true,
+        "independence_group": "rt_page"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_rt_southern_report_2022",
+      "source": "rt",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Pre-war/2022: Southern testified she gave RT a brief live report on the trucker convoy — a second, later pre-Tenet RT contribution, independent of Chen/Tenet in both relationship and time.",
+      "citations": [
+        {
+          "publisher": "House of Commons of Canada — SECU mtg 130 evidence",
+          "title": "Southern: 'I've done contributions to RT before'; trucker-convoy live report",
+          "date": "2024",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
+          "primary": true,
+          "independence_group": "canada_secu"
+        }
+      ],
+      "verification": "verified",
+      "date": "2022",
+      "domain": "influence",
+      "pre_tenet": true,
+      "relationship_type": "LIVE_REPORT",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "House of Commons of Canada — SECU mtg 130 evidence",
+        "title": "Southern: 'I've done contributions to RT before'; trucker-convoy live report",
+        "date": "2024",
+        "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
+        "primary": true,
+        "independence_group": "canada_secu"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_rt_tim_pool_DNC",
+      "source": "rt",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (not 'none'): a pre-Tenet Russian-side contact for Tim Pool. First-pass backward sweep for direct RT/Sputnik/Russian-official relationship found none. Found Russia/Ukraine COMMENTARY (e.g., a Jan 2023 Putin-'moderate' segment) — that is content, not a Russian-side relationship. Distinct from Southern, who has a documented RT contribution edge.",
+      "citation": {
+        "publisher": "Media Matters",
+        "title": "Tim Pool guest: Putin 'actually a moderate' (Russia CONTENT, not a Russian relationship)",
+        "date": "2023-01",
+        "url": "https://www.mediamatters.org/tim-pool/tim-pool-guest-putin-hes-actually-moderate",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Media Matters",
+          "title": "Tim Pool guest: Putin 'actually a moderate' (Russia CONTENT, not a Russian relationship)",
+          "date": "2023-01",
+          "url": "https://www.mediamatters.org/tim-pool/tim-pool-guest-putin-hes-actually-moderate",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2023",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_dave_rubin_DNC",
+      "source": "rt",
+      "target": "dave_rubin",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (not 'none'): a pre-Tenet Russian-side contact for Dave Rubin. First-pass backward sweep for direct RT/Sputnik/Russian-official relationship found none. Found discussion of RT/Russian disinformation, but no comparable pre-Tenet RT relationship in this pass. Distinct from Southern, who has a documented RT contribution edge.",
+      "citation": {
+        "publisher": "RFE/RL",
+        "title": "Russian/Chinese disinformation in the Balkans (context; Rubin discussed RT/disinfo — no pre-Tenet RT relationship)",
+        "date": "2021",
+        "url": "https://www.rferl.org/a/balkans-russia-china-disinformation-rubin/32359395.html",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "RFE/RL",
+          "title": "Russian/Chinese disinformation in the Balkans (context; Rubin discussed RT/disinfo — no pre-Tenet RT relationship)",
+          "date": "2021",
+          "url": "https://www.rferl.org/a/balkans-russia-china-disinformation-rubin/32359395.html",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2021",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_benny_johnson_DNC",
+      "source": "rt",
+      "target": "benny_johnson",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (not 'none'): a pre-Tenet Russian-side contact for Benny Johnson. First-pass backward sweep for direct RT/Sputnik/Russian-official relationship found none. Extensive Russia/Ukraine political content; no clean pre-Tenet Russian-state relationship surfaced. Distinct from Southern, who has a documented RT contribution edge.",
+      "citation": {
+        "publisher": "Project — first-pass backward sweep",
+        "title": "No clean pre-Tenet Russian-state/RT/Sputnik relationship surfaced (searched)",
+        "date": "2026-09-10",
+        "url": "../HANDOFF.md",
+        "primary": true,
+        "independence_group": "project_sweep"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Project — first-pass backward sweep",
+          "title": "No clean pre-Tenet Russian-state/RT/Sputnik relationship surfaced (searched)",
+          "date": "2026-09-10",
+          "url": "../HANDOFF.md",
+          "primary": true,
+          "independence_group": "project_sweep"
+        }
+      ],
+      "date": "2026",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_tayler_hansen_DNC",
+      "source": "rt",
+      "target": "tayler_hansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (not 'none'): a pre-Tenet Russian-side contact for Tayler Hansen. First-pass backward sweep for direct RT/Sputnik/Russian-official relationship found none. Documented pre-Tenet DOMESTIC-media trajectory; nothing establishing a Russian-side conduit. Distinct from Southern, who has a documented RT contribution edge.",
+      "citation": {
+        "publisher": "Columbia Journalism Review",
+        "title": "Hansen's pre-Tenet DOMESTIC media trajectory (no Russian-side conduit found)",
+        "date": "2021",
+        "url": "https://www.cjr.org/analysis/cant-believe-reality-mackey-capitol-january-6-insurrection-ashli-babbitt-tayler-hansen-john-sullivan.php",
+        "primary": false,
+        "independence_group": "press_cjr"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Columbia Journalism Review",
+          "title": "Hansen's pre-Tenet DOMESTIC media trajectory (no Russian-side conduit found)",
+          "date": "2021",
+          "url": "https://www.cjr.org/analysis/cant-believe-reality-mackey-capitol-january-6-insurrection-ashli-babbitt-tayler-hansen-john-sullivan.php",
+          "primary": false,
+          "independence_group": "press_cjr"
+        }
+      ],
+      "date": "2021",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_matt_christiansen_DNC",
+      "source": "rt",
+      "target": "matt_christiansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (not 'none'): a pre-Tenet Russian-side contact for Matt Christiansen. First-pass backward sweep for direct RT/Sputnik/Russian-official relationship found none. Documented pre-Tenet relationship is the DOMESTIC Chen friendship/recruitment; no Russian-side edge. Distinct from Southern, who has a documented RT contribution edge.",
+      "citation": {
+        "publisher": "Matt Christiansen Media",
+        "title": "Christiansen: longtime friend of Chen, recruited Jun 2023 (domestic; no Russian-side edge)",
+        "date": "2024-09",
+        "url": "https://www.mattchristiansenmedia.com/tenet-media-explainer",
+        "primary": false,
+        "independence_group": "creator_statement"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Matt Christiansen Media",
+          "title": "Christiansen: longtime friend of Chen, recruited Jun 2023 (domestic; no Russian-side edge)",
+          "date": "2024-09",
+          "url": "https://www.mattchristiansenmedia.com/tenet-media-explainer",
+          "primary": false,
+          "independence_group": "creator_statement"
+        }
+      ],
+      "date": "2024",
       "evidence_quality": "N/A"
     }
   ]
