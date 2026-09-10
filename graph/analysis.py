@@ -155,6 +155,71 @@ for tid in TARGETS:
     elif len(routes) == 1 and routes[0][1:-1]:
         print(f"    ⇒ single route; hinges on {' / '.join(label(x) for x in routes[0][1:-1])} (a chokepoint).")
 
+# ---- BRIDGE CENTRALITY: which intermediaries carry / sever Russian-origin reach ----
+print("\n" + "="*78)
+print("BRIDGE CENTRALITY  (over all Russian-state origin → American target demand pairs)")
+print("Participation = # demand pairs whose vertex-independent routes pass through the node.")
+print("Severs = # demand pairs that lose ALL documented routes if the node is removed")
+print("         (a true articulation point / single chokepoint for that reach).")
+print("="*78)
+
+def routes_blocking(edgeset, s, t, preblock):
+    """Greedy vertex-independent s->t routes with an extra pre-blocked vertex set,
+    reusing the sink bar. Returns list of paths."""
+    adj = adjacency(edgeset)
+    routes = []
+    blocked = set(x for x in SINKS if x not in (s, t)) | set(x for x in preblock if x not in (s, t))
+    while True:
+        pth = bfs_path(adj, s, t, blocked)
+        if not pth: break
+        routes.append(pth)
+        internal = set(pth[1:-1])
+        if not internal: break
+        blocked |= internal
+    return routes
+
+ORIGINS = [nid for nid, n in NODES.items() if n.get("layer") == "russian_state"]
+AM_TARGETS = [nid for nid, n in NODES.items()
+              if n.get("us_class") in ("direct_state_connected", "bridge_amplifier", "downstream")
+              and n.get("type") not in ("audience", "platform")]
+# demand pairs that actually have at least one documented route in G_obs
+demand = []
+for s in ORIGINS:
+    for t in AM_TARGETS:
+        if s == t: continue
+        base = vertex_independent_routes(OBS, s, t)
+        if base:
+            demand.append((s, t, base))
+print(f"origins (russian_state): {len(ORIGINS)}   american targets: {len(AM_TARGETS)}   "
+      f"connected demand pairs: {len(demand)}")
+
+CANDIDATES = [nid for nid, n in NODES.items()
+              if nid not in SINKS and n.get("layer") in ("intermediary", "us_media", "us_political")]
+participation = {c: 0 for c in CANDIDATES}
+severs = {c: 0 for c in CANDIDATES}
+for (s, t, base) in demand:
+    internal_union = set()
+    for pth in base:
+        internal_union |= set(pth[1:-1])
+    for c in CANDIDATES:
+        if c in (s, t): continue
+        if c in internal_union:
+            participation[c] += 1
+        # articulation test: with c removed, does ANY route survive?
+        if not routes_blocking(OBS, s, t, {c}):
+            severs[c] += 1
+
+ranked = sorted(CANDIDATES, key=lambda c: (severs[c], participation[c]), reverse=True)
+print("\n  node                         severs   participates   (of %d demand pairs)" % len(demand))
+for c in ranked[:12]:
+    if participation[c] == 0 and severs[c] == 0: continue
+    flag = "  ◄ SOLE CHOKEPOINT for %d pair(s)" % severs[c] if severs[c] else ""
+    print(f"    {label(c):<28} {severs[c]:>4}   {participation[c]:>10}{flag}")
+print("\n  Reading: high 'severs' = a load-bearing bridge whose removal isolates Russian-origin")
+print("  reach — the structural claim is about the ARCHITECTURE, not any American's intent.")
+print("  A node can participate widely yet sever nothing (redundant), or sever much while")
+print("  participating narrowly (a lone gate). Only 'severs' is a topological dependency.")
+
 # ---- G_conditional(E): ASSUMING_TRUE — every result carries the assumption -----
 def reachable_nonsink(edgeset, s, extra=None):
     """Nodes reachable from s WITHOUT passing THROUGH sink/hub nodes

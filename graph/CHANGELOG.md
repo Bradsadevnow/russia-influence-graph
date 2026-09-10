@@ -134,3 +134,14 @@ HYPOTHESIS (not a finding): the persistent object is the ARCHITECTURE (Russian-l
 client → American intermediary → lobbying + media/PR → Congress/audience), which
 recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same shape).
 68 nodes / 109 edges; 58 verified; schema 1.0; validator clean.
+
+## batch 07 (2026-09-10) — Cooper/Potomac consolidation + bridge centrality
+**Data (graph.json → 68 nodes / 114 edges; verified 61):**
+- `e_fusion_cooper` — Fusion GPS ↔ Chris Cooper *professional* relationship (Simpson: knew Cooper ~10 yrs; Fusion worked with Potomac Square Group and believed it paid Cooper). Typed `documented_material_exchange`/`business_relationship`, **verified** (Simpson transcript, Wikisource). Explicitly NOT evidence of a joint Russian operation.
+- `e_akh_veselnitskaya`, `e_akh_katsyv`, `e_akh_hragi`, `e_akh_cooper` — Akhmetshin strengthened as the highest-centrality 2016 lobbying bridge; he said he proposed establishing HRAGI to Veselnitskaya and her Russian client Katsyv (SSCI Vol 5).
+- `e_katsyv_hragi_control` — **DISPUTED object (preserved, not adjudicated):** Arakelian's conflicting HRAGI-origin story. Earlier HRAGI document: created "at the request of Denis Katsyv." Later tracked-changes revision: origin reattributed to Akhmetshin. Both versions kept; `confidence: medium`, `verification: pending`, `disputed: true` (Dossier Center / Boston Globe). Textbook: the revision doesn't erase the earlier doc; the earlier doc doesn't prove the allegation.
+- `e_2016_2024_bridge_DNC` — **do_not_claim reaffirmed:** searched Cooper, Akhmetshin, Arakelian, Cymrot, Schweitzer, Dellums against RT/Tenet/FARA/later ops — no reliable 2016→2024 personnel-continuity edge found. What recurs is the ARCHITECTURE, not the cast. Hypothesis, not finding.
+
+**Instrument (analysis.py):** added **BRIDGE CENTRALITY** over all Russian-state→American demand pairs (242 connected pairs). Per intermediary: *participation* (# pairs whose vertex-independent routes traverse it) and *severs* (# pairs that lose ALL documented routes if it is removed — a true articulation point). Only *severs* is a topological dependency.
+- Result: **Trump Jr. participates 104, severs 0** — most-traversed American node, isolates nothing when removed. Same shape: 2016 campaign 48/0, Veselnitskaya 34/0, Goldstone 32/0. Load-bearing bridges are infrastructure: Swann 31, Rebel Media 23, Akhmetshin 20, Stone 10 (but participates 61 → mostly redundant), Tenet 10, Corsi 10.
+- **CAVEAT:** the 2024-media bridges (Swann/Rebel/Tenet) score high partly because that architecture is still a thinner subgraph (fewer redundant routes encoded). Re-read severance as 2024 media edges land; high severance ≠ proven irreplaceability yet.

@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 06 (Cooper/Potomac Square Group — recurring American PR bridge 2016 anti-Magnitsky → 2017 Gabbard; dense lobbying cluster Arakelian/Cymrot/Dellums/Schweitzer w/ Hermitage FARA allegations typed low). Guardrails: Fusion→lobbying, Russia→Gabbard, 2016→2024 cast = do_not_claim. Hypothesis: the persistent object is the ARCHITECTURE, not the cast.",
+    "status": "1.0 + batch 07 (consolidation): Fusion↔Cooper professional edge; Akhmetshin strengthened as highest-centrality 2016 bridge (proposed HRAGI to Veselnitskaya/Katsyv); Arakelian conflicting-origin = DISPUTED object preserved. 2024 continuity still NOT established (negative result). Next: FARA/LDA org-level longitudinal.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -2409,8 +2409,8 @@
       "target": "hragi",
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
-      "confidence": "high",
-      "claim": "Akhmetshin helped establish HRAGI, whose practical activity was anti-Magnitsky lobbying.",
+      "confidence": "very_high",
+      "claim": "Akhmetshin helped establish HRAGI (he said he proposed it to Veselnitskaya and Katsyv); its practical activity was anti-Magnitsky lobbying.",
       "citation": {
         "publisher": "Senate Judiciary Committee",
         "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
@@ -3963,7 +3963,7 @@
       "evidence_class": "documented_state_connection",
       "mechanism": "business_relationship",
       "confidence": "do_not_claim",
-      "claim": "NOT ESTABLISHED: that the 2016 anti-Magnitsky intermediaries (Cooper/Potomac/Akhmetshin/Arakelian) migrated into the 2024 Tenet/RT covert-funding architecture. No evidence found. What recurs so far is the ARCHITECTURE (Russian-linked client → American intermediary → lobbying + media/PR → Congress/audience), not the cast — a hypothesis, not a finding. DOJ's 2024 cases describe the same shape with different American intermediaries.",
+      "claim": "NOT ESTABLISHED: that the 2016 anti-Magnitsky intermediaries migrated into the 2024 Tenet/RT covert-funding architecture. Searched Cooper, Akhmetshin, Arakelian, Cymrot, Schweitzer, Dellums against RT / Tenet / FARA / later Russian influence ops — no reliable edge found. What recurs is the ARCHITECTURE (foreign principal → US intermediary → lobbying + media/PR → Congress/audience), not the cast. Hypothesis, not finding.",
       "citation": {
         "publisher": "DOJ OPA",
         "title": "Justice Department Disrupts Covert Russian Government-Sponsored Foreign Malign Influence Operation",
@@ -3986,6 +3986,163 @@
       ],
       "date": "2016",
       "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_fusion_cooper",
+      "source": "fusion_gps",
+      "target": "cooper",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Simpson testified he had known Cooper ~10 years, that Fusion GPS had worked with Potomac Square Group, and that he believed Fusion had paid Cooper. A professional relationship — NOT evidence of a joint Russian operation.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_cooper",
+      "source": "akhmetshin",
+      "target": "cooper",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Akhmetshin instructed Potomac Square Group (Cooper) to pay for the Washington anti-Magnitsky screening, with HRAGIF reimbursing; Cooper confirmed HRAGIF compensated his firm.",
+      "citation": {
+        "publisher": "RFE/RL",
+        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+        "date": "2016",
+        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "primary": false,
+        "independence_group": "RFE/RL"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "RFE/RL",
+          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+          "date": "2016",
+          "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+          "primary": false,
+          "independence_group": "RFE/RL"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_akh_veselnitskaya",
+      "source": "akhmetshin",
+      "target": "veselnitskaya",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Akhmetshin worked with Veselnitskaya on Prevezon-related issues and, through HRAGI, on efforts countering the Magnitsky Act.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_katsyv",
+      "source": "akhmetshin",
+      "target": "katsyv",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Akhmetshin said he proposed establishing HRAGI to Veselnitskaya and her Russian client Denis Katsyv (SSCI).",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_katsyv_hragi_control",
+      "source": "katsyv",
+      "target": "hragi",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "direction",
+      "confidence": "medium",
+      "disputed": true,
+      "dispute_note": "Earlier HRAGI document vs later tracked-changes revision (Dossier Center / Boston Globe). Both versions preserved; not adjudicated.",
+      "claim": "CONFLICTING ORIGIN EVIDENCE on whether Katsyv directed HRAGI's creation: an earlier HRAGI document had Arakelian stating he created the organization 'at the request of Denis Katsyv'; a later tracked-changes revision removed that language and attributed the origin to Akhmetshin.",
+      "citation": {
+        "publisher": "Boston Globe",
+        "title": "Emails: Lawyer who met Trump Jr. tied to Russian officials",
+        "date": "2018-07-26",
+        "url": "https://www.bostonglobe.com/news/politics/2018/07/26/emails-lawyer-who-met-trump-tied-russian-officials/Qf40KtARUs7pm57pBz5psK/story.html",
+        "primary": false,
+        "independence_group": "Boston Globe"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Boston Globe",
+          "title": "Emails: Lawyer who met Trump Jr. tied to Russian officials",
+          "date": "2018-07-26",
+          "url": "https://www.bostonglobe.com/news/politics/2018/07/26/emails-lawyer-who-met-trump-tied-russian-officials/Qf40KtARUs7pm57pBz5psK/story.html",
+          "primary": false,
+          "independence_group": "Boston Globe"
+        }
+      ],
+      "date": "2018",
+      "evidence_quality": "C"
     }
   ]
 }
