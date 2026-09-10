@@ -194,3 +194,16 @@ recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same s
 - With Chen: 6/6 creators in one domestic component. **Without Chen: 5/6 still connected** via the Johnson↔Rubin↔Pool show circuit, TPUSA/Blaze org intersections, and Hansen's amplification path.
 - **Matt Christiansen is the ONLY creator whose sole hard pre-Tenet bridge was Chen** (personal friendship) — heterogeneous bridges, not a Chen-only star.
 - Conclusion (domestic-topology, asserts no intent): **Tenet CENTRALIZED a pre-existing American network; it did not create one.** Directly supports the batch-09 `e_russia_built_network_DNC`.
+
+## batch 11 (2026-09-10) — harden domestic edges + org architecture + G0/G1/G2 experiment
+**① Hardened pre-Tenet edges to PRIMARY episode records (verified/A):** `e_chen_pool_prior` (Timcast IRL #145, Oct 2020), `e_chen_rubin_prior` (Rubin Report, Mar + Sep 2021), `e_pool_southern_prior` (Timcast 2022), `e_pool_johnson_prior` (Timcast Oct 4 2022), `e_rubin_pool_prior` (2021), `e_rubin_johnson_prior` (Feb 2020). Media Matters / PolitiFact demoted to corroboration. All carry `relationship_type: APPEARANCE`, `pre_tenet: true`. 15 domestic edges now flagged `pre_tenet`.
+
+**② Organizational architecture layer:** `arch_profile` (structured) on `maffick` / `rebel_media` / `tenet` across {era, foreign_ownership, direct_contract, american_intermediary, existing_talent_network, organizational_concealment}. Added `sovren_media` (Swann cluster); TV-Novosti→Rebel upgraded with TPM's ~$4.5M (Mar–Aug 2023) contract detail; Maffick provenance upgraded to State Dept GEC primary (verified). analysis.py prints the comparison: **own the vehicle (Maffick) → contract the producer (Swann/Rebel) → embed at the founder layer (Tenet)** — vehicle changes, architecture-shape holds. Verdict leans: Russia ADAPTED the vehicle to the target network; cast varies, architecture persists.
+
+**③ G0→G1→G2 staged experiment + removal tests (analysis.py):** connectivity uses HARD DOMESTIC edges; Russian reach uses INFLUENCE edges only, DIRECTED (a Timcast appearance is not a Russian conduit — the earlier merged-undirected version leaked and was corrected).
+- **G0** (pre-Tenet US network): 15 edges, 11 nodes, **1 component; six creators 6/6 connected before Tenet.**
+- **G1** (+RT→Chen/Donovan→Tenet spine, six not yet attached): Russian→creator reach **0/6** (correct — Tenet exists, unattached).
+- **G2** (+six recruit/contract edges): Russian→creator reach **6/6.** Tenet flips reach 0→6/6 across an already-connected American network.
+- **Removal tests:** remove Chen → creators 5/6 domestic (Christiansen orphans), Russian reach still 6/6; remove Tenet → creators 6/6, Russian reach still 6/6; **remove BOTH Chen+Tenet → 0/6.** The foreign coupling is carried REDUNDANTLY by the Chen+Tenet pair; no lone gate (consistent with Chen severs=0). Remove all six → broker + TPUSA + Blaze still stand: American infrastructure coupled to, not created by, Russia.
+
+Chain now runs document → relationship → network → organizational mechanism → historical comparison. 84 nodes / 180 edges. validate.py clean.

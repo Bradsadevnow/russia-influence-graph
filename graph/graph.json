@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 10: PRE-TENET CREATOR SUBGRAPH. Real sourced creator<->creator + creator<->org ties (all dated before Tenet's Nov-2023 launch) tagged domain=domestic so they are EXCLUDED from foreign-influence reach (American ties are not Russian conduits) but power a new AMERICAN-ECOSYSTEM DENSITY readout. Establishes: the six sat in a pre-existing network with heterogeneous bridges (Chen personal ties to Pool/Rubin/Southern/Christiansen; Johnson<->Rubin<->Pool show circuit; Hansen surfaced bottom-up via Johnson/Trump Jr. amplification; TPUSA/Blaze org intersections).",
+    "status": "1.0 + batch 11: (1) hardened pre-Tenet domestic edges to PRIMARY episode records (Chen->Pool, Chen->Rubin x2, Pool->Southern, Pool->Johnson, Rubin->Pool, Rubin->Johnson) = verified/A, Media-Matters/PolitiFact demoted to corroboration; relationship_type=APPEARANCE, pre_tenet=true. (2) Organizational architecture layer: arch_profile on maffick/rebel_media/tenet across {foreign_ownership, direct_contract, american_intermediary, existing_talent_network, concealment}; Sovren added; State Dept GEC + TPM primaries. Ready for G0/G1/G2 staged experiment.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -248,7 +248,16 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "Nashville firm; ~$9.7M ≈ 90% of deposits from RT via shells; ~2,000 videos, 16M+ views."
+      "notes": "Nashville firm; ~$9.7M ≈ 90% of deposits from RT via shells; ~2,000 videos, 16M+ views.",
+      "arch_profile": {
+        "foreign_ownership": "none_demonstrated",
+        "direct_contract": "yes",
+        "american_intermediary": "founder_embedded",
+        "existing_talent_network": "high",
+        "organizational_concealment": "high",
+        "era": "2023-24"
+      },
+      "arch_summary": "EMBED AT THE FOUNDER LAYER: RT operatives fund/direct via shells + a fake investor, embed at Chen/Donovan (founders already inside the US creator scene), then recruit an EXISTING high-reach creator network."
     },
     {
       "id": "swann",
@@ -264,7 +273,16 @@
       "layer": "us_media",
       "type": "producer",
       "us_class": "direct_state_connected",
-      "notes": "Swann's company; FARA-disclosed >$6M from Russian state-media entities."
+      "notes": "Swann's company; FARA-disclosed >$6M from Russian state-media entities.",
+      "arch_profile": {
+        "foreign_ownership": "none_demonstrated",
+        "direct_contract": "yes",
+        "american_intermediary": "production_company",
+        "existing_talent_network": "moderate",
+        "organizational_concealment": "lower",
+        "era": "2023"
+      },
+      "arch_summary": "CONTRACT THE PRODUCER: Russian state-backed contract (~$4.5M) to an American production company (Rebel/Sovren/Truth in Media) to produce Swann's programming."
     },
     {
       "id": "truth_in_media",
@@ -634,7 +652,16 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "Earlier RT-funded US-facing digital network (In The Now / Soapbox / Waste-ED). German parent 51% Ruptly-owned; ~$5.6M from TV-Novosti from Oct 2019 (FARA/GEC). ARCHITECTURAL analogue of Tenet, NOT a proven personnel link to it."
+      "notes": "Earlier RT-funded US-facing digital network (In The Now / Soapbox / Waste-ED). German parent 51% Ruptly-owned; ~$5.6M from TV-Novosti from Oct 2019 (FARA/GEC). ARCHITECTURAL analogue of Tenet, NOT a proven personnel link to it.",
+      "arch_profile": {
+        "foreign_ownership": "high",
+        "direct_contract": "yes",
+        "american_intermediary": "low",
+        "existing_talent_network": "low",
+        "organizational_concealment": "moderate",
+        "era": "2019"
+      },
+      "arch_summary": "OWN THE VEHICLE: Russian-owned media subsidiary (51% Ruptly) producing Western-facing brands directly."
     },
     {
       "id": "anissa_naouai",
@@ -723,6 +750,14 @@
       "type": "influencer",
       "us_class": "downstream",
       "notes": "Independent Montana YouTuber/podcaster, full-time creator by 2020. LONGSTANDING friendship with Chen/Donovan; Chen approached him late June 2023. Not charged."
+    },
+    {
+      "id": "sovren_media",
+      "label": "Sovren Media",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "notes": "Part of the Swann corporate cluster (with Rebel Media Productions and Truth in Media); precise financial relationship among them unclear (TPM)."
     }
   ],
   "edges": [
@@ -983,28 +1018,28 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "very_high",
-      "claim": "Russian state-media entities paid Rebel Media Productions >$6M (FARA-disclosed).",
+      "claim": "Rebel Media Productions received ~$4.5M under a Russian state-backed contract during March-August 2023 to produce Swann's content.",
       "citation": {
-        "publisher": "AP News",
-        "title": "Right-wing influencers hyped anti-Ukraine videos...",
-        "date": "2024-10-18",
-        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "publisher": "Talking Points Memo",
+        "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
+        "date": "2024",
+        "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
         "primary": false,
-        "independence_group": "AP"
+        "independence_group": "press_tpm"
       },
       "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "AP News",
-          "title": "Right-wing influencers hyped anti-Ukraine videos...",
-          "date": "2024-10-18",
-          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "publisher": "Talking Points Memo",
+          "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
+          "date": "2024",
+          "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
           "primary": false,
-          "independence_group": "AP"
+          "independence_group": "press_tpm"
         }
       ],
-      "date": "2024",
+      "date": "2023",
       "evidence_quality": "C"
     },
     {
@@ -4343,29 +4378,29 @@
       "evidence_class": "documented_state_connection",
       "mechanism": "ownership",
       "confidence": "very_high",
-      "claim": "Ruptly (an RT subsidiary) held 51% of Maffick's German parent company.",
+      "claim": "Ruptly (RT subsidiary) held 51% of Maffick's German parent; Anissa Naouai held the remaining 49% (State Dept GEC; Lawfare).",
       "citation": {
-        "publisher": "Lawfare",
-        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
-        "date": "2019",
-        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
-        "primary": false,
-        "independence_group": "fara_gec"
+        "publisher": "U.S. State Dept (GEC)",
+        "title": "Kremlin-Funded Media: RT and Sputnik's Role (Ruptly/TV-Novosti; Maffick 51% Ruptly-owned; ~$5.6M)",
+        "date": "2022-01",
+        "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+        "primary": true,
+        "independence_group": "state_gec"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2019",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Lawfare",
-          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
-          "date": "2019",
-          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
-          "primary": false,
-          "independence_group": "fara_gec"
+          "publisher": "U.S. State Dept (GEC)",
+          "title": "Kremlin-Funded Media: RT and Sputnik's Role (Ruptly/TV-Novosti; Maffick 51% Ruptly-owned; ~$5.6M)",
+          "date": "2022-01",
+          "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+          "primary": true,
+          "independence_group": "state_gec"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "A"
     },
     {
       "id": "e_tvnovosti_maffick",
@@ -4374,29 +4409,29 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "very_high",
-      "claim": "FARA records document ~$5.6M transferred from TV-Novosti to Maffick beginning Oct 2019; GEC described the Russian ownership/funding structure.",
+      "claim": "FARA records document ~$5.6M from TV-Novosti to Maffick beginning Oct 2019; State Dept GEC described the ownership/funding structure.",
       "citation": {
-        "publisher": "Lawfare",
-        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
-        "date": "2019",
-        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
-        "primary": false,
-        "independence_group": "fara_gec"
+        "publisher": "U.S. State Dept (GEC)",
+        "title": "Kremlin-Funded Media: RT and Sputnik's Role (Ruptly/TV-Novosti; Maffick 51% Ruptly-owned; ~$5.6M)",
+        "date": "2022-01",
+        "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+        "primary": true,
+        "independence_group": "state_gec"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2019-10",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Lawfare",
-          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
-          "date": "2019",
-          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
-          "primary": false,
-          "independence_group": "fara_gec"
+          "publisher": "U.S. State Dept (GEC)",
+          "title": "Kremlin-Funded Media: RT and Sputnik's Role (Ruptly/TV-Novosti; Maffick 51% Ruptly-owned; ~$5.6M)",
+          "date": "2022-01",
+          "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+          "primary": true,
+          "independence_group": "state_gec"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "A"
     },
     {
       "id": "e_naouai_maffick",
@@ -5795,7 +5830,8 @@
         "independence_group": "press_identification"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "pre_tenet": true
     },
     {
       "id": "e_chen_tpusa",
@@ -5827,7 +5863,8 @@
         "independence_group": "press_identification"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "pre_tenet": true
     },
     {
       "id": "e_chen_conmedia",
@@ -5899,7 +5936,8 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "pre_tenet": true
     },
     {
       "id": "e_johnson_tpusa",
@@ -5931,7 +5969,8 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "pre_tenet": true
     },
     {
       "id": "e_afanasyeva_tenet_direction",
@@ -6066,8 +6105,8 @@
       "confidence": "high",
       "claim": "Chen appeared on Timcast IRL in Oct 2020 — a documented relationship ~3 years BEFORE Tenet.",
       "citation": {
-        "publisher": "Apple Podcasts",
-        "title": "Timcast IRL #145 (Lauren Chen guest)",
+        "publisher": "Apple Podcasts / Timcast IRL",
+        "title": "Timcast IRL #145 (Lauren Chen)",
         "date": "2020-10-05",
         "url": "https://podcasts.apple.com/us/podcast/timcast-irl-145-trump-lives-potus-leaves-hospital-as/id1503517959?i=1000493743057",
         "primary": true,
@@ -6079,15 +6118,25 @@
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Apple Podcasts",
-          "title": "Timcast IRL #145 (Lauren Chen guest)",
+          "publisher": "Apple Podcasts / Timcast IRL",
+          "title": "Timcast IRL #145 (Lauren Chen)",
           "date": "2020-10-05",
           "url": "https://podcasts.apple.com/us/podcast/timcast-irl-145-trump-lives-potus-leaves-hospital-as/id1503517959?i=1000493743057",
           "primary": true,
           "independence_group": "episode_record"
+        },
+        {
+          "publisher": "PolitiFact",
+          "title": "Who were Tenet's 6 creators? (corroboration; 20M+ combined audience)",
+          "date": "2024-09-16",
+          "url": "https://politifact.com/article/2024/sep/16/the-doj-says-a-us-media-company-promoted-russian-i/",
+          "primary": false,
+          "independence_group": "press_politifact"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_chen_rubin_prior",
@@ -6099,7 +6148,7 @@
       "claim": "Chen appeared on the Rubin Report roundtables in Mar 2021 and Sep 2021 — pre-Tenet.",
       "citation": {
         "publisher": "Amazon Music / The Rubin Report",
-        "title": "Rubin Report roundtables w/ Lauren Chen (Mar 2021 & Sep 2021)",
+        "title": "Rubin Report roundtable — Lauren Chen (Mar 2021)",
         "date": "2021-03",
         "url": "https://music.amazon.com/podcasts/a9bd0a6f-2e73-4819-8241-d939cdb9ef76/episodes/fa781df8-8b60-4867-b581-a325c2780dce",
         "primary": true,
@@ -6112,14 +6161,32 @@
       "citations": [
         {
           "publisher": "Amazon Music / The Rubin Report",
-          "title": "Rubin Report roundtables w/ Lauren Chen (Mar 2021 & Sep 2021)",
+          "title": "Rubin Report roundtable — Lauren Chen (Mar 2021)",
           "date": "2021-03",
           "url": "https://music.amazon.com/podcasts/a9bd0a6f-2e73-4819-8241-d939cdb9ef76/episodes/fa781df8-8b60-4867-b581-a325c2780dce",
           "primary": true,
           "independence_group": "episode_record"
+        },
+        {
+          "publisher": "Amazon Music / The Rubin Report",
+          "title": "Rubin Report — Canada's election roundtable, Lauren Chen (Sep 2021)",
+          "date": "2021-09",
+          "url": "https://music.amazon.com/podcasts/a9bd0a6f-2e73-4819-8241-d939cdb9ef76/episodes/8040a9b8-05e9-4bc3-a25a-7605a3695f4e",
+          "primary": true,
+          "independence_group": "episode_record"
+        },
+        {
+          "publisher": "PolitiFact",
+          "title": "Who were Tenet's 6 creators? (corroboration; 20M+ combined audience)",
+          "date": "2024-09-16",
+          "url": "https://politifact.com/article/2024/sep/16/the-doj-says-a-us-media-company-promoted-russian-i/",
+          "primary": false,
+          "independence_group": "press_politifact"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_chen_southern_prior",
@@ -6151,7 +6218,8 @@
           "independence_group": "press_politifact"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "pre_tenet": true
     },
     {
       "id": "e_chen_matt_prior",
@@ -6183,7 +6251,8 @@
           "independence_group": "creator_statement"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "pre_tenet": true
     },
     {
       "id": "e_rubin_pool_prior",
@@ -6195,7 +6264,7 @@
       "claim": "Rubin's 2021 programming featured Tim Pool alongside Prager/Malice/Kirk — shared free-speech creator ecosystem pre-Tenet.",
       "citation": {
         "publisher": "YouTube / The Rubin Report",
-        "title": "Tim Pool featured on Rubin Report tech panel (2021)",
+        "title": "Tim Pool on Rubin Report tech panel (2021)",
         "date": "2021",
         "url": "https://www.youtube.com/watch?v=7oMUDdSoNAc",
         "primary": true,
@@ -6208,14 +6277,24 @@
       "citations": [
         {
           "publisher": "YouTube / The Rubin Report",
-          "title": "Tim Pool featured on Rubin Report tech panel (2021)",
+          "title": "Tim Pool on Rubin Report tech panel (2021)",
           "date": "2021",
           "url": "https://www.youtube.com/watch?v=7oMUDdSoNAc",
           "primary": true,
           "independence_group": "episode_record"
+        },
+        {
+          "publisher": "Media Matters",
+          "title": "Tim Pool's 2022 guests in review (corroboration)",
+          "date": "2022",
+          "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
+          "primary": false,
+          "independence_group": "press"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_rubin_johnson_prior",
@@ -6227,7 +6306,7 @@
       "claim": "Rubin interviewed Benny Johnson in Feb 2020 while Johnson was TPUSA Chief Creative Officer.",
       "citation": {
         "publisher": "YouTube / The Rubin Report",
-        "title": "Dave Rubin interviews Benny Johnson (Feb 2020, then TPUSA CCO)",
+        "title": "Dave Rubin interviews Benny Johnson (Feb 2020)",
         "date": "2020-02",
         "url": "https://www.youtube.com/watch?v=xEHLqRhTOaw",
         "primary": true,
@@ -6240,14 +6319,24 @@
       "citations": [
         {
           "publisher": "YouTube / The Rubin Report",
-          "title": "Dave Rubin interviews Benny Johnson (Feb 2020, then TPUSA CCO)",
+          "title": "Dave Rubin interviews Benny Johnson (Feb 2020)",
           "date": "2020-02",
           "url": "https://www.youtube.com/watch?v=xEHLqRhTOaw",
           "primary": true,
           "independence_group": "episode_record"
+        },
+        {
+          "publisher": "PolitiFact",
+          "title": "Who were Tenet's 6 creators? (corroboration; 20M+ combined audience)",
+          "date": "2024-09-16",
+          "url": "https://politifact.com/article/2024/sep/16/the-doj-says-a-us-media-company-promoted-russian-i/",
+          "primary": false,
+          "independence_group": "press_politifact"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_pool_southern_prior",
@@ -6258,28 +6347,38 @@
       "confidence": "high",
       "claim": "Southern appeared on Timcast repeatedly in 2022 — pre-Tenet.",
       "citation": {
-        "publisher": "Media Matters",
-        "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
-        "date": "2022",
-        "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
-        "primary": false,
-        "independence_group": "press"
+        "publisher": "Apple Podcasts / Timcast IRL",
+        "title": "Timcast IRL — Lauren Southern (SOTU episode, 2022)",
+        "date": "2022-03-01",
+        "url": "https://podcasts.apple.com/ca/podcast/live-state-of-the-union-drinking-game-with/id1503517959?i=1000552653124",
+        "primary": true,
+        "independence_group": "episode_record"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2022",
       "domain": "domestic",
       "provenance": "observed",
       "citations": [
         {
+          "publisher": "Apple Podcasts / Timcast IRL",
+          "title": "Timcast IRL — Lauren Southern (SOTU episode, 2022)",
+          "date": "2022-03-01",
+          "url": "https://podcasts.apple.com/ca/podcast/live-state-of-the-union-drinking-game-with/id1503517959?i=1000552653124",
+          "primary": true,
+          "independence_group": "episode_record"
+        },
+        {
           "publisher": "Media Matters",
-          "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+          "title": "Tim Pool's 2022 guests in review (corroboration)",
           "date": "2022",
           "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
           "primary": false,
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_pool_johnson_prior",
@@ -6290,28 +6389,38 @@
       "confidence": "high",
       "claim": "Benny Johnson appeared on Timcast in Oct 2022 — pre-Tenet.",
       "citation": {
-        "publisher": "Media Matters",
-        "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
-        "date": "2022",
-        "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
-        "primary": false,
-        "independence_group": "press"
+        "publisher": "Apple Podcasts / Timcast IRL",
+        "title": "Timcast IRL — Benny Johnson (Oct 4, 2022)",
+        "date": "2022-10-04",
+        "url": "https://podcasts.apple.com/us/podcast/timcast-irl/id1503517959",
+        "primary": true,
+        "independence_group": "episode_record"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2022-10",
       "domain": "domestic",
       "provenance": "observed",
       "citations": [
         {
+          "publisher": "Apple Podcasts / Timcast IRL",
+          "title": "Timcast IRL — Benny Johnson (Oct 4, 2022)",
+          "date": "2022-10-04",
+          "url": "https://podcasts.apple.com/us/podcast/timcast-irl/id1503517959",
+          "primary": true,
+          "independence_group": "episode_record"
+        },
+        {
           "publisher": "Media Matters",
-          "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+          "title": "Tim Pool's 2022 guests in review (corroboration)",
           "date": "2022",
           "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
           "primary": false,
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "A",
+      "relationship_type": "APPEARANCE",
+      "pre_tenet": true
     },
     {
       "id": "e_johnson_hansen_amp",
@@ -6351,7 +6460,8 @@
         "primary": false,
         "independence_group": "press_fox"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "pre_tenet": true
     },
     {
       "id": "e_dtj_hansen_amp",
@@ -6383,7 +6493,8 @@
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "pre_tenet": true
     },
     {
       "id": "e_southern_rebel",
@@ -6413,6 +6524,38 @@
           "url": "https://www.yahoo.com/news/tim-pool-benny-johnson-dave-210735444.html",
           "primary": false,
           "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C",
+      "pre_tenet": true
+    },
+    {
+      "id": "e_swann_sovren",
+      "source": "swann",
+      "target": "sovren_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Swann operated within a cluster of companies (Rebel Media, Sovren, Truth in Media); the precise financial relationship among them is unclear.",
+      "citation": {
+        "publisher": "Talking Points Memo",
+        "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
+        "date": "2024",
+        "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
+        "primary": false,
+        "independence_group": "press_tpm"
+      },
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Talking Points Memo",
+          "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
+          "date": "2024",
+          "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
+          "primary": false,
+          "independence_group": "press_tpm"
         }
       ],
       "evidence_quality": "C"

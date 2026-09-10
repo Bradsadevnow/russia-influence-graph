@@ -364,3 +364,122 @@ print("  removing her does not fully disassemble the domestic graph (Johnson<->R
 print("  circuit, TPUSA/Blaze org intersections, and Hansen surfaced via Johnson/Trump-Jr")
 print("  amplification remain). => Tenet CENTRALIZED an existing network; it did not create one.")
 print("  This is a DOMESTIC-topology finding and asserts nothing about anyone's intent.")
+
+# ---- ORGANIZATIONAL ARCHITECTURE COMPARISON (architecture-vs-cast test) --------
+print("\n" + "="*78)
+print("ORGANIZATIONAL ARCHITECTURE  (did Russia reuse one vehicle, or adapt it?)")
+print("="*78)
+DIMS=["era","foreign_ownership","direct_contract","american_intermediary","existing_talent_network","organizational_concealment"]
+vehicles=[n for n in NODES.values() if n.get("arch_profile")]
+w=max(len(label(v["id"])) for v in vehicles) if vehicles else 8
+print(f"  {'vehicle':<{w}} " + " ".join(f"{d.split('_')[0][:9]:>10}" for d in DIMS))
+for v in vehicles:
+    ap=v["arch_profile"]
+    print(f"  {label(v['id']):<{w}} " + " ".join(f"{str(ap.get(d,'-'))[:10]:>10}" for d in DIMS))
+for v in vehicles:
+    print(f"\n  {label(v['id'])}: {v.get('arch_summary','')}")
+print("\n  => The vehicle CHANGES (own -> contract -> founder-embed) while the ARCHITECTURE holds")
+print("  (foreign principal -> US intermediary CLASS -> American-facing media -> audience).")
+print("  Verdict leans: Russia ADAPTED the organizational vehicle to the target network,")
+print("  it did not rerun one fixed template. Cast varies; the architecture-shape persists.")
+
+# ---- G0 -> G1 -> G2 STAGED EXPERIMENT + REMOVAL TESTS --------------------------
+print("\n" + "="*78)
+print("STAGED CONSTRUCTION  G0 (pre-Tenet US net) -> G1 (+RT->Chen/Donovan->Tenet) -> G2 (+six)")
+print("Connectivity uses HARD DOMESTIC edges; Russian reach uses INFLUENCE edges only, DIRECTED")
+print("(a Timcast appearance is not a Russian conduit).")
+print("="*78)
+EBYID={e["id"]:e for e in EDGES}
+SIX=["tim_pool","dave_rubin","benny_johnson","lauren_southern","tayler_hansen","matt_christiansen"]
+SOFT={"us_conservative_media"}
+AMERICAN={nid for nid,n in NODES.items() if n.get("layer") in ("us_media","us_political") and nid!="tenet"}
+AMERICAN |= {"turning_point_usa","blaze_tv"}
+# hard domestic American network (soft milieu hub excluded)
+DOM=[e for e in EDGES if e.get("domain")=="domestic" and e.get("pre_tenet")
+     and e["source"] in AMERICAN and e["target"] in AMERICAN
+     and e["source"] not in SOFT and e["target"] not in SOFT]
+# influence spine into Tenet (formation/funding), and the six attachment edges
+SPINE=[i for i in ["e_tvnovosti_chen","e_afanasyeva_chen_scouting","e_ruptly_donovan","e_donovan_chen",
+       "e_chen_tenet_founder","e_donovan_tenet_founder","e_rt_tenet_direction","e_tvnovosti_rt",
+       "e_afanasyeva_tenet_direction","e_grigoriann_tenet_funding","e_afanasyeva_grigoriann",
+       "e_shells_tenet","e_employees_shells","e_rt_employees"] if i in EBYID]
+SIXEDGES=[e["id"] for e in EDGES if (e["id"].startswith("e_chen_recruit_") or
+          (e["source"]=="tenet" and e["target"] in SIX))]
+def undirected(edgelist):
+    a={}
+    for e in edgelist:
+        a.setdefault(e["source"],set()).add(e["target"]); a.setdefault(e["target"],set()).add(e["source"])
+    return a
+def reach_ud(edgelist,s):
+    a=undirected(edgelist); seen={s}; st=[s]
+    while st:
+        v=st.pop()
+        for w in a.get(v,set())-seen: seen.add(w); st.append(w)
+    return seen
+def reach_dir(edgelist,s):           # directed, sink-respecting foreign reach
+    a={}
+    for e in edgelist: a.setdefault(e["source"],set()).add(e["target"])
+    seen={s}; st=[s]
+    while st:
+        v=st.pop()
+        if v in SINKS and v!=s: continue
+        for w in a.get(v,set())-seen: seen.add(w); st.append(w)
+    return seen
+def ncomp(edgelist,nodes):
+    a=undirected(edgelist); seen=set(); c=0
+    for s in nodes:
+        if s in seen: continue
+        c+=1
+        for w in reach_ud(edgelist,s): seen.add(w)
+    return c
+def six_infl_reach(infl_ids, drop=None):
+    edges=[EBYID[i] for i in infl_ids if EBYID[i]["source"]!=drop and EBYID[i]["target"]!=drop]
+    origins=[nid for nid,n in NODES.items() if n.get("layer")=="russian_state" and nid!=drop]
+    got=set()
+    for o in origins: got|=reach_dir(edges,o)
+    return [c for c in SIX if c!=drop and c in got]
+
+dom_nodes={x for e in DOM for x in (e["source"],e["target"])}
+print(f"\n  G0 (pre-Tenet US network, hard domestic): {len(DOM)} edges, {len(dom_nodes)} nodes, "
+      f"{ncomp(DOM,dom_nodes)} component(s).")
+print(f"      six-creator connectivity: {sum(1 for c in SIX if c in reach_ud(DOM,'tim_pool'))}/6 in one component pre-Tenet.")
+print(f"  G1 (+ {len(SPINE)} influence spine edges; Tenet exists, six NOT yet attached):")
+print(f"      Russian->six reach: {len(six_infl_reach(SPINE))}/6   (0 expected — no attachment yet).")
+print(f"  G2 (+ {len(SIXEDGES)} recruit/contract edges):")
+print(f"      Russian->six reach: {len(six_infl_reach(SPINE+SIXEDGES))}/6.")
+print(f"\n  Tenet's net contribution: it did NOT build the American network (G0 already 1 component,")
+print(f"  6/6). It added a foreign-funded node ACROSS it, flipping Russian->creator reach 0/6 -> "
+      f"{len(six_infl_reach(SPINE+SIXEDGES))}/6.")
+
+print("\n  --- REMOVAL TESTS ---")
+print("  (creator-cluster = largest set of the six connected via HARD DOMESTIC ties;")
+print("   Russian reach = via INFLUENCE edges only)")
+for node in ["lauren_chen","tenet","turning_point_usa","tim_pool"]:
+    if node not in NODES: continue
+    dedges=[e for e in DOM if e["source"]!=node and e["target"]!=node]
+    best=0
+    for seed in SIX:
+        if seed==node: continue
+        r=reach_ud(dedges,seed)
+        best=max(best,sum(1 for c in SIX if c!=node and c in r))
+    russ=len(six_infl_reach(SPINE+SIXEDGES,drop=node))
+    print(f"    remove {label(node):<18}: creator-cluster {best}/6 ; Russian->creator reach {russ}/6")
+edges_no_six=[e for e in DOM if e["source"] not in SIX and e["target"] not in SIX]
+remain=sorted({label(x) for e in edges_no_six for x in (e["source"],e["target"])})
+print(f"    remove ALL SIX creators   : US ecosystem remnant still linked: {remain or '(none)'}")
+def six_infl_reach_drop2(a,b):
+    edges=[EBYID[i] for i in (SPINE+SIXEDGES) if EBYID[i]["source"] not in (a,b) and EBYID[i]["target"] not in (a,b)]
+    origins=[nid for nid,n in NODES.items() if n.get("layer")=="russian_state"]
+    got=set()
+    for o in origins: got|=reach_dir(edges,o)
+    return [c for c in SIX if c in got]
+print(f"    remove BOTH Chen + Tenet  : Russian->creator reach {len(six_infl_reach_drop2('lauren_chen','tenet'))}/6  <= the pair is the gate, not either alone")
+print("\n  Reading (node dependency, not vibes):")
+print("  - The six were ALREADY one connected US network before Tenet (G0: 6/6, 1 component).")
+print("  - Russian->creator reach is carried REDUNDANTLY by TWO couplings: Tenet-contract AND")
+print("    Chen-recruitment. Remove either single node and reach stays 6/6; only removing the")
+print("    Chen+Tenet PAIR severs it (0/6). No lone gate -- the operation over-provisioned, as a")
+print("    resourced state actor would. Consistent with Chen severs=0 in the influence graph.")
+print("  - Removing the whole American creator layer leaves the broker + orgs (Chen/TPUSA/Blaze)")
+print("    still standing: the ecosystem is American infrastructure, coupled to -- not created by --")
+print("    Russia. That is the defensible architectural claim, end to end.")
