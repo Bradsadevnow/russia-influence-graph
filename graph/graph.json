@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 09: CHEN AS NETWORK BROKER. Six creators split into individuals; recruitment reads RT->Chen->[recruit]->each (not six phantom RT->influencer paths). Pre-existing American ecosystem (Blaze/TPUSA/conservative-media milieu) added as us_class=null CONTEXT with inward membership edges. DOJ direction edges (hiring/editorial/monitoring + Grigoriann fake-investor concealment) added as OBSERVED = predictive convergence for the conditional Chen-knowing branch. New do_not_claim: Russia did NOT build the network, it attached to a pre-existing American social graph.",
+    "status": "1.0 + batch 10: PRE-TENET CREATOR SUBGRAPH. Real sourced creator<->creator + creator<->org ties (all dated before Tenet's Nov-2023 launch) tagged domain=domestic so they are EXCLUDED from foreign-influence reach (American ties are not Russian conduits) but power a new AMERICAN-ECOSYSTEM DENSITY readout. Establishes: the six sat in a pre-existing network with heterogeneous bridges (Chen personal ties to Pool/Rubin/Southern/Christiansen; Johnson<->Rubin<->Pool show circuit; Hansen surfaced bottom-up via Johnson/Trump Jr. amplification; TPUSA/Blaze org intersections).",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -48,6 +48,10 @@
         "C",
         "D",
         "N/A"
+      ],
+      "domain": [
+        "influence (foreign-influence propagation edge; default)",
+        "domestic (US-ecosystem context edge; excluded from foreign-reach pathfinding)"
       ]
     },
     "rules": [
@@ -678,7 +682,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "independent podcaster/YouTuber (Timcast) with a pre-existing large audience. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "Timcast/Timcast IRL. Origin OUTSIDE the conservative pipeline: Occupy Wall Street -> VICE -> Fusion, then built Timcast independently (SEC/LinkedIn record). By 2019-22 a pre-Tenet AGGREGATION node for the right-creator ecosystem. Downstream; unaware of Russian funding (not charged)."
     },
     {
       "id": "dave_rubin",
@@ -686,7 +690,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "The Rubin Report; prior BlazeTV deal — pre-existing audience. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "The Rubin Report: Young Turks -> RYOT/Ora TV -> independent -> BlazeTV (2019) -> PragerU/TPUSA event circuit. The INSTITUTIONAL BRIDGE of the six. Not charged."
     },
     {
       "id": "benny_johnson",
@@ -694,7 +698,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "prior Turning Point USA ties; pre-existing audience. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "Career tour of conservative-media infrastructure: The Blaze -> BuzzFeed -> National Review -> IJR -> Daily Caller -> TPUSA (Chief Creative Officer) -> Newsmax -> independent. A MAJOR pre-Tenet hub. Not charged."
     },
     {
       "id": "lauren_southern",
@@ -702,7 +706,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Canadian commentator in the same conservative-media circles as Chen. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "Canadian activism -> Rebel Media (until 2017) -> independent -> US ecosystem. Personal friend/collaborator of Chen pre-Tenet. Not charged."
     },
     {
       "id": "tayler_hansen",
@@ -710,7 +714,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "commentator recruited to Tenet. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "Bottom-up viral creator: ~6 months building a conservative social identity before the Jul 2020 'Baby Lives Matter' stunt, which drew Fox News + Benny Johnson (then Trump Jr.) amplification. Surfaced BY the existing ecosystem, not manufactured by Russia. Not charged."
     },
     {
       "id": "matt_christiansen",
@@ -718,7 +722,7 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "commentator recruited to Tenet. Not charged; DOJ says they were unaware of the Russian funding."
+      "notes": "Independent Montana YouTuber/podcaster, full-time creator by 2020. LONGSTANDING friendship with Chen/Donovan; Chen approached him late June 2023. Not charged."
     }
   ],
   "edges": [
@@ -4907,7 +4911,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_tim_pool_cohort",
@@ -5070,7 +5075,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_dave_rubin_cohort",
@@ -5233,7 +5239,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_benny_johnson_cohort",
@@ -5396,7 +5403,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_lauren_southern_cohort",
@@ -5559,7 +5567,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_tayler_hansen_cohort",
@@ -5722,7 +5731,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_matt_christiansen_cohort",
@@ -5784,7 +5794,8 @@
         "primary": false,
         "independence_group": "press_identification"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_chen_tpusa",
@@ -5792,8 +5803,8 @@
       "target": "turning_point_usa",
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
-      "confidence": "high",
-      "claim": "Chen was associated with Turning Point USA circles before Tenet.",
+      "confidence": "very_high",
+      "claim": "TPUSA announced Lauren Chen as a contributor in July 2022 (noting her Blaze/CRTV background) — an org intersection with Benny Johnson (TPUSA CCO).",
       "citations": [
         {
           "publisher": "Forbes",
@@ -5804,8 +5815,8 @@
           "independence_group": "press_identification"
         }
       ],
-      "verification": "needs_primary",
-      "date": "2020",
+      "verification": "verified",
+      "date": "2022-07",
       "provenance": "observed",
       "citation": {
         "publisher": "Forbes",
@@ -5815,7 +5826,8 @@
         "primary": false,
         "independence_group": "press_identification"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_chen_conmedia",
@@ -5854,7 +5866,8 @@
         "primary": false,
         "independence_group": "press_identification"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_rubin_blaze",
@@ -5885,7 +5898,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_johnson_tpusa",
@@ -5916,7 +5930,8 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "domain": "domestic"
     },
     {
       "id": "e_afanasyeva_tenet_direction",
@@ -6041,6 +6056,366 @@
       ],
       "date": "2026",
       "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_chen_pool_prior",
+      "source": "lauren_chen",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Chen appeared on Timcast IRL in Oct 2020 — a documented relationship ~3 years BEFORE Tenet.",
+      "citation": {
+        "publisher": "Apple Podcasts",
+        "title": "Timcast IRL #145 (Lauren Chen guest)",
+        "date": "2020-10-05",
+        "url": "https://podcasts.apple.com/us/podcast/timcast-irl-145-trump-lives-potus-leaves-hospital-as/id1503517959?i=1000493743057",
+        "primary": true,
+        "independence_group": "episode_record"
+      },
+      "verification": "verified",
+      "date": "2020-10",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Apple Podcasts",
+          "title": "Timcast IRL #145 (Lauren Chen guest)",
+          "date": "2020-10-05",
+          "url": "https://podcasts.apple.com/us/podcast/timcast-irl-145-trump-lives-potus-leaves-hospital-as/id1503517959?i=1000493743057",
+          "primary": true,
+          "independence_group": "episode_record"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_chen_rubin_prior",
+      "source": "lauren_chen",
+      "target": "dave_rubin",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Chen appeared on the Rubin Report roundtables in Mar 2021 and Sep 2021 — pre-Tenet.",
+      "citation": {
+        "publisher": "Amazon Music / The Rubin Report",
+        "title": "Rubin Report roundtables w/ Lauren Chen (Mar 2021 & Sep 2021)",
+        "date": "2021-03",
+        "url": "https://music.amazon.com/podcasts/a9bd0a6f-2e73-4819-8241-d939cdb9ef76/episodes/fa781df8-8b60-4867-b581-a325c2780dce",
+        "primary": true,
+        "independence_group": "episode_record"
+      },
+      "verification": "verified",
+      "date": "2021-03",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Amazon Music / The Rubin Report",
+          "title": "Rubin Report roundtables w/ Lauren Chen (Mar 2021 & Sep 2021)",
+          "date": "2021-03",
+          "url": "https://music.amazon.com/podcasts/a9bd0a6f-2e73-4819-8241-d939cdb9ef76/episodes/fa781df8-8b60-4867-b581-a325c2780dce",
+          "primary": true,
+          "independence_group": "episode_record"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_chen_southern_prior",
+      "source": "lauren_chen",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Chen and Southern were friends and occasional collaborators before Tenet; Southern said she joined partly because she knew the people running it.",
+      "citation": {
+        "publisher": "PolitiFact",
+        "title": "Who were Tenet's 6 content creators? (Southern & Christiansen prior ties to Chen; 20M+ combined audience)",
+        "date": "2024-09-16",
+        "url": "https://politifact.com/article/2024/sep/16/the-doj-says-a-us-media-company-promoted-russian-i/",
+        "primary": false,
+        "independence_group": "press_politifact"
+      },
+      "verification": "needs_primary",
+      "date": "2022",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PolitiFact",
+          "title": "Who were Tenet's 6 content creators? (Southern & Christiansen prior ties to Chen; 20M+ combined audience)",
+          "date": "2024-09-16",
+          "url": "https://politifact.com/article/2024/sep/16/the-doj-says-a-us-media-company-promoted-russian-i/",
+          "primary": false,
+          "independence_group": "press_politifact"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_chen_matt_prior",
+      "source": "lauren_chen",
+      "target": "matt_christiansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Chen/Donovan had been friendly with Christiansen for years; Chen personally approached him in late June 2023.",
+      "citation": {
+        "publisher": "Matt Christiansen Media",
+        "title": "Tenet Media Explainer (Chen/Donovan friendly for years; approached him late June 2023)",
+        "date": "2024-09",
+        "url": "https://www.mattchristiansenmedia.com/tenet-media-explainer",
+        "primary": false,
+        "independence_group": "creator_statement"
+      },
+      "verification": "needs_primary",
+      "date": "2023-06",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Matt Christiansen Media",
+          "title": "Tenet Media Explainer (Chen/Donovan friendly for years; approached him late June 2023)",
+          "date": "2024-09",
+          "url": "https://www.mattchristiansenmedia.com/tenet-media-explainer",
+          "primary": false,
+          "independence_group": "creator_statement"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_rubin_pool_prior",
+      "source": "dave_rubin",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Rubin's 2021 programming featured Tim Pool alongside Prager/Malice/Kirk — shared free-speech creator ecosystem pre-Tenet.",
+      "citation": {
+        "publisher": "YouTube / The Rubin Report",
+        "title": "Tim Pool featured on Rubin Report tech panel (2021)",
+        "date": "2021",
+        "url": "https://www.youtube.com/watch?v=7oMUDdSoNAc",
+        "primary": true,
+        "independence_group": "episode_record"
+      },
+      "verification": "verified",
+      "date": "2021",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "YouTube / The Rubin Report",
+          "title": "Tim Pool featured on Rubin Report tech panel (2021)",
+          "date": "2021",
+          "url": "https://www.youtube.com/watch?v=7oMUDdSoNAc",
+          "primary": true,
+          "independence_group": "episode_record"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_rubin_johnson_prior",
+      "source": "dave_rubin",
+      "target": "benny_johnson",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Rubin interviewed Benny Johnson in Feb 2020 while Johnson was TPUSA Chief Creative Officer.",
+      "citation": {
+        "publisher": "YouTube / The Rubin Report",
+        "title": "Dave Rubin interviews Benny Johnson (Feb 2020, then TPUSA CCO)",
+        "date": "2020-02",
+        "url": "https://www.youtube.com/watch?v=xEHLqRhTOaw",
+        "primary": true,
+        "independence_group": "episode_record"
+      },
+      "verification": "verified",
+      "date": "2020-02",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "YouTube / The Rubin Report",
+          "title": "Dave Rubin interviews Benny Johnson (Feb 2020, then TPUSA CCO)",
+          "date": "2020-02",
+          "url": "https://www.youtube.com/watch?v=xEHLqRhTOaw",
+          "primary": true,
+          "independence_group": "episode_record"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_pool_southern_prior",
+      "source": "tim_pool",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Southern appeared on Timcast repeatedly in 2022 — pre-Tenet.",
+      "citation": {
+        "publisher": "Media Matters",
+        "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+        "date": "2022",
+        "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2022",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Media Matters",
+          "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+          "date": "2022",
+          "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_pool_johnson_prior",
+      "source": "tim_pool",
+      "target": "benny_johnson",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Benny Johnson appeared on Timcast in Oct 2022 — pre-Tenet.",
+      "citation": {
+        "publisher": "Media Matters",
+        "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+        "date": "2022",
+        "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2022-10",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Media Matters",
+          "title": "Tim Pool's 2022 guests in review (Southern, Johnson appeared)",
+          "date": "2022",
+          "url": "https://www.mediamatters.org/tim-pool/extremists-bigots-and-conspiracy-theorists-youtuber-tim-pools-2022-guests-review",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_johnson_hansen_amp",
+      "source": "benny_johnson",
+      "target": "tayler_hansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "very_high",
+      "claim": "In Jul 2020 Benny Johnson directly amplified Tayler Hansen's 'Baby Lives Matter' stunt to his audience — a documented information-flow edge that helped surface Hansen BEFORE Tenet.",
+      "citations": [
+        {
+          "publisher": "Fox News",
+          "title": "'Baby Lives Matter' mural — Benny Johnson amplified Hansen's stunt",
+          "date": "2020-07",
+          "url": "https://www.foxnews.com/us/planned-parenthood-utah-baby-lives-matter-mural",
+          "primary": false,
+          "independence_group": "press_fox"
+        },
+        {
+          "publisher": "Columbia Journalism Review",
+          "title": "Hansen's 2020 activism drew Fox News and Benny Johnson attention",
+          "date": "2021",
+          "url": "https://www.cjr.org/analysis/cant-believe-reality-mackey-capitol-january-6-insurrection-ashli-babbitt-tayler-hansen-john-sullivan.php",
+          "primary": false,
+          "independence_group": "press_cjr"
+        }
+      ],
+      "verification": "verified",
+      "date": "2020-07",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Fox News",
+        "title": "'Baby Lives Matter' mural — Benny Johnson amplified Hansen's stunt",
+        "date": "2020-07",
+        "url": "https://www.foxnews.com/us/planned-parenthood-utah-baby-lives-matter-mural",
+        "primary": false,
+        "independence_group": "press_fox"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dtj_hansen_amp",
+      "source": "dtj",
+      "target": "tayler_hansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Johnson's post of Hansen's 2020 stunt was subsequently shared by Donald Trump Jr. — a cross-link between the 2016 cast and a future Tenet creator (domestic amplification, not a Russian conduit).",
+      "citation": {
+        "publisher": "Live Action",
+        "title": "Johnson's Hansen post subsequently shared by Donald Trump Jr.",
+        "date": "2020-07",
+        "url": "https://www.liveaction.org/news/baby-lives-matter-painted-planned-parenthood",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2020-07",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Live Action",
+          "title": "Johnson's Hansen post subsequently shared by Donald Trump Jr.",
+          "date": "2020-07",
+          "url": "https://www.liveaction.org/news/baby-lives-matter-painted-planned-parenthood",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_southern_rebel",
+      "source": "lauren_southern",
+      "target": "rebel_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Southern worked for Rebel Media until 2017. NOTE: predates the documented TV-Novosti->Rebel funding relationship in this graph; kept domestic (career history), not treated as a Southern->RT conduit.",
+      "citation": {
+        "publisher": "Yahoo/CNN",
+        "title": "Southern worked for Rebel Media until 2017",
+        "date": "2024-09",
+        "url": "https://www.yahoo.com/news/tim-pool-benny-johnson-dave-210735444.html",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "domestic",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Yahoo/CNN",
+          "title": "Southern worked for Rebel Media until 2017",
+          "date": "2024-09",
+          "url": "https://www.yahoo.com/news/tim-pool-benny-johnson-dave-210735444.html",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
     }
   ]
 }

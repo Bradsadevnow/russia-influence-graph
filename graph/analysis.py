@@ -34,6 +34,12 @@ def is_conditional(e): return e.get("provenance") == "conditional"
 OBS = [e for e in EDGES if not is_contested(e) and not is_conditional(e)]
 CONTESTED = [e for e in EDGES if is_contested(e)]
 CONDITIONAL = [e for e in EDGES if is_conditional(e)]
+def is_domestic(e): return e.get("domain") == "domestic"
+# INFLUENCE = the foreign-influence propagation graph: observed, non-contested, and
+# NOT a US-ecosystem context edge. Russian-origin reach / criticality / bridge
+# centrality run on THIS set — American creator<->creator ties are not Russian conduits.
+INFLUENCE = [e for e in OBS if not is_domestic(e)]
+DOMESTIC  = [e for e in OBS if is_domestic(e)]
 
 # ---- undirected adjacency over a given edge set -------------------------------
 def adjacency(edgeset, extra=None):
@@ -114,10 +120,10 @@ print("="*78)
 for e in CONTESTED:
     s, t = e["source"], e["target"]
     kind = "DO_NOT_CLAIM" if e["confidence"]=="do_not_claim" else "DISPUTED"
-    routes = vertex_independent_routes(OBS, s, t)
+    routes = vertex_independent_routes(INFLUENCE, s, t)
     R = len(routes)
-    c_without = len(components(OBS))
-    c_with = len(components(OBS, extra=[e]))
+    c_without = len(components(INFLUENCE))
+    c_with = len(components(INFLUENCE, extra=[e]))
     dcomp = c_without - c_with
     print(f"\nE = {e['id']}  [{kind}]")
     print(f"    {label(s)}  ──►  {label(t)}")
@@ -145,7 +151,7 @@ print("="*78)
 TARGETS = ["trump_campaign", "us_audience", "dtj", "stone", "breitbart"]
 for tid in TARGETS:
     if tid not in NODES: continue
-    routes = vertex_independent_routes(OBS, "gru", tid)
+    routes = vertex_independent_routes(INFLUENCE, "gru", tid)
     print(f"\nGRU ──► {label(tid)}: {len(routes)} vertex-independent route(s)")
     for i, pth in enumerate(routes[:4], 1):
         print(f"    {i}: " + " → ".join(label(x) for x in pth))
@@ -187,7 +193,7 @@ demand = []
 for s in ORIGINS:
     for t in AM_TARGETS:
         if s == t: continue
-        base = vertex_independent_routes(OBS, s, t)
+        base = vertex_independent_routes(INFLUENCE, s, t)
         if base:
             demand.append((s, t, base))
 print(f"origins (russian_state): {len(ORIGINS)}   american targets: {len(AM_TARGETS)}   "
@@ -206,7 +212,7 @@ for (s, t, base) in demand:
         if c in internal_union:
             participation[c] += 1
         # articulation test: with c removed, does ANY route survive?
-        if not routes_blocking(OBS, s, t, {c}):
+        if not routes_blocking(INFLUENCE, s, t, {c}):
             severs[c] += 1
 
 ranked = sorted(CANDIDATES, key=lambda c: (severs[c], participation[c]), reverse=True)
@@ -243,8 +249,8 @@ for e in CONTESTED:
     tag = f"ASSUMING_TRUE({e['id']})"
     print(f"\n[{tag}]  {label(e['source'])} ──► {label(e['target'])}  [{e['confidence']}"
           f"{', disputed' if e.get('disputed') else ''}]")
-    before = reachable_nonsink(OBS, e["source"])
-    after = reachable_nonsink(OBS, e["source"], extra=[e])
+    before = reachable_nonsink(INFLUENCE, e["source"])
+    after = reachable_nonsink(INFLUENCE, e["source"], extra=[e])
     newly = after - before - {e["source"]}
     if newly:
         print(f"   [{tag}] newly reachable from {label(e['source'])} "
@@ -311,3 +317,50 @@ for e in EDGES:
 print("no temporal inversions detectable at current granularity." if not flags else f"{flags} to review")
 print("\n(Full temporal enforcement needs per-node event dates + edge.start/end — SCHEMA extension is in place;"
       " backfill dates as batches land.)")
+
+# ---- AMERICAN ECOSYSTEM DENSITY (pre-Tenet, domestic edges only) --------------
+print("\n" + "="*78)
+print("AMERICAN ECOSYSTEM DENSITY  (were the six a pre-existing network, or strangers?)")
+print("Uses DOMESTIC edges only (creator<->creator, creator<->org). Tenet/RT excluded.")
+print("="*78)
+SIX = ["tim_pool","dave_rubin","benny_johnson","lauren_southern","tayler_hansen","matt_christiansen"]
+BROKER = "lauren_chen"
+SEVEN = [BROKER] + SIX
+# undirected adjacency over domestic edges (people + orgs), among nodes that exist
+dom_adj = {n["id"]: set() for n in NODES.values()}
+for e in DOMESTIC:
+    dom_adj[e["source"]].add(e["target"]); dom_adj[e["target"]].add(e["source"])
+# direct person-person degree within SEVEN
+print("\n  pre-Tenet DIRECT ties among the seven (person<->person):")
+for a in SEVEN:
+    peers = sorted(dom_adj[a] & set(SEVEN))
+    print(f"    {label(a):<20} degree {len(peers):>1}  -> {', '.join(label(x) for x in peers) or '(none direct)'}")
+# Chen's direct reach into the six
+chen_direct = sorted(dom_adj[BROKER] & set(SIX))
+print(f"\n  Chen had a DIRECT pre-Tenet tie to {len(chen_direct)}/6 of the eventual creators: "
+      f"{', '.join(label(x) for x in chen_direct)}")
+# connectivity of the six via domestic edges ALONE (people + orgs as connectors), Chen removed
+def dom_component(seed, blocked):
+    seen, stack = {seed}, [seed]
+    while stack:
+        v = stack.pop()
+        for w in dom_adj[v] - seen:
+            if w in blocked: continue
+            seen.add(w); stack.append(w)
+    return seen
+SOFT = {"us_conservative_media"}  # catch-all milieu: real but weak, barred from the hard connectivity test
+comp_with = dom_component("tim_pool", set(SOFT))
+inside_with = [c for c in SIX if c in comp_with]
+comp_wo = dom_component("tim_pool", {BROKER} | SOFT)
+inside_wo = [c for c in SIX if c in comp_wo]
+print(f"\n  With Chen (excluding the soft milieu hub): {len(inside_with)}/6 creators in one component.")
+print(f"  Without Chen (broker removed): {len(inside_wo)}/6 still connected via other bridges "
+      f"(orgs, show circuit, amplification).")
+orphan_wo = [label(c) for c in SIX if c not in comp_wo and c != "tim_pool"]
+print(f"    creators whose ONLY hard pre-Tenet bridge was Chen: {orphan_wo or 'none'}")
+print("\n  Reading: the six were NOT strangers — they sat in a pre-existing American network")
+print("  with HETEROGENEOUS bridges. Chen is the densest single connector (personal ties), but")
+print("  removing her does not fully disassemble the domestic graph (Johnson<->Rubin<->Pool show")
+print("  circuit, TPUSA/Blaze org intersections, and Hansen surfaced via Johnson/Trump-Jr")
+print("  amplification remain). => Tenet CENTRALIZED an existing network; it did not create one.")
+print("  This is a DOMESTIC-topology finding and asserts nothing about anyone's intent.")

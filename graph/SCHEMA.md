@@ -57,6 +57,7 @@ edgeless in the validator until incoming research connects them.
 | `evidence_quality` | edge | `A` primary record · `B` independent corroboration · `C` credible secondary · `D` allegation/speculation. Weights support independently of `confidence`. |
 | `citations` | edge | array form of `citation` (back-compatible: single `citation` still valid). Each entry may carry `independence_group` / `information_origin` so N documents collapse to M independent origins. |
 | node `type` `audience`/`platform` | node | treated as **sink/hub** — barred as *intermediate* vertices in criticality pathfinding ("both reach the public" is not a path). |
+| `domain` | edge | `influence` (default) · `domestic`. A `domestic` edge is a US-ecosystem context tie (creator↔creator appearance, creator↔org membership, intra-American amplification). It is EXCLUDED from foreign-influence reach / criticality / bridge-centrality pathfinding (American ties are not Russian conduits) and instead powers the AMERICAN ECOSYSTEM DENSITY readout. |
 | `provenance` | edge | `observed` (default) · `conditional` · `contested`. **`conditional` = a consequence derived by ASSUMING a contested edge true.** It is barred from `G_obs`, may never be `verification: verified`, and MUST carry `assumed_under`. This is the contamination firewall. |
 | `assumed_under` | conditional edges | array of the hypothesis edge id(s) this result depends on. A conditional edge with no `assumed_under` is invalid. |
 

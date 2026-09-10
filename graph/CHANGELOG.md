@@ -183,3 +183,14 @@ recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same s
 - **Formation-dependency (temporal, Chen-critical: without her Tenet never assembles) is distinct from steady-state routing (redundant, routes around her).** The instrument measures the latter.
 - Second consecutive batch (Swann→0, now Chen→0) where encoding the complete structure dissolved an apparent chokepoint — real influence operations build redundancy. participation ≠ severance.
 - Trump Jr. participates 166 / severs 0. Pattern holds and strengthens.
+
+## batch 10 (2026-09-10) — pre-Tenet creator subgraph + domain split
+**Data:** 11 real, sourced creator↔creator and creator↔org ties, ALL dated before Tenet's Nov-2023 launch, tagged `domain: "domestic"`. Chen prior ties: Pool (Timcast IRL, Oct 2020), Rubin (Rubin Report, Mar & Sep 2021), Southern (friends/collaborators), Christiansen (longstanding friendship, approached Jun 2023). Creator circuit: Rubin↔Pool (2021), Rubin↔Johnson (Feb 2020), Pool↔Southern (2022), Pool↔Johnson (Oct 2022). Amplification: Johnson→Hansen ('Baby Lives Matter', Jul 2020, Fox+CJR); Trump Jr.→Hansen (shared Johnson's post — cross-link to the 2016 cast). Org intersections: Chen→TPUSA (contributor Jul 2022), Johnson→TPUSA (CCO), Rubin→Blaze, Chen→Blaze, Southern→Rebel (until 2017, kept domestic — predates the graph's TV-Novosti→Rebel funding).
+
+**Instrument:** `analysis.py` gains a `domain` split — `INFLUENCE` (foreign-influence subgraph) drives reach/criticality/bridge-centrality; `DOMESTIC` drives a new **AMERICAN ECOSYSTEM DENSITY** readout. Domestic edges are barred from foreign-reach pathfinding so American creator ties can't manufacture Russian reach. `domain` documented in SCHEMA.md.
+
+**Density result (the "centralized vs created" answer):**
+- Chen degree 4, Tim Pool degree 4 = the two densest pre-Tenet connectors. Chen had a DIRECT pre-Tenet tie to **4/6** eventual creators (Rubin, Southern, Christiansen, Pool).
+- With Chen: 6/6 creators in one domestic component. **Without Chen: 5/6 still connected** via the Johnson↔Rubin↔Pool show circuit, TPUSA/Blaze org intersections, and Hansen's amplification path.
+- **Matt Christiansen is the ONLY creator whose sole hard pre-Tenet bridge was Chen** (personal friendship) — heterogeneous bridges, not a Chen-only star.
+- Conclusion (domestic-topology, asserts no intent): **Tenet CENTRALIZED a pre-existing American network; it did not create one.** Directly supports the batch-09 `e_russia_built_network_DNC`.
