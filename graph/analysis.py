@@ -478,15 +478,18 @@ print(f"    remove BOTH Chen + Tenet  : Russian->creator reach {len(six_infl_rea
 # ---- G3 / G4: independent pre-Tenet Russian-side branches into the creator graph ----
 RUS_ORIGIN={nid for nid,n in NODES.items() if n.get("actor_class") in ("RUSSIAN_STATE","RUSSIAN_STATE_MEDIA","RUSSIAN_STATE_LINKED_PRIVATE")}
 INTERM={nid for nid,n in NODES.items() if n.get("actor_class")=="INTERMEDIARY"}
+PROXIMITY={"OFFICE_VISIT","CONTACT","INTERVIEW","EVENT","TRAVEL","APPEARANCE","AMPLIFICATION"}  # proximity != conduit
 RUS=RUS_ORIGIN                                  # reach origins (Dugin=RUSSIAN_POLITICAL_ACTOR excluded by design)
 GATED={"lauren_chen","tenet"}
 # DIRECT: RUS_ORIGIN --influence--> creator, not via Chen/Tenet, observed
 G3=[e["id"] for e in EDGES if e.get("domain")=="influence" and e["target"] in SIX
-    and e["source"] in RUS_ORIGIN and e["source"] not in GATED and not is_contested(e)]
+    and e["source"] in RUS_ORIGIN and e["source"] not in GATED and not is_contested(e)
+    and e.get("relationship_type") not in PROXIMITY]
 direct_set={EBYID[i]["target"] for i in G3}
 # INTERMEDIARY_MEDIATED: RUS_ORIGIN -> INTERMEDIARY(s) -> creator, no Chen/Tenet, no direct edge
 _infl=[e for e in EDGES if e.get("domain")=="influence" and not is_contested(e)
-       and e["source"] not in GATED and e["target"] not in GATED]
+       and e["source"] not in GATED and e["target"] not in GATED
+       and e.get("relationship_type") not in PROXIMITY]
 def _reach(seeds):
     a={}
     for e in _infl: a.setdefault(e["source"],set()).add(e["target"])

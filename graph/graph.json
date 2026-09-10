@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 14: taxonomy upgrade — actor_class (7 classes+US) and relationship_type (controlled vocab) legends added; all russian_state/intermediary nodes classed (Dugin=RUSSIAN_POLITICAL_ACTOR, permanently distinct from RT=RUSSIAN_STATE_MEDIA). Entry-point analysis will split DIRECT vs INTERMEDIARY_MEDIATED using actor_class. Sweep integrity exclusions recorded in metadata.",
+    "status": "1.0 + batch 15: sweep hits adjudicated. Pool 2016 RT/Sputnik OFFICE_VISIT + Sputnik->Fairbanks->Pool personnel continuity + Ora TV shared infrastructure -> all encoded as NON-QUALIFYING near-misses (do_not_claim influence guardrails; Fairbanks->Pool and Ora->Rubin legs domain=domestic). Scoreboard unchanged: 1 direct influence entry (Southern). near_miss_taxonomy recorded.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -75,6 +75,7 @@
         "RECRUITMENT",
         "PR",
         "AMPLIFICATION",
+        "OFFICE_VISIT",
         "APPEARANCE",
         "CONTACT",
         "OWNERSHIP",
@@ -91,8 +92,8 @@
     "entry_point_sweep": {
       "question": "Independent pre-Tenet Russian-side entry points into the six creators (bypassing Chen/Tenet)",
       "lauren_southern": "established (RT contribution 2019 + live report 2022)",
-      "tim_pool": "not_established",
-      "dave_rubin": "not_established",
+      "tim_pool": "not_established (influence); near-miss: DIRECT_CONTACT (2016 RT/Sputnik office visit) + PERSONNEL_CONTINUITY (Sputnik->Fairbanks->Pool)",
+      "dave_rubin": "not_established (influence); near-miss: SHARED_MEDIA_INFRASTRUCTURE (Ora TV -> Rubin; Ora TV -> RT America)",
       "benny_johnson": "not_established",
       "tayler_hansen": "not_established",
       "matt_christiansen": "not_established",
@@ -109,6 +110,13 @@
         "Southern->Dugin (creator->actor INTERVIEW is not a Russia->creator conduit)",
         "RUSSIAN_POLITICAL_ACTOR / RUSSIAN_ORDINARY_PERSON as automatic state origins"
       ]
+    },
+    "near_miss_taxonomy": {
+      "INFLUENCE": "qualifying: Russian actor -> creator via conduit relationship (contract/employment/contribution/funding/recruitment/direction). Counts.",
+      "DIRECT_CONTACT": "proximity only (office visit/meeting); e.g. Pool 2016 RT/Sputnik offices. Does NOT count.",
+      "PERSONNEL_CONTINUITY": "shared personnel across time (Sputnik->Fairbanks->Pool); no demonstrated influence propagation. Does NOT count.",
+      "SHARED_MEDIA_INFRASTRUCTURE": "same producer/vendor touches both sides (Ora TV -> Rubin; Ora TV -> RT America); no directed Russia->creator influence. Does NOT count.",
+      "CONTENT": "creator's Russia/Ukraine commentary. Rejected outright."
     }
   },
   "nodes": [
@@ -894,6 +902,42 @@
       "us_class": null,
       "notes": "Russian ultranationalist political actor with documented proximity to Russian state/political circles — NOT a state-media employee; kept in a DISTINCT actor class from RT. Only edge is Southern->Dugin: she traveled to Moscow and interviewed him (2018), arranged it herself. A journalist-subject CONTACT, not a Russia->Southern conduit and not evidence of state direction.",
       "actor_class": "RUSSIAN_POLITICAL_ACTOR"
+    },
+    {
+      "id": "sputnik",
+      "label": "Sputnik",
+      "layer": "russian_state",
+      "type": "state_media",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_MEDIA",
+      "notes": "Russian state media (Rossiya Segodnya). Appears here via Pool's 2016 office visit and Fairbanks' prior employment."
+    },
+    {
+      "id": "rt_america",
+      "label": "RT America",
+      "layer": "russian_state",
+      "type": "state_media",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_MEDIA",
+      "notes": "RT's former US arm. Ora TV separately produced/licensed programming to RT America."
+    },
+    {
+      "id": "cassandra_fairbanks",
+      "label": "Cassandra Fairbanks",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR",
+      "notes": "American; worked for Sputnik, later hired by Tim Pool (2021) to run his website. PERSONNEL-CONTINUITY node — NOT a demonstrated influence conduit; her Pool employment is domestic."
+    },
+    {
+      "id": "ora_tv",
+      "label": "Ora TV",
+      "layer": "us_media",
+      "type": "producer",
+      "us_class": null,
+      "actor_class": "US_ACTOR",
+      "notes": "US production company (Larry King). Produced The Rubin Report; separately produced/licensed programming to RT America. Ora stated the programming was independently produced and licensed. SHARED-INFRASTRUCTURE node, not a Russian influence conduit."
     }
   ],
   "edges": [
@@ -7030,6 +7074,305 @@
         }
       ],
       "date": "2024",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_pool_office_2016",
+      "source": "rt",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Pool said on Timcast he was at the RT and Sputnik offices in 2016 during the election (with Cassandra Fairbanks). A pre-Tenet CONTACT event; no evidence of recruitment, payment, or editorial direction. CHASE: contemporaneous 2016 record of WHY he was there (interview/report/event/other) to decide if it upgrades.",
+      "citation": {
+        "publisher": "PodScripts / Timcast IRL #480",
+        "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+        "date": "2022",
+        "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+        "primary": true,
+        "independence_group": "pool_self_statement"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "OFFICE_VISIT",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PodScripts / Timcast IRL #480",
+          "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+          "date": "2022",
+          "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+          "primary": true,
+          "independence_group": "pool_self_statement"
+        }
+      ],
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_sputnik_pool_office_2016",
+      "source": "sputnik",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Same 2016 event: Pool at the Sputnik offices. CONTACT only.",
+      "citation": {
+        "publisher": "PodScripts / Timcast IRL #480",
+        "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+        "date": "2022",
+        "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+        "primary": true,
+        "independence_group": "pool_self_statement"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "OFFICE_VISIT",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PodScripts / Timcast IRL #480",
+          "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+          "date": "2022",
+          "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+          "primary": true,
+          "independence_group": "pool_self_statement"
+        }
+      ],
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_sputnik_fairbanks_emp",
+      "source": "sputnik",
+      "target": "cassandra_fairbanks",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Fairbanks worked for Sputnik (Russian state media).",
+      "citation": {
+        "publisher": "SPLC Hatewatch",
+        "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+        "date": "2023",
+        "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+        "primary": false,
+        "independence_group": "splc"
+      },
+      "verification": "needs_primary",
+      "date": "2017",
+      "domain": "influence",
+      "relationship_type": "EMPLOYMENT",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SPLC Hatewatch",
+          "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+          "date": "2023",
+          "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+          "primary": false,
+          "independence_group": "splc"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_fairbanks_pool_emp",
+      "source": "cassandra_fairbanks",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Pool hired Fairbanks in 2021 to run his website — a DOMESTIC employment; temporally separated from her earlier Sputnik role, with no evidence Sputnik directed it.",
+      "citation": {
+        "publisher": "SPLC Hatewatch",
+        "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+        "date": "2023",
+        "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+        "primary": false,
+        "independence_group": "splc"
+      },
+      "verification": "needs_primary",
+      "date": "2021",
+      "domain": "domestic",
+      "relationship_type": "EMPLOYMENT",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SPLC Hatewatch",
+          "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+          "date": "2023",
+          "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+          "primary": false,
+          "independence_group": "splc"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_ora_rubin_prod",
+      "source": "ora_tv",
+      "target": "dave_rubin",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Ora TV produced The Rubin Report before it went independent/BlazeTV — a DOMESTIC production relationship.",
+      "citation": {
+        "publisher": "Wikipedia — Ora TV",
+        "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+        "date": "2015",
+        "url": "https://en.wikipedia.org/wiki/Ora_TV",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2015",
+      "domain": "domestic",
+      "relationship_type": "CONTRACT",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Wikipedia — Ora TV",
+          "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+          "date": "2015",
+          "url": "https://en.wikipedia.org/wiki/Ora_TV",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_ora_rtamerica_prod",
+      "source": "ora_tv",
+      "target": "rt_america",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Ora TV separately produced/licensed programming to RT America; Ora stated the programming was independently produced. Direction is Ora->RT America (Ora is not directed BY RT).",
+      "citation": {
+        "publisher": "Wikipedia — Ora TV",
+        "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+        "date": "2015",
+        "url": "https://en.wikipedia.org/wiki/Ora_TV",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTRACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Wikipedia — Ora TV",
+          "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+          "date": "2015",
+          "url": "https://en.wikipedia.org/wiki/Ora_TV",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_rt_pool_influence_DNC",
+      "source": "rt",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "editorial_direction",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Pool's 2016 RT/Sputnik office visit was an INFLUENCE relationship (recruitment/payment/editorial direction). It is a documented CONTACT only, pending the contemporaneous 2016 record. Does NOT increment the influence-entry scoreboard.",
+      "citation": {
+        "publisher": "PodScripts / Timcast IRL #480",
+        "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+        "date": "2022",
+        "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+        "primary": true,
+        "independence_group": "pool_self_statement"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PodScripts / Timcast IRL #480",
+          "title": "Pool: was at RT and Sputnik offices in 2016 (with Cassandra Fairbanks)",
+          "date": "2022",
+          "url": "https://podscripts.co/podcasts/timcast-irl/timcast-irl-480-russia-firing-on-nuclear-power-plant-on-live-video-wposobiec-daniel-turner",
+          "primary": true,
+          "independence_group": "pool_self_statement"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_sputnik_pool_via_fairbanks_DNC",
+      "source": "sputnik",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "editorial_direction",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Sputnik influenced Pool THROUGH Fairbanks. Sputnik->Fairbanks (employment) and Fairbanks->Pool (later domestic employment) are a PERSONNEL-CONTINUITY chain, temporally separated; no evidence Sputnik directed Fairbanks to influence Pool. Personnel-continuity candidate, not an influence pathway.",
+      "citation": {
+        "publisher": "SPLC Hatewatch",
+        "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+        "date": "2023",
+        "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+        "primary": false,
+        "independence_group": "splc"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SPLC Hatewatch",
+          "title": "Fairbanks worked for Sputnik, later hired by Pool (2021) to run his website",
+          "date": "2023",
+          "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+          "primary": false,
+          "independence_group": "splc"
+        }
+      ],
+      "date": "2023",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_rt_rubin_via_ora_DNC",
+      "source": "rt_america",
+      "target": "dave_rubin",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: an RT->Rubin influence edge via Ora TV. Ora produced The Rubin Report AND separately licensed programming to RT America; Ora stated independent production. SHARED media infrastructure is not an influence conduit.",
+      "citation": {
+        "publisher": "Wikipedia — Ora TV",
+        "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+        "date": "2015",
+        "url": "https://en.wikipedia.org/wiki/Ora_TV",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Wikipedia — Ora TV",
+          "title": "Ora TV produced The Rubin Report; separately produced/licensed programming to RT America (Ora stated independent production)",
+          "date": "2015",
+          "url": "https://en.wikipedia.org/wiki/Ora_TV",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2015",
       "evidence_quality": "N/A"
     }
   ]

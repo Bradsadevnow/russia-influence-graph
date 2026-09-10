@@ -238,3 +238,16 @@ Chain now runs document → relationship → network → organizational mechanis
 **Scoreboard upgraded (analysis.py):** entry points now split **DIRECT** (RUS_ORIGIN→creator, no Chen/Tenet) vs **INTERMEDIARY_MEDIATED** (RUS_ORIGIN→intermediary(s)→creator, no Chen/Tenet). Current: **1 direct (Southern) + 0 intermediary-mediated of 6; 5 not_established.** The intermediary lane auto-populates when a mediated path lands. `metadata.entry_point_sweep` records method + the integrity-exclusion list (content, ideology, appearances-with, post-Tenet, Chen-mediated, Southern→Dugin, political-actor auto-origin).
 
 85 nodes / 189 edges. validate.py clean.
+
+## batch 15 (2026-09-10) — sweep hits adjudicated: 1 kept, 3 near-misses, content rejected
+**The sweep worked: 1 qualifying edge + structurally-interesting near-misses we can explicitly distinguish from influence.**
+- **DIRECT_CONTACT (non-qualifying):** `e_rt_pool_office_2016` / `e_sputnik_pool_office_2016` — Pool said he was at RT+Sputnik offices in 2016 (with Fairbanks). `relationship_type: OFFICE_VISIT`, `domain: influence`, do_not_claim guardrail `e_rt_pool_influence_DNC`. CHASE: contemporaneous 2016 record of why he was there.
+- **PERSONNEL_CONTINUITY (non-qualifying):** `sputnik`→`cassandra_fairbanks` (EMPLOYMENT, influence) → `tim_pool` (EMPLOYMENT, **domain: domestic** — can't relay Russian reach). Guardrail `e_sputnik_pool_via_fairbanks_DNC`.
+- **SHARED_MEDIA_INFRASTRUCTURE (non-qualifying):** `ora_tv`→`dave_rubin` (domestic production) + `ora_tv`→`rt_america` (Ora licensed to RT America, stated independent). Guardrail `e_rt_rubin_via_ora_DNC`.
+- New nodes: `sputnik`, `rt_america` (RUSSIAN_STATE_MEDIA), `cassandra_fairbanks`, `ora_tv` (US_ACTOR).
+
+**Scoreboard mechanism:** analysis.py now gates entry-point counting by **conduit vs proximity** relationship_type (`PROXIMITY = OFFICE_VISIT/CONTACT/INTERVIEW/EVENT/TRAVEL/APPEARANCE/AMPLIFICATION` excluded from both DIRECT and INTERMEDIARY_MEDIATED). Result unchanged: **1 direct (Southern) + 0 mediated of 6; 5 not_established.** `metadata.near_miss_taxonomy` records the five classes; `entry_point_sweep` updated with Pool/Rubin near-miss notes.
+
+**Link preservation:** `sources/sweep-log.md` classifies every URL touched (qualifying / near-miss / rejected-content) so negatives are recorded searches; `sources/citation-url-inventory.txt` enumerates all 62 external citation URLs in the graph. Rejected-content links (Pool Putin-moderate, Rogan #1242, RFE/RL, Johnson/Griner, CDMRN, WIRED, NPR) saved but NOT edged.
+
+89 nodes / 198 edges. validate.py clean.
