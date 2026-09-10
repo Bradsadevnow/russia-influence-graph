@@ -476,9 +476,28 @@ def six_infl_reach_drop2(a,b):
 print(f"    remove BOTH Chen + Tenet  : Russian->creator reach {len(six_infl_reach_drop2('lauren_chen','tenet'))}/6  <= the pair is the gate, not either alone")
 
 # ---- G3 / G4: independent pre-Tenet Russian-side branches into the creator graph ----
-RUS={nid for nid,n in NODES.items() if n.get("layer")=="russian_state"}
+RUS_ORIGIN={nid for nid,n in NODES.items() if n.get("actor_class") in ("RUSSIAN_STATE","RUSSIAN_STATE_MEDIA","RUSSIAN_STATE_LINKED_PRIVATE")}
+INTERM={nid for nid,n in NODES.items() if n.get("actor_class")=="INTERMEDIARY"}
+RUS=RUS_ORIGIN                                  # reach origins (Dugin=RUSSIAN_POLITICAL_ACTOR excluded by design)
+GATED={"lauren_chen","tenet"}
+# DIRECT: RUS_ORIGIN --influence--> creator, not via Chen/Tenet, observed
 G3=[e["id"] for e in EDGES if e.get("domain")=="influence" and e["target"] in SIX
-    and e["source"] in RUS and not is_contested(e)]
+    and e["source"] in RUS_ORIGIN and e["source"] not in GATED and not is_contested(e)]
+direct_set={EBYID[i]["target"] for i in G3}
+# INTERMEDIARY_MEDIATED: RUS_ORIGIN -> INTERMEDIARY(s) -> creator, no Chen/Tenet, no direct edge
+_infl=[e for e in EDGES if e.get("domain")=="influence" and not is_contested(e)
+       and e["source"] not in GATED and e["target"] not in GATED]
+def _reach(seeds):
+    a={}
+    for e in _infl: a.setdefault(e["source"],set()).add(e["target"])
+    seen=set(seeds); st=list(seeds)
+    while st:
+        v=st.pop()
+        if v in SINKS and v not in seeds: continue
+        for w in a.get(v,set())-seen: seen.add(w); st.append(w)
+    return seen
+_mediated_reach=_reach(RUS_ORIGIN)
+intermediary_set={c for c in SIX if c in _mediated_reach} - direct_set
 def reach_ids(edge_ids, drop=()):
     edges=[EBYID[i] for i in edge_ids if EBYID[i]["source"] not in drop and EBYID[i]["target"] not in drop]
     got=set()
@@ -490,6 +509,10 @@ entry_pts=sorted({EBYID[i]["target"] for i in G3})
 print(f"\n  --- INDEPENDENT RUSSIAN ENTRY POINTS (pre-Tenet, bypassing Chen/Tenet) ---")
 print(f"  G3 = direct Russian-side -> creator edges NOT via Chen/Tenet: {[EBYID[i]['id'] for i in G3] or 'none'}")
 print(f"      creators with an independent Russian entry: {[label(x) for x in entry_pts] or 'none'}  ({len(entry_pts)})")
+print(f"      DIRECT entry points: {[label(x) for x in sorted(direct_set)] or 'none'}  ({len(direct_set)})")
+print(f"      INTERMEDIARY-MEDIATED (RUS->intermediary->creator, no Chen/Tenet): {[label(x) for x in sorted(intermediary_set)] or 'none'}  ({len(intermediary_set)})")
+print(f"      SCOREBOARD: {len(direct_set)} direct + {len(intermediary_set)} intermediary-mediated of 6; "
+      f"{6-len(direct_set|intermediary_set)} not_established (searched-negative, not zero).")
 _sweep=g.get("metadata",{}).get("entry_point_sweep",{})
 if _sweep:
     print("  sweep status (searched-negative is NOT proven zero):")

@@ -229,3 +229,12 @@ Chain now runs document → relationship → network → organizational mechanis
 - **Established independent pre-Tenet Russian entry points into the six = 1 (Southern).** Removal ladder unchanged (6/6 → 0/6 → 1/6 → 0/6). Southern's two RT edges auto-join G3.
 
 85 nodes / 189 edges. validate.py clean.
+
+## batch 14 (2026-09-10) — actor_class + relationship_type taxonomy (the Dugin fix, permanent)
+**Controlled vocabularies added to metadata.legends and SCHEMA.md:**
+- **`actor_class`** (node): RUSSIAN_STATE · RUSSIAN_STATE_MEDIA · RUSSIAN_STATE_LINKED_PRIVATE · RUSSIAN_POLITICAL_ACTOR · RUSSIAN_ORDINARY_PERSON · INTERMEDIARY · US_ACTOR · UNKNOWN. All Russian-side/intermediary nodes classed (RUSSIAN_STATE 13, RUSSIAN_STATE_MEDIA 5, RUSSIAN_STATE_LINKED_PRIVATE 8, INTERMEDIARY 11, RUSSIAN_POLITICAL_ACTOR 1 = Dugin, US_ACTOR 41). **Dugin is now permanently distinct from RT** — reach origins are the three RUSSIAN_STATE* classes only, so a political actor is never auto-counted as a state-media conduit.
+- **`relationship_type`** (edge): CONTRACT/EMPLOYMENT/CONTRIBUTION/LIVE_REPORT/INTERVIEW/EVENT/TRAVEL/FUNDING/RECRUITMENT/PR/AMPLIFICATION/APPEARANCE/CONTACT/OWNERSHIP/DIRECTION. Tagged onto key influence edges; INTERVIEW (creator→actor) is explicitly not a conduit.
+
+**Scoreboard upgraded (analysis.py):** entry points now split **DIRECT** (RUS_ORIGIN→creator, no Chen/Tenet) vs **INTERMEDIARY_MEDIATED** (RUS_ORIGIN→intermediary(s)→creator, no Chen/Tenet). Current: **1 direct (Southern) + 0 intermediary-mediated of 6; 5 not_established.** The intermediary lane auto-populates when a mediated path lands. `metadata.entry_point_sweep` records method + the integrity-exclusion list (content, ideology, appearances-with, post-Tenet, Chen-mediated, Southern→Dugin, political-actor auto-origin).
+
+85 nodes / 189 edges. validate.py clean.

@@ -23,6 +23,8 @@ mechanical (filter by `verification` and `confidence`).
 | `type` | yes | finer role: `government`,`state_media`,`intelligence`,`operation`,`person_state`,`shell`,`person_intermediary`,`network`,`outlet`,`producer`,`influencer`,`content`,`platform`,`audience` |
 | `us_class` | US actors only | 🔴`direct_state_connected` · 🟠`bridge_amplifier` · 🟡`downstream` · `null` — the colour that matters for American nodes |
 | `aliases` | no | array |
+| `actor_class` | Russian/intermediary nodes | `RUSSIAN_STATE` · `RUSSIAN_STATE_MEDIA` · `RUSSIAN_STATE_LINKED_PRIVATE` · `RUSSIAN_POLITICAL_ACTOR` · `RUSSIAN_ORDINARY_PERSON` · `INTERMEDIARY` · `US_ACTOR` · `UNKNOWN`. Finer than `layer`; **the fix for the Dugin problem** — a political actor (Dugin) is never auto-counted as a state-media origin. Entry-point reach origins = the three RUSSIAN_STATE* classes only. |
+
 | `notes` | no | one-liner |
 | `sources` | no | array of citation objects (node-level) |
 
@@ -33,6 +35,7 @@ mechanical (filter by `verification` and `confidence`).
 | `source` / `target` | yes | node ids; edge is directed source→target |
 | `evidence_class` | yes | **the methodological category** — `documented_contact` · `documented_material_exchange` · `documented_state_connection` |
 | `mechanism` | yes | what kind: `funding`,`editorial_direction`,`production`,`amplification`,`introduction`,`communication`,`business_relationship`,`hosted_appearance`,`content_creation`,`distribution`,`ownership`,`laundering` |
+| `relationship_type` | no | controlled vocab: `CONTRACT`·`EMPLOYMENT`·`CONTRIBUTION`·`LIVE_REPORT`·`INTERVIEW`·`EVENT`·`TRAVEL`·`FUNDING`·`RECRUITMENT`·`PR`·`AMPLIFICATION`·`APPEARANCE`·`CONTACT`·`OWNERSHIP`·`DIRECTION`. Names the concrete relationship; `INTERVIEW` (creator→actor) is explicitly NOT a foreign-influence conduit. |
 | `confidence` | yes | `very_high` · `high` · `medium` · `low` · **`do_not_claim`** |
 | `claim` | yes | one sentence: exactly what this edge asserts, no more |
 | `quote` | no | short supporting quote/paraphrase from the source |

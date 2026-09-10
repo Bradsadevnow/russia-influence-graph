@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 13: backward-sweep result. Southern's RT edge SPLIT into two dated, better-provenanced edges (2019 Borderless contribution + 2022 trucker-convoy live report). The other five creators recorded as do_not_claim 'not established' (searched, none found) — NOT zero. Established independent pre-Tenet Russian entry points into the six = 1 (Southern). metadata.entry_point_sweep records the full table.",
+    "status": "1.0 + batch 14: taxonomy upgrade — actor_class (7 classes+US) and relationship_type (controlled vocab) legends added; all russian_state/intermediary nodes classed (Dugin=RUSSIAN_POLITICAL_ACTOR, permanently distinct from RT=RUSSIAN_STATE_MEDIA). Entry-point analysis will split DIRECT vs INTERMEDIARY_MEDIATED using actor_class. Sweep integrity exclusions recorded in metadata.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -52,6 +52,33 @@
       "domain": [
         "influence (foreign-influence propagation edge; default)",
         "domestic (US-ecosystem context edge; excluded from foreign-reach pathfinding)"
+      ],
+      "actor_class": [
+        "RUSSIAN_STATE",
+        "RUSSIAN_STATE_MEDIA",
+        "RUSSIAN_STATE_LINKED_PRIVATE",
+        "RUSSIAN_POLITICAL_ACTOR",
+        "RUSSIAN_ORDINARY_PERSON",
+        "INTERMEDIARY",
+        "US_ACTOR",
+        "UNKNOWN"
+      ],
+      "relationship_type": [
+        "CONTRACT",
+        "EMPLOYMENT",
+        "CONTRIBUTION",
+        "LIVE_REPORT",
+        "INTERVIEW",
+        "EVENT",
+        "TRAVEL",
+        "FUNDING",
+        "RECRUITMENT",
+        "PR",
+        "AMPLIFICATION",
+        "APPEARANCE",
+        "CONTACT",
+        "OWNERSHIP",
+        "DIRECTION"
       ]
     },
     "rules": [
@@ -69,7 +96,19 @@
       "benny_johnson": "not_established",
       "tayler_hansen": "not_established",
       "matt_christiansen": "not_established",
-      "note": "'not_established' is a searched negative, NOT proven zero. Count of established independent entry points = 1 (Southern)."
+      "note": "'not_established' is a searched negative, NOT proven zero. Count of established independent entry points = 1 (Southern).",
+      "method": "Count RUSSIAN_STATE/RUSSIAN_STATE_MEDIA/RUSSIAN_STATE_LINKED_PRIVATE actors with an influence edge INTO a creator, NOT via Chen/Tenet. DIRECT = actor->creator; INTERMEDIARY_MEDIATED = actor->intermediary(s)->creator (no Chen/Tenet).",
+      "not_counted": [
+        "Russia-related commentary/content",
+        "Russian-topic interviews",
+        "ideological similarity",
+        "appearances with Russian-linked people",
+        "post-Tenet relationships",
+        "Tenet itself",
+        "Chen-mediated relationships",
+        "Southern->Dugin (creator->actor INTERVIEW is not a Russia->creator conduit)",
+        "RUSSIAN_POLITICAL_ACTOR / RUSSIAN_ORDINARY_PERSON as automatic state origins"
+      ]
     }
   },
   "nodes": [
@@ -79,14 +118,16 @@
       "layer": "russian_state",
       "type": "government",
       "us_class": null,
-      "notes": "Root state actor."
+      "notes": "Root state actor.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "russian_intel",
       "label": "Russian intelligence services",
       "layer": "russian_state",
       "type": "intelligence",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "gru",
@@ -94,7 +135,8 @@
       "layer": "russian_state",
       "type": "intelligence",
       "us_class": null,
-      "notes": "Stole DNC/Clinton material; transmitted to WikiLeaks (IC assessment)."
+      "notes": "Stole DNC/Clinton material; transmitted to WikiLeaks (IC assessment).",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "rt",
@@ -102,7 +144,8 @@
       "layer": "russian_state",
       "type": "state_media",
       "us_class": null,
-      "notes": "State-controlled; DOJ: 'funded and directed by the Government of Russia'."
+      "notes": "State-controlled; DOJ: 'funded and directed by the Government of Russia'.",
+      "actor_class": "RUSSIAN_STATE_MEDIA"
     },
     {
       "id": "tv_novosti",
@@ -110,7 +153,8 @@
       "layer": "russian_state",
       "type": "state_media",
       "us_class": null,
-      "notes": "RT's parent state-media entity."
+      "notes": "RT's parent state-media entity.",
+      "actor_class": "RUSSIAN_STATE_MEDIA"
     },
     {
       "id": "kalashnikov",
@@ -118,7 +162,8 @@
       "layer": "russian_state",
       "type": "person_state",
       "us_class": null,
-      "notes": "RT employee, indicted (Tenet)."
+      "notes": "RT employee, indicted (Tenet).",
+      "actor_class": "RUSSIAN_STATE_MEDIA"
     },
     {
       "id": "afanasyeva",
@@ -126,7 +171,8 @@
       "layer": "russian_state",
       "type": "person_state",
       "us_class": null,
-      "notes": "RT employee, indicted (Tenet)."
+      "notes": "RT employee, indicted (Tenet).",
+      "actor_class": "RUSSIAN_STATE_MEDIA"
     },
     {
       "id": "ira",
@@ -134,7 +180,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "St. Petersburg troll farm; Mueller 2018 indictment."
+      "notes": "St. Petersburg troll farm; Mueller 2018 indictment.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "project_lakhta",
@@ -142,7 +189,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "Umbrella influence initiative incl. IRA; Lifshits complaint 2020."
+      "notes": "Umbrella influence initiative incl. IRA; Lifshits complaint 2020.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "sda",
@@ -150,21 +198,24 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "Doppelganger; under Kiriyenko."
+      "notes": "Doppelganger; under Kiriyenko.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "structura",
       "label": "Structura National Technology",
       "layer": "russian_state",
       "type": "operation",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "ano_dialog",
       "label": "ANO Dialog",
       "layer": "russian_state",
       "type": "operation",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "kiriyenko",
@@ -172,7 +223,8 @@
       "layer": "russian_state",
       "type": "person_state",
       "us_class": null,
-      "notes": "Kremlin deputy chief of staff; directs Doppelganger firms."
+      "notes": "Kremlin deputy chief of staff; directs Doppelganger firms.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "vk",
@@ -180,7 +232,8 @@
       "layer": "russian_state",
       "type": "platform",
       "us_class": null,
-      "notes": "Russia's major social network."
+      "notes": "Russia's major social network.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "sidorkov",
@@ -188,7 +241,8 @@
       "layer": "russian_state",
       "type": "person_state",
       "us_class": null,
-      "notes": "VK director of partnership marketing; 2016 overtures to Trump Jr./Scavino."
+      "notes": "VK director of partnership marketing; 2016 overtures to Trump Jr./Scavino.",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "shell_companies",
@@ -196,14 +250,16 @@
       "layer": "intermediary",
       "type": "shell",
       "us_class": null,
-      "notes": "Laundered ~$9.7M RT → Tenet."
+      "notes": "Laundered ~$9.7M RT → Tenet.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "agalarov_network",
       "label": "Agalarov network",
       "layer": "intermediary",
       "type": "network",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "aras_agalarov",
@@ -211,14 +267,16 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Oligarch, ties to Putin; SSCI: likely pushed Trump Tower meeting on behalf of Russian-gov-affiliated individuals."
+      "notes": "Oligarch, ties to Putin; SSCI: likely pushed Trump Tower meeting on behalf of Russian-gov-affiliated individuals.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "emin_agalarov",
       "label": "Emin Agalarov",
       "layer": "intermediary",
       "type": "person_intermediary",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "goldstone",
@@ -226,7 +284,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "BRIDGE NODE — arranged Trump Tower meeting AND brokered VK overture."
+      "notes": "BRIDGE NODE — arranged Trump Tower meeting AND brokered VK overture.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "veselnitskaya",
@@ -234,7 +293,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Attended Trump Tower meeting."
+      "notes": "Attended Trump Tower meeting.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "akhmetshin",
@@ -242,7 +302,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Russian-American lobbyist; attended Trump Tower meeting."
+      "notes": "Russian-American lobbyist; attended Trump Tower meeting.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "kaveladze",
@@ -250,7 +311,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Crocus Group; reported to Aras; attended Trump Tower meeting as translator at Aras's instruction."
+      "notes": "Crocus Group; reported to Aras; attended Trump Tower meeting as translator at Aras's instruction.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "tenet",
@@ -267,7 +329,8 @@
         "organizational_concealment": "high",
         "era": "2023-24"
       },
-      "arch_summary": "EMBED AT THE FOUNDER LAYER: RT operatives fund/direct via shells + a fake investor, embed at Chen/Donovan (founders already inside the US creator scene), then recruit an EXISTING high-reach creator network."
+      "arch_summary": "EMBED AT THE FOUNDER LAYER: RT operatives fund/direct via shells + a fake investor, embed at Chen/Donovan (founders already inside the US creator scene), then recruit an EXISTING high-reach creator network.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "swann",
@@ -275,7 +338,8 @@
       "layer": "us_media",
       "type": "producer",
       "us_class": "direct_state_connected",
-      "notes": "FARA-registered; produced RT programming."
+      "notes": "FARA-registered; produced RT programming.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "rebel_media",
@@ -292,7 +356,8 @@
         "organizational_concealment": "lower",
         "era": "2023"
       },
-      "arch_summary": "CONTRACT THE PRODUCER: Russian state-backed contract (~$4.5M) to an American production company (Rebel/Sovren/Truth in Media) to produce Swann's programming."
+      "arch_summary": "CONTRACT THE PRODUCER: Russian state-backed contract (~$4.5M) to an American production company (Rebel/Sovren/Truth in Media) to produce Swann's programming.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "truth_in_media",
@@ -300,7 +365,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "Swann's U.S.-facing outlet."
+      "notes": "Swann's U.S.-facing outlet.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "fake_sites",
@@ -308,7 +374,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "32 domains seized; spoofed WaPo/Fox etc."
+      "notes": "32 domains seized; spoofed WaPo/Fox etc.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "zelenskyy_unmasked",
@@ -324,7 +391,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "bridge_amplifier",
-      "notes": "DOJ-anonymized; media-named (e.g. Tim Pool, Benny Johnson, Dave Rubin, Lauren Southern). NOT charged; several say they did not know of Russian funding."
+      "notes": "DOJ-anonymized; media-named (e.g. Tim Pool, Benny Johnson, Dave Rubin, Lauren Southern). NOT charged; several say they did not know of Russian funding.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "dtj",
@@ -332,7 +400,8 @@
       "layer": "us_political",
       "type": "influencer",
       "us_class": "bridge_amplifier",
-      "notes": "Multiple documented contact points with networks intersecting Russian influence ops; amplified Swann content. See do_not_claim edges."
+      "notes": "Multiple documented contact points with networks intersecting Russian influence ops; amplified Swann content. See do_not_claim edges.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "trump_campaign",
@@ -340,7 +409,8 @@
       "layer": "us_political",
       "type": "network",
       "us_class": "downstream",
-      "notes": "Downstream of several intermediary edges; no established criminal conspiracy (Mueller)."
+      "notes": "Downstream of several intermediary edges; no established criminal conspiracy (Mueller).",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "manafort",
@@ -348,7 +418,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Attended Trump Tower meeting."
+      "notes": "Attended Trump Tower meeting.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "kushner",
@@ -356,7 +427,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Attended Trump Tower meeting."
+      "notes": "Attended Trump Tower meeting.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "scavino",
@@ -364,7 +436,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Target of 2016 VK overture."
+      "notes": "Target of 2016 VK overture.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "wikileaks",
@@ -402,7 +475,8 @@
       "layer": "intermediary",
       "type": "network",
       "us_class": null,
-      "notes": "Aras Agalarov's company; Kaveladze's employer."
+      "notes": "Aras Agalarov's company; Kaveladze's employer.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "beniaminov",
@@ -410,7 +484,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Emin Agalarov's assistant."
+      "notes": "Emin Agalarov's assistant.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "stone",
@@ -418,7 +493,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "bridge_amplifier",
-      "notes": "SSCI: intermediary for campaign efforts re: WikiLeaks releases."
+      "notes": "SSCI: intermediary for campaign efforts re: WikiLeaks releases.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "guccifer_2",
@@ -426,7 +502,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "GRU-controlled dissemination persona (Mueller; SSCI Vol 3)."
+      "notes": "GRU-controlled dissemination persona (Mueller; SSCI Vol 3).",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "dcleaks",
@@ -434,7 +511,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "GRU-controlled dissemination persona (SSCI Vol 3)."
+      "notes": "GRU-controlled dissemination persona (SSCI Vol 3).",
+      "actor_class": "RUSSIAN_STATE"
     },
     {
       "id": "prevezon",
@@ -442,7 +520,8 @@
       "layer": "intermediary",
       "type": "network",
       "us_class": null,
-      "notes": "Katsyv's company; centre of the Magnitsky-sanctions litigation; hired BakerHostetler."
+      "notes": "Katsyv's company; centre of the Magnitsky-sanctions litigation; hired BakerHostetler.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "katsyv",
@@ -450,7 +529,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Owner of Prevezon; Russian-linked businessman at the centre of the Magnitsky/Prevezon litigation."
+      "notes": "Owner of Prevezon; Russian-linked businessman at the centre of the Magnitsky/Prevezon litigation.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "bakerhostetler",
@@ -458,7 +538,8 @@
       "layer": "intermediary",
       "type": "network",
       "us_class": null,
-      "notes": "US law firm hired by Prevezon; in turn hired Fusion GPS. NOT a Russian entity — a contracted intermediary."
+      "notes": "US law firm hired by Prevezon; in turn hired Fusion GPS. NOT a Russian entity — a contracted intermediary.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "fusion_gps",
@@ -466,7 +547,8 @@
       "layer": "us_media",
       "type": "network",
       "us_class": null,
-      "notes": "US opposition-research firm. Worked the Prevezon matter via BakerHostetler and interacted with Veselnitskaya. NOT established as part of a Russian operation — this edge is typed separately. No conspiracy spaghetti."
+      "notes": "US opposition-research firm. Worked the Prevezon matter via BakerHostetler and interacted with Veselnitskaya. NOT established as part of a Russian operation — this edge is typed separately. No conspiracy spaghetti.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "glenn_simpson",
@@ -474,7 +556,8 @@
       "layer": "us_media",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Fusion GPS co-founder. Testified he did NOT know of the Trump Tower meeting beforehand."
+      "notes": "Fusion GPS co-founder. Testified he did NOT know of the Trump Tower meeting beforehand.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "hragi",
@@ -482,7 +565,8 @@
       "layer": "intermediary",
       "type": "network",
       "us_class": null,
-      "notes": "Nominal Russian-American adoption org; practical activity = anti-Magnitsky lobbying; ≥$300k from Russian interests (Akhmetshin testimony)."
+      "notes": "Nominal Russian-American adoption org; practical activity = anti-Magnitsky lobbying; ≥$300k from Russian interests (Akhmetshin testimony).",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "rohrabacher",
@@ -490,7 +574,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Russia-friendly member of Congress; anti-Magnitsky lobbying target. INFLUENCE RECIPIENT, not a controlled asset."
+      "notes": "Russia-friendly member of Congress; anti-Magnitsky lobbying target. INFLUENCE RECIPIENT, not a controlled asset.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "anti_magnitsky_film",
@@ -505,7 +590,8 @@
       "label": "U.S. Congress / Magnitsky policy",
       "layer": "us_political",
       "type": "audience",
-      "us_class": null
+      "us_class": null,
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "rhona_graff",
@@ -513,7 +599,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Trump Organization; contacted in the VK overture."
+      "notes": "Trump Organization; contacted in the VK overture.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "smoking_gun",
@@ -521,7 +608,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "downstream",
-      "notes": "Received GRU-provided stolen material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+      "notes": "Received GRU-provided stolen material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "the_hill",
@@ -529,7 +617,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "downstream",
-      "notes": "Received GRU-provided material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+      "notes": "Received GRU-provided material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "congressional_candidate",
@@ -537,7 +626,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Received stolen material on opponent via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+      "notes": "Received stolen material on opponent via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "breitbart",
@@ -545,7 +635,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "downstream",
-      "notes": "Published Stone's Aug 5 2016 article crediting Guccifer 2.0 (not Russia) for the DNC hack."
+      "notes": "Published Stone's Aug 5 2016 article crediting Guccifer 2.0 (not Russia) for the DNC hack.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "corsi",
@@ -553,14 +644,16 @@
       "layer": "us_media",
       "type": "person_intermediary",
       "us_class": "bridge_amplifier",
-      "notes": "WND (2016); Stone's operative — media production + political op + WikiLeaks dissemination. Bridge node."
+      "notes": "WND (2016); Stone's operative — media production + political op + WikiLeaks dissemination. Bridge node.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "wnd",
       "label": "WorldNetDaily (WND)",
       "layer": "us_media",
       "type": "outlet",
-      "us_class": "downstream"
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "bannon",
@@ -568,7 +661,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Told by Stone of an Assange relationship / inside WikiLeaks info; later campaign chairman. Received info; NOT coordinating with Russia."
+      "notes": "Told by Stone of an Assange relationship / inside WikiLeaks info; later campaign chairman. Received info; NOT coordinating with Russia.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "cooper",
@@ -576,7 +670,8 @@
       "layer": "us_media",
       "type": "person_intermediary",
       "us_class": "bridge_amplifier",
-      "notes": "Potomac Square Group. Recurring American PR bridge: organized the 2016 anti-Magnitsky film screening; later paid media consultant to the Gabbard campaign (2017). Personnel continuity ≠ influence transmission."
+      "notes": "Potomac Square Group. Recurring American PR bridge: organized the 2016 anti-Magnitsky film screening; later paid media consultant to the Gabbard campaign (2017). Personnel continuity ≠ influence transmission.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "potomac",
@@ -584,7 +679,8 @@
       "layer": "us_media",
       "type": "network",
       "us_class": "bridge_amplifier",
-      "notes": "US PR/lobbying firm; compensated by HRAGIF for the 2016 Washington Magnitsky-film screening; later retained by the Gabbard campaign."
+      "notes": "US PR/lobbying firm; compensated by HRAGIF for the 2016 Washington Magnitsky-film screening; later retained by the Gabbard campaign.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "gabbard_campaign",
@@ -592,7 +688,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Paid Potomac Square Group ~$19,400 for media consulting (2017). The ONLY documented link to the Russia cluster is the shared PR contractor Cooper — NOT an influence path. See do_not_claim."
+      "notes": "Paid Potomac Square Group ~$19,400 for media consulting (2017). The ONLY documented link to the Russia cluster is the shared PR contractor Cooper — NOT an influence path. See do_not_claim.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "arakelian",
@@ -600,7 +697,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Introduced to Simpson as a friend of Katsyv; listed in HRAGIF lobbying records. Documented association; functional role unclear/contested."
+      "notes": "Introduced to Simpson as a friend of Katsyv; listed in HRAGIF lobbying records. Documented association; functional role unclear/contested.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "cymrot",
@@ -608,7 +706,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "BakerHostetler lawyer on the Prevezon matter; briefed congressional staff."
+      "notes": "BakerHostetler lawyer on the Prevezon matter; briefed congressional staff.",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "schweitzer",
@@ -616,7 +715,8 @@
       "layer": "intermediary",
       "type": "person_intermediary",
       "us_class": null,
-      "notes": "Cozen O'Connor Public Strategies. Named in the Hermitage FARA complaint (allegation)."
+      "notes": "Cozen O'Connor Public Strategies. Named in the Hermitage FARA complaint (allegation).",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "dellums",
@@ -624,7 +724,8 @@
       "layer": "us_political",
       "type": "person_intermediary",
       "us_class": "downstream",
-      "notes": "Former congressman; lobbied congressional offices on Magnitsky alongside Akhmetshin (RFE)."
+      "notes": "Former congressman; lobbied congressional offices on Magnitsky alongside Akhmetshin (RFE).",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "lauren_chen",
@@ -635,7 +736,8 @@
       "aliases": [
         "Founder-1"
       ],
-      "notes": "Charged (DOJ, Sep 2024, uncharged conduct pseudonym 'Founder-1' identified in reporting). Had a written ANO TV-Novosti content contract 2021-22 BEFORE co-founding Tenet; later received an RT 'Influencer Talent Scouting' contract. THE longitudinal RT->Tenet personnel bridge."
+      "notes": "Charged (DOJ, Sep 2024, uncharged conduct pseudonym 'Founder-1' identified in reporting). Had a written ANO TV-Novosti content contract 2021-22 BEFORE co-founding Tenet; later received an RT 'Influencer Talent Scouting' contract. THE longitudinal RT->Tenet personnel bridge.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "liam_donovan",
@@ -646,7 +748,8 @@
       "aliases": [
         "Founder-2"
       ],
-      "notes": "Chen's husband; 'Founder-2' per reporting. Worked directly with RT and Ruptly ~Oct 2021-May 2022; co-founded Tenet. Charged (DOJ Sep 2024)."
+      "notes": "Chen's husband; 'Founder-2' per reporting. Worked directly with RT and Ruptly ~Oct 2021-May 2022; co-founded Tenet. Charged (DOJ Sep 2024).",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "ruptly",
@@ -654,7 +757,8 @@
       "layer": "russian_state",
       "type": "state_media",
       "us_class": null,
-      "notes": "RT's German video subsidiary. 51% owner of Maffick's German parent; contracted Donovan."
+      "notes": "RT's German video subsidiary. 51% owner of Maffick's German parent; contracted Donovan.",
+      "actor_class": "RUSSIAN_STATE_MEDIA"
     },
     {
       "id": "maffick",
@@ -671,7 +775,8 @@
         "organizational_concealment": "moderate",
         "era": "2019"
       },
-      "arch_summary": "OWN THE VEHICLE: Russian-owned media subsidiary (51% Ruptly) producing Western-facing brands directly."
+      "arch_summary": "OWN THE VEHICLE: Russian-owned media subsidiary (51% Ruptly) producing Western-facing brands directly.",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "anissa_naouai",
@@ -679,7 +784,8 @@
       "layer": "us_media",
       "type": "person_intermediary",
       "us_class": "direct_state_connected",
-      "notes": "RT anchor; former minority owner in Maffick's structure."
+      "notes": "RT anchor; former minority owner in Maffick's structure.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "blaze_tv",
@@ -687,7 +793,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": null,
-      "notes": "Existing American conservative outlet. Context node — a network Chen (and Rubin) worked in BEFORE Tenet. Not Russian-connected."
+      "notes": "Existing American conservative outlet. Context node — a network Chen (and Rubin) worked in BEFORE Tenet. Not Russian-connected.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "turning_point_usa",
@@ -695,7 +802,8 @@
       "layer": "us_political",
       "type": "network",
       "us_class": null,
-      "notes": "Existing American conservative org. Context node — Chen and Benny Johnson circles pre-Tenet. Not Russian-connected."
+      "notes": "Existing American conservative org. Context node — Chen and Benny Johnson circles pre-Tenet. Not Russian-connected.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "us_conservative_media",
@@ -703,7 +811,8 @@
       "layer": "us_media",
       "type": "network",
       "us_class": null,
-      "notes": "Collector node for the 'overlapping conservative-media circles' the six creators + Chen already occupied before Tenet. Membership edges point INTO it (it never redistributes) so it cannot relay Russian reach between creators. Represents the aggregate 'they already had audiences' fact without inventing unsourced pairwise creator edges."
+      "notes": "Collector node for the 'overlapping conservative-media circles' the six creators + Chen already occupied before Tenet. Membership edges point INTO it (it never redistributes) so it cannot relay Russian reach between creators. Represents the aggregate 'they already had audiences' fact without inventing unsourced pairwise creator edges.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "grigoriann_persona",
@@ -711,7 +820,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "notes": "Fake investor identity the RT operatives allegedly created to disguise the source of Tenet's funding (DOJ)."
+      "notes": "Fake investor identity the RT operatives allegedly created to disguise the source of Tenet's funding (DOJ).",
+      "actor_class": "INTERMEDIARY"
     },
     {
       "id": "tim_pool",
@@ -719,7 +829,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Timcast/Timcast IRL. Origin OUTSIDE the conservative pipeline: Occupy Wall Street -> VICE -> Fusion, then built Timcast independently (SEC/LinkedIn record). By 2019-22 a pre-Tenet AGGREGATION node for the right-creator ecosystem. Downstream; unaware of Russian funding (not charged)."
+      "notes": "Timcast/Timcast IRL. Origin OUTSIDE the conservative pipeline: Occupy Wall Street -> VICE -> Fusion, then built Timcast independently (SEC/LinkedIn record). By 2019-22 a pre-Tenet AGGREGATION node for the right-creator ecosystem. Downstream; unaware of Russian funding (not charged).",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "dave_rubin",
@@ -727,7 +838,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "The Rubin Report: Young Turks -> RYOT/Ora TV -> independent -> BlazeTV (2019) -> PragerU/TPUSA event circuit. The INSTITUTIONAL BRIDGE of the six. Not charged."
+      "notes": "The Rubin Report: Young Turks -> RYOT/Ora TV -> independent -> BlazeTV (2019) -> PragerU/TPUSA event circuit. The INSTITUTIONAL BRIDGE of the six. Not charged.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "benny_johnson",
@@ -735,7 +847,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Career tour of conservative-media infrastructure: The Blaze -> BuzzFeed -> National Review -> IJR -> Daily Caller -> TPUSA (Chief Creative Officer) -> Newsmax -> independent. A MAJOR pre-Tenet hub. Not charged."
+      "notes": "Career tour of conservative-media infrastructure: The Blaze -> BuzzFeed -> National Review -> IJR -> Daily Caller -> TPUSA (Chief Creative Officer) -> Newsmax -> independent. A MAJOR pre-Tenet hub. Not charged.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "lauren_southern",
@@ -743,7 +856,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Canadian activism -> Rebel Media (until 2017) -> independent -> US ecosystem. Personal friend/collaborator of Chen pre-Tenet. Not charged."
+      "notes": "Canadian activism -> Rebel Media (until 2017) -> independent -> US ecosystem. Personal friend/collaborator of Chen pre-Tenet. Not charged.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "tayler_hansen",
@@ -751,7 +865,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Bottom-up viral creator: ~6 months building a conservative social identity before the Jul 2020 'Baby Lives Matter' stunt, which drew Fox News + Benny Johnson (then Trump Jr.) amplification. Surfaced BY the existing ecosystem, not manufactured by Russia. Not charged."
+      "notes": "Bottom-up viral creator: ~6 months building a conservative social identity before the Jul 2020 'Baby Lives Matter' stunt, which drew Fox News + Benny Johnson (then Trump Jr.) amplification. Surfaced BY the existing ecosystem, not manufactured by Russia. Not charged.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "matt_christiansen",
@@ -759,7 +874,8 @@
       "layer": "us_media",
       "type": "influencer",
       "us_class": "downstream",
-      "notes": "Independent Montana YouTuber/podcaster, full-time creator by 2020. LONGSTANDING friendship with Chen/Donovan; Chen approached him late June 2023. Not charged."
+      "notes": "Independent Montana YouTuber/podcaster, full-time creator by 2020. LONGSTANDING friendship with Chen/Donovan; Chen approached him late June 2023. Not charged.",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "sovren_media",
@@ -767,7 +883,8 @@
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "Part of the Swann corporate cluster (with Rebel Media Productions and Truth in Media); precise financial relationship among them unclear (TPM)."
+      "notes": "Part of the Swann corporate cluster (with Rebel Media Productions and Truth in Media); precise financial relationship among them unclear (TPM).",
+      "actor_class": "US_ACTOR"
     },
     {
       "id": "dugin",
@@ -775,7 +892,8 @@
       "layer": "russian_state",
       "type": "person_state",
       "us_class": null,
-      "notes": "Russian ultranationalist political actor with documented proximity to Russian state/political circles — NOT a state-media employee; kept in a DISTINCT actor class from RT. Only edge is Southern->Dugin: she traveled to Moscow and interviewed him (2018), arranged it herself. A journalist-subject CONTACT, not a Russia->Southern conduit and not evidence of state direction."
+      "notes": "Russian ultranationalist political actor with documented proximity to Russian state/political circles — NOT a state-media employee; kept in a DISTINCT actor class from RT. Only edge is Southern->Dugin: she traveled to Moscow and interviewed him (2018), arranged it herself. A journalist-subject CONTACT, not a Russia->Southern conduit and not evidence of state direction.",
+      "actor_class": "RUSSIAN_POLITICAL_ACTOR"
     }
   ],
   "edges": [
@@ -1058,7 +1176,8 @@
         }
       ],
       "date": "2023",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_type": "FUNDING"
     },
     {
       "id": "e_rebel_swann",
@@ -1089,7 +1208,8 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_swann_rt_prog",
@@ -4418,7 +4538,8 @@
           "independence_group": "state_gec"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "OWNERSHIP"
     },
     {
       "id": "e_tvnovosti_maffick",
@@ -4449,7 +4570,8 @@
           "independence_group": "state_gec"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "FUNDING"
     },
     {
       "id": "e_naouai_maffick",
@@ -4550,7 +4672,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_ruptly_donovan",
@@ -4589,7 +4712,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_donovan_chen",
@@ -4659,7 +4783,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_chen_tenet_founder",
@@ -4698,7 +4823,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "OWNERSHIP"
     },
     {
       "id": "e_donovan_tenet_founder",
@@ -4737,7 +4863,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "OWNERSHIP"
     },
     {
       "id": "e_maffick_tenet_DNC",
@@ -4871,7 +4998,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_tim_pool",
@@ -4902,7 +5030,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_tim_pool_platforms",
@@ -5035,7 +5164,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_dave_rubin",
@@ -5066,7 +5196,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_dave_rubin_platforms",
@@ -5199,7 +5330,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_benny_johnson",
@@ -5230,7 +5362,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_benny_johnson_platforms",
@@ -5363,7 +5496,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_lauren_southern",
@@ -5394,7 +5528,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_lauren_southern_platforms",
@@ -5527,7 +5662,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_tayler_hansen",
@@ -5558,7 +5694,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_tayler_hansen_platforms",
@@ -5691,7 +5828,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "RECRUITMENT"
     },
     {
       "id": "e_tenet_matt_christiansen",
@@ -5722,7 +5860,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTRACT"
     },
     {
       "id": "e_matt_christiansen_platforms",
@@ -6019,7 +6158,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "DIRECTION"
     },
     {
       "id": "e_grigoriann_tenet_funding",
@@ -6050,7 +6190,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "FUNDING"
     },
     {
       "id": "e_afanasyeva_grigoriann",
@@ -6081,7 +6222,8 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_type": "CONTACT"
     },
     {
       "id": "e_russia_built_network_DNC",
@@ -6479,7 +6621,8 @@
         "independence_group": "press_fox"
       },
       "evidence_quality": "C",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "relationship_type": "AMPLIFICATION"
     },
     {
       "id": "e_dtj_hansen_amp",
@@ -6512,7 +6655,8 @@
         }
       ],
       "evidence_quality": "C",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "relationship_type": "AMPLIFICATION"
     },
     {
       "id": "e_southern_rebel",
@@ -6617,7 +6761,8 @@
         "primary": true,
         "independence_group": "episode_record"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_type": "INTERVIEW"
     },
     {
       "id": "e_rt_pool_via_southern_DNC",
