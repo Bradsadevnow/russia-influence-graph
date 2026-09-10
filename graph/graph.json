@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 07 (consolidation): Fusion↔Cooper professional edge; Akhmetshin strengthened as highest-centrality 2016 bridge (proposed HRAGI to Veselnitskaya/Katsyv); Arakelian conflicting-origin = DISPUTED object preserved. 2024 continuity still NOT established (negative result). Next: FARA/LDA org-level longitudinal.",
+    "status": "1.0 + batch 08: LONGITUDINAL PERSONNEL BRIDGE found — RT/TV-Novosti -> Lauren Chen (contract 2021-22) + Liam Donovan (RT/Ruptly 2021-22) -> Tenet founders -> RT talent-scouting 2023 -> recruited US commentators. Maffick generation added as ARCHITECTURAL analogue (do_not_claim on Maffick<->Tenet personnel). Influencer-knowledge + Chen/Donovan-intent held as negative/contested. Identification of Founder-1/2 rests on reporting -> needs_primary until indictment pulled.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -593,6 +593,52 @@
       "type": "person_intermediary",
       "us_class": "downstream",
       "notes": "Former congressman; lobbied congressional offices on Magnitsky alongside Akhmetshin (RFE)."
+    },
+    {
+      "id": "lauren_chen",
+      "label": "Lauren Chen",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "direct_state_connected",
+      "aliases": [
+        "Founder-1"
+      ],
+      "notes": "Charged (DOJ, Sep 2024, uncharged conduct pseudonym 'Founder-1' identified in reporting). Had a written ANO TV-Novosti content contract 2021-22 BEFORE co-founding Tenet; later received an RT 'Influencer Talent Scouting' contract. THE longitudinal RT->Tenet personnel bridge."
+    },
+    {
+      "id": "liam_donovan",
+      "label": "Liam Donovan",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "direct_state_connected",
+      "aliases": [
+        "Founder-2"
+      ],
+      "notes": "Chen's husband; 'Founder-2' per reporting. Worked directly with RT and Ruptly ~Oct 2021-May 2022; co-founded Tenet. Charged (DOJ Sep 2024)."
+    },
+    {
+      "id": "ruptly",
+      "label": "Ruptly GmbH",
+      "layer": "russian_state",
+      "type": "state_media",
+      "us_class": null,
+      "notes": "RT's German video subsidiary. 51% owner of Maffick's German parent; contracted Donovan."
+    },
+    {
+      "id": "maffick",
+      "label": "Maffick Media",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "notes": "Earlier RT-funded US-facing digital network (In The Now / Soapbox / Waste-ED). German parent 51% Ruptly-owned; ~$5.6M from TV-Novosti from Oct 2019 (FARA/GEC). ARCHITECTURAL analogue of Tenet, NOT a proven personnel link to it."
+    },
+    {
+      "id": "anissa_naouai",
+      "label": "Anissa Naouai",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "direct_state_connected",
+      "notes": "RT anchor; former minority owner in Maffick's structure."
     }
   ],
   "edges": [
@@ -4142,6 +4188,513 @@
         }
       ],
       "date": "2018",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tvnovosti_rt",
+      "source": "tv_novosti",
+      "target": "rt",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "ANO TV-Novosti is the Russian state entity that operates RT.",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "verification": "verified",
+      "date": "2013",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_tvnovosti_ruptly",
+      "source": "tv_novosti",
+      "target": "ruptly",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Ruptly is RT's (ANO TV-Novosti's) German subsidiary.",
+      "citation": {
+        "publisher": "Lawfare",
+        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+        "date": "2019",
+        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+        "primary": false,
+        "independence_group": "fara_gec"
+      },
+      "verification": "needs_primary",
+      "date": "2013",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Lawfare",
+          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "date": "2019",
+          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "primary": false,
+          "independence_group": "fara_gec"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_ruptly_maffick",
+      "source": "ruptly",
+      "target": "maffick",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Ruptly (an RT subsidiary) held 51% of Maffick's German parent company.",
+      "citation": {
+        "publisher": "Lawfare",
+        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+        "date": "2019",
+        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+        "primary": false,
+        "independence_group": "fara_gec"
+      },
+      "verification": "needs_primary",
+      "date": "2019",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Lawfare",
+          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "date": "2019",
+          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "primary": false,
+          "independence_group": "fara_gec"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tvnovosti_maffick",
+      "source": "tv_novosti",
+      "target": "maffick",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "claim": "FARA records document ~$5.6M transferred from TV-Novosti to Maffick beginning Oct 2019; GEC described the Russian ownership/funding structure.",
+      "citation": {
+        "publisher": "Lawfare",
+        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+        "date": "2019",
+        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+        "primary": false,
+        "independence_group": "fara_gec"
+      },
+      "verification": "needs_primary",
+      "date": "2019-10",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Lawfare",
+          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "date": "2019",
+          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "primary": false,
+          "independence_group": "fara_gec"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_naouai_maffick",
+      "source": "anissa_naouai",
+      "target": "maffick",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "high",
+      "claim": "RT anchor Anissa Naouai was a minority owner in Maffick's structure.",
+      "citation": {
+        "publisher": "Lawfare",
+        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+        "date": "2019",
+        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+        "primary": false,
+        "independence_group": "fara_gec"
+      },
+      "verification": "needs_primary",
+      "date": "2019",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Lawfare",
+          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "date": "2019",
+          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "primary": false,
+          "independence_group": "fara_gec"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_maffick_audience",
+      "source": "maffick",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Maffick's channels distributed content to Western (millennial) social-media audiences without prominent RT branding.",
+      "citation": {
+        "publisher": "Lawfare",
+        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+        "date": "2019",
+        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+        "primary": false,
+        "independence_group": "fara_gec"
+      },
+      "verification": "needs_primary",
+      "date": "2019",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Lawfare",
+          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "date": "2019",
+          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "primary": false,
+          "independence_group": "fara_gec"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tvnovosti_chen",
+      "source": "tv_novosti",
+      "target": "lauren_chen",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "content_creation",
+      "confidence": "very_high",
+      "claim": "Per the DOJ Tenet indictment, 'Founder-1' operated under a written contract with ANO TV-Novosti ~March 2021-Feb 2022, producing videos, social content, and articles (not always branded as RT). Reporting and a Canadian foreign-interference inquiry identify Founder-1 as Lauren Chen. Verification held at needs_primary until the indictment is pulled and the identification confirmed.",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "Yahoo News",
+          "title": "She allegedly became a Russian asset (Founder-1 identified as Lauren Chen)",
+          "date": "2024-09",
+          "url": "https://www.yahoo.com/news/she-allegedly-became-russian-asset-235019662.html",
+          "primary": false,
+          "independence_group": "press_identification"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2021",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_ruptly_donovan",
+      "source": "ruptly",
+      "target": "liam_donovan",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "content_creation",
+      "confidence": "high",
+      "claim": "'Founder-2' (identified in reporting as Liam Donovan, Chen's husband) worked directly with RT and Ruptly ~Oct 2021-May 2022.",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "Insight Threat Intel",
+          "title": "Networks of Deception: Russian propaganda (Donovan/Founder-2 worked with RT and Ruptly Oct 2021-May 2022)",
+          "date": "2024",
+          "url": "https://newsletter.insightthreatintel.com/p/networks-of-deception-russian-propaganda",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2021",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_donovan_chen",
+      "source": "liam_donovan",
+      "target": "lauren_chen",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Liam Donovan and Lauren Chen are spouses and Tenet co-founders.",
+      "citation": {
+        "publisher": "CBS News",
+        "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+        "date": "2024-09-04",
+        "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "CBS News",
+          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_afanasyeva_chen_scouting",
+      "source": "afanasyeva",
+      "target": "lauren_chen",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "introduction",
+      "confidence": "very_high",
+      "claim": "Per the indictment, in Jan 2023 the RT operatives gave 'Founder-1' (Chen) an 'Influencer Talent Scouting' contract to find commentators for the new network. Afanasyeva named as an operative directing the effort.",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "Yahoo News",
+          "title": "She allegedly became a Russian asset (Founder-1 identified as Lauren Chen)",
+          "date": "2024-09",
+          "url": "https://www.yahoo.com/news/she-allegedly-became-russian-asset-235019662.html",
+          "primary": false,
+          "independence_group": "press_identification"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023-01",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_tenet_founder",
+      "source": "lauren_chen",
+      "target": "tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Chen co-founded and operated Tenet Media, into which she recruited established American commentators; RT-controlled funds (~$9.7M) flowed to Tenet.",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "CBS News",
+          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022-01",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_donovan_tenet_founder",
+      "source": "liam_donovan",
+      "target": "tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Donovan co-founded Tenet Media with Chen.",
+      "citations": [
+        {
+          "publisher": "Foreign Interference Commission (Canada)",
+          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "CBS News",
+          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022-01",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Foreign Interference Commission (Canada)",
+        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
+        "date": "2024-09-25",
+        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_maffick_tenet_DNC",
+      "source": "maffick",
+      "target": "tenet",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: any personnel or organizational continuity between Maffick and Tenet. Both instantiate the SAME architecture (RT/TV-Novosti -> US-facing digital-media infrastructure -> domestic audiences), but architectural analogy is not a documented link. No shared-personnel edge exists in the record. 'Tenet was Maffick 2.0' is a hypothesis, not a finding.",
+      "citation": {
+        "publisher": "Project — negative result",
+        "title": "Maffick<->Tenet personnel-continuity search (no edge found)",
+        "date": "2026-09-10",
+        "url": "../HANDOFF.md",
+        "primary": true,
+        "independence_group": "Project — negative result"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Project — negative result",
+          "title": "Maffick<->Tenet personnel-continuity search (no edge found)",
+          "date": "2026-09-10",
+          "url": "../HANDOFF.md",
+          "primary": true,
+          "independence_group": "Project — negative result"
+        }
+      ],
+      "date": "2026",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_tenet_influencers_knowing_DNC",
+      "source": "influencers_tenet",
+      "target": "tv_novosti",
+      "evidence_class": "documented_contact",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that the six Tenet commentators knew their funding was Russian state-controlled. The DOJ alleges the operators CONCEALED the Russian involvement from the influencers, who were not charged. They are influence recipients, not proven witting agents.",
+      "citation": {
+        "publisher": "CBS News",
+        "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+        "date": "2024-09-04",
+        "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "CBS News",
+          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_chen_intent_contested",
+      "source": "lauren_chen",
+      "target": "tv_novosti",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "medium",
+      "disputed": true,
+      "dispute_note": "Criminal knowledge/intent alleged in the DOJ indictment (Chen & Donovan charged Sep 2024); NOT adjudicated. Charged is not convicted.",
+      "claim": "CONTESTED: the full extent of Chen's and Donovan's knowledge of Russian state control at each stage is ALLEGED in the indictment, not proven. The documented contracts stand; the criminal-knowledge question is unresolved.",
+      "citation": {
+        "publisher": "CBS News",
+        "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+        "date": "2024-09-04",
+        "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "pending",
+      "date": "2024-09",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "CBS News",
+          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
       "evidence_quality": "C"
     }
   ]

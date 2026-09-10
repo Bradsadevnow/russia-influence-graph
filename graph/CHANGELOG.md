@@ -145,3 +145,26 @@ recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same s
 **Instrument (analysis.py):** added **BRIDGE CENTRALITY** over all Russian-state→American demand pairs (242 connected pairs). Per intermediary: *participation* (# pairs whose vertex-independent routes traverse it) and *severs* (# pairs that lose ALL documented routes if it is removed — a true articulation point). Only *severs* is a topological dependency.
 - Result: **Trump Jr. participates 104, severs 0** — most-traversed American node, isolates nothing when removed. Same shape: 2016 campaign 48/0, Veselnitskaya 34/0, Goldstone 32/0. Load-bearing bridges are infrastructure: Swann 31, Rebel Media 23, Akhmetshin 20, Stone 10 (but participates 61 → mostly redundant), Tenet 10, Corsi 10.
 - **CAVEAT:** the 2024-media bridges (Swann/Rebel/Tenet) score high partly because that architecture is still a thinner subgraph (fewer redundant routes encoded). Re-read severance as 2024 media edges land; high severance ≠ proven irreplaceability yet.
+
+## batch 08 (2026-09-10) — LONGITUDINAL PERSONNEL BRIDGE: Lauren Chen (RT → Tenet)
+**The convergence finding HANDOFF called "THE prize" — with discipline intact.** Not Maffick→Tenet (no personnel edge; stays do_not_claim). A cleaner, charged one: **RT/TV-Novosti → Chen/Donovan → Tenet.**
+
+**New nodes:** `lauren_chen` (Founder-1), `liam_donovan` (Founder-2, spouse), `ruptly` (RT German subsidiary), `maffick` (older RT-funded US-facing network), `anissa_naouai` (RT anchor / Maffick minority owner).
+
+**Personnel bridge (identification rests on reporting → all held `needs_primary` until indictment pulled):**
+- `e_tvnovosti_chen` — Founder-1 under written ANO TV-Novosti contract ~Mar 2021–Feb 2022 (videos/social/articles, often unbranded). Chen per Yahoo + Canadian inquiry.
+- `e_ruptly_donovan` — Founder-2 worked directly with RT/Ruptly ~Oct 2021–May 2022.
+- `e_afanasyeva_chen_scouting` — Jan 2023 "Influencer Talent Scouting" contract from RT operatives to Chen (activates the previously-edgeless `afanasyeva` operative node).
+- `e_chen_tenet_founder` / `e_donovan_tenet_founder` — Chen & Donovan co-founded Tenet; ~$9.7M RT funds flowed in.
+
+**Maffick generation (architectural analogue):** `e_tvnovosti_rt`, `e_tvnovosti_ruptly`, `e_ruptly_maffick` (51% of German parent), `e_tvnovosti_maffick` (~$5.6M from Oct 2019, FARA/GEC), `e_naouai_maffick`, `e_maffick_audience`.
+
+**do_not_claim / contested (must stay):**
+- `e_maffick_tenet_DNC` — NO personnel/org continuity Maffick↔Tenet established. Criticality confirms: they connect ONLY through the shared parent (Maffick→TV-Novosti→Chen→Tenet), i.e. architectural analogy, not a link. "Tenet was Maffick 2.0" = hypothesis.
+- `e_tenet_influencers_knowing_DNC` — the six commentators knew the funding was Russian = NOT established (DOJ: operators concealed it; influencers uncharged).
+- `e_chen_intent_contested` (disputed) — Chen/Donovan criminal knowledge is ALLEGED (charged Sep 2024), not adjudicated. Criticality: the intent edge is redundant — the documented CONTRACT already connects Chen↔TV-Novosti; the knowledge question is a separate, unresolved object.
+
+**Instrument result (73 nodes / 129 edges; 338 connected demand pairs):**
+- **Lauren Chen: severs 27 — now the #1 load-bearing bridge in the graph** (above Akhmetshin 24). A documented/charged personnel node is the single most structurally critical intermediary.
+- **Ben Swann: severs 31 → 0.** Adding Chen+Maffick as real RT→US-media routes DISSOLVED Swann's articulation status — proving the batch-07 caveat ("2024 subgraph thin; re-read severance as edges land"). His high score was a coverage artifact; real edges corrected it. Instrument working as designed.
+- Trump Jr. still participates 111, severs 0. Goldstone 133/0, Veselnitskaya 77/0. Pattern holds: famous names = high traffic, zero dependency; the architecture is load-bearing, not the cast.
