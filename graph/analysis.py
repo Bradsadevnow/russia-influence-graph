@@ -542,3 +542,20 @@ print("    resourced state actor would. Consistent with Chen severs=0 in the inf
 print("  - Removing the whole American creator layer leaves the broker + orgs (Chen/TPUSA/Blaze)")
 print("    still standing: the ecosystem is American infrastructure, coupled to -- not created by --")
 print("    Russia. That is the defensible architectural claim, end to end.")
+
+# ---- PERSONNEL LANE + OPEN QUESTIONS -----------------------------------------
+print("\n" + "="*78)
+print("PERSONNEL-CONTINUITY LANE  (shared personnel across time; conduit=false, not scored)")
+print("="*78)
+pers=[e for e in EDGES if e.get("domain")=="personnel" or e.get("relationship_class")=="PERSONNEL_CONTINUITY"]
+for e in pers:
+    print(f"  {label(e['source'])} --{e.get('relationship_type','?')}--> {label(e['target'])}  "
+          f"[{e.get('relationship_class','?')}, conduit={e.get('conduit',True)}]")
+print("  (kept for the personnel graph; explicitly excluded from influence reach + scoreboard.)")
+_oq=g.get("metadata",{}).get("open_questions",[])
+if _oq:
+    print("\n" + "="*78); print("OPEN QUESTIONS  (graph-generated; answer upgrades or kills an edge)"); print("="*78)
+    for q in _oq:
+        print(f"  [{q['id']}|{q['status']}] {q['question']}")
+        print(f"      edge={q.get('edge')}  UPGRADE: {q.get('upgrades_if','')}")
+        print(f"      KILL: {q.get('kills_if','')}")

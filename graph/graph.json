@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 15: sweep hits adjudicated. Pool 2016 RT/Sputnik OFFICE_VISIT + Sputnik->Fairbanks->Pool personnel continuity + Ora TV shared infrastructure -> all encoded as NON-QUALIFYING near-misses (do_not_claim influence guardrails; Fairbanks->Pool and Ora->Rubin legs domain=domestic). Scoreboard unchanged: 1 direct influence entry (Southern). near_miss_taxonomy recorded.",
+    "status": "1.0 + batch 16: PERSONNEL lane formalized (domain=personnel + relationship_class + conduit/scoreboard flags) for Sputnik->Fairbanks->Pool; Fairbanks prior-appearance-before-hire recorded. Open question OQ-01 banked (what was the 2016 RT/Sputnik visit for? upgrade->2nd direct entry, or kill). Scoreboard unchanged: 1 direct (Southern).",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -51,7 +51,8 @@
       ],
       "domain": [
         "influence (foreign-influence propagation edge; default)",
-        "domestic (US-ecosystem context edge; excluded from foreign-reach pathfinding)"
+        "domestic (US-ecosystem context edge)",
+        "personnel (shared-personnel-across-time lane; not a conduit, not scored)"
       ],
       "actor_class": [
         "RUSSIAN_STATE",
@@ -80,6 +81,13 @@
         "CONTACT",
         "OWNERSHIP",
         "DIRECTION"
+      ],
+      "relationship_class": [
+        "INFLUENCE",
+        "DIRECT_CONTACT",
+        "PERSONNEL_CONTINUITY",
+        "SHARED_MEDIA_INFRASTRUCTURE",
+        "CONTENT"
       ]
     },
     "rules": [
@@ -117,7 +125,27 @@
       "PERSONNEL_CONTINUITY": "shared personnel across time (Sputnik->Fairbanks->Pool); no demonstrated influence propagation. Does NOT count.",
       "SHARED_MEDIA_INFRASTRUCTURE": "same producer/vendor touches both sides (Ora TV -> Rubin; Ora TV -> RT America); no directed Russia->creator influence. Does NOT count.",
       "CONTENT": "creator's Russia/Ukraine commentary. Rejected outright."
-    }
+    },
+    "open_questions": [
+      {
+        "id": "OQ-01",
+        "status": "open",
+        "edge": "e_rt_pool_office_2016",
+        "question": "What was Pool & Fairbanks' 2016 RT/Sputnik office visit FOR? (A journalism/reporting B interview/contributor C RT/Sputnik event D employment/recruitment E ordinary tour/visit F other)",
+        "upgrades_if": "contemporaneous 2016 record shows Pool reporting/contributing/interviewing FOR RT/Sputnik -> upgrade OFFICE_VISIT to CONTRIBUTION => Pool becomes a SECOND direct entry point.",
+        "kills_if": "record shows a tour/event/ordinary journalistic visit -> leave as DIRECT_CONTACT, non-qualifying.",
+        "search_cluster": [
+          "\"Cassandra Fairbanks\" RT 2016",
+          "\"Cassandra Fairbanks\" Sputnik 2016",
+          "\"Cassandra Fairbanks\" \"Russia Today\" 2016",
+          "\"Cassandra Fairbanks\" RT Moscow 2016",
+          "\"Cassandra Fairbanks\" Sputnik office 2016",
+          "\"Tim Pool\" \"Cassandra Fairbanks\" Russia Today",
+          "\"Tim Pool\" \"Cassandra Fairbanks\" Sputnik"
+        ],
+        "targets": "2016 primary/near-primary: archived bios, articles, social posts, videos, event pages, interviews, employment records. Search Fairbanks+Pool together, not Pool alone."
+      }
+    ]
   },
   "nodes": [
     {
@@ -6880,7 +6908,10 @@
         "primary": true,
         "independence_group": "rt_page"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_class": "INFLUENCE",
+      "conduit": true,
+      "scoreboard": true
     },
     {
       "id": "e_rt_southern_report_2022",
@@ -6914,7 +6945,10 @@
         "primary": true,
         "independence_group": "canada_secu"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "relationship_class": "INFLUENCE",
+      "conduit": true,
+      "scoreboard": true
     },
     {
       "id": "e_rt_tim_pool_DNC",
@@ -7108,7 +7142,10 @@
           "independence_group": "pool_self_statement"
         }
       ],
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_class": "DIRECT_CONTACT",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_sputnik_pool_office_2016",
@@ -7142,7 +7179,10 @@
           "independence_group": "pool_self_statement"
         }
       ],
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "relationship_class": "DIRECT_CONTACT",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_sputnik_fairbanks_emp",
@@ -7162,7 +7202,7 @@
       },
       "verification": "needs_primary",
       "date": "2017",
-      "domain": "influence",
+      "domain": "personnel",
       "relationship_type": "EMPLOYMENT",
       "pre_tenet": true,
       "provenance": "observed",
@@ -7176,7 +7216,10 @@
           "independence_group": "splc"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_class": "PERSONNEL_CONTINUITY",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_fairbanks_pool_emp",
@@ -7196,7 +7239,7 @@
       },
       "verification": "needs_primary",
       "date": "2021",
-      "domain": "domestic",
+      "domain": "personnel",
       "relationship_type": "EMPLOYMENT",
       "pre_tenet": true,
       "provenance": "observed",
@@ -7210,7 +7253,10 @@
           "independence_group": "splc"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_class": "PERSONNEL_CONTINUITY",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_ora_rubin_prod",
@@ -7244,7 +7290,10 @@
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_class": "SHARED_MEDIA_INFRASTRUCTURE",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_ora_rtamerica_prod",
@@ -7277,7 +7326,10 @@
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "relationship_class": "SHARED_MEDIA_INFRASTRUCTURE",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_rt_pool_influence_DNC",
@@ -7374,6 +7426,43 @@
       ],
       "date": "2015",
       "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_fairbanks_pool_appearance",
+      "source": "cassandra_fairbanks",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Fairbanks appeared on Pool's show BEFORE he hired her (2021) to run his website — a pre-existing relationship, not a random later hire.",
+      "citation": {
+        "publisher": "SPLC Hatewatch",
+        "title": "Fairbanks prior appearance on Timcast, then 2021 employment",
+        "date": "2023",
+        "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+        "primary": false,
+        "independence_group": "splc"
+      },
+      "verification": "needs_primary",
+      "date": "2020",
+      "domain": "domestic",
+      "relationship_type": "APPEARANCE",
+      "relationship_class": "PERSONNEL_CONTINUITY",
+      "conduit": false,
+      "scoreboard": false,
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SPLC Hatewatch",
+          "title": "Fairbanks prior appearance on Timcast, then 2021 employment",
+          "date": "2023",
+          "url": "https://www.splcenter.org/resources/hatewatch/youtube-profiting-timcast-irl-study-finds/",
+          "primary": false,
+          "independence_group": "splc"
+        }
+      ],
+      "evidence_quality": "C"
     }
   ]
 }

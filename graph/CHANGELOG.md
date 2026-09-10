@@ -251,3 +251,11 @@ Chain now runs document → relationship → network → organizational mechanis
 **Link preservation:** `sources/sweep-log.md` classifies every URL touched (qualifying / near-miss / rejected-content) so negatives are recorded searches; `sources/citation-url-inventory.txt` enumerates all 62 external citation URLs in the graph. Rejected-content links (Pool Putin-moderate, Rogan #1242, RFE/RL, Johnson/Griner, CDMRN, WIRED, NPR) saved but NOT edged.
 
 89 nodes / 198 edges. validate.py clean.
+
+## batch 16 (2026-09-10) — personnel lane formalized + open-question tracker
+**Sputnik→Fairbanks→Pool given its own lane** (per Brad's field spec): `domain: personnel`, `relationship_class: PERSONNEL_CONTINUITY`, `conduit: false`, `scoreboard: false`. Excluded from influence reach AND domestic density — a third lane. Recorded that Fairbanks appeared on Pool's show BEFORE the 2021 hire (`e_fairbanks_pool_appearance`) — not a random later hire. Direct-contact (Pool office visit) and shared-infrastructure (Ora) edges tagged with `relationship_class` + conduit/scoreboard flags. Southern's two edges marked INFLUENCE/conduit/scoreboard=true.
+- **`metadata.legends.domain`** now three values; **`relationship_class`** legend added (INFLUENCE/DIRECT_CONTACT/PERSONNEL_CONTINUITY/SHARED_MEDIA_INFRASTRUCTURE/CONTENT).
+- **`metadata.open_questions[OQ-01]`** banked: *what was Pool & Fairbanks' 2016 RT/Sputnik office visit for?* — upgrades to a SECOND direct entry if a contemporaneous 2016 record shows reporting/contributing/interviewing FOR RT/Sputnik; killed if tour/event/ordinary. Includes the Fairbanks+Pool 2016 search cluster + target record types (search them together, not Pool alone).
+- analysis.py prints the PERSONNEL-CONTINUITY LANE and OPEN QUESTIONS sections. Scoreboard unchanged: **1 direct (Southern) + 0 mediated of 6; 5 not_established.**
+
+89 nodes / 199 edges. validate.py clean.
