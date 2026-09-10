@@ -207,3 +207,16 @@ recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same s
 - **Removal tests:** remove Chen → creators 5/6 domestic (Christiansen orphans), Russian reach still 6/6; remove Tenet → creators 6/6, Russian reach still 6/6; **remove BOTH Chen+Tenet → 0/6.** The foreign coupling is carried REDUNDANTLY by the Chen+Tenet pair; no lone gate (consistent with Chen severs=0). Remove all six → broker + TPUSA + Blaze still stand: American infrastructure coupled to, not created by, Russia.
 
 Chain now runs document → relationship → network → organizational mechanism → historical comparison. 84 nodes / 180 edges. validate.py clean.
+
+## batch 12 (2026-09-10) — independent pre-Tenet Russian branch: RT → Lauren Southern
+**The alternate path.** Southern has a documented, pre-Tenet Russian-side edge that does NOT run through Chen/Tenet.
+- `e_rt_southern` — Southern testified (Canada SECU, mtg 130) she did contributions to RT "before the war" (incl. a 2022 trucker-convoy live report). Typed `documented_contact` / `hosted_appearance`, **verified** (sworn parliamentary testimony), `domain: influence`, `pre_tenet: true`. She also testified she believed Tenet was backed by a tech investor (unaware of Russian funding).
+- `dugin` (new node, DISTINCT actor class — Russian ultranationalist political actor, not state media) + `e_southern_dugin` — direction is **Southern → Dugin** (she traveled to Moscow and interviewed him, Jun 2018, arranged it herself). A journalist-subject contact, NOT a Russia→Southern conduit. Deliberately not collapsed into "Russian state → Southern."
+- `e_rt_pool_via_southern_DNC` (do_not_claim) — RT influence did NOT reach Pool THROUGH Southern: RT→Southern is a Russian-side contact, but Southern→Pool is a DOMESTIC appearance. Independent entry ≠ transitive influence.
+
+**Experiment upgrade (analysis.py) — G3/G4 + independent-entry-point count + removal ladder:**
+- **Independent Russian entry points into the six (pre-Tenet, bypassing Chen/Tenet): 1 — Lauren Southern (RT).**
+- **Removal ladder (Russian→creator reach): G2 6/6 → G2−Chen/Tenet 0/6 → G4(=G2+G3)−Chen/Tenet 1/6 (Southern via the independent RT edge) → G4−Chen/Tenet−independent 0/6.**
+- Interpretation: Chen+Tenet is the MAIN foreign gate but not the ONLY pre-Tenet Russian contact touching the six. A Russian CONTACT (RT→Southern) is not an influence PATHWAY (Southern→Pool stays domestic). This is the metric that bridges the Tenet case to the historical-architecture work: *how many independent Russian-side entry points existed into the pre-existing American creator graph?*
+
+85 nodes / 183 edges. validate.py clean.

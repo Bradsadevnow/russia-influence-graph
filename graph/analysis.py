@@ -474,6 +474,34 @@ def six_infl_reach_drop2(a,b):
     for o in origins: got|=reach_dir(edges,o)
     return [c for c in SIX if c in got]
 print(f"    remove BOTH Chen + Tenet  : Russian->creator reach {len(six_infl_reach_drop2('lauren_chen','tenet'))}/6  <= the pair is the gate, not either alone")
+
+# ---- G3 / G4: independent pre-Tenet Russian-side branches into the creator graph ----
+RUS={nid for nid,n in NODES.items() if n.get("layer")=="russian_state"}
+G3=[e["id"] for e in EDGES if e.get("domain")=="influence" and e["target"] in SIX
+    and e["source"] in RUS and not is_contested(e)]
+def reach_ids(edge_ids, drop=()):
+    edges=[EBYID[i] for i in edge_ids if EBYID[i]["source"] not in drop and EBYID[i]["target"] not in drop]
+    got=set()
+    for o in RUS:
+        if o in drop: continue
+        got|=reach_dir(edges,o)
+    return [c for c in SIX if c in got and c not in drop]
+entry_pts=sorted({EBYID[i]["target"] for i in G3})
+print(f"\n  --- INDEPENDENT RUSSIAN ENTRY POINTS (pre-Tenet, bypassing Chen/Tenet) ---")
+print(f"  G3 = direct Russian-side -> creator edges NOT via Chen/Tenet: {[EBYID[i]['id'] for i in G3] or 'none'}")
+print(f"      creators with an independent Russian entry: {[label(x) for x in entry_pts] or 'none'}  ({len(entry_pts)})")
+print(f"\n  REMOVAL LADDER (Russian->creator reach):")
+print(f"    G2                              : {len(reach_ids(SPINE+SIXEDGES))}/6")
+print(f"    G2  - Chen/Tenet                : {len(reach_ids(SPINE+SIXEDGES, drop=('lauren_chen','tenet')))}/6")
+print(f"    G4 (=G2+G3) - Chen/Tenet        : {len(reach_ids(SPINE+SIXEDGES+G3, drop=('lauren_chen','tenet')))}/6"
+      f"   <= survives ONLY through the independent branch(es)")
+print(f"    G4 - Chen/Tenet - independent   : {len(reach_ids(SPINE+SIXEDGES, drop=('lauren_chen','tenet')))}/6")
+print("    (removing Chen+Tenet AND the independent RT->creator edge(s) -> 0/6)")
+print("  Interpretation: the Chen+Tenet coupling is the MAIN foreign gate, but it is NOT the only")
+print("  pre-Tenet Russian-side contact touching the six. Southern carries an independent RT edge —")
+print("  which is why 'remove Chen+Tenet' does not fully zero Russian CONTACT with the creator set,")
+print("  even though it does zero the Tenet-operation reach. A Russian CONTACT is not an influence")
+print("  PATHWAY: Southern->Pool stays a domestic APPEARANCE (see e_rt_pool_via_southern_DNC).")
 print("\n  Reading (node dependency, not vibes):")
 print("  - The six were ALREADY one connected US network before Tenet (G0: 6/6, 1 component).")
 print("  - Russian->creator reach is carried REDUNDANTLY by TWO couplings: Tenet-contract AND")

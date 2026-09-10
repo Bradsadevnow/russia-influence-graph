@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 11: (1) hardened pre-Tenet domestic edges to PRIMARY episode records (Chen->Pool, Chen->Rubin x2, Pool->Southern, Pool->Johnson, Rubin->Pool, Rubin->Johnson) = verified/A, Media-Matters/PolitiFact demoted to corroboration; relationship_type=APPEARANCE, pre_tenet=true. (2) Organizational architecture layer: arch_profile on maffick/rebel_media/tenet across {foreign_ownership, direct_contract, american_intermediary, existing_talent_network, concealment}; Sovren added; State Dept GEC + TPM primaries. Ready for G0/G1/G2 staged experiment.",
+    "status": "1.0 + batch 12: INDEPENDENT pre-Tenet Russian-side branch — RT->Southern (contact, verified via Canadian SECU testimony), distinct from Chen/Tenet. Dugin added in a SEPARATE actor class (edge is Southern->Dugin, an interview she arranged; not a Russia->Southern conduit). do_not_claim: RT->Southern->Pool is NOT an influence pathway (Southern->Pool is a domestic appearance). Enables G3/G4 experiment + independent-entry-point count.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -758,6 +758,14 @@
       "type": "outlet",
       "us_class": "direct_state_connected",
       "notes": "Part of the Swann corporate cluster (with Rebel Media Productions and Truth in Media); precise financial relationship among them unclear (TPM)."
+    },
+    {
+      "id": "dugin",
+      "label": "Aleksandr Dugin",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "notes": "Russian ultranationalist political actor with documented proximity to Russian state/political circles — NOT a state-media employee; kept in a DISTINCT actor class from RT. Only edge is Southern->Dugin: she traveled to Moscow and interviewed him (2018), arranged it herself. A journalist-subject CONTACT, not a Russia->Southern conduit and not evidence of state direction."
     }
   ],
   "edges": [
@@ -6559,6 +6567,112 @@
         }
       ],
       "evidence_quality": "C"
+    },
+    {
+      "id": "e_rt_southern",
+      "source": "rt",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Southern testified she did contributions to RT 'before the war' (incl. a brief 2022 trucker-convoy live report) — an INDEPENDENT, pre-Tenet Russian-side contact, distinct from the Chen/Tenet coupling. She also testified she believed Tenet was backed by a tech investor and was unaware of Russian funding.",
+      "citation": {
+        "publisher": "House of Commons of Canada — SECU committee, mtg 130 evidence",
+        "title": "Lauren Southern testimony: contributions to RT before the war (2022 trucker-convoy live report); believed Tenet was backed by a tech investor",
+        "date": "2024",
+        "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
+        "primary": true,
+        "independence_group": "canada_secu"
+      },
+      "verification": "verified",
+      "date": "2021",
+      "domain": "influence",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "House of Commons of Canada — SECU committee, mtg 130 evidence",
+          "title": "Lauren Southern testimony: contributions to RT before the war (2022 trucker-convoy live report); believed Tenet was backed by a tech investor",
+          "date": "2024",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/44-1/SECU/meeting-130/evidence",
+          "primary": true,
+          "independence_group": "canada_secu"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_southern_dugin",
+      "source": "lauren_southern",
+      "target": "dugin",
+      "evidence_class": "documented_contact",
+      "mechanism": "hosted_appearance",
+      "confidence": "high",
+      "claim": "Southern traveled to Moscow and interviewed Dugin (published Jun 2018); she testified she arranged it herself and declined to publish her other Russia interviews. Direction is Southern->Dugin — a journalist-subject contact, NOT a Russia->Southern influence edge.",
+      "citations": [
+        {
+          "publisher": "YouTube / Lauren Southern",
+          "title": "Southern's interview with Aleksandr Dugin, Moscow (published Jun 2018)",
+          "date": "2018-06",
+          "url": "https://www.youtube.com/watch?v=sl2--OHvxK4",
+          "primary": true,
+          "independence_group": "episode_record"
+        },
+        {
+          "publisher": "OpenParliament (SECU 44-1/130)",
+          "title": "Southern: interviewed several in Russia, published only the Dugin interview she arranged herself",
+          "date": "2024",
+          "url": "https://openparliament.ca/committees/public-safety/44-1/130/",
+          "primary": false,
+          "independence_group": "canada_secu"
+        }
+      ],
+      "verification": "verified",
+      "date": "2018-06",
+      "domain": "influence",
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citation": {
+        "publisher": "YouTube / Lauren Southern",
+        "title": "Southern's interview with Aleksandr Dugin, Moscow (published Jun 2018)",
+        "date": "2018-06",
+        "url": "https://www.youtube.com/watch?v=sl2--OHvxK4",
+        "primary": true,
+        "independence_group": "episode_record"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_rt_pool_via_southern_DNC",
+      "source": "rt",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that RT influence reached Tim Pool THROUGH Lauren Southern. RT->Southern is a documented Russian-side CONTACT, but Southern->Pool is a DOMESTIC appearance (Timcast), not an influence conduit. An independent Russian entry point into the network is not transitive influence across a domestic edge.",
+      "citation": {
+        "publisher": "Project — negative result / domain discipline",
+        "title": "RT->Southern->Pool is not an influence pathway (domestic edge does not relay foreign influence)",
+        "date": "2026-09-10",
+        "url": "../HANDOFF.md",
+        "primary": true,
+        "independence_group": "Project — negative result / domain discipline"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Project — negative result / domain discipline",
+          "title": "RT->Southern->Pool is not an influence pathway (domestic edge does not relay foreign influence)",
+          "date": "2026-09-10",
+          "url": "../HANDOFF.md",
+          "primary": true,
+          "independence_group": "Project — negative result / domain discipline"
+        }
+      ],
+      "date": "2026",
+      "evidence_quality": "N/A"
     }
   ]
 }
