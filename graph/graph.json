@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 08: LONGITUDINAL PERSONNEL BRIDGE found — RT/TV-Novosti -> Lauren Chen (contract 2021-22) + Liam Donovan (RT/Ruptly 2021-22) -> Tenet founders -> RT talent-scouting 2023 -> recruited US commentators. Maffick generation added as ARCHITECTURAL analogue (do_not_claim on Maffick<->Tenet personnel). Influencer-knowledge + Chen/Donovan-intent held as negative/contested. Identification of Founder-1/2 rests on reporting -> needs_primary until indictment pulled.",
+    "status": "1.0 + batch 09: CHEN AS NETWORK BROKER. Six creators split into individuals; recruitment reads RT->Chen->[recruit]->each (not six phantom RT->influencer paths). Pre-existing American ecosystem (Blaze/TPUSA/conservative-media milieu) added as us_class=null CONTEXT with inward membership edges. DOJ direction edges (hiring/editorial/monitoring + Grigoriann fake-investor concealment) added as OBSERVED = predictive convergence for the conditional Chen-knowing branch. New do_not_claim: Russia did NOT build the network, it attached to a pre-existing American social graph.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -639,6 +639,86 @@
       "type": "person_intermediary",
       "us_class": "direct_state_connected",
       "notes": "RT anchor; former minority owner in Maffick's structure."
+    },
+    {
+      "id": "blaze_tv",
+      "label": "The Blaze / BlazeTV",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": null,
+      "notes": "Existing American conservative outlet. Context node — a network Chen (and Rubin) worked in BEFORE Tenet. Not Russian-connected."
+    },
+    {
+      "id": "turning_point_usa",
+      "label": "Turning Point USA",
+      "layer": "us_political",
+      "type": "network",
+      "us_class": null,
+      "notes": "Existing American conservative org. Context node — Chen and Benny Johnson circles pre-Tenet. Not Russian-connected."
+    },
+    {
+      "id": "us_conservative_media",
+      "label": "US conservative-media milieu (pre-existing creator network)",
+      "layer": "us_media",
+      "type": "network",
+      "us_class": null,
+      "notes": "Collector node for the 'overlapping conservative-media circles' the six creators + Chen already occupied before Tenet. Membership edges point INTO it (it never redistributes) so it cannot relay Russian reach between creators. Represents the aggregate 'they already had audiences' fact without inventing unsourced pairwise creator edges."
+    },
+    {
+      "id": "grigoriann_persona",
+      "label": "'Eduard Grigoriann' (fictitious investor)",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "Fake investor identity the RT operatives allegedly created to disguise the source of Tenet's funding (DOJ)."
+    },
+    {
+      "id": "tim_pool",
+      "label": "Tim Pool",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "independent podcaster/YouTuber (Timcast) with a pre-existing large audience. Not charged; DOJ says they were unaware of the Russian funding."
+    },
+    {
+      "id": "dave_rubin",
+      "label": "Dave Rubin",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "The Rubin Report; prior BlazeTV deal — pre-existing audience. Not charged; DOJ says they were unaware of the Russian funding."
+    },
+    {
+      "id": "benny_johnson",
+      "label": "Benny Johnson",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "prior Turning Point USA ties; pre-existing audience. Not charged; DOJ says they were unaware of the Russian funding."
+    },
+    {
+      "id": "lauren_southern",
+      "label": "Lauren Southern",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "Canadian commentator in the same conservative-media circles as Chen. Not charged; DOJ says they were unaware of the Russian funding."
+    },
+    {
+      "id": "tayler_hansen",
+      "label": "Tayler Hansen",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "commentator recruited to Tenet. Not charged; DOJ says they were unaware of the Russian funding."
+    },
+    {
+      "id": "matt_christiansen",
+      "label": "Matt Christiansen",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "notes": "commentator recruited to Tenet. Not charged; DOJ says they were unaware of the Russian funding."
     }
   ],
   "edges": [
@@ -4696,6 +4776,1271 @@
         }
       ],
       "evidence_quality": "C"
+    },
+    {
+      "id": "e_chen_recruit_tim_pool",
+      "source": "lauren_chen",
+      "target": "tim_pool",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Tim Pool into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_tim_pool",
+      "source": "tenet",
+      "target": "tim_pool",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Tim Pool was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tim_pool_platforms",
+      "source": "tim_pool",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Tim Pool distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tim_pool_conmedia",
+      "source": "tim_pool",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Tim Pool operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tim_pool_cohort",
+      "source": "tim_pool",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Tim Pool is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_recruit_dave_rubin",
+      "source": "lauren_chen",
+      "target": "dave_rubin",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Dave Rubin into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_dave_rubin",
+      "source": "tenet",
+      "target": "dave_rubin",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Dave Rubin was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_dave_rubin_platforms",
+      "source": "dave_rubin",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Dave Rubin distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dave_rubin_conmedia",
+      "source": "dave_rubin",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Dave Rubin operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dave_rubin_cohort",
+      "source": "dave_rubin",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Dave Rubin is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_recruit_benny_johnson",
+      "source": "lauren_chen",
+      "target": "benny_johnson",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Benny Johnson into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_benny_johnson",
+      "source": "tenet",
+      "target": "benny_johnson",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Benny Johnson was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_benny_johnson_platforms",
+      "source": "benny_johnson",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Benny Johnson distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_benny_johnson_conmedia",
+      "source": "benny_johnson",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Benny Johnson operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_benny_johnson_cohort",
+      "source": "benny_johnson",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Benny Johnson is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_recruit_lauren_southern",
+      "source": "lauren_chen",
+      "target": "lauren_southern",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Lauren Southern into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_lauren_southern",
+      "source": "tenet",
+      "target": "lauren_southern",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Lauren Southern was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_lauren_southern_platforms",
+      "source": "lauren_southern",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Lauren Southern distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_lauren_southern_conmedia",
+      "source": "lauren_southern",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Lauren Southern operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_lauren_southern_cohort",
+      "source": "lauren_southern",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Lauren Southern is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_recruit_tayler_hansen",
+      "source": "lauren_chen",
+      "target": "tayler_hansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Tayler Hansen into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_tayler_hansen",
+      "source": "tenet",
+      "target": "tayler_hansen",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Tayler Hansen was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tayler_hansen_platforms",
+      "source": "tayler_hansen",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Tayler Hansen distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tayler_hansen_conmedia",
+      "source": "tayler_hansen",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Tayler Hansen operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tayler_hansen_cohort",
+      "source": "tayler_hansen",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Tayler Hansen is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_recruit_matt_christiansen",
+      "source": "lauren_chen",
+      "target": "matt_christiansen",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Chen (as talent scout) recruited Matt Christiansen into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        },
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_matt_christiansen",
+      "source": "tenet",
+      "target": "matt_christiansen",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Matt Christiansen was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_matt_christiansen_platforms",
+      "source": "matt_christiansen",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Matt Christiansen distributed content to a pre-existing personal audience on social platforms.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_matt_christiansen_conmedia",
+      "source": "matt_christiansen",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Matt Christiansen operated within the overlapping US conservative-media circles that pre-dated Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2022",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_matt_christiansen_cohort",
+      "source": "matt_christiansen",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Matt Christiansen is one of the six Tenet commentators.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_chen_blaze",
+      "source": "lauren_chen",
+      "target": "blaze_tv",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Chen worked within The Blaze/BlazeTV ecosystem before Tenet.",
+      "citations": [
+        {
+          "publisher": "Forbes",
+          "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+          "date": "2024-09-06",
+          "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+          "primary": false,
+          "independence_group": "press_identification"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2020",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Forbes",
+        "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+        "date": "2024-09-06",
+        "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+        "primary": false,
+        "independence_group": "press_identification"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_chen_tpusa",
+      "source": "lauren_chen",
+      "target": "turning_point_usa",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Chen was associated with Turning Point USA circles before Tenet.",
+      "citations": [
+        {
+          "publisher": "Forbes",
+          "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+          "date": "2024-09-06",
+          "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+          "primary": false,
+          "independence_group": "press_identification"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2020",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Forbes",
+        "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+        "date": "2024-09-06",
+        "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+        "primary": false,
+        "independence_group": "press_identification"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_chen_conmedia",
+      "source": "lauren_chen",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Chen was already embedded in the US conservative-media milieu before Tenet — the pre-existing social graph Russian resources attached to.",
+      "citations": [
+        {
+          "publisher": "Forbes",
+          "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+          "date": "2024-09-06",
+          "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+          "primary": false,
+          "independence_group": "press_identification"
+        },
+        {
+          "publisher": "Yahoo News",
+          "title": "She allegedly became a Russian asset (Chen embedded in conservative-media circles)",
+          "date": "2024-09",
+          "url": "https://www.yahoo.com/news/she-allegedly-became-russian-asset-235019662.html",
+          "primary": false,
+          "independence_group": "press_identification"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2020",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "Forbes",
+        "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
+        "date": "2024-09-06",
+        "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+        "primary": false,
+        "independence_group": "press_identification"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_rubin_blaze",
+      "source": "dave_rubin",
+      "target": "blaze_tv",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Dave Rubin had a pre-existing BlazeTV relationship independent of Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2020",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_johnson_tpusa",
+      "source": "benny_johnson",
+      "target": "turning_point_usa",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Benny Johnson had pre-existing Turning Point USA ties independent of Tenet.",
+      "citations": [
+        {
+          "publisher": "ABC17/CNN",
+          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+          "date": "2024-09-04",
+          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2020",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "ABC17/CNN",
+        "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
+        "date": "2024-09-04",
+        "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_afanasyeva_tenet_direction",
+      "source": "afanasyeva",
+      "target": "tenet",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "editorial_direction",
+      "confidence": "very_high",
+      "claim": "DOJ: the RT operatives directed Tenet's hiring, issued editorial requests, and monitored content, while concealing their RT roles.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_grigoriann_tenet_funding",
+      "source": "grigoriann_persona",
+      "target": "tenet",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "laundering",
+      "confidence": "very_high",
+      "claim": "DOJ: Tenet's Russian funding was routed behind a fictitious investor persona ('Eduard Grigoriann') to conceal its origin.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_afanasyeva_grigoriann",
+      "source": "afanasyeva",
+      "target": "grigoriann_persona",
+      "evidence_class": "documented_contact",
+      "mechanism": "laundering",
+      "confidence": "very_high",
+      "claim": "DOJ: the RT operatives created/operated the fictitious 'Grigoriann' investor identity.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (SDNY)",
+          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "doj_tenet_indictment"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2023",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (SDNY)",
+        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "doj_tenet_indictment"
+      },
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_russia_built_network_DNC",
+      "source": "grigoriann_persona",
+      "target": "us_conservative_media",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "content_creation",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Russia CREATED the American creator network. The evidence supports the opposite model — the operation ATTACHED capital/infrastructure/direction to a PRE-EXISTING American social graph (creators who already had audiences, companies, and cross-relationships). Foreign actor -> intermediary (Chen) -> existing trusted nodes -> pre-existing audiences. Russia exploited an existing network; it did not manufacture one.",
+      "citation": {
+        "publisher": "Project — negative result / model statement",
+        "title": "Russia-built-the-network hypothesis rejected in favor of attach-to-existing-graph model",
+        "date": "2026-09-10",
+        "url": "../HANDOFF.md",
+        "primary": true,
+        "independence_group": "Project — negative result / model statement"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Project — negative result / model statement",
+          "title": "Russia-built-the-network hypothesis rejected in favor of attach-to-existing-graph model",
+          "date": "2026-09-10",
+          "url": "../HANDOFF.md",
+          "primary": true,
+          "independence_group": "Project — negative result / model statement"
+        }
+      ],
+      "date": "2026",
+      "evidence_quality": "N/A"
     }
   ]
 }

@@ -168,3 +168,18 @@ recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same s
 - **Lauren Chen: severs 27 — now the #1 load-bearing bridge in the graph** (above Akhmetshin 24). A documented/charged personnel node is the single most structurally critical intermediary.
 - **Ben Swann: severs 31 → 0.** Adding Chen+Maffick as real RT→US-media routes DISSOLVED Swann's articulation status — proving the batch-07 caveat ("2024 subgraph thin; re-read severance as edges land"). His high score was a coverage artifact; real edges corrected it. Instrument working as designed.
 - Trump Jr. still participates 111, severs 0. Goldstone 133/0, Veselnitskaya 77/0. Pattern holds: famous names = high traffic, zero dependency; the architecture is load-bearing, not the cast.
+
+## batch 09 (2026-09-10) — Chen as NETWORK BROKER; the six split; existing-network model
+**Topology refinement (the important structural correction):** the six commentators split from the `influencers_tenet` blob into individual nodes (`tim_pool`,`dave_rubin`,`benny_johnson`,`lauren_southern`,`tayler_hansen`,`matt_christiansen`, us_class=downstream). Recruitment now reads **RT → Chen → [recruit] → each**, not six phantom RT→influencer pathways. Each creator carries: `e_chen_recruit_*` (Chen recruited them), `e_tenet_*` (Tenet contracted/paid them — independent of Chen), `e_*_platforms` (pre-existing personal audience), `e_*_conmedia` (membership in the pre-existing milieu, directed INTO the collector).
+
+**Pre-existing American layer (us_class=null CONTEXT, NOT Russian):** `blaze_tv`, `turning_point_usa`, `us_conservative_media` (milieu collector; inward edges only so it can't relay Russian reach). Chen's own footprint: `e_chen_blaze`, `e_chen_tpusa`, `e_chen_conmedia`; creators' prior footholds `e_rubin_blaze`, `e_johnson_tpusa`.
+
+**DOJ direction edges (OBSERVED = predictive convergence for the Chen-knowing branch):** `e_afanasyeva_tenet_direction` (operatives directed hiring, editorial requests, content monitoring), `grigoriann_persona` + `e_grigoriann_tenet_funding` + `e_afanasyeva_grigoriann` (fictitious investor concealment). These independently-documented edges populate what ASSUMING_TRUE(Chen-knowing) would predict — WITHOUT upgrading the disputed intent edge.
+
+**New do_not_claim:** `e_russia_built_network_DNC` — NOT established that Russia CREATED the American creator network. Evidence supports the opposite: the operation ATTACHED capital/infrastructure/direction to a PRE-EXISTING American social graph. Foreign actor → intermediary (Chen) → existing trusted nodes → pre-existing audiences.
+
+**Instrument (83 nodes / 168 edges; 444 demand pairs) — the disciplined correction:**
+- **Lauren Chen: severs 27 → 0, participates 112.** Now the #1-participation intermediary (3rd overall behind Trump Jr. 166, Tenet 162) but severs NOTHING. Encoding the full DOJ structure gave the operatives redundant routes into Tenet (direct editorial direction + shells + fake investor), so Chen is a high-betweenness BROKER, not an articulation point. Reach test: afanasyeva reaches Tenet with AND without Chen; RT reaches the creators without Chen (they sit on Tenet contracts).
+- **Formation-dependency (temporal, Chen-critical: without her Tenet never assembles) is distinct from steady-state routing (redundant, routes around her).** The instrument measures the latter.
+- Second consecutive batch (Swann→0, now Chen→0) where encoding the complete structure dissolved an apparent chokepoint — real influence operations build redundancy. participation ≠ severance.
+- Trump Jr. participates 166 / severs 0. Pattern holds and strengthens.
