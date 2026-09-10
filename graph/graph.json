@@ -1,0 +1,2916 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated": "2026-09-09",
+    "title": "Russia → U.S. media/political influence — evidence graph",
+    "status": "SEED + batch 02 (Goldstone bridge) + batch 03 (2nd-order network: Veselnitskaya/Prevezon/Katsyv, HRAGI/Akhmetshin/Rohrabacher, anti-Magnitsky film, GRU personas Guccifer 2.0/DCLeaks). KEY NEGATIVE FINDING: Fusion GPS typed separately, do_not_claim on Fusion->Trump Tower meeting. Three architectures A(lobbying)/B(cyber-intel)/C(RT-media) intersect only through shared bridges, NOT centrally directed.",
+    "methodology_ref": "../README.md",
+    "legends": {
+      "layer": [
+        "russian_state",
+        "intermediary",
+        "us_media",
+        "us_political",
+        "content",
+        "platform"
+      ],
+      "us_class": [
+        "direct_state_connected",
+        "bridge_amplifier",
+        "downstream",
+        null
+      ],
+      "evidence_class": [
+        "documented_contact",
+        "documented_material_exchange",
+        "documented_state_connection"
+      ],
+      "confidence": [
+        "very_high",
+        "high",
+        "medium",
+        "low",
+        "do_not_claim"
+      ],
+      "verification": [
+        "pending",
+        "verified",
+        "needs_primary"
+      ],
+      "provenance": [
+        "observed",
+        "conditional",
+        "contested"
+      ],
+      "evidence_quality": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "N/A"
+      ]
+    },
+    "rules": [
+      "A connection is not a conclusion. Never merge an outlet/producer (may be state-connected) with a downstream personality (may be an unwitting amplifier).",
+      "No edge without a citation, except do_not_claim edges which record an absence.",
+      "do_not_claim edges are first-class negative findings; render them, never drop or silently upgrade them.",
+      "The finding is convergent INDEPENDENT paths terminating in the same Russian state/Kremlin-linked network — not any single chain."
+    ],
+    "normalized": "2026-09-10 — schema frozen at 1.0; fields uniform across all edges/nodes."
+  },
+  "nodes": [
+    {
+      "id": "kremlin",
+      "label": "Russian government / Kremlin",
+      "layer": "russian_state",
+      "type": "government",
+      "us_class": null,
+      "notes": "Root state actor."
+    },
+    {
+      "id": "russian_intel",
+      "label": "Russian intelligence services",
+      "layer": "russian_state",
+      "type": "intelligence",
+      "us_class": null
+    },
+    {
+      "id": "gru",
+      "label": "GRU (Russian military intelligence)",
+      "layer": "russian_state",
+      "type": "intelligence",
+      "us_class": null,
+      "notes": "Stole DNC/Clinton material; transmitted to WikiLeaks (IC assessment)."
+    },
+    {
+      "id": "rt",
+      "label": "RT (Russia Today)",
+      "layer": "russian_state",
+      "type": "state_media",
+      "us_class": null,
+      "notes": "State-controlled; DOJ: 'funded and directed by the Government of Russia'."
+    },
+    {
+      "id": "tv_novosti",
+      "label": "ANO TV-Novosti",
+      "layer": "russian_state",
+      "type": "state_media",
+      "us_class": null,
+      "notes": "RT's parent state-media entity."
+    },
+    {
+      "id": "kalashnikov",
+      "label": "Kostiantyn Kalashnikov",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "notes": "RT employee, indicted (Tenet)."
+    },
+    {
+      "id": "afanasyeva",
+      "label": "Elena Afanasyeva",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "notes": "RT employee, indicted (Tenet)."
+    },
+    {
+      "id": "ira",
+      "label": "Internet Research Agency (IRA)",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "St. Petersburg troll farm; Mueller 2018 indictment."
+    },
+    {
+      "id": "project_lakhta",
+      "label": "Project Lakhta",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "Umbrella influence initiative incl. IRA; Lifshits complaint 2020."
+    },
+    {
+      "id": "sda",
+      "label": "Social Design Agency",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "Doppelganger; under Kiriyenko."
+    },
+    {
+      "id": "structura",
+      "label": "Structura National Technology",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null
+    },
+    {
+      "id": "ano_dialog",
+      "label": "ANO Dialog",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null
+    },
+    {
+      "id": "kiriyenko",
+      "label": "Sergei Kiriyenko",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "notes": "Kremlin deputy chief of staff; directs Doppelganger firms."
+    },
+    {
+      "id": "vk",
+      "label": "VKontakte (VK)",
+      "layer": "russian_state",
+      "type": "platform",
+      "us_class": null,
+      "notes": "Russia's major social network."
+    },
+    {
+      "id": "sidorkov",
+      "label": "Konstantin Sidorkov",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "notes": "VK director of partnership marketing; 2016 overtures to Trump Jr./Scavino."
+    },
+    {
+      "id": "shell_companies",
+      "label": "Shell companies (Turkey/UAE/Mauritius)",
+      "layer": "intermediary",
+      "type": "shell",
+      "us_class": null,
+      "notes": "Laundered ~$9.7M RT → Tenet."
+    },
+    {
+      "id": "agalarov_network",
+      "label": "Agalarov network",
+      "layer": "intermediary",
+      "type": "network",
+      "us_class": null
+    },
+    {
+      "id": "aras_agalarov",
+      "label": "Aras Agalarov",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Oligarch, ties to Putin; SSCI: likely pushed Trump Tower meeting on behalf of Russian-gov-affiliated individuals."
+    },
+    {
+      "id": "emin_agalarov",
+      "label": "Emin Agalarov",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null
+    },
+    {
+      "id": "goldstone",
+      "label": "Rob Goldstone",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "BRIDGE NODE — arranged Trump Tower meeting AND brokered VK overture."
+    },
+    {
+      "id": "veselnitskaya",
+      "label": "Natalia Veselnitskaya",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Attended Trump Tower meeting."
+    },
+    {
+      "id": "akhmetshin",
+      "label": "Rinat Akhmetshin",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Russian-American lobbyist; attended Trump Tower meeting."
+    },
+    {
+      "id": "kaveladze",
+      "label": "Ike Kaveladze",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Crocus Group; reported to Aras; attended Trump Tower meeting as translator at Aras's instruction."
+    },
+    {
+      "id": "tenet",
+      "label": "Tenet Media",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "notes": "Nashville firm; ~$9.7M ≈ 90% of deposits from RT via shells; ~2,000 videos, 16M+ views."
+    },
+    {
+      "id": "swann",
+      "label": "Ben Swann",
+      "layer": "us_media",
+      "type": "producer",
+      "us_class": "direct_state_connected",
+      "notes": "FARA-registered; produced RT programming."
+    },
+    {
+      "id": "rebel_media",
+      "label": "Rebel Media Productions",
+      "layer": "us_media",
+      "type": "producer",
+      "us_class": "direct_state_connected",
+      "notes": "Swann's company; FARA-disclosed >$6M from Russian state-media entities."
+    },
+    {
+      "id": "truth_in_media",
+      "label": "Truth in Media",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "notes": "Swann's U.S.-facing outlet."
+    },
+    {
+      "id": "fake_sites",
+      "label": "Doppelganger fake-news sites",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "notes": "32 domains seized; spoofed WaPo/Fox etc."
+    },
+    {
+      "id": "zelenskyy_unmasked",
+      "label": "“Zelenskyy Unmasked” series",
+      "layer": "content",
+      "type": "content",
+      "us_class": null,
+      "notes": "Anti-Ukraine series, April 2024."
+    },
+    {
+      "id": "influencers_tenet",
+      "label": "Tenet commentators (six)",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "bridge_amplifier",
+      "notes": "DOJ-anonymized; media-named (e.g. Tim Pool, Benny Johnson, Dave Rubin, Lauren Southern). NOT charged; several say they did not know of Russian funding."
+    },
+    {
+      "id": "dtj",
+      "label": "Donald Trump Jr.",
+      "layer": "us_political",
+      "type": "influencer",
+      "us_class": "bridge_amplifier",
+      "notes": "Multiple documented contact points with networks intersecting Russian influence ops; amplified Swann content. See do_not_claim edges."
+    },
+    {
+      "id": "trump_campaign",
+      "label": "Trump 2016 campaign",
+      "layer": "us_political",
+      "type": "network",
+      "us_class": "downstream",
+      "notes": "Downstream of several intermediary edges; no established criminal conspiracy (Mueller)."
+    },
+    {
+      "id": "manafort",
+      "label": "Paul Manafort",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Attended Trump Tower meeting."
+    },
+    {
+      "id": "kushner",
+      "label": "Jared Kushner",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Attended Trump Tower meeting."
+    },
+    {
+      "id": "scavino",
+      "label": "Dan Scavino",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Target of 2016 VK overture."
+    },
+    {
+      "id": "wikileaks",
+      "label": "WikiLeaks",
+      "layer": "content",
+      "type": "outlet",
+      "us_class": null,
+      "notes": "SSCI: very likely knew it was assisting a Russian intelligence influence effort."
+    },
+    {
+      "id": "trump_tower_meeting",
+      "label": "Trump Tower meeting (June 2016)",
+      "layer": "content",
+      "type": "operation",
+      "us_class": null,
+      "notes": "Trump Jr., Kushner, Manafort + Russian-linked attendees."
+    },
+    {
+      "id": "us_audience",
+      "label": "U.S. audience / political discourse",
+      "layer": "platform",
+      "type": "audience",
+      "us_class": null
+    },
+    {
+      "id": "social_platforms",
+      "label": "YouTube / X / Instagram / TikTok",
+      "layer": "platform",
+      "type": "platform",
+      "us_class": null
+    },
+    {
+      "id": "crocus_group",
+      "label": "Crocus Group",
+      "layer": "intermediary",
+      "type": "network",
+      "us_class": null,
+      "notes": "Aras Agalarov's company; Kaveladze's employer."
+    },
+    {
+      "id": "beniaminov",
+      "label": "Roman Beniaminov",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Emin Agalarov's assistant."
+    },
+    {
+      "id": "stone",
+      "label": "Roger Stone",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "bridge_amplifier",
+      "notes": "SSCI: intermediary for campaign efforts re: WikiLeaks releases."
+    },
+    {
+      "id": "guccifer_2",
+      "label": "Guccifer 2.0",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "GRU-controlled dissemination persona (Mueller; SSCI Vol 3)."
+    },
+    {
+      "id": "dcleaks",
+      "label": "DCLeaks",
+      "layer": "russian_state",
+      "type": "operation",
+      "us_class": null,
+      "notes": "GRU-controlled dissemination persona (SSCI Vol 3)."
+    },
+    {
+      "id": "prevezon",
+      "label": "Prevezon Holdings",
+      "layer": "intermediary",
+      "type": "network",
+      "us_class": null,
+      "notes": "Katsyv's company; centre of the Magnitsky-sanctions litigation; hired BakerHostetler."
+    },
+    {
+      "id": "katsyv",
+      "label": "Denis Katsyv",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Owner of Prevezon; Russian-linked businessman at the centre of the Magnitsky/Prevezon litigation."
+    },
+    {
+      "id": "bakerhostetler",
+      "label": "BakerHostetler",
+      "layer": "intermediary",
+      "type": "network",
+      "us_class": null,
+      "notes": "US law firm hired by Prevezon; in turn hired Fusion GPS. NOT a Russian entity — a contracted intermediary."
+    },
+    {
+      "id": "fusion_gps",
+      "label": "Fusion GPS",
+      "layer": "us_media",
+      "type": "network",
+      "us_class": null,
+      "notes": "US opposition-research firm. Worked the Prevezon matter via BakerHostetler and interacted with Veselnitskaya. NOT established as part of a Russian operation — this edge is typed separately. No conspiracy spaghetti."
+    },
+    {
+      "id": "glenn_simpson",
+      "label": "Glenn Simpson",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Fusion GPS co-founder. Testified he did NOT know of the Trump Tower meeting beforehand."
+    },
+    {
+      "id": "hragi",
+      "label": "Human Rights Accountability Global Initiative Foundation (HRAGI)",
+      "layer": "intermediary",
+      "type": "network",
+      "us_class": null,
+      "notes": "Nominal Russian-American adoption org; practical activity = anti-Magnitsky lobbying; ≥$300k from Russian interests (Akhmetshin testimony)."
+    },
+    {
+      "id": "rohrabacher",
+      "label": "Rep. Dana Rohrabacher",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Russia-friendly member of Congress; anti-Magnitsky lobbying target. INFLUENCE RECIPIENT, not a controlled asset."
+    },
+    {
+      "id": "anti_magnitsky_film",
+      "label": "Anti-Magnitsky documentary",
+      "layer": "content",
+      "type": "content",
+      "us_class": null,
+      "notes": "Screened in DC four days after the Trump Tower meeting; Akhmetshin helped organize/promote."
+    },
+    {
+      "id": "us_congress",
+      "label": "U.S. Congress / Magnitsky policy",
+      "layer": "us_political",
+      "type": "audience",
+      "us_class": null
+    },
+    {
+      "id": "rhona_graff",
+      "label": "Rhona Graff",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Trump Organization; contacted in the VK overture."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_kremlin_rt",
+      "source": "kremlin",
+      "target": "rt",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "RT is state-controlled, funded and directed by the Russian government.",
+      "quote": "DOJ: 'a state-controlled media outlet funded and directed by the Government of Russia'.",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Two RT Employees Indicted...",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Two RT Employees Indicted...",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_rt_employees",
+      "source": "rt",
+      "target": "kalashnikov",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Kalashnikov and Afanasyeva were RT employees.",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Two RT Employees Indicted...",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Two RT Employees Indicted...",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_employees_shells",
+      "source": "kalashnikov",
+      "target": "shell_companies",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "laundering",
+      "confidence": "very_high",
+      "claim": "RT employees funneled funds through foreign shell companies.",
+      "citation": {
+        "publisher": "DOJ indictment",
+        "title": "US v. Kalashnikov & Afanasyeva",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/opa/media/1366266/dl",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ indictment",
+          "title": "US v. Kalashnikov & Afanasyeva",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/opa/media/1366266/dl",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_shells_tenet",
+      "source": "shell_companies",
+      "target": "tenet",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "claim": "~$9.7M (≈90% of Tenet deposits) reached Tenet via shells in Turkey/UAE/Mauritius.",
+      "citation": {
+        "publisher": "DOJ indictment",
+        "title": "US v. Kalashnikov & Afanasyeva",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/opa/media/1366266/dl",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ indictment",
+          "title": "US v. Kalashnikov & Afanasyeva",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/opa/media/1366266/dl",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_rt_tenet_direction",
+      "source": "rt",
+      "target": "tenet",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "editorial_direction",
+      "confidence": "high",
+      "claim": "RT personnel exercised editorial influence over Tenet while concealing the relationship.",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Two RT Employees Indicted...",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Two RT Employees Indicted...",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_tenet_influencers",
+      "source": "tenet",
+      "target": "influencers_tenet",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Tenet paid six U.S. commentators to produce content.",
+      "quote": "Commentators were not charged; several said they did not know of the Russian funding.",
+      "citation": {
+        "publisher": "DOJ OPA / NPR",
+        "title": "Tenet indictment coverage",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": true,
+        "independence_group": "NPR"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA / NPR",
+          "title": "Tenet indictment coverage",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": true,
+          "independence_group": "NPR"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_influencers_platforms",
+      "source": "influencers_tenet",
+      "target": "social_platforms",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Tenet produced ~2,000 videos distributed on YouTube/TikTok/Instagram/X (16M+ views).",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Two RT Employees Indicted...",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Two RT Employees Indicted...",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_platforms_audience",
+      "source": "social_platforms",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Content reached U.S. audiences at scale.",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Two RT Employees Indicted...",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "primary": false,
+        "independence_group": "DOJ"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Two RT Employees Indicted...",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "primary": false,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_novosti_rebel",
+      "source": "tv_novosti",
+      "target": "rebel_media",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "claim": "Russian state-media entities paid Rebel Media Productions >$6M (FARA-disclosed).",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_rebel_swann",
+      "source": "rebel_media",
+      "target": "swann",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Rebel Media Productions is Ben Swann's company.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_swann_rt_prog",
+      "source": "swann",
+      "target": "rt",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "production",
+      "confidence": "very_high",
+      "claim": "Swann produced RT programming for Russian state media.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_swann_tim",
+      "source": "swann",
+      "target": "truth_in_media",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "high",
+      "claim": "Swann runs the U.S.-facing outlet Truth in Media.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_tim_zelensky",
+      "source": "truth_in_media",
+      "target": "zelenskyy_unmasked",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "content_creation",
+      "confidence": "high",
+      "claim": "Truth in Media produced 'Zelenskyy Unmasked'.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_zelensky_dtj",
+      "source": "zelenskyy_unmasked",
+      "target": "dtj",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Trump Jr. promoted 'Zelenskyy Unmasked' to his followers.",
+      "quote": "AP documented the promotion; does NOT establish Trump Jr. knew of Swann's Russian funding.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dtj_audience",
+      "source": "dtj",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "Trump Jr.'s amplification reached millions of followers.",
+      "citation": {
+        "publisher": "AP News",
+        "title": "Right-wing influencers hyped anti-Ukraine videos...",
+        "date": "2024-10-18",
+        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+        "primary": false,
+        "independence_group": "AP"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "AP News",
+          "title": "Right-wing influencers hyped anti-Ukraine videos...",
+          "date": "2024-10-18",
+          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
+          "primary": false,
+          "independence_group": "AP"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_kiriyenko_sda",
+      "source": "kiriyenko",
+      "target": "sda",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "editorial_direction",
+      "confidence": "high",
+      "claim": "Kremlin deputy chief of staff Kiriyenko directs the Doppelganger firms.",
+      "citation": {
+        "publisher": "DOJ / DFRLab",
+        "title": "Doppelganger domain seizures",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/opa/pr",
+        "primary": true,
+        "independence_group": "DFRLab"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / DFRLab",
+          "title": "Doppelganger domain seizures",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/opa/pr",
+          "primary": true,
+          "independence_group": "DFRLab"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_sda_fakesites",
+      "source": "sda",
+      "target": "fake_sites",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Social Design Agency built spoofed U.S. news domains.",
+      "citation": {
+        "publisher": "DOJ affidavit",
+        "title": "Doppelganger domain seizures",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/opa/pr",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ affidavit",
+          "title": "Doppelganger domain seizures",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/opa/pr",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_fakesites_audience",
+      "source": "fake_sites",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Fake sites pushed Kremlin propaganda to U.S. audiences via paid social ads.",
+      "citation": {
+        "publisher": "DOJ / Meta",
+        "title": "Doppelganger domain seizures",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/opa/pr",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Meta",
+          "title": "Doppelganger domain seizures",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/opa/pr",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_kremlin_agalarov",
+      "source": "kremlin",
+      "target": "aras_agalarov",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Aras Agalarov is an oligarch with ties to Putin and Russian officials; SSCI assessed he likely acted on behalf of Russian-government-affiliated individuals in pushing the Trump Tower meeting.",
+      "citation": {
+        "publisher": "SSCI",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_aras_emin",
+      "source": "aras_agalarov",
+      "target": "emin_agalarov",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Aras and Emin Agalarov (father/son) are the core of the Agalarov network.",
+      "citation": {
+        "publisher": "SSCI",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_emin_goldstone",
+      "source": "emin_agalarov",
+      "target": "goldstone",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Goldstone represented Emin Agalarov and brokered contacts with Trump Jr.",
+      "citation": {
+        "publisher": "SSCI / Mueller",
+        "title": "Report Volume 5 / Special Counsel Report",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI / Mueller",
+          "title": "Report Volume 5 / Special Counsel Report",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_agalarov_dtj",
+      "source": "aras_agalarov",
+      "target": "dtj",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "The Trump/Agalarov relationship began in 2013 (Miss Universe Moscow) and involved business/personal communications, meetings, and gifts.",
+      "citation": {
+        "publisher": "SSCI",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2013",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_goldstone_meeting",
+      "source": "goldstone",
+      "target": "trump_tower_meeting",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "very_high",
+      "claim": "Goldstone arranged the June 9 Trump Tower meeting; on June 7 he told Trump Jr. that Emin wanted it scheduled with the 'Russian government attorney' flying from Moscow.",
+      "quote": "Russia and its government's support for Mr. Trump",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_dtj_meeting",
+      "source": "dtj",
+      "target": "trump_tower_meeting",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Trump Jr. accepted the offer, arranged the meeting, and responded that Manafort and Kushner would probably attend.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_meeting_attendees_v",
+      "source": "trump_tower_meeting",
+      "target": "veselnitskaya",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Veselnitskaya attended the June 9 Trump Tower meeting.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_meeting_manafort",
+      "source": "trump_tower_meeting",
+      "target": "manafort",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Manafort attended the Trump Tower meeting.",
+      "citation": {
+        "publisher": "Mueller Report",
+        "title": "Special Counsel Report",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report",
+          "title": "Special Counsel Report",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_meeting_kushner",
+      "source": "trump_tower_meeting",
+      "target": "kushner",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Kushner attended the Trump Tower meeting.",
+      "citation": {
+        "publisher": "Mueller Report",
+        "title": "Special Counsel Report",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report",
+          "title": "Special Counsel Report",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_veselnitskaya_op",
+      "source": "veselnitskaya",
+      "target": "kremlin",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Mueller found Veselnitskaya had previously worked for the Russian government and maintained a relationship with it during this period.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_gru_wikileaks",
+      "source": "gru",
+      "target": "wikileaks",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "material_exchange",
+      "confidence": "very_high",
+      "claim": "The IC assessed with high confidence that the GRU transferred material stolen from the DNC and senior Democratic officials to WikiLeaks.",
+      "citation": {
+        "publisher": "US Intelligence Community",
+        "title": "ICA 2017-01: Assessing Russian Activities and Intentions in Recent US Elections",
+        "date": "2017-01",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-ica-2017-01.pdf",
+        "primary": true,
+        "independence_group": "USIC-ICA"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "US Intelligence Community",
+          "title": "ICA 2017-01: Assessing Russian Activities and Intentions in Recent US Elections",
+          "date": "2017-01",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-ica-2017-01.pdf",
+          "primary": true,
+          "independence_group": "USIC-ICA"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_wikileaks_russia_knew",
+      "source": "wikileaks",
+      "target": "russian_intel",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "SSCI concluded WikiLeaks very likely knew it was assisting a Russian intelligence influence effort; the GRU used WikiLeaks as a dissemination mechanism.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_dtj_wikileaks",
+      "source": "dtj",
+      "target": "wikileaks",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Trump Jr. communicated directly with WikiLeaks during the 2016 campaign.",
+      "quote": "Establishes the communication only; does NOT establish Trump Jr. knowingly communicated with Russian intelligence.",
+      "citation": {
+        "publisher": "SSCI / released DMs",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI / released DMs"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI / released DMs",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI / released DMs"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_goldstone_vk",
+      "source": "goldstone",
+      "target": "sidorkov",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "June 2016: Goldstone followed up copying Sidorkov, saying Manafort had welcomed the VK idea and that VK had prepared a sample 'Vote Trump 2016' page.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2016-06",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_sidorkov_dtj",
+      "source": "sidorkov",
+      "target": "dtj",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "VK exec Sidorkov made 2016 overtures to Trump Jr. and Scavino to promote the campaign to VK's audience.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign...",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign...",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_sidorkov_scavino",
+      "source": "sidorkov",
+      "target": "scavino",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "The VK overture also targeted Dan Scavino.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign...",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign...",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_vk_sidorkov",
+      "source": "vk",
+      "target": "sidorkov",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Sidorkov was a senior VK executive.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign...",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign...",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dtj_state_direct",
+      "source": "dtj",
+      "target": "kremlin",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: a direct Trump Jr. → Russian state edge. Mueller did not establish a criminal conspiracy; SSCI found no reliable evidence useful information changed hands at the Trump Tower meeting.",
+      "citation": {
+        "publisher": "Mueller Report / SSCI Vol. 5",
+        "title": "Negative finding",
+        "date": "2019-2020",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report / SSCI Vol. 5",
+          "title": "Negative finding",
+          "date": "2019-2020",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_dtj_knowing",
+      "source": "dtj",
+      "target": "project_lakhta",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "communication",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Trump Jr. knowingly participated in a Russian influence operation. The evidence establishes contact points, not knowledge/intent.",
+      "citation": {
+        "publisher": "Project guardrail",
+        "title": "Negative finding",
+        "date": "2026-09-09",
+        "url": "../README.md",
+        "primary": true,
+        "independence_group": "Project guardrail"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Project guardrail",
+          "title": "Negative finding",
+          "date": "2026-09-09",
+          "url": "../README.md",
+          "primary": true,
+          "independence_group": "Project guardrail"
+        }
+      ],
+      "date": "2026",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_ira_lakhta",
+      "source": "ira",
+      "target": "project_lakhta",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "The IRA operated within the broader Project Lakhta initiative.",
+      "citation": {
+        "publisher": "DOJ / Mueller",
+        "title": "IRA indictment (2018); Lifshits complaint (2020)",
+        "date": "2018-2020",
+        "url": "https://www.justice.gov/archives/sco",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Mueller",
+          "title": "IRA indictment (2018); Lifshits complaint (2020)",
+          "date": "2018-2020",
+          "url": "https://www.justice.gov/archives/sco",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2018",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_lakhta_audience",
+      "source": "project_lakhta",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Lakhta/IRA ran fake accounts pushing divisive messaging to millions of Americans across ideological lines.",
+      "citation": {
+        "publisher": "DOJ / AP",
+        "title": "Project Lakhta (Lifshits)",
+        "date": "2020-09",
+        "url": "https://www.justice.gov",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / AP",
+          "title": "Project Lakhta (Lifshits)",
+          "date": "2020-09",
+          "url": "https://www.justice.gov",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_goldstone_dtj",
+      "source": "goldstone",
+      "target": "dtj",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "June 3, 2016: Goldstone told Trump Jr. that Emin asked him to make contact regarding information supposedly from the Russian government useful to the campaign; Goldstone then arranged Trump Jr.–Emin calls June 6–7.",
+      "quote": "Trump Jr. responded essentially immediately and pursued contact with Emin.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-06-03",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_aras_kaveladze",
+      "source": "aras_agalarov",
+      "target": "kaveladze",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "editorial_direction",
+      "confidence": "very_high",
+      "claim": "June 6, 2016: Aras Agalarov personally called Kaveladze and instructed him to attend the meeting with the Trump Organization; sent him Magnitsky Act material and Veselnitskaya's business card and asked him to translate.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-06-06",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kaveladze_crocus",
+      "source": "kaveladze",
+      "target": "crocus_group",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Kaveladze worked for Crocus Group and reported to Aras Agalarov.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_aras_crocus",
+      "source": "aras_agalarov",
+      "target": "crocus_group",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Aras Agalarov heads Crocus Group.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kaveladze_meeting",
+      "source": "kaveladze",
+      "target": "trump_tower_meeting",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Kaveladze attended the June 9 Trump Tower meeting (as translator, at Aras's instruction).",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kaveladze_beniaminov",
+      "source": "kaveladze",
+      "target": "beniaminov",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Kaveladze, puzzled by the attendee list, checked with Emin's assistant Roman Beniaminov about the meeting's purpose.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_beniaminov_purpose",
+      "source": "beniaminov",
+      "target": "trump_tower_meeting",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "medium",
+      "disputed": true,
+      "dispute_note": "Beniaminov reportedly said the purpose was for Veselnitskaya to convey negative information about Clinton, but later disputed/recalled this differently. Preserved as a contested edge, not established fact.",
+      "claim": "Beniaminov's account: the meeting's purpose was for Veselnitskaya to convey negative information about Hillary Clinton.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "pending",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_meeting_expectation",
+      "source": "trump_tower_meeting",
+      "target": "kremlin",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Mueller: senior Trump campaign representatives met with a Russian attorney expecting to receive derogatory information about Hillary Clinton from the Russian government.",
+      "quote": "expecting to receive derogatory information about Hillary Clinton from the Russian government",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+        "date": "2019",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference in the 2016 Presidential Election",
+          "date": "2019",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_goldstone_dtj_vk",
+      "source": "goldstone",
+      "target": "dtj",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Early 2016: Goldstone proposed to Trump Jr. setting up a Trump campaign presence on VK.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dtj_scavino_vk",
+      "source": "dtj",
+      "target": "scavino",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Trump Jr. forwarded the VK campaign-presence idea to Dan Scavino.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_sidorkov_campaign",
+      "source": "sidorkov",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Sidorkov (VK director of partnership marketing) contacted the Trump campaign offering assistance and promotion to VK's Russian/Russian-American user base.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+        "date": "2017-12-07",
+        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
+          "date": "2017-12-07",
+          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_stone_wikileaks",
+      "source": "stone",
+      "target": "wikileaks",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "SSCI found Roger Stone served as the intermediary for Trump-campaign efforts to obtain advance information about WikiLeaks releases.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_stone_campaign",
+      "source": "stone",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "SSCI: Stone was a significant vector through which information about WikiLeaks releases entered the campaign — BUT SSCI could not reliably determine how much genuinely non-public information Stone actually possessed.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_katsyv_prevezon",
+      "source": "katsyv",
+      "target": "prevezon",
+      "evidence_class": "documented_contact",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Prevezon is Denis Katsyv's company.",
+      "citation": {
+        "publisher": "DOJ / US Attorney SDNY",
+        "title": "Russian Attorney Natalya Veselnitskaya Charged With Obstruction of Justice",
+        "date": "2019-01-08",
+        "url": "https://www.justice.gov/usao-sdny/pr/russian-attorney-natalya-veselnitskaya-charged-obstruction-justice-connection-civil",
+        "primary": true,
+        "independence_group": "DOJ-SDNY"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / US Attorney SDNY",
+          "title": "Russian Attorney Natalya Veselnitskaya Charged With Obstruction of Justice",
+          "date": "2019-01-08",
+          "url": "https://www.justice.gov/usao-sdny/pr/russian-attorney-natalya-veselnitskaya-charged-obstruction-justice-connection-civil",
+          "primary": true,
+          "independence_group": "DOJ-SDNY"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_ves_prevezon",
+      "source": "veselnitskaya",
+      "target": "prevezon",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Veselnitskaya represented Katsyv and Prevezon and led anti-Magnitsky lobbying tied to that litigation.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_ves_obstruction",
+      "source": "veselnitskaya",
+      "target": "kremlin",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "coordination",
+      "confidence": "very_high",
+      "claim": "DOJ charged Veselnitskaya with obstruction for secretly working with a senior Russian prosecutor on material submitted in the Prevezon litigation.",
+      "citation": {
+        "publisher": "DOJ / US Attorney SDNY",
+        "title": "Russian Attorney Natalya Veselnitskaya Charged With Obstruction of Justice",
+        "date": "2019-01-08",
+        "url": "https://www.justice.gov/usao-sdny/pr/russian-attorney-natalya-veselnitskaya-charged-obstruction-justice-connection-civil",
+        "primary": true,
+        "independence_group": "DOJ-SDNY"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / US Attorney SDNY",
+          "title": "Russian Attorney Natalya Veselnitskaya Charged With Obstruction of Justice",
+          "date": "2019-01-08",
+          "url": "https://www.justice.gov/usao-sdny/pr/russian-attorney-natalya-veselnitskaya-charged-obstruction-justice-connection-civil",
+          "primary": true,
+          "independence_group": "DOJ-SDNY"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_ves_intel",
+      "source": "veselnitskaya",
+      "target": "russian_intel",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "SSCI concluded Veselnitskaya had significant connections to the Russian government, including intelligence services, more extensive than publicly known.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_intel",
+      "source": "akhmetshin",
+      "target": "russian_intel",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "SSCI concluded Akhmetshin had significant connections to the Russian government, including intelligence services.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_meeting_akh",
+      "source": "trump_tower_meeting",
+      "target": "akhmetshin",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Akhmetshin attended the June 9 Trump Tower meeting.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_hragi",
+      "source": "akhmetshin",
+      "target": "hragi",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Akhmetshin helped establish HRAGI, whose practical activity was anti-Magnitsky lobbying.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+        "date": "2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+          "date": "2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2018",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_katsyv_hragi",
+      "source": "katsyv",
+      "target": "hragi",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "HRAGI was connected to Katsyv and substantially funded by Russian interests (Akhmetshin: ≥$300k from Russian oligarchs).",
+      "citation": {
+        "publisher": "PBS NewsHour / AP",
+        "title": "Lobbyist who met Trump team says he's not Russian intel",
+        "date": "2017-07",
+        "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+        "primary": false,
+        "independence_group": "PBS"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PBS NewsHour / AP",
+          "title": "Lobbyist who met Trump team says he's not Russian intel",
+          "date": "2017-07",
+          "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+          "primary": false,
+          "independence_group": "PBS"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_hragi_congress",
+      "source": "hragi",
+      "target": "us_congress",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "HRAGI/Akhmetshin lobbied Congress against the Magnitsky sanctions.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+        "date": "2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+          "date": "2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2018",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_rohrabacher",
+      "source": "akhmetshin",
+      "target": "rohrabacher",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "The lobbying network reached Rep. Rohrabacher; Akhmetshin's Senate testimony confirms Magnitsky was discussed at a dinner involving Rohrabacher.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+        "date": "2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
+          "date": "2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2018",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_rohrabacher_congress",
+      "source": "rohrabacher",
+      "target": "us_congress",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "Rohrabacher subsequently sought to challenge the Magnitsky narrative in Congress. INFLUENCE RECIPIENT, not a controlled asset.",
+      "citation": {
+        "publisher": "Los Angeles Times",
+        "title": "Rohrabacher-Russia timeline",
+        "date": "2017-08-04",
+        "url": "https://www.latimes.com/politics/la-pol-rohrabacher-russia-timeline-20170804-htmlstory.html",
+        "primary": false,
+        "independence_group": "LAT"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Los Angeles Times",
+          "title": "Rohrabacher-Russia timeline",
+          "date": "2017-08-04",
+          "url": "https://www.latimes.com/politics/la-pol-rohrabacher-russia-timeline-20170804-htmlstory.html",
+          "primary": false,
+          "independence_group": "LAT"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_film",
+      "source": "akhmetshin",
+      "target": "anti_magnitsky_film",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Veselnitskaya and Akhmetshin promoted an anti-Magnitsky documentary, screened in DC four days after the Trump Tower meeting.",
+      "citation": {
+        "publisher": "PBS NewsHour / AP",
+        "title": "Lobbyist who met Trump team says he's not Russian intel",
+        "date": "2017-07",
+        "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+        "primary": false,
+        "independence_group": "PBS"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PBS NewsHour / AP",
+          "title": "Lobbyist who met Trump team says he's not Russian intel",
+          "date": "2017-07",
+          "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+          "primary": false,
+          "independence_group": "PBS"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_film_audience",
+      "source": "anti_magnitsky_film",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Narrative channel: the documentary carried the anti-Magnitsky message to a U.S. audience alongside the lobbying (policy) channel.",
+      "citation": {
+        "publisher": "PBS NewsHour / AP",
+        "title": "Lobbyist who met Trump team says he's not Russian intel",
+        "date": "2017-07",
+        "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+        "primary": false,
+        "independence_group": "PBS"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "PBS NewsHour / AP",
+          "title": "Lobbyist who met Trump team says he's not Russian intel",
+          "date": "2017-07",
+          "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
+          "primary": false,
+          "independence_group": "PBS"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_prevezon_baker",
+      "source": "prevezon",
+      "target": "bakerhostetler",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Prevezon hired BakerHostetler for the Magnitsky/Prevezon litigation.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_baker_fusion",
+      "source": "bakerhostetler",
+      "target": "fusion_gps",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "claim": "BakerHostetler hired Fusion GPS for Prevezon-related research; Prevezon money flowed through BakerHostetler to Fusion (Simpson, under oath).",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_fusion_simpson",
+      "source": "fusion_gps",
+      "target": "glenn_simpson",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Glenn Simpson co-founded Fusion GPS.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_simpson_ves",
+      "source": "glenn_simpson",
+      "target": "veselnitskaya",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Simpson interacted with Veselnitskaya as part of the Prevezon litigation.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_fusion_meeting_DNC",
+      "source": "fusion_gps",
+      "target": "trump_tower_meeting",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "coordination",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: 'Russian network → Fusion GPS → Trump Tower meeting'. Simpson testified he did not know of the meeting beforehand and learned of it when public; Veselnitskaya denied telling him. Fusion's Prevezon work and the Agalarov/Goldstone meeting branch intersect only through Veselnitskaya — that is not proof of coordination.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_sidorkov_graff",
+      "source": "sidorkov",
+      "target": "rhona_graff",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "VK exec Sidorkov also contacted Rhona Graff at the Trump Organization.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
+        "date": "2017-12-14",
+        "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
+          "date": "2017-12-14",
+          "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_goldstone_putin",
+      "source": "goldstone",
+      "target": "kremlin",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "low",
+      "claim": "ATTEMPTED, NOT COMPLETED: Goldstone floated a possible Putin meeting for Trump during the campaign; no evidence the campaign followed through.",
+      "citation": {
+        "publisher": "Washington Post",
+        "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
+        "date": "2017-12-14",
+        "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post",
+          "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
+          "date": "2017-12-14",
+          "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "D"
+    },
+    {
+      "id": "e_gru_guccifer",
+      "source": "gru",
+      "target": "guccifer_2",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "Guccifer 2.0 was a GRU-controlled persona.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 3",
+        "date": "2019",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume3.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 3",
+          "date": "2019",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume3.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_gru_dcleaks",
+      "source": "gru",
+      "target": "dcleaks",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "ownership",
+      "confidence": "very_high",
+      "claim": "DCLeaks was a GRU-controlled persona.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 3",
+        "date": "2019",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume3.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 3",
+          "date": "2019",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume3.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_guccifer_wl",
+      "source": "guccifer_2",
+      "target": "wikileaks",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "material_exchange",
+      "confidence": "very_high",
+      "claim": "On June 29, 2016 a GRU-operated Guccifer 2.0 account sent an encrypted file to a WikiLeaks email address; further Guccifer 2.0↔WikiLeaks comms followed.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-06-29",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_dcleaks_wl",
+      "source": "dcleaks",
+      "target": "wikileaks",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "DCLeaks↔WikiLeaks communications documented.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report On The Investigation Into Russian Interference",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report On The Investigation Into Russian Interference",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_guccifer_stone",
+      "source": "guccifer_2",
+      "target": "stone",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Roger Stone communicated with the GRU persona Guccifer 2.0.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_wl_audience",
+      "source": "wikileaks",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "WikiLeaks releases propagated through U.S. media to voters.",
+      "citation": {
+        "publisher": "Senate Select Committee on Intelligence",
+        "title": "Report Volume 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Select Committee on Intelligence",
+          "title": "Report Volume 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A"
+    }
+  ]
+}
