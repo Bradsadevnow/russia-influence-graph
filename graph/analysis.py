@@ -138,6 +138,23 @@ for e in CONTESTED:
         for i, p in enumerate(routes[:3], 1):
             print(f"        route {i}: " + " → ".join(label(x) for x in p))
 
+# ---- Russian-origin reach: independent GRU→American-target routes ------------
+print("\n" + "="*78)
+print("RUSSIAN-ORIGIN REACH  (vertex-independent routes from GRU into US targets, in G_obs)")
+print("="*78)
+TARGETS = ["trump_campaign", "us_audience", "dtj", "stone", "breitbart"]
+for tid in TARGETS:
+    if tid not in NODES: continue
+    routes = vertex_independent_routes(OBS, "gru", tid)
+    print(f"\nGRU ──► {label(tid)}: {len(routes)} vertex-independent route(s)")
+    for i, pth in enumerate(routes[:4], 1):
+        print(f"    {i}: " + " → ".join(label(x) for x in pth))
+    if len(routes) >= 3:
+        print(f"    ⇒ {len(routes)} independent Russian-origin paths reach this node — structurally strong "
+              f"(no single intermediary is a chokepoint).")
+    elif len(routes) == 1 and routes[0][1:-1]:
+        print(f"    ⇒ single route; hinges on {' / '.join(label(x) for x in routes[0][1:-1])} (a chokepoint).")
+
 # ---- G_conditional(E): ASSUMING_TRUE — every result carries the assumption -----
 def reachable_nonsink(edgeset, s, extra=None):
     """Nodes reachable from s WITHOUT passing THROUGH sink/hub nodes

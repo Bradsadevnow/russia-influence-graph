@@ -93,3 +93,20 @@ audience/platform nodes = sinks, barred as criticality intermediates.
 Backfill pending (due-diligence): per-edge `date`, `evidence_quality`, and
 `independence_group` on citations (currently 1 citation/edge → independence collapse
 is a no-op until multi-source edges are added).
+
+## batch 05 — 2026-09-10 — GRU information-distribution architecture
+The cyber branch becomes a distribution network, not just a hack. New nodes:
+smoking_gun, the_hill, congressional_candidate, breitbart, corsi, wnd, bannon.
+GRU→Guccifer 2.0 seeded stolen material DIRECTLY to American recipients: The Smoking
+Gun (Jun 27), The Hill (congressional-race oppo), a U.S. congressional candidate
+(Aug 15). Stone→Breitbart (Aug 5 article crediting Guccifer, not Russia; then
+Guccifer↔Stone DMs Aug 14–Sep); Stone→Corsi→WND + Corsi→WikiLeaks (Jul 25 email to
+reach Assange); Stone→Bannon→campaign (press strategy around anticipated releases,
+per Gates). Recipients typed downstream/UNWITTING — DOJ: not alleged to know the
+source was Russian intelligence. Added `analysis.py` RUSSIAN-ORIGIN REACH metric
+(vertex-independent GRU→target routes).
+NEW do_not_claim: `e_stone_gru_knowledge` (Stone knew Guccifer was the GRU). Criticality:
+Stone already connected to GRU by 2 independent routes (Guccifer AND WikiLeaks) — so
+ASSUMING_TRUE raises Stone's *consequence*, not the *topology*, and never the knowledge
+claim. 61 nodes / 93 edges; normalized to schema 1.0; validator clean.
+Reach snapshot: GRU→campaign 2 independent routes; GRU→Stone 2; GRU→Breitbart 1 (chokepoint = Guccifer/Stone).

@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "SEED + batch 02 (Goldstone bridge) + batch 03 (2nd-order network: Veselnitskaya/Prevezon/Katsyv, HRAGI/Akhmetshin/Rohrabacher, anti-Magnitsky film, GRU personas Guccifer 2.0/DCLeaks). KEY NEGATIVE FINDING: Fusion GPS typed separately, do_not_claim on Fusion->Trump Tower meeting. Three architectures A(lobbying)/B(cyber-intel)/C(RT-media) intersect only through shared bridges, NOT centrally directed.",
+    "status": "1.0 + batch 05 (GRU information-distribution architecture: Guccifer 2.0 → The Smoking Gun / The Hill / a congressional candidate directly; Stone→Breitbart, Stone→Corsi→WND, Stone→Bannon→campaign). Recipients typed downstream/unwitting. New do_not_claim: Stone knew Guccifer was GRU.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -482,6 +482,61 @@
       "type": "person_intermediary",
       "us_class": "downstream",
       "notes": "Trump Organization; contacted in the VK overture."
+    },
+    {
+      "id": "smoking_gun",
+      "label": "The Smoking Gun",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "downstream",
+      "notes": "Received GRU-provided stolen material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+    },
+    {
+      "id": "the_hill",
+      "label": "The Hill",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "downstream",
+      "notes": "Received GRU-provided material via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+    },
+    {
+      "id": "congressional_candidate",
+      "label": "U.S. congressional candidate (2016)",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Received stolen material on opponent via Guccifer 2.0. DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator."
+    },
+    {
+      "id": "breitbart",
+      "label": "Breitbart",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "downstream",
+      "notes": "Published Stone's Aug 5 2016 article crediting Guccifer 2.0 (not Russia) for the DNC hack."
+    },
+    {
+      "id": "corsi",
+      "label": "Jerome Corsi",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "bridge_amplifier",
+      "notes": "WND (2016); Stone's operative — media production + political op + WikiLeaks dissemination. Bridge node."
+    },
+    {
+      "id": "wnd",
+      "label": "WorldNetDaily (WND)",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "downstream"
+    },
+    {
+      "id": "bannon",
+      "label": "Steve Bannon",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Told by Stone of an Assange relationship / inside WikiLeaks info; later campaign chairman. Received info; NOT coordinating with Russia."
     }
   ],
   "edges": [
@@ -2857,7 +2912,7 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "Roger Stone communicated with the GRU persona Guccifer 2.0.",
+      "claim": "Roger Stone communicated with the GRU persona Guccifer 2.0; they exchanged direct messages from Aug 14 through September 2016.",
       "citation": {
         "publisher": "Senate Select Committee on Intelligence",
         "title": "Report Volume 5",
@@ -2911,6 +2966,474 @@
       ],
       "date": "2020",
       "evidence_quality": "A"
+    },
+    {
+      "id": "e_guccifer_smokinggun",
+      "source": "guccifer_2",
+      "target": "smoking_gun",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "material_exchange",
+      "confidence": "very_high",
+      "claim": "On June 27, 2016 Guccifer 2.0 contacted The Smoking Gun offering exclusive access to stolen Clinton-related material; the GRU provided a password and link to a restricted archive of stolen emails.",
+      "quote": "DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-06-27",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_guccifer_hill",
+      "source": "guccifer_2",
+      "target": "the_hill",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "material_exchange",
+      "confidence": "high",
+      "claim": "Guccifer 2.0 supplied material directly to The Hill — political strategy and opposition research, including documents on competitive congressional races.",
+      "quote": "DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_guccifer_candidate",
+      "source": "guccifer_2",
+      "target": "congressional_candidate",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "material_exchange",
+      "confidence": "very_high",
+      "claim": "On August 15, 2016 Guccifer 2.0 provided a U.S. congressional candidate stolen material concerning the candidate's opponent.",
+      "quote": "DOJ: American recipients were not alleged to know they were communicating with Russian intelligence — recipient, not collaborator.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-08-15",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_smokinggun_aud",
+      "source": "smoking_gun",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Material reached U.S. readers.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_hill_aud",
+      "source": "the_hill",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Material reached U.S. readers.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_candidate_aud",
+      "source": "congressional_candidate",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Stolen material entered the electoral environment.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Mueller Report — Russian Hacking and Dumping Operations",
+        "date": "2019",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Mueller Report — Russian Hacking and Dumping Operations",
+          "date": "2019",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Hacking_and_Dumping_Operations",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_stone_breitbart",
+      "source": "stone",
+      "target": "breitbart",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "high",
+      "claim": "On August 5, 2016 Stone published a Breitbart article arguing Guccifer 2.0 — not Russia — was responsible for the DNC hack, relying on the Guccifer persona's statements. Guccifer then contacted Stone; they exchanged DMs Aug 14–Sept.",
+      "citation": {
+        "publisher": "FactCheck.org",
+        "title": "Misrepresenting Stone's Prescience",
+        "date": "2017-03",
+        "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
+        "primary": false,
+        "independence_group": "FactCheck.org"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "FactCheck.org",
+          "title": "Misrepresenting Stone's Prescience",
+          "date": "2017-03",
+          "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
+          "primary": false,
+          "independence_group": "FactCheck.org"
+        }
+      ],
+      "date": "2016-08-05",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_breitbart_aud",
+      "source": "breitbart",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Reached an American audience.",
+      "citation": {
+        "publisher": "FactCheck.org",
+        "title": "Misrepresenting Stone's Prescience",
+        "date": "2017-03",
+        "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
+        "primary": false,
+        "independence_group": "FactCheck.org"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "FactCheck.org",
+          "title": "Misrepresenting Stone's Prescience",
+          "date": "2017-03",
+          "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
+          "primary": false,
+          "independence_group": "FactCheck.org"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_stone_corsi",
+      "source": "stone",
+      "target": "corsi",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Stone worked with Jerome Corsi (WND); on July 25, 2016 Stone emailed Corsi instructing him to contact Assange and obtain pending WikiLeaks material. Corsi shifted from producing WND content with Stone to acting as an operative assisting Stone.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016-07-25",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_corsi_wnd",
+      "source": "corsi",
+      "target": "wnd",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Corsi worked for WorldNetDaily (WND) in 2016.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_corsi_wikileaks",
+      "source": "corsi",
+      "target": "wikileaks",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "At Stone's direction, Corsi sought to contact Assange / obtain pending WikiLeaks material.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_wnd_aud",
+      "source": "wnd",
+      "target": "us_audience",
+      "evidence_class": "documented_contact",
+      "mechanism": "distribution",
+      "confidence": "high",
+      "claim": "Reached a U.S. audience.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_stone_bannon",
+      "source": "stone",
+      "target": "bannon",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Stone told Bannon (before Bannon joined the campaign) that he had a relationship with Assange and inside information about WikiLeaks; after Bannon became chairman, Stone continued telling him WikiLeaks would release damaging Clinton material.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_bannon_campaign",
+      "source": "bannon",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Bannon became Trump campaign chairman; the campaign developed a communications strategy around potential WikiLeaks releases (Gates to Mueller).",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_stone_gru_knowledge",
+      "source": "stone",
+      "target": "gru",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "knowledge",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Stone knew Guccifer 2.0 was Russian intelligence (the GRU). The evidence establishes Stone's communications with Guccifer 2.0 and WikiLeaks and his publishing about the persona; knowledge of the Russian-intelligence identity is not established. ASSUMING_TRUE would raise Stone's consequence, not the knowledge claim.",
+      "citation": {
+        "publisher": "DOJ / Special Counsel (Mueller Report)",
+        "title": "Report Vol. I",
+        "date": "2019",
+        "url": "https://www.justice.gov/storage/report_volume1.pdf",
+        "primary": true,
+        "independence_group": "DOJ-SCO(Mueller)"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Special Counsel (Mueller Report)",
+          "title": "Report Vol. I",
+          "date": "2019",
+          "url": "https://www.justice.gov/storage/report_volume1.pdf",
+          "primary": true,
+          "independence_group": "DOJ-SCO(Mueller)"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "N/A"
     }
   ]
 }
