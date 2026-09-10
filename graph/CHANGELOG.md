@@ -110,3 +110,27 @@ Stone already connected to GRU by 2 independent routes (Guccifer AND WikiLeaks) 
 ASSUMING_TRUE raises Stone's *consequence*, not the *topology*, and never the knowledge
 claim. 61 nodes / 93 edges; normalized to schema 1.0; validator clean.
 Reach snapshot: GRU→campaign 2 independent routes; GRU→Stone 2; GRU→Breitbart 1 (chokepoint = Guccifer/Stone).
+
+## batch 06 — 2026-09-10 — Cooper/Potomac bridge + lobbying cluster + guardrails
+STANDOUT: Chris Cooper / Potomac Square Group — a recurring American PR professional
+who organized the 2016 anti-Magnitsky film screening (HRAGIF-compensated; FBI email
+chain) and later did paid media consulting for the Gabbard campaign (2017, ~$19,400,
+FEC). New nodes: cooper, potomac, gabbard_campaign, arakelian, cymrot, schweitzer,
+dellums. Lobbying cluster densified: Cymrot/BakerHostetler briefed Congress; Dellums
++ Akhmetshin lobbied congressional offices; Rohrabacher entered film material into the
+congressional record (ProPublica). Hermitage/Browder FARA complaint participants
+(Schweitzer, Cymrot-as-campaign) typed LOW/allegation (evidence_quality D) — not
+adjudicated.
+THREE new do_not_claim guardrails, all demonstrated by criticality:
+- Fusion→anti-Magnitsky lobbying: NOT established (litigation support; WaPo). 2 routes
+  already exist → assuming changes nothing.
+- Russia→Gabbard: NOT established. Criticality = ONE route, single chokepoint chain
+  ending at Potomac Square Group — i.e. the ONLY structural link is the shared PR
+  contractor (Cooper). Personnel continuity, NOT influence transmission. ASSUMING_TRUE
+  creates no new reachability.
+- 2016→2024 cast migration (Potomac→Tenet): NOT established — no evidence the 2016
+  intermediaries entered the 2024 Tenet/RT architecture.
+HYPOTHESIS (not a finding): the persistent object is the ARCHITECTURE (Russian-linked
+client → American intermediary → lobbying + media/PR → Congress/audience), which
+recurs 2016→2024 with a DIFFERENT American cast (DOJ 2024 describes the same shape).
+68 nodes / 109 edges; 58 verified; schema 1.0; validator clean.

@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 05 (GRU information-distribution architecture: Guccifer 2.0 → The Smoking Gun / The Hill / a congressional candidate directly; Stone→Breitbart, Stone→Corsi→WND, Stone→Bannon→campaign). Recipients typed downstream/unwitting. New do_not_claim: Stone knew Guccifer was GRU.",
+    "status": "1.0 + batch 06 (Cooper/Potomac Square Group — recurring American PR bridge 2016 anti-Magnitsky → 2017 Gabbard; dense lobbying cluster Arakelian/Cymrot/Dellums/Schweitzer w/ Hermitage FARA allegations typed low). Guardrails: Fusion→lobbying, Russia→Gabbard, 2016→2024 cast = do_not_claim. Hypothesis: the persistent object is the ARCHITECTURE, not the cast.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -537,6 +537,62 @@
       "type": "person_intermediary",
       "us_class": "downstream",
       "notes": "Told by Stone of an Assange relationship / inside WikiLeaks info; later campaign chairman. Received info; NOT coordinating with Russia."
+    },
+    {
+      "id": "cooper",
+      "label": "Chris Cooper",
+      "layer": "us_media",
+      "type": "person_intermediary",
+      "us_class": "bridge_amplifier",
+      "notes": "Potomac Square Group. Recurring American PR bridge: organized the 2016 anti-Magnitsky film screening; later paid media consultant to the Gabbard campaign (2017). Personnel continuity ≠ influence transmission."
+    },
+    {
+      "id": "potomac",
+      "label": "Potomac Square Group",
+      "layer": "us_media",
+      "type": "network",
+      "us_class": "bridge_amplifier",
+      "notes": "US PR/lobbying firm; compensated by HRAGIF for the 2016 Washington Magnitsky-film screening; later retained by the Gabbard campaign."
+    },
+    {
+      "id": "gabbard_campaign",
+      "label": "Tulsi Gabbard campaign (2017)",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Paid Potomac Square Group ~$19,400 for media consulting (2017). The ONLY documented link to the Russia cluster is the shared PR contractor Cooper — NOT an influence path. See do_not_claim."
+    },
+    {
+      "id": "arakelian",
+      "label": "Robert Arakelian",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Introduced to Simpson as a friend of Katsyv; listed in HRAGIF lobbying records. Documented association; functional role unclear/contested."
+    },
+    {
+      "id": "cymrot",
+      "label": "Mark Cymrot",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "BakerHostetler lawyer on the Prevezon matter; briefed congressional staff."
+    },
+    {
+      "id": "schweitzer",
+      "label": "Howard Schweitzer",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "notes": "Cozen O'Connor Public Strategies. Named in the Hermitage FARA complaint (allegation)."
+    },
+    {
+      "id": "dellums",
+      "label": "Ron Dellums",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "notes": "Former congressman; lobbied congressional offices on Magnitsky alongside Akhmetshin (RFE)."
     }
   ],
   "edges": [
@@ -2478,7 +2534,7 @@
       "evidence_class": "documented_contact",
       "mechanism": "lobbying",
       "confidence": "high",
-      "claim": "Rohrabacher subsequently sought to challenge the Magnitsky narrative in Congress. INFLUENCE RECIPIENT, not a controlled asset.",
+      "claim": "The lobbying campaign persuaded Rohrabacher to enter material from the anti-Magnitsky documentary into the congressional record. INFLUENCE RECIPIENT, not a controlled asset.",
       "citation": {
         "publisher": "Los Angeles Times",
         "title": "Rohrabacher-Russia timeline",
@@ -3433,6 +3489,502 @@
         }
       ],
       "date": "2019",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_cooper_potomac",
+      "source": "cooper",
+      "target": "potomac",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Chris Cooper is of Potomac Square Group.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "CEG to FBI (follow-up to Steele letter) — FBI email chain re June 13 2016 Magnitsky screening",
+        "date": "2017-04-28",
+        "url": "https://www.judiciary.senate.gov/imo/media/doc/2017-04-28%20CEG%20to%20FBI%20%28follow-up%20to%20Steele%20letter%29%20with%20attachments.pdf",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "CEG to FBI (follow-up to Steele letter) — FBI email chain re June 13 2016 Magnitsky screening",
+          "date": "2017-04-28",
+          "url": "https://www.judiciary.senate.gov/imo/media/doc/2017-04-28%20CEG%20to%20FBI%20%28follow-up%20to%20Steele%20letter%29%20with%20attachments.pdf",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_hragi_potomac",
+      "source": "hragi",
+      "target": "potomac",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "high",
+      "claim": "Potomac Square Group was the PR firm retained for the Washington Magnitsky-film screening; Cooper confirmed the company was compensated by HRAGIF.",
+      "citation": {
+        "publisher": "RFE/RL",
+        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+        "date": "2016",
+        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "primary": false,
+        "independence_group": "RFE/RL"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "RFE/RL",
+          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+          "date": "2016",
+          "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+          "primary": false,
+          "independence_group": "RFE/RL"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_cooper_film",
+      "source": "cooper",
+      "target": "anti_magnitsky_film",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Cooper organized the June 13, 2016 Washington screening of the Magnitsky documentary (alongside Akhmetshin); an FBI-released email chain shows him coordinating logistics.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "CEG to FBI (follow-up to Steele letter) — FBI email chain re June 13 2016 Magnitsky screening",
+        "date": "2017-04-28",
+        "url": "https://www.judiciary.senate.gov/imo/media/doc/2017-04-28%20CEG%20to%20FBI%20%28follow-up%20to%20Steele%20letter%29%20with%20attachments.pdf",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "CEG to FBI (follow-up to Steele letter) — FBI email chain re June 13 2016 Magnitsky screening",
+          "date": "2017-04-28",
+          "url": "https://www.judiciary.senate.gov/imo/media/doc/2017-04-28%20CEG%20to%20FBI%20%28follow-up%20to%20Steele%20letter%29%20with%20attachments.pdf",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2016-06-13",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_potomac_gabbard",
+      "source": "potomac",
+      "target": "gabbard_campaign",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Gabbard's campaign paid Potomac Square Group ~$19,400 for media consulting in 2017 (FEC records).",
+      "citation": {
+        "publisher": "Hawaii Free Press",
+        "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+        "date": "2019",
+        "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+        "primary": false,
+        "independence_group": "Hawaii Free Press"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Hawaii Free Press",
+          "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+          "date": "2019",
+          "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+          "primary": false,
+          "independence_group": "Hawaii Free Press"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_cooper_gabbard",
+      "source": "cooper",
+      "target": "gabbard_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Cooper described himself as a consultant to Gabbard and communicated with a Hawaii publication about coverage of her.",
+      "citation": {
+        "publisher": "Hawaii Free Press",
+        "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+        "date": "2019",
+        "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+        "primary": false,
+        "independence_group": "Hawaii Free Press"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Hawaii Free Press",
+          "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+          "date": "2019",
+          "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+          "primary": false,
+          "independence_group": "Hawaii Free Press"
+        }
+      ],
+      "date": "2019",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_katsyv_arakelian",
+      "source": "katsyv",
+      "target": "arakelian",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "medium",
+      "claim": "Arakelian was introduced to Simpson as a friend of Denis Katsyv; Simpson said he did not know Arakelian's role. Documented association, unclear functional role.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Interview of Glenn Simpson (transcript)",
+        "date": "2017-08-22",
+        "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Interview of Glenn Simpson (transcript)",
+          "date": "2017-08-22",
+          "url": "https://en.wikisource.org/wiki/Senate_Judiciary_Committee_Interview_of_Glenn_Simpson",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_arakelian_hragi",
+      "source": "arakelian",
+      "target": "hragi",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "medium",
+      "claim": "Arakelian is listed in HRAGIF lobbying records.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower transcripts/documents (Grassley)",
+        "date": "2017-2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower transcripts/documents (Grassley)",
+          "date": "2017-2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_cymrot_baker",
+      "source": "cymrot",
+      "target": "bakerhostetler",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Mark Cymrot was the BakerHostetler lawyer on the Prevezon matter.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower transcripts/documents (Grassley)",
+        "date": "2017-2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower transcripts/documents (Grassley)",
+          "date": "2017-2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_baker_congress",
+      "source": "bakerhostetler",
+      "target": "us_congress",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "BakerHostetler briefed congressional staff on the Prevezon case.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Trump Tower transcripts/documents (Grassley)",
+        "date": "2017-2018",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+        "primary": true,
+        "independence_group": "SJC"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Trump Tower transcripts/documents (Grassley)",
+          "date": "2017-2018",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/judiciary-committee-releases-transcripts-documents-following-trump-tower-meeting-inquiry",
+          "primary": true,
+          "independence_group": "SJC"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_akh_dellums",
+      "source": "akhmetshin",
+      "target": "dellums",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "Akhmetshin and Ron Dellums met with congressional offices regarding Magnitsky.",
+      "citation": {
+        "publisher": "RFE/RL",
+        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+        "date": "2016",
+        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "primary": false,
+        "independence_group": "RFE/RL"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "RFE/RL",
+          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+          "date": "2016",
+          "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+          "primary": false,
+          "independence_group": "RFE/RL"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_dellums_congress",
+      "source": "dellums",
+      "target": "us_congress",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "high",
+      "claim": "Dellums lobbied congressional offices on Magnitsky.",
+      "citation": {
+        "publisher": "RFE/RL",
+        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+        "date": "2016",
+        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "primary": false,
+        "independence_group": "RFE/RL"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "RFE/RL",
+          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
+          "date": "2016",
+          "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+          "primary": false,
+          "independence_group": "RFE/RL"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_schweitzer_hragi",
+      "source": "schweitzer",
+      "target": "hragi",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "low",
+      "claim": "ALLEGED in the Hermitage/Browder FARA complaint (not adjudicated): Schweitzer (Cozen O'Connor Public Strategies) worked on the anti-Magnitsky campaign.",
+      "citation": {
+        "publisher": "Hermitage/Browder FARA complaint (ALLEGATION, not adjudicated)",
+        "title": "CEG to DOJ — Anti-Magnitsky FARA violations",
+        "date": "2017-03-31",
+        "url": "https://www.investigace.cz/wp-content/uploads/2017/05/2017-03-31-CEG-to-DOJ-Anti-Magnitsky-FARA-violations-with-attachments.pdf",
+        "primary": false,
+        "independence_group": "USIC-ICA"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Hermitage/Browder FARA complaint (ALLEGATION, not adjudicated)",
+          "title": "CEG to DOJ — Anti-Magnitsky FARA violations",
+          "date": "2017-03-31",
+          "url": "https://www.investigace.cz/wp-content/uploads/2017/05/2017-03-31-CEG-to-DOJ-Anti-Magnitsky-FARA-violations-with-attachments.pdf",
+          "primary": false,
+          "independence_group": "USIC-ICA"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "D"
+    },
+    {
+      "id": "e_cymrot_hragi",
+      "source": "cymrot",
+      "target": "hragi",
+      "evidence_class": "documented_contact",
+      "mechanism": "lobbying",
+      "confidence": "low",
+      "claim": "ALLEGED in the Hermitage/Browder FARA complaint (not adjudicated): Cymrot/BakerHostetler worked on the anti-Magnitsky campaign. (The BakerHostetler litigation/briefing role is separately documented at higher confidence.)",
+      "citation": {
+        "publisher": "Hermitage/Browder FARA complaint (ALLEGATION, not adjudicated)",
+        "title": "CEG to DOJ — Anti-Magnitsky FARA violations",
+        "date": "2017-03-31",
+        "url": "https://www.investigace.cz/wp-content/uploads/2017/05/2017-03-31-CEG-to-DOJ-Anti-Magnitsky-FARA-violations-with-attachments.pdf",
+        "primary": false,
+        "independence_group": "USIC-ICA"
+      },
+      "verification": "needs_primary",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Hermitage/Browder FARA complaint (ALLEGATION, not adjudicated)",
+          "title": "CEG to DOJ — Anti-Magnitsky FARA violations",
+          "date": "2017-03-31",
+          "url": "https://www.investigace.cz/wp-content/uploads/2017/05/2017-03-31-CEG-to-DOJ-Anti-Magnitsky-FARA-violations-with-attachments.pdf",
+          "primary": false,
+          "independence_group": "USIC-ICA"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "D"
+    },
+    {
+      "id": "e_fusion_lobbying_DNC",
+      "source": "fusion_gps",
+      "target": "hragi",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "lobbying",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: Fusion GPS was part of the anti-Magnitsky lobbying/propaganda effort. Fusion was hired by BakerHostetler for Prevezon LITIGATION support; the WaPo Fact Checker found little evidence Fusion itself engaged in anti-Magnitsky advocacy, though its research could have aided opponents of Magnitsky.",
+      "citation": {
+        "publisher": "Washington Post Fact Checker",
+        "title": "Trump, Russia and the opposition research firm run by ex-journalists",
+        "date": "2017-08-09",
+        "url": "https://www.washingtonpost.com/news/fact-checker/wp/2017/08/09/trump-russia-and-the-opposition-research-firm-run-by-ex-journalists/",
+        "primary": false,
+        "independence_group": "WaPo"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Washington Post Fact Checker",
+          "title": "Trump, Russia and the opposition research firm run by ex-journalists",
+          "date": "2017-08-09",
+          "url": "https://www.washingtonpost.com/news/fact-checker/wp/2017/08/09/trump-russia-and-the-opposition-research-firm-run-by-ex-journalists/",
+          "primary": false,
+          "independence_group": "WaPo"
+        }
+      ],
+      "date": "2017",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_russia_gabbard_DNC",
+      "source": "kremlin",
+      "target": "gabbard_campaign",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "coordination",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: any Russia→Gabbard or Veselnitskaya→Gabbard influence path. The ONLY documented link is a shared American PR contractor (Cooper / Potomac Square Group) who worked the 2016 anti-Magnitsky campaign and later did paid media consulting for Gabbard — personnel/business continuity, NOT influence transmission. Requires its own evidence.",
+      "citation": {
+        "publisher": "Hawaii Free Press",
+        "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+        "date": "2019",
+        "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+        "primary": false,
+        "independence_group": "Hawaii Free Press"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Hawaii Free Press",
+          "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
+          "date": "2019",
+          "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+          "primary": false,
+          "independence_group": "Hawaii Free Press"
+        }
+      ],
+      "date": "2016",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_2016_2024_bridge_DNC",
+      "source": "potomac",
+      "target": "tenet",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that the 2016 anti-Magnitsky intermediaries (Cooper/Potomac/Akhmetshin/Arakelian) migrated into the 2024 Tenet/RT covert-funding architecture. No evidence found. What recurs so far is the ARCHITECTURE (Russian-linked client → American intermediary → lobbying + media/PR → Congress/audience), not the cast — a hypothesis, not a finding. DOJ's 2024 cases describe the same shape with different American intermediaries.",
+      "citation": {
+        "publisher": "DOJ OPA",
+        "title": "Justice Department Disrupts Covert Russian Government-Sponsored Foreign Malign Influence Operation",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
+        "primary": true,
+        "independence_group": "DOJ"
+      },
+      "verification": "verified",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ OPA",
+          "title": "Justice Department Disrupts Covert Russian Government-Sponsored Foreign Malign Influence Operation",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
+          "primary": true,
+          "independence_group": "DOJ"
+        }
+      ],
+      "date": "2016",
       "evidence_quality": "N/A"
     }
   ]
