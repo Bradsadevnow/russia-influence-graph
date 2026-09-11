@@ -579,3 +579,12 @@ print("  Russia->TPUSA: NOT established (e_rt_tpusa_DNC). Russia->Benny virality
 print("  (e_russia_benny_virality_DNC — the documented cause is TPUSA's domestic machine).")
 print("  => This is INFRASTRUCTURE_EXPLOITATION territory: did the operation plug into a pre-optimized")
 print("  American amplifier it did not build? (OQ-02) — a different architecture from Russian penetration.")
+
+# ---- RUSSIAN INTERACTION MODES (same US ecosystem, different mechanisms/eras) --
+print("\n" + "="*78)
+print("RUSSIAN INTERACTION MODES  (same American ecosystem, different mechanism + era)")
+print("="*78)
+_m=g.get("metadata",{}).get("russian_interaction_modes",{})
+for k in ("2016_CONTENT_HARVEST","2021_2024_COUPLING"):
+    if k in _m: print(f"  {k}: {_m[k]}")
+if _m.get("finding"): print(f"  => {_m['finding']}")

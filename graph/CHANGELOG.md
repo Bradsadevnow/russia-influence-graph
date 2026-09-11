@@ -280,3 +280,13 @@ Chain now runs document → relationship → network → organizational mechanis
 - analysis.py prints DOMESTIC AMPLIFICATION INFRASTRUCTURE. Removal test: TPUSA still not a creator-cluster cut-point (6/6), no Russian reach. Scoreboard unchanged: 1 direct (Southern) + 0 mediated.
 
 90 nodes / 203 edges. validate.py clean.
+
+## batch 19 (2026-09-11) — IRA → TPUSA_CONTENT (2016 content-harvest, Chen-independent)
+**A real Russian-side edge to the TPUSA ecosystem, independent of Chen — modeled as content-harvest, not organizational penetration.**
+- New node `tpusa_content` (layer content) — TPUSA's authentic media OUTPUT, deliberately separate from the org so Russian amplification can never transit to TPUSA/Benny/creators. Verified: IRA influence-reach = {tpusa_content} only; reaches org/Benny/Tenet/creators = False.
+- `e_ira_tpusa_content` (verified, SSCI New Knowledge + Just Security + WaPo Examiner): 2016 IRA shared/rebranded TPUSA memes (Memopolis, Angry Eagle; sometimes leaving TPUSA branding intact). `relationship_type: AMPLIFICATION`, `relationship_class: CONTENT_HARVEST`, conduit=false, scoreboard=false. IRA reclassified `RUSSIAN_STATE_LINKED_PRIVATE` (Prigozhin contractor).
+- `e_tpusa_produces_content` (turning_point_usa→tpusa_content, domestic, directed so content never routes back).
+- `e_ira_tpusa_org_DNC` (do_not_claim): reaffirms NO IRA/Russia→TPUSA organizational relationship; exploitation of OUTPUT ≠ org relationship.
+- `metadata.russian_interaction_modes`: **2016 CONTENT_HARVEST** (IRA→content) vs **2021-24 COUPLING** (RT→Chen→Tenet→creators) — same ecosystem, two mechanisms ~5-8 yrs apart; Russia created the network in neither. `architecture_distinctions.CONTENT_HARVEST` added.
+- Publishable statement: "IRA accounts were documented amplifying and rebranding TPUSA content during the 2016 operation. This establishes Russian exploitation of TPUSA's media output, not Russian control, funding, or coordination with TPUSA."
+- Scoreboard unchanged: 1 direct (Southern) + 0 mediated. 91 nodes / 206 edges. validate.py clean.

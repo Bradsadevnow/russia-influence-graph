@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 18: TPUSA modeled as a documented DOMESTIC amplification machine ($7.2M media, 400+ creators, production/PR/events/training) with Benny Johnson (CCO Feb 2019) as operator + TPUSA Productions arm. do_not_claim: Russia did NOT cause Benny's virality (American institutional explanation). Temporal arc + OQ-02 (did Russia EXPLOIT a pre-optimized American amplifier?) banked. Still NO Russia->TPUSA. 2 of 6 documented inside TPUSA's machine pre-Tenet (Benny, Chen).",
+    "status": "1.0 + batch 19: IRA->TPUSA_CONTENT (2016 CONTENT_HARVEST) — a Russian-side edge to the TPUSA ecosystem INDEPENDENT of Chen, modeled on a SEPARATE tpusa_content node so it never transits to the org/Benny/creators. do_not_claim reaffirmed: NO IRA/Russia->TPUSA organizational relationship. Two documented Russian interaction modes banked (2016 content-harvest vs 2021-24 coupling). Scoreboard unchanged.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -80,7 +80,8 @@
         "APPEARANCE",
         "CONTACT",
         "OWNERSHIP",
-        "DIRECTION"
+        "DIRECTION",
+        "CONTENT_REUSE"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -88,7 +89,8 @@
         "PERSONNEL_CONTINUITY",
         "SHARED_MEDIA_INFRASTRUCTURE",
         "CONTENT",
-        "DOMESTIC_MEMBERSHIP"
+        "DOMESTIC_MEMBERSHIP",
+        "CONTENT_HARVEST"
       ]
     },
     "rules": [
@@ -160,7 +162,8 @@
     "architecture_distinctions": {
       "PERSON_MEDIATED": "Russian node -> American PERSON -> American INSTITUTION. Documented: RT -> Chen -> TPUSA. The institution is reached THROUGH a person; the institution itself is not Russian-linked.",
       "INSTITUTION_DIRECT": "Russian node -> American INSTITUTION directly (funding/control/org). NOT established for TPUSA. Materially different, stronger claim; do not conflate with person-mediated proximity.",
-      "INFRASTRUCTURE_EXPLOITATION": "Russian operation plugs into a PRE-EXISTING American amplification system (e.g. TPUSA's influencer machine) that it did not build or control. Documented that the machine exists and Benny/Chen were inside it; NOT documented that Russia directed or used TPUSA. Distinct from PERSON_MEDIATED and INSTITUTION_DIRECT."
+      "INFRASTRUCTURE_EXPLOITATION": "Russian operation plugs into a PRE-EXISTING American amplification system (e.g. TPUSA's influencer machine) that it did not build or control. Documented that the machine exists and Benny/Chen were inside it; NOT documented that Russia directed or used TPUSA. Distinct from PERSON_MEDIATED and INSTITUTION_DIRECT.",
+      "CONTENT_HARVEST": "Russian operation harvests/rebrands authentic American content for its own distribution (IRA reusing TPUSA memes, 2016). Exploitation of OUTPUT, dead-ended at a content node; not control/funding/coordination of the organization, and not a path to its people."
     },
     "org_penetration_sweep": {
       "turning_point_usa": "not_established (direct Russia->TPUSA); present only as PERSON_MEDIATED via Chen. Queries: TPUSA+Russia/RT/FARA/funding/government/influence."
@@ -175,7 +178,12 @@
       "2023: Chen/Donovan assemble Tenet.",
       "2023-11: Tenet launches with creators already inside this ecosystem.",
       "2024-09: DOJ alleges RT covertly funded/directed Tenet."
-    ]
+    ],
+    "russian_interaction_modes": {
+      "2016_CONTENT_HARVEST": "IRA harvested/rebranded authentic TPUSA content for its own distribution (IRA -> tpusa_content). Exploitation of output; no org relationship.",
+      "2021_2024_COUPLING": "RT personnel/organizational coupling: RT -> Chen (contribution) -> Tenet -> existing creator network. Founder-level access to people embedded in the ecosystem.",
+      "finding": "Same American information ecosystem, two fundamentally different Russian interaction modes, ~5-8 years apart. Russia did not create the network in either case; in 2016 it exploited authentic content, later it coupled at the founder level."
+    }
   },
   "nodes": [
     {
@@ -247,7 +255,7 @@
       "type": "operation",
       "us_class": null,
       "notes": "St. Petersburg troll farm; Mueller 2018 indictment.",
-      "actor_class": "RUSSIAN_STATE"
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "project_lakhta",
@@ -1033,6 +1041,15 @@
       "actor_class": "US_ACTOR",
       "organization_type": "PRODUCTION_ARM",
       "notes": "TPUSA's content/production arm (established 2018). The production muscle of the amplification machine Benny Johnson ran as CCO."
+    },
+    {
+      "id": "tpusa_content",
+      "label": "TPUSA content / media output",
+      "layer": "content",
+      "type": "content",
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR",
+      "notes": "Turning Point USA's authentic media output (memes/content). MODELED AS A DISTINCT NODE from the TPUSA org so that Russian amplification of CONTENT can never transit to the organization, Benny, or the creators. Dead-ends the IRA edge."
     }
   ],
   "edges": [
@@ -7682,6 +7699,127 @@
         }
       ],
       "date": "2022",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_tpusa_produces_content",
+      "source": "turning_point_usa",
+      "target": "tpusa_content",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "very_high",
+      "claim": "TPUSA produced the authentic branded content in question.",
+      "citation": {
+        "publisher": "SSCI-commissioned New Knowledge report",
+        "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+        "date": "2018-12",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+        "primary": true,
+        "independence_group": "ssci_new_knowledge"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "domestic",
+      "relationship_type": "CONTENT_REUSE",
+      "relationship_class": "DOMESTIC_MEMBERSHIP",
+      "conduit": false,
+      "scoreboard": false,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI-commissioned New Knowledge report",
+          "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+          "date": "2018-12",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+          "primary": true,
+          "independence_group": "ssci_new_knowledge"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_ira_tpusa_content",
+      "source": "ira",
+      "target": "tpusa_content",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "amplification",
+      "confidence": "very_high",
+      "claim": "2016: the Russian IRA shared TPUSA-created memes and rebranded some TPUSA content with IRA page branding (Memopolis, Angry Eagle); TPUSA was an exception in that operators sometimes left the TPUSA branding intact. Russian EXPLOITATION of TPUSA's media OUTPUT — not control, funding, or coordination with TPUSA. Independent of Chen and years before Tenet.",
+      "citations": [
+        {
+          "publisher": "SSCI-commissioned New Knowledge report",
+          "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+          "date": "2018-12",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+          "primary": true,
+          "independence_group": "ssci_new_knowledge"
+        },
+        {
+          "publisher": "Just Security (New Knowledge report copy)",
+          "title": "TPUSA content on IRA far-right youth pages (Memopolis, Angry Eagle)",
+          "date": "2019-03",
+          "url": "https://www.justsecurity.org/wp-content/uploads/2019/03/12.17.18-New-Knowledge-Report-on-IRA.pdf",
+          "primary": true,
+          "independence_group": "ssci_new_knowledge"
+        },
+        {
+          "publisher": "Washington Examiner",
+          "title": "IRA regularly shared TPUSA material, sometimes leaving TPUSA branding intact",
+          "date": "2018-12",
+          "url": "https://www.washingtonexaminer.com/opinion/818524/russia-used-turning-point-usa-memes-to-wage-a-propaganda-war/",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "verification": "verified",
+      "date": "2016",
+      "event_period": "2016",
+      "domain": "influence",
+      "relationship_type": "AMPLIFICATION",
+      "relationship_class": "CONTENT_HARVEST",
+      "conduit": false,
+      "scoreboard": false,
+      "provenance": "observed",
+      "citation": {
+        "publisher": "SSCI-commissioned New Knowledge report",
+        "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+        "date": "2018-12",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+        "primary": true,
+        "independence_group": "ssci_new_knowledge"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_ira_tpusa_org_DNC",
+      "source": "ira",
+      "target": "turning_point_usa",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "funding",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: IRA/Russia control, funding, or coordination WITH the Turning Point USA organization. What is documented is IRA amplifying/rebranding TPUSA's authentic CONTENT (e_ira_tpusa_content). Exploitation of OUTPUT is not an organizational relationship — the content node is deliberately separate so this cannot be read as Russia->TPUSA.",
+      "citation": {
+        "publisher": "SSCI-commissioned New Knowledge report",
+        "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+        "date": "2018-12",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+        "primary": true,
+        "independence_group": "ssci_new_knowledge"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI-commissioned New Knowledge report",
+          "title": "IRA shared/rebranded Turning Point USA memes; TPUSA content on IRA pages (Memopolis, Angry Eagle); TPUSA an exception in that IRA left branding intact",
+          "date": "2018-12",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-newknowledge-disinformation-report-whitepaper.pdf",
+          "primary": true,
+          "independence_group": "ssci_new_knowledge"
+        }
+      ],
+      "date": "2018",
       "evidence_quality": "N/A"
     }
   ]
