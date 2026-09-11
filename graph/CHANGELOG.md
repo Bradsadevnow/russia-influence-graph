@@ -311,3 +311,14 @@ Chain now runs document → relationship → network → organizational mechanis
 - **Scoreboard:** DIRECT {Manafort, Page}; MEDIATED {Trump Jr, Stone, Manafort, Papadopoulos}; Kilimnik unscored.
 - **Finding:** the 2016 cast is HETEROGENEOUS (intermediary / intel-persona / deep-intermediary+info-outflow / potential-vector / direct-official-contact) — the variation the architecture-vs-cast hypothesis needs. Same vocabulary now spans 2016↔2024.
 - 2024 scoreboard unchanged (1 direct + 0 mediated). Verified 110→120. 102 nodes / 224 edges. validate.py clean.
+
+## batch 22 (2026-09-11) — PASS ④: dangling-node cleanup (Doppelganger triad + prune)
+**Zero dangling nodes.**
+- **structura** KEEP+CONNECT: `kiriyenko→structura` (DIRECTION) + `structura→fake_sites` (PRODUCTION, `scope: Doppelganger_fake_site_network`). VERIFIED — DOJ 9/4/24 + Treasury OFAC jy2195 (Structura a key actor; SDA+Structura ran 60+ impersonation sites).
+- **ano_dialog** KEEP+CONNECT: `kiriyenko→ano_dialog` (DIRECTION) + `ano_dialog→fake_sites` (PRODUCTION, `scope: Doppelganger_fake_media_network`). VERIFIED — DOJ affidavit 9/4/24 (created original media brands; same articles on cybersquatted domains + ANO Dialog brands; internal SDA doc names all three) + Treasury jy2559.
+- Existing SDA edges refined to VERIFIED + network-scoped for consistency.
+- **agalarov_network** PRUNED — redundant abstraction, 0 unique edges, superseded by aras_agalarov/emin_agalarov/crocus_group/kaveladze. Logged in `metadata.pruned_nodes`. No evidence lost.
+- Downstream edges deliberately **network-scoped** (`scope` field) — not a claim of universal individual-site authorship.
+- **Result:** Doppelganger triad complete (Kiriyenko → {SDA, Structura, ANO Dialog} → fake_sites), giving the 2024 side TWO distinct observed mechanisms — RT→Tenet *coupling* vs Presidential-Administration→PR-firms→*fabricated media* (Doppelganger). Sharpens ⑤'s intermediary-class comparison. 2024 scoreboard unchanged.
+
+101 nodes / 228 edges. validate.py clean. Zero dangling nodes.

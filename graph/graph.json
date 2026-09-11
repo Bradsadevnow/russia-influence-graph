@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 21: PASS 3 (2016 cast sweep). Added Manafort/Kilimnik/Deripaska, Papadopoulos/Mifsud/Timofeev/Polonskaya, Page/Dvorkovich/Baranov/Sechin branches. cast_sweep_2016: DIRECT{Manafort,Page} MEDIATED{TrumpJr,Stone,Manafort,Papadopoulos}; Kilimnik=Russian-side intermediary (unscored). Intent tracked separately (Papadopoulos not witting; Stone knowledge NOT est; Page intel-conduit NOT est/contested Sechin). Heterogeneous cast = good for the longitudinal test.",
+    "status": "1.0 + batch 22 (PASS 4): dangling cleanup. Doppelganger triad completed — Kiriyenko -> {SDA, Structura, ANO Dialog} -> fake_sites (all VERIFIED, DOJ+Treasury primary, network-scoped PRODUCTION). agalarov_network PRUNED (redundant abstraction, 0 unique edges, superseded by concrete Agalarov nodes). 2024 architecture now has TWO distinct observed mechanisms: RT->Tenet coupling and Presidential-Administration->PR-firms->fabricated-media (Doppelganger). Zero dangling nodes.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -208,7 +208,22 @@
       "kilimnik": "NOT an American recipient — a RUSSIAN-SIDE intermediary/infrastructure node (Russian intel officer). Excluded from the American scoreboard. Possible/qualified GRU hack-leak link.",
       "scoreboard": "DIRECT: Manafort, Page. MEDIATED: Trump Jr, Stone, Manafort, Papadopoulos. NOT_ESTABLISHED direct: Trump Jr, Stone, Papadopoulos. Kilimnik = intermediary, unscored.",
       "finding": "The 2016 cast is HETEROGENEOUS — intermediary architecture (Trump Jr), intelligence-persona (Stone), deep intermediary + info outflow (Manafort), potential-vector/diplomatic (Papadopoulos), direct official contact (Page), Russian-side intermediary (Kilimnik). Variation the hypothesis needs to survive."
-    }
+    },
+    "pruned_nodes": [
+      {
+        "node": "agalarov_network",
+        "disposition": "PRUNED",
+        "reason": "REDUNDANT_ABSTRACTION",
+        "superseded_by": [
+          "aras_agalarov",
+          "emin_agalarov",
+          "crocus_group",
+          "kaveladze"
+        ],
+        "unique_edges": 0,
+        "date": "2026-09-11"
+      }
+    ]
   },
   "nodes": [
     {
@@ -306,7 +321,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "actor_class": "RUSSIAN_STATE"
+      "actor_class": "RUSSIAN_STATE",
+      "notes": "One of three Doppelganger firms (with SDA and ANO Dialog) operating under the direction/control of the Russian Presidential Administration (Kiriyenko). Treasury: a key actor implementing the Kremlin-directed campaign; SDA+Structura ran a network of 60+ impersonation news sites."
     },
     {
       "id": "ano_dialog",
@@ -314,7 +330,8 @@
       "layer": "russian_state",
       "type": "operation",
       "us_class": null,
-      "actor_class": "RUSSIAN_STATE"
+      "actor_class": "RUSSIAN_STATE",
+      "notes": "Third Doppelganger firm (with SDA, Structura) under Kiriyenko. DOJ affidavit: created original media brands and coordinated closely with SDA/Structura — the same articles appeared on cybersquatted domains AND ANO Dialog media brands. Treasury: provided services for fake posts + RRN infrastructure."
     },
     {
       "id": "kiriyenko",
@@ -351,14 +368,6 @@
       "us_class": null,
       "notes": "Laundered ~$9.7M RT → Tenet.",
       "actor_class": "INTERMEDIARY"
-    },
-    {
-      "id": "agalarov_network",
-      "label": "Agalarov network",
-      "layer": "intermediary",
-      "type": "network",
-      "us_class": null,
-      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
     },
     {
       "id": "aras_agalarov",
@@ -1683,27 +1692,36 @@
       "confidence": "high",
       "claim": "Kremlin deputy chief of staff Kiriyenko directs the Doppelganger firms.",
       "citation": {
-        "publisher": "DOJ / DFRLab",
-        "title": "Doppelganger domain seizures",
+        "publisher": "U.S. DOJ",
+        "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/opa/pr",
+        "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
         "primary": true,
-        "independence_group": "DFRLab"
+        "independence_group": "doj_doppelganger"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ / DFRLab",
-          "title": "Doppelganger domain seizures",
+          "publisher": "U.S. DOJ",
+          "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/opa/pr",
+          "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
           "primary": true,
-          "independence_group": "DFRLab"
+          "independence_group": "doj_doppelganger"
+        },
+        {
+          "publisher": "U.S. Treasury OFAC",
+          "title": "Sanctions: Structura a key actor implementing the Kremlin-directed campaign; SDA+Structura network of 60+ impersonation sites",
+          "date": "2024-09-04",
+          "url": "https://home.treasury.gov/news/press-releases/jy2195",
+          "primary": true,
+          "independence_group": "treasury_ofac"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A",
+      "relationship_type": "DIRECTION"
     },
     {
       "id": "e_sda_fakesites",
@@ -1714,27 +1732,37 @@
       "confidence": "high",
       "claim": "Social Design Agency built spoofed U.S. news domains.",
       "citation": {
-        "publisher": "DOJ affidavit",
-        "title": "Doppelganger domain seizures",
+        "publisher": "U.S. DOJ",
+        "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/opa/pr",
+        "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "doj_doppelganger"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ affidavit",
-          "title": "Doppelganger domain seizures",
+          "publisher": "U.S. DOJ",
+          "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/opa/pr",
+          "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "doj_doppelganger"
+        },
+        {
+          "publisher": "U.S. Treasury OFAC",
+          "title": "Sanctions: Structura a key actor implementing the Kremlin-directed campaign; SDA+Structura network of 60+ impersonation sites",
+          "date": "2024-09-04",
+          "url": "https://home.treasury.gov/news/press-releases/jy2195",
+          "primary": true,
+          "independence_group": "treasury_ofac"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A",
+      "relationship_type": "PRODUCTION",
+      "scope": "Doppelganger_fake_site_network"
     },
     {
       "id": "e_fakesites_audience",
@@ -8566,6 +8594,156 @@
       ],
       "date": "2016",
       "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_kiriyenko_structura",
+      "source": "kiriyenko",
+      "target": "structura",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "editorial_direction",
+      "confidence": "very_high",
+      "claim": "DOJ + Treasury: Structura operated under the direction and control of the Russian Presidential Administration (Kiriyenko) as part of the Doppelganger operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ",
+          "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
+          "primary": true,
+          "independence_group": "doj_doppelganger"
+        },
+        {
+          "publisher": "U.S. Treasury OFAC",
+          "title": "Sanctions: Structura a key actor implementing the Kremlin-directed campaign; SDA+Structura network of 60+ impersonation sites",
+          "date": "2024-09-04",
+          "url": "https://home.treasury.gov/news/press-releases/jy2195",
+          "primary": true,
+          "independence_group": "treasury_ofac"
+        }
+      ],
+      "verification": "verified",
+      "date": "2022",
+      "domain": "influence",
+      "relationship_type": "DIRECTION",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ",
+        "title": "Justice Dept disrupts covert Russian govt-sponsored malign influence (Doppelganger): SDA, Structura National Technology, ANO Dialog under Kiriyenko / Presidential Administration",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/archives/opa/pr/justice-department-disrupts-covert-russian-government-sponsored-foreign-malign-influence",
+        "primary": true,
+        "independence_group": "doj_doppelganger"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_structura_fakesites",
+      "source": "structura",
+      "target": "fake_sites",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "production",
+      "confidence": "very_high",
+      "claim": "Treasury: SDA and Structura collectively built/operated a network of 60+ impersonation news websites (Doppelganger). Network-scoped operations, not a claim of universal individual-site authorship.",
+      "citations": [
+        {
+          "publisher": "U.S. Treasury OFAC",
+          "title": "Sanctions: Structura a key actor implementing the Kremlin-directed campaign; SDA+Structura network of 60+ impersonation sites",
+          "date": "2024-09-04",
+          "url": "https://home.treasury.gov/news/press-releases/jy2195",
+          "primary": true,
+          "independence_group": "treasury_ofac"
+        }
+      ],
+      "verification": "verified",
+      "date": "2022",
+      "domain": "influence",
+      "relationship_type": "PRODUCTION",
+      "scope": "Doppelganger_fake_site_network",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. Treasury OFAC",
+        "title": "Sanctions: Structura a key actor implementing the Kremlin-directed campaign; SDA+Structura network of 60+ impersonation sites",
+        "date": "2024-09-04",
+        "url": "https://home.treasury.gov/news/press-releases/jy2195",
+        "primary": true,
+        "independence_group": "treasury_ofac"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kiriyenko_anodialog",
+      "source": "kiriyenko",
+      "target": "ano_dialog",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "editorial_direction",
+      "confidence": "very_high",
+      "claim": "DOJ + Treasury: ANO Dialog operated under Kiriyenko's direction/control within the Doppelganger operation.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (Doppelganger affidavit 9/4/24)",
+          "title": "ANO Dialog & SDA/Structura close coordination; same articles on cybersquatted domains + ANO Dialog media brands; internal SDA doc discusses all three",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/d9/2024-09/doppelganger_affidavit_9.4.24.pdf",
+          "primary": true,
+          "independence_group": "doj_doppelganger"
+        },
+        {
+          "publisher": "U.S. Treasury OFAC",
+          "title": "ANO Dialog linked to Doppelganger; services to the Russian government for fake online posts + RRN infrastructure",
+          "date": "2024",
+          "url": "https://home.treasury.gov/news/press-releases/jy2559",
+          "primary": true,
+          "independence_group": "treasury_ofac"
+        }
+      ],
+      "verification": "verified",
+      "date": "2022",
+      "domain": "influence",
+      "relationship_type": "DIRECTION",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (Doppelganger affidavit 9/4/24)",
+        "title": "ANO Dialog & SDA/Structura close coordination; same articles on cybersquatted domains + ANO Dialog media brands; internal SDA doc discusses all three",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/d9/2024-09/doppelganger_affidavit_9.4.24.pdf",
+        "primary": true,
+        "independence_group": "doj_doppelganger"
+      },
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_anodialog_fakesites",
+      "source": "ano_dialog",
+      "target": "fake_sites",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "production",
+      "confidence": "very_high",
+      "claim": "DOJ affidavit: ANO Dialog created original media brands and coordinated with SDA/Structura — the same articles appeared on both cybersquatted domains and ANO Dialog media brands. Network-scoped operations.",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ (Doppelganger affidavit 9/4/24)",
+          "title": "ANO Dialog & SDA/Structura close coordination; same articles on cybersquatted domains + ANO Dialog media brands; internal SDA doc discusses all three",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/d9/2024-09/doppelganger_affidavit_9.4.24.pdf",
+          "primary": true,
+          "independence_group": "doj_doppelganger"
+        }
+      ],
+      "verification": "verified",
+      "date": "2022",
+      "domain": "influence",
+      "relationship_type": "PRODUCTION",
+      "scope": "Doppelganger_fake_media_network",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ (Doppelganger affidavit 9/4/24)",
+        "title": "ANO Dialog & SDA/Structura close coordination; same articles on cybersquatted domains + ANO Dialog media brands; internal SDA doc discusses all three",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/d9/2024-09/doppelganger_affidavit_9.4.24.pdf",
+        "primary": true,
+        "independence_group": "doj_doppelganger"
+      },
+      "evidence_quality": "A"
     }
   ]
 }
