@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 23 (PASS 5): arch_profile v2 canonical. Media vehicles backfilled; 2016 lobbying/financial vehicles profiled (HRAGI lobbying_front_ngo [principal CONTESTED, not promoted], Prevezon financial_litigation_vehicle [ownership majority, verified], BakerHostetler law_firm + Potomac pr_government_relations both is_russian_vehicle=FALSE/contracted_service = negative controls), shell_companies shell_network, Doppelganger triad = ONE fabrication_firms class (members sda/structura/ano_dialog). intermediary_class is the comparison key; is_russian_vehicle carries {value,basis}.",
+    "status": "1.0 + batch 25 (PASS 1 audit, Cluster A/Mueller): 4 edges CONFIRMED primary_verified vs Mueller Vol I with verbatim quotes (e_aras_emin, e_polonskaya_papadopoulos, e_timofeev_mfa, e_agalarov_dtj [NARROWED — scope fix: dropped unsupported 'gifts']); 6 edges recorded with exact located section as PENDING_PULL. Audit fields (primary_candidate.proposition, claim_scope, identity_check, temporal_check) applied.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -2250,7 +2250,7 @@
       "evidence_quality": "B",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -2258,6 +2258,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Agalarov assessment",
+        "proposition": "SSCI assessed Aras Agalarov likely acted on behalf of Russian-government-affiliated individuals regarding the June 9 meeting outreach.",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -2269,37 +2275,44 @@
       "confidence": "very_high",
       "claim": "Aras and Emin Agalarov (father/son) are the core of the Agalarov network.",
       "citation": {
-        "publisher": "SSCI",
-        "title": "Report Volume 5",
-        "date": "2020-08-18",
-        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
         "primary": true,
-        "independence_group": "SSCI"
+        "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "SSCI",
-          "title": "Report Volume 5",
-          "date": "2020-08-18",
-          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
           "primary": true,
-          "independence_group": "SSCI"
+          "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2020",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.1.a Trump Tower Moscow Venture with the Crocus Group (2013-2014)",
+        "proposition": "Emin Agalarov is the son of Aras Agalarov.",
+        "supporting_quote": "Emin Agalarov (son of Aras Agalarov) and Irakli 'Ike' Kaveladze represented the Crocus Group during negotiations."
       }
     },
     {
@@ -2334,7 +2347,7 @@
       "evidence_quality": "B",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -2342,6 +2355,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.5 The June 9, 2016 Meeting at Trump Tower",
+        "proposition": "Goldstone, Emin Agalarov's publicist, brokered the June 9 meeting outreach to Trump Jr.",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -2351,39 +2370,46 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "business_relationship",
       "confidence": "very_high",
-      "claim": "The Trump/Agalarov relationship began in 2013 (Miss Universe Moscow) and involved business/personal communications, meetings, and gifts.",
+      "claim": "The Trump Organization and Aras Agalarov's Crocus Group began discussing a Moscow real-estate project shortly after the 2013 Miss Universe pageant in Moscow; Emin Agalarov and Ike Kaveladze represented Crocus. [NARROWED from prior 'meetings and gifts' — Mueller supports the 2013 business relationship, not the gifts detail.]",
       "citation": {
-        "publisher": "SSCI",
-        "title": "Report Volume 5",
-        "date": "2020-08-18",
-        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
         "primary": true,
-        "independence_group": "SSCI"
+        "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "SSCI",
-          "title": "Report Volume 5",
-          "date": "2020-08-18",
-          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
           "primary": true,
-          "independence_group": "SSCI"
+          "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2013",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.1.a Trump Tower Moscow Venture with the Crocus Group (2013-2014)",
+        "proposition": "Trump Organization–Crocus Group real-estate discussions began shortly after the 2013 Miss Universe pageant in Moscow.",
+        "supporting_quote": "The Trump Organization and the Crocus Group ... began discussing a Russia-based real estate project shortly after the conclusion of the 2013 Miss Universe pageant in Moscow."
       }
     },
     {
@@ -2587,7 +2613,7 @@
       "evidence_quality": "B",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -2595,6 +2621,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.5 The June 9, 2016 Meeting at Trump Tower",
+        "proposition": "Jared Kushner attended the June 9, 2016 Trump Tower meeting (attendee list).",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -2756,7 +2788,7 @@
       "evidence_quality": "B",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -2764,6 +2796,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "Section V / WikiLeaks dissemination",
+        "proposition": "Trump Jr. exchanged direct messages with the WikiLeaks Twitter account during the 2016 campaign.",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -3474,7 +3512,7 @@
       "evidence_quality": "C",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -3482,6 +3520,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Social-media / VK overtures section",
+        "proposition": "Early 2016 Goldstone proposed a Trump campaign presence on VKontakte (VK).",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -4146,7 +4190,7 @@
       "evidence_quality": "C",
       "evidence_state": "reported",
       "claim_scope": "unaudited",
-      "identity_check": "unaudited",
+      "identity_check": "exact_person",
       "temporal_check": "unaudited",
       "publication": {
         "layer": "evidence_ledger",
@@ -4154,6 +4198,12 @@
         "reason": [
           "reported"
         ]
+      },
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.5 (aftermath) / SSCI Vol 5",
+        "proposition": "Veselnitskaya/Akhmetshin promoted an anti-Magnitsky documentary screened in Washington DC shortly after the June 9 meeting.",
+        "status": "PENDING_PULL"
       }
     },
     {
@@ -10891,39 +10941,46 @@
       "confidence": "high",
       "claim": "Timofeev had connections to the Russian Ministry of Foreign Affairs.",
       "citation": {
-        "publisher": "Mueller Report (Wikisource)",
-        "title": "Russian Government Links To and Contacts With the Trump Campaign",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
         "date": "2019-03",
-        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
         "primary": true,
-        "independence_group": "mueller"
+        "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2016",
       "domain": "influence",
       "relationship_type": "CONTACT",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Mueller Report (Wikisource)",
-          "title": "Russian Government Links To and Contacts With the Trump Campaign",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
           "date": "2019-03",
-          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
           "primary": true,
-          "independence_group": "mueller"
+          "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.2.d Papadopoulos Learns Russia Has 'Dirt'",
+        "proposition": "Timofeev had connections with the Russian Ministry of Foreign Affairs.",
+        "supporting_quote": "Mifsud had described Timofeev as having connections with the Russian Ministry of Foreign Affairs (MFA), the executive entity in Russia responsible for Russian foreign relations."
       }
     },
     {
@@ -10935,39 +10992,46 @@
       "confidence": "high",
       "claim": "Mueller: Polonskaya, presented to Papadopoulos as connected to senior Russian officials, communicated with him about facilitating a Russia trip.",
       "citation": {
-        "publisher": "DOJ / Mueller Report",
-        "title": "Report on the Investigation into Russian Interference (Stone-Guccifer 2.0 contact; Papadopoulos-Mifsud-Timofeev-Polonskaya)",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
         "date": "2019-03",
         "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
         "primary": true,
-        "independence_group": "mueller"
+        "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2016",
       "domain": "influence",
       "relationship_type": "CONTACT",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ / Mueller Report",
-          "title": "Report on the Investigation into Russian Interference (Stone-Guccifer 2.0 contact; Papadopoulos-Mifsud-Timofeev-Polonskaya)",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference in the 2016 Presidential Election, Vol. I",
           "date": "2019-03",
           "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
           "primary": true,
-          "independence_group": "mueller"
+          "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.2.b George Papadopoulos — Initial Russia-Related Contacts",
+        "proposition": "Polonskaya, introduced as connected to Russian officials, offered to help Papadopoulos establish contacts in Russia.",
+        "supporting_quote": "During the meeting, Polonskaya offered to help Papadopoulos establish contacts in Russia ... 'I have already alerted my personal links to our conversation and your request.'"
       }
     },
     {

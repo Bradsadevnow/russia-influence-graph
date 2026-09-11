@@ -342,3 +342,12 @@ Chain now runs document → relationship → network → organizational mechanis
 - **Current split: public_core 125 (99 primary_verified + 1 multi_source + 25 do_not_claim-w/-provenance), evidence_ledger 103.** These are provisional until the 75-edge audit assigns final evidence_state per edge.
 
 101 nodes / 228 edges. validate.py clean.
+
+## batch 25 (2026-09-11) — Cluster A audit (Mueller Vol I): template proven end-to-end
+Pulled Mueller Vol I (Wikisource) against the 10 Cluster-A propositions.
+- **4 CONFIRMED → primary_verified** with verbatim supporting quotes + exact section + proposition: `e_aras_emin` (IV.A.1.a), `e_polonskaya_papadopoulos` (IV.A.2.b), `e_timofeev_mfa` (IV.A.2.d), `e_agalarov_dtj` (IV.A.1.a).
+- **1 SCOPE FIX (the audit doing its job):** `e_agalarov_dtj` claimed "meetings and gifts" — Mueller supports only the 2013 Crocus/Miss-Universe business relationship. Claim NARROWED to what the source establishes; claim_scope=exact after narrowing. Exactly the CSF provenance-to-claim failure class, caught.
+- **6 PENDING_PULL** with exact located section + proposition recorded (not confirmed, not claimed): `e_meeting_kushner` + `e_emin_goldstone` + `e_film` (Mueller IV.A.5 June 9 meeting — a Wikisource subpage this fetch couldn't reach), `e_goldstone_dtj_vk` + `e_kremlin_agalarov` (SSCI Vol 5), `e_dtj_wikileaks` (Mueller §V).
+- Audit fields applied: `primary_candidate.{document,section,proposition,supporting_quote}`, `claim_scope`, `identity_check`, `temporal_check`. Public core 125→129.
+
+101 nodes / 228 edges. validate.py clean.
