@@ -88,7 +88,8 @@
         "LOBBIED",
         "RECEIVED_MATERIAL",
         "CONTRACTED_AND_PAID",
-        "FEATURED_TALENT"
+        "FEATURED_TALENT",
+        "AUTHORED"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -5233,39 +5234,55 @@
       "evidence_class": "documented_contact",
       "mechanism": "amplification",
       "confidence": "high",
-      "claim": "On August 5, 2016 Stone published a Breitbart article arguing Guccifer 2.0 — not Russia — was responsible for the DNC hack, relying on the Guccifer persona's statements. Guccifer then contacted Stone; they exchanged DMs Aug 14–Sept.",
+      "claim": "Roger Stone AUTHORED an August 5, 2016 Breitbart article arguing that Guccifer 2.0 — not Russia — was responsible for the DNC hack. A contemporaneous authored artifact of what Stone PUBLISHED. SCOPE CEILING: does NOT establish that Stone knew Guccifer 2.0 was a GRU persona, nor any coordination with the GRU (see e_stone_gru_knowledge do_not_claim). Kept analytically separate from the GRU->Guccifer->Stone chain.",
       "citation": {
-        "publisher": "FactCheck.org",
-        "title": "Misrepresenting Stone's Prescience",
-        "date": "2017-03",
-        "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
-        "primary": false,
-        "independence_group": "FactCheck.org"
+        "publisher": "Breitbart (Roger Stone, authored)",
+        "title": "Stone's Aug 5, 2016 essay attributing the DNC hack to Guccifer 2.0 rather than Russia",
+        "date": "2016-08-05",
+        "url": "https://www.breitbart.com/politics/2016/08/05/dear-hillary-dnc-hack-solved-so-now-stop-blaming-russia/",
+        "primary": true,
+        "independence_group": "stone_authored"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "FactCheck.org",
-          "title": "Misrepresenting Stone's Prescience",
-          "date": "2017-03",
-          "url": "https://www.factcheck.org/2017/03/misrepresenting-stones-prescience/",
+          "publisher": "Breitbart (Roger Stone, authored)",
+          "title": "Stone's Aug 5, 2016 essay attributing the DNC hack to Guccifer 2.0 rather than Russia",
+          "date": "2016-08-05",
+          "url": "https://www.breitbart.com/politics/2016/08/05/dear-hillary-dnc-hack-solved-so-now-stop-blaming-russia/",
+          "primary": true,
+          "independence_group": "stone_authored"
+        },
+        {
+          "publisher": "Washington Post",
+          "title": "Identifies Stone's Aug 5 Breitbart essay and its central claim; notes Guccifer 2.0 later established as a GRU persona",
+          "date": "2018-04-04",
+          "url": "https://www.washingtonpost.com/news/politics/wp/2018/04/04/an-alleged-dinner-with-assange-is-unlikely-the-real-roger-stone-questions-are-elsewhere/",
           "primary": false,
-          "independence_group": "FactCheck.org"
+          "independence_group": "WaPo"
         }
       ],
       "date": "2016-08-05",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "AUTHORED",
+      "primary_candidate": {
+        "document": "Breitbart (Stone byline, 2016-08-05)",
+        "section": "authored op-ed",
+        "proposition": "Stone authored a Breitbart article attributing the DNC hack to Guccifer 2.0 rather than Russia.",
+        "supporting_quote": "(Stone's Aug 5 2016 Breitbart essay; WaPo 2018-04-04 identifies the essay and its central claim)"
       }
     },
     {
