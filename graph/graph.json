@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 30 (Cluster B CLOSED): Rohrabacher SPLIT — e_kosachev_rohrabacher NEW primary_verified (SSCI: Russian Magnitsky material delivered/accepted; substantial similarity to Veselnitskaya's material), e_rohrabacher_congress narrowed to REPORTED (causal lobbying->record not SSCI-primary). e_akh_dellums MULTI_SOURCE_VERIFIED (WaPo hired Dellums + SJC + RFE + Hermitage; Dellums contradiction preserved). e_dellums_congress REPORTED (anonymous Daily Beast staffer account; contradiction preserved). Personnel edge > action edge. Cluster B done.",
+    "status": "1.0 + batch 31 (C1, proposition-aware): Tenet payment spine primary_verified from the DOJ indictment. Cohort-level (six named creators FEATURED_TALENT + cohort membership + influencers + platforms). TWO explicit contracts at PSEUDONYM level (commentator_1 $400k/mo, commentator_2 $100k/video) — real-name binding corroborated-not-asserted. tenet.commentator_segmentation records C1-6 differentiated propositions. Grigoriann scoped to persona INFRASTRUCTURE. Figure corrected to 'nearly $10 million'.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -86,7 +86,9 @@
         "MEDIATED_OUTREACH",
         "HIRED_FOR_LOBBYING",
         "LOBBIED",
-        "RECEIVED_MATERIAL"
+        "RECEIVED_MATERIAL",
+        "CONTRACTED_AND_PAID",
+        "FEATURED_TALENT"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -587,7 +589,16 @@
           "contemporaneous reporting"
         ]
       },
-      "arch_profile_schema": "v2"
+      "arch_profile_schema": "v2",
+      "commentator_segmentation": {
+        "Commentator-1": "contract: 4 weekly videos, $400k/mo + $100k signing + perf bonus; content = Company property",
+        "Commentator-2": "contract: weekly videos at $100k/video, distribution license",
+        "Commentator-3": "agreed to work for Company-1",
+        "Commentator-4": "documented in Discord production channels (Kalashnikov requested raw footage / circulated edits)",
+        "Commentator-5": "documented in Discord production channels (Kalashnikov requested raw footage / circulated edits)",
+        "Commentator-6": "identified as one of the six; posted the launch announcement describing the initial six-creator lineup",
+        "note": "Real-name bindings (Commentator-N -> specific creator) are corroborated in reporting; not asserted per-person in the graph. Post-launch, Afanasyeva directed Founder-1 to push the hired commentators (naming C1-5) to share Company-1 content with their existing audiences."
+      }
     },
     {
       "id": "swann",
@@ -1450,6 +1461,24 @@
       "us_class": null,
       "actor_class": "RUSSIAN_STATE",
       "notes": "Chair, Russian Federation Council Foreign Affairs Committee. In Moscow asked Rohrabacher if he would accept 'sensitive documents'; a folder of Magnitsky material was then handed to Rohrabacher (SSCI Vol 5)."
+    },
+    {
+      "id": "commentator_1",
+      "label": "Commentator-1 (Tenet, indictment pseudonym)",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR",
+      "notes": "Indictment pseudonym. Real-name binding corroborated in reporting but NOT encoded until pulled. Held the $400k/month contract."
+    },
+    {
+      "id": "commentator_2",
+      "label": "Commentator-2 (Tenet, indictment pseudonym)",
+      "layer": "us_media",
+      "type": "influencer",
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR",
+      "notes": "Indictment pseudonym. Real-name binding corroborated in reporting but NOT encoded until pulled. Held the $100k/video contract."
     }
   ],
   "edges": [
@@ -1671,41 +1700,49 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Tenet paid six U.S. commentators to produce content.",
+      "claim": "Company-1 (Tenet) identified six U.S. commentators as its talent and regularly posted videos featuring them; nearly $10 million was deployed to Company-1, which posted nearly 2,000 videos with more than 16 million YouTube views.",
       "quote": "Commentators were not charged; several said they did not know of the Russian funding.",
       "citation": {
-        "publisher": "DOJ OPA / NPR",
-        "title": "Tenet indictment coverage",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "NPR"
+        "independence_group": "DOJ-SDNY"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ OPA / NPR",
-          "title": "Tenet indictment coverage",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "NPR"
+          "independence_group": "DOJ-SDNY"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "paras 2-3",
+        "proposition": "Company-1 identified six commentators as its talent; nearly $10M deployed, ~2,000 videos, 16M+ views.",
+        "supporting_quote": "U.S. Company-1 identified six commentators as its talent and regularly posted videos featuring them."
+      },
+      "relationship_type": "FEATURED_TALENT"
     },
     {
       "id": "e_influencers_platforms",
@@ -1714,40 +1751,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "distribution",
       "confidence": "high",
-      "claim": "Tenet produced ~2,000 videos distributed on YouTube/TikTok/Instagram/X (16M+ views).",
+      "claim": "Company-1's ~2,000 videos were distributed on YouTube/TikTok/Instagram/X (16M+ YouTube views).",
       "citation": {
-        "publisher": "DOJ OPA",
-        "title": "Two RT Employees Indicted...",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "DOJ-SDNY"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ OPA",
-          "title": "Two RT Employees Indicted...",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "DOJ-SDNY"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "paras 2-3",
+        "proposition": "Company-1's videos were distributed on major social platforms (16M+ views).",
+        "supporting_quote": "nearly 2,000 videos ... more than 16 million ... views"
+      },
+      "relationship_type": "distribution"
     },
     {
       "id": "e_platforms_audience",
@@ -7269,40 +7314,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Tim Pool was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Tim Pool was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Tim Pool binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Tim Pool as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -7397,40 +7449,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Tim Pool is one of the six Tenet commentators.",
+      "claim": "Tim Pool is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Tim Pool is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_recruit_dave_rubin",
@@ -7486,40 +7546,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Dave Rubin was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Dave Rubin was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Dave Rubin binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Dave Rubin as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -7614,40 +7681,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Dave Rubin is one of the six Tenet commentators.",
+      "claim": "Dave Rubin is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Dave Rubin is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_recruit_benny_johnson",
@@ -7703,40 +7778,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Benny Johnson was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Benny Johnson was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Benny Johnson binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Benny Johnson as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -7831,40 +7913,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Benny Johnson is one of the six Tenet commentators.",
+      "claim": "Benny Johnson is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Benny Johnson is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_recruit_lauren_southern",
@@ -7920,40 +8010,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Lauren Southern was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Lauren Southern was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Lauren Southern binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Lauren Southern as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -8048,40 +8145,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Lauren Southern is one of the six Tenet commentators.",
+      "claim": "Lauren Southern is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Lauren Southern is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_recruit_tayler_hansen",
@@ -8137,40 +8242,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Tayler Hansen was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Tayler Hansen was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Tayler Hansen binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Tayler Hansen as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -8265,40 +8377,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Tayler Hansen is one of the six Tenet commentators.",
+      "claim": "Tayler Hansen is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Tayler Hansen is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_recruit_matt_christiansen",
@@ -8354,40 +8474,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "Matt Christiansen was contracted and paid by Tenet Media to produce content (part of ~$9.7M / ~2,000 videos).",
+      "claim": "Matt Christiansen was one of the six commentators Company-1 hired/featured as part of the nearly-$10M operation. Individual contract terms are documented at the PSEUDONYM level (Commentators 1-2 only); the Commentator-N -> Matt Christiansen binding is corroborated in reporting, NOT asserted here.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "FEATURED_TALENT",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent",
+        "proposition": "Company-1 hired/featured Matt Christiansen as one of its six commentators.",
+        "supporting_quote": "regularly posted videos featuring them"
       }
     },
     {
@@ -8482,40 +8609,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Matt Christiansen is one of the six Tenet commentators.",
+      "claim": "Matt Christiansen is one of the six commentators Company-1 identified as its talent (the initial six-creator lineup). Identity corroborated in reporting; the indictment names the commentators only pseudonymously.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "corroborated",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
-      }
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "talent lineup",
+        "proposition": "Matt Christiansen is one of Company-1's six identified commentators.",
+        "supporting_quote": "identified six commentators as its talent"
+      },
+      "relationship_type": "business_relationship"
     },
     {
       "id": "e_chen_blaze",
@@ -8800,7 +8935,7 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "laundering",
       "confidence": "very_high",
-      "claim": "DOJ indictment: RT and the defendants deployed nearly $10M through foreign shell entities to fund and direct U.S. Company-1, behind the fictitious 'Eduard Grigoriann' investor persona.",
+      "claim": "DOJ indictment: RT and the defendants deployed nearly $10 million through foreign shell entities to fund and direct U.S. Company-1, behind the fictitious 'Eduard Grigoriann' investor persona.",
       "citations": [
         {
           "publisher": "U.S. DOJ / SDNY",
@@ -8843,40 +8978,47 @@
       "evidence_class": "documented_contact",
       "mechanism": "laundering",
       "confidence": "very_high",
-      "claim": "DOJ: the RT operatives created/operated the fictitious 'Grigoriann' investor identity.",
+      "claim": "DOJ indictment: RT operative / fake-persona infrastructure used the fictitious 'Eduard Grigoriann' identity as the purported investor in Company-1's recruitment and funding structure. 'Grigoriann' and Personas 1-3 were fictitious and forensically linked to the same individual; Afanasyeva subsequently operated under fake 'Helena Shudra' and 'Victoria Pesti' personas.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "doj_tenet_indictment"
+          "independence_group": "DOJ-SDNY"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "doj_tenet_indictment"
+        "independence_group": "DOJ-SDNY"
       },
-      "evidence_quality": "B",
+      "evidence_quality": "A",
       "relationship_type": "CONTACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "fake personas",
+        "proposition": "The fictitious 'Grigoriann' persona (and Personas 1-3) were used in Company-1's recruitment/funding; the operatives operated fake personas.",
+        "supporting_quote": "the purported investor 'Eduard Grigoriann' ... was fictitious"
       }
     },
     {
@@ -12090,6 +12232,108 @@
         ]
       },
       "verification": "verified"
+    },
+    {
+      "id": "e_tenet_commentator_1",
+      "source": "tenet",
+      "target": "commentator_1",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "DOJ-SDNY"
+        }
+      ],
+      "relationship_type": "CONTRACTED_AND_PAID",
+      "domain": "influence",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "verification": "verified",
+      "claim": "DOJ indictment: Founder-1 and Founder-2 contracted with Commentator-1 to produce four weekly videos for $400,000/month plus a $100,000 signing bonus and a performance bonus; the content became U.S. Company-1's property.",
+      "claim_scope": "exact",
+      "identity_check": "pseudonym_binding",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "Commentator-1 contract",
+        "proposition": "Company-1 contracted Commentator-1: 4 weekly videos, $400k/mo + $100k signing + performance bonus; content = Company property.",
+        "supporting_quote": "$400,000 per month ... a $100,000 signing bonus"
+      },
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "DOJ-SDNY"
+      },
+      "date": "2024",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
+    },
+    {
+      "id": "e_tenet_commentator_2",
+      "source": "tenet",
+      "target": "commentator_2",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "confidence": "very_high",
+      "citations": [
+        {
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+          "primary": true,
+          "independence_group": "DOJ-SDNY"
+        }
+      ],
+      "relationship_type": "CONTRACTED_AND_PAID",
+      "domain": "influence",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "verification": "verified",
+      "claim": "DOJ indictment: Founder-1 and Founder-2 contracted with Commentator-2 to produce weekly videos at $100,000 per video, with a license to distribute the content.",
+      "claim_scope": "exact",
+      "identity_check": "pseudonym_binding",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "DOJ SDNY Tenet indictment",
+        "section": "Commentator-2 contract",
+        "proposition": "Company-1 contracted Commentator-2: weekly videos at $100k/video, with distribution license.",
+        "supporting_quote": "$100,000 per video"
+      },
+      "provenance": "observed",
+      "citation": {
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (Tenet)",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
+        "primary": true,
+        "independence_group": "DOJ-SDNY"
+      },
+      "date": "2024",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     }
   ]
 }

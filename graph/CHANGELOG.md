@@ -399,3 +399,13 @@ Using the Committee's own verbatim Key Findings (primary Senate publication) —
 **Cluster B complete.** Next: Cluster C (DOJ/FARA, ~33 — mostly already verified from indictment work), then relabel/cut the 14 no-primary.
 
 102 nodes / 234 edges. validate.py clean.
+
+## batch 31 (2026-09-11) — C1: Tenet payment spine (proposition-aware, DOJ indictment)
+The indictment segments the six, so the batch is segmented (not one blanket "contracted and paid"):
+- **Cohort-level primary_verified:** `e_tenet_influencers` (six identified as talent; nearly $10M, ~2,000 videos, 16M+ views), `e_influencers_platforms`, the six `e_*_cohort` membership edges, and the six named `e_tenet_{creator}` edges reframed to **FEATURED_TALENT** ("one of the six hired/featured") — NOT uniform per-person contract terms.
+- **Two explicit contracts at PSEUDONYM level:** new nodes `commentator_1` ($400k/mo + $100k signing + perf bonus; content → Company property) and `commentator_2` ($100k/video + distribution license), with `e_tenet_commentator_1/2` CONTRACTED_AND_PAID, `identity_check: pseudonym_binding` (real-name binding corroborated in reporting, NOT asserted in-graph).
+- `tenet.commentator_segmentation` records the differentiated C1–C6 propositions (contracts / agreed / Discord production channels / launch announcement).
+- **`e_afanasyeva_grigoriann`** scoped to the persona INFRASTRUCTURE (fictitious Grigoriann + Personas 1-3 forensically linked; Afanasyeva later using Shudra/Pesti) — not "Afanasyeva created Grigoriann."
+- Figure corrected to **"nearly $10 million."** Public core 153→170; primary_verified 122→139.
+
+104 nodes / 236 edges. validate.py clean.
