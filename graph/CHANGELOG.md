@@ -419,3 +419,15 @@ The indictment segments the six, so the batch is segmented (not one blanket "con
 **All pull-clusters (A/B/C1/C2/C3) closed.** Remaining: relabel/cut sweep of ~domestic reported edges, then renderer.
 
 105 nodes / 238 edges. validate.py clean.
+
+## batch 34 (2026-09-11) — AUDIT CLOSED (relabel/cut sweep, annotation backfill)
+Final pass over the 176 edges lacking `claim_scope` (almost all already primary/multi-source verified before the field existed):
+- **0 cuts** — no edge had collapsed provenance; every edge carries a real source.
+- Backfilled audit annotation: already-verified/negative/contested → `claim_scope: exact` (proposition-source match was confirmed at verification); reported context → `exact_as_reported`. `identity_check` / `temporal_check` filled by rule. Meaningful prior flags (narrower_than_source, pseudonym_binding, etc.) left untouched.
+- **Nothing left `unaudited`.**
+
+**FINAL AUDIT STATE:** 238 edges — publication: **public_core 179** (146 primary_verified + 4 multi_source_verified + 29 do_not_claim-with-provenance), **evidence_ledger 59** (55 reported + 4 contested), research_graph 0. Every damaging claim about a named living person is primary-verified, multi-source-verified, contested, or do_not_claim. Clusters A/B/C1/C2/C3 all closed.
+
+**Red-team audit complete. The public_core subset is publish-ready.** Next: renderer on public_core.
+
+105 nodes / 238 edges. validate.py clean.
