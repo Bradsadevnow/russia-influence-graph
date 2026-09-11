@@ -140,7 +140,41 @@
           "low"
         ],
         "is_russian_vehicle": "{value: bool, basis: ownership|direction_control|russian_state_creation|contracted_service|none_demonstrated}"
-      }
+      },
+      "evidence_state": [
+        "primary_verified",
+        "multi_source_verified",
+        "reported",
+        "contested",
+        "conditional",
+        "negative_finding",
+        "searched_negative",
+        "cut"
+      ],
+      "publication_layer": [
+        "public_core",
+        "evidence_ledger",
+        "research_graph"
+      ],
+      "claim_scope": [
+        "exact",
+        "narrower_than_source",
+        "broader_than_source",
+        "unaudited"
+      ],
+      "identity_check": [
+        "exact_person",
+        "pseudonym_binding",
+        "ambiguous",
+        "n_a",
+        "unaudited"
+      ],
+      "temporal_check": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "unaudited"
+      ]
     },
     "rules": [
       "A connection is not a conclusion. Never merge an outlet/producer (may be state-connected) with a downstream personality (may be an unwitting amplifier).",
@@ -1434,7 +1468,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rt_employees",
@@ -1465,7 +1510,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_employees_shells",
@@ -1496,7 +1552,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_shells_tenet",
@@ -1527,7 +1594,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rt_tenet_direction",
@@ -1558,7 +1636,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_tenet_influencers",
@@ -1590,7 +1679,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_influencers_platforms",
@@ -1621,7 +1721,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_platforms_audience",
@@ -1652,7 +1763,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_novosti_rebel",
@@ -1684,7 +1806,18 @@
       ],
       "date": "2023",
       "evidence_quality": "C",
-      "relationship_type": "FUNDING"
+      "relationship_type": "FUNDING",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rebel_swann",
@@ -1716,7 +1849,18 @@
       ],
       "date": "2024",
       "evidence_quality": "C",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_swann_rt_prog",
@@ -1747,7 +1891,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_swann_tim",
@@ -1778,7 +1933,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tim_zelensky",
@@ -1809,7 +1975,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_zelensky_dtj",
@@ -1841,7 +2018,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dtj_audience",
@@ -1872,7 +2060,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_kiriyenko_sda",
@@ -1912,7 +2111,18 @@
       ],
       "date": "2024",
       "evidence_quality": "A",
-      "relationship_type": "DIRECTION"
+      "relationship_type": "DIRECTION",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_sda_fakesites",
@@ -1953,7 +2163,18 @@
       "date": "2024",
       "evidence_quality": "A",
       "relationship_type": "PRODUCTION",
-      "scope": "Doppelganger_fake_site_network"
+      "scope": "Doppelganger_fake_site_network",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_fakesites_audience",
@@ -1984,7 +2205,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_kremlin_agalarov",
@@ -2015,7 +2247,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_aras_emin",
@@ -2046,7 +2289,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_emin_goldstone",
@@ -2077,7 +2331,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_agalarov_dtj",
@@ -2108,7 +2373,18 @@
         }
       ],
       "date": "2013",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_goldstone_meeting",
@@ -2140,7 +2416,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_dtj_meeting",
@@ -2171,7 +2458,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_meeting_attendees_v",
@@ -2202,7 +2500,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_meeting_manafort",
@@ -2233,7 +2542,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_meeting_kushner",
@@ -2264,7 +2584,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_veselnitskaya_op",
@@ -2295,7 +2626,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_gru_wikileaks",
@@ -2326,7 +2668,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_wikileaks_russia_knew",
@@ -2357,7 +2710,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_dtj_wikileaks",
@@ -2389,7 +2753,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_goldstone_vk",
@@ -2420,7 +2795,18 @@
         }
       ],
       "date": "2016-06",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sidorkov_dtj",
@@ -2451,7 +2837,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sidorkov_scavino",
@@ -2482,7 +2879,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_vk_sidorkov",
@@ -2513,7 +2921,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dtj_state_direct",
@@ -2544,7 +2963,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_dtj_knowing",
@@ -2575,7 +3005,18 @@
         }
       ],
       "date": "2026",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_ira_lakhta",
@@ -2606,7 +3047,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_lakhta_audience",
@@ -2637,7 +3089,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_goldstone_dtj",
@@ -2669,7 +3132,18 @@
         }
       ],
       "date": "2016-06-03",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_aras_kaveladze",
@@ -2700,7 +3174,18 @@
         }
       ],
       "date": "2016-06-06",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kaveladze_crocus",
@@ -2731,7 +3216,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_aras_crocus",
@@ -2762,7 +3258,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kaveladze_meeting",
@@ -2793,7 +3300,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kaveladze_beniaminov",
@@ -2824,7 +3342,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_beniaminov_purpose",
@@ -2857,7 +3386,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "contested",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "contested"
+        ]
+      }
     },
     {
       "id": "e_meeting_expectation",
@@ -2889,7 +3429,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_goldstone_dtj_vk",
@@ -2920,7 +3471,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dtj_scavino_vk",
@@ -2951,7 +3513,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sidorkov_campaign",
@@ -2982,7 +3555,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_stone_wikileaks",
@@ -3013,7 +3597,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_stone_campaign",
@@ -3044,7 +3639,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_katsyv_prevezon",
@@ -3075,7 +3681,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_ves_prevezon",
@@ -3106,7 +3723,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_ves_obstruction",
@@ -3137,7 +3765,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_ves_intel",
@@ -3168,7 +3807,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_intel",
@@ -3199,7 +3849,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_meeting_akh",
@@ -3230,7 +3891,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_hragi",
@@ -3261,7 +3933,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_katsyv_hragi",
@@ -3292,7 +3975,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_hragi_congress",
@@ -3323,7 +4017,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_rohrabacher",
@@ -3354,7 +4059,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rohrabacher_congress",
@@ -3385,7 +4101,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_film",
@@ -3416,7 +4143,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_film_audience",
@@ -3447,7 +4185,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_prevezon_baker",
@@ -3478,7 +4227,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_baker_fusion",
@@ -3509,7 +4269,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_fusion_simpson",
@@ -3540,7 +4311,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_simpson_ves",
@@ -3571,7 +4353,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_fusion_meeting_DNC",
@@ -3602,7 +4395,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_sidorkov_graff",
@@ -3633,7 +4437,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_goldstone_putin",
@@ -3664,7 +4479,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "D"
+      "evidence_quality": "D",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_gru_guccifer",
@@ -3695,7 +4521,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_gru_dcleaks",
@@ -3726,7 +4563,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_guccifer_wl",
@@ -3757,7 +4605,18 @@
         }
       ],
       "date": "2016-06-29",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_dcleaks_wl",
@@ -3788,7 +4647,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_guccifer_stone",
@@ -3819,7 +4689,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_wl_audience",
@@ -3850,7 +4731,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_guccifer_smokinggun",
@@ -3882,7 +4774,18 @@
         }
       ],
       "date": "2016-06-27",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_guccifer_hill",
@@ -3914,7 +4817,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_guccifer_candidate",
@@ -3946,7 +4860,18 @@
         }
       ],
       "date": "2016-08-15",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_smokinggun_aud",
@@ -3977,7 +4902,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_hill_aud",
@@ -4008,7 +4944,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_candidate_aud",
@@ -4039,7 +4986,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_stone_breitbart",
@@ -4070,7 +5028,18 @@
         }
       ],
       "date": "2016-08-05",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_breitbart_aud",
@@ -4101,7 +5070,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_stone_corsi",
@@ -4132,7 +5112,18 @@
         }
       ],
       "date": "2016-07-25",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_corsi_wnd",
@@ -4163,7 +5154,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_corsi_wikileaks",
@@ -4194,7 +5196,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_wnd_aud",
@@ -4225,7 +5238,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_stone_bannon",
@@ -4256,7 +5280,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_bannon_campaign",
@@ -4287,7 +5322,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_stone_gru_knowledge",
@@ -4318,7 +5364,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_cooper_potomac",
@@ -4349,7 +5406,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_hragi_potomac",
@@ -4380,7 +5448,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_cooper_film",
@@ -4411,7 +5490,18 @@
         }
       ],
       "date": "2016-06-13",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_potomac_gabbard",
@@ -4442,7 +5532,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_cooper_gabbard",
@@ -4473,7 +5574,18 @@
         }
       ],
       "date": "2019",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_katsyv_arakelian",
@@ -4504,7 +5616,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_arakelian_hragi",
@@ -4535,7 +5658,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_cymrot_baker",
@@ -4566,7 +5700,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_baker_congress",
@@ -4597,7 +5742,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_dellums",
@@ -4628,7 +5784,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dellums_congress",
@@ -4659,7 +5826,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_schweitzer_hragi",
@@ -4690,7 +5868,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "D"
+      "evidence_quality": "D",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_cymrot_hragi",
@@ -4721,7 +5910,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "D"
+      "evidence_quality": "D",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_fusion_lobbying_DNC",
@@ -4752,7 +5952,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_russia_gabbard_DNC",
@@ -4783,7 +5994,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_2016_2024_bridge_DNC",
@@ -4814,7 +6036,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_fusion_cooper",
@@ -4845,7 +6078,18 @@
         }
       ],
       "date": "2017",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_cooper",
@@ -4876,7 +6120,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_akh_veselnitskaya",
@@ -4907,7 +6162,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_akh_katsyv",
@@ -4938,7 +6204,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_katsyv_hragi_control",
@@ -4971,7 +6248,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "contested",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "contested"
+        ]
+      }
     },
     {
       "id": "e_tvnovosti_rt",
@@ -5002,7 +6290,18 @@
           "independence_group": "doj_tenet_indictment"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_tvnovosti_ruptly",
@@ -5033,7 +6332,18 @@
           "independence_group": "fara_gec"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_ruptly_maffick",
@@ -5065,7 +6375,18 @@
         }
       ],
       "evidence_quality": "A",
-      "relationship_type": "OWNERSHIP"
+      "relationship_type": "OWNERSHIP",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_tvnovosti_maffick",
@@ -5097,7 +6418,18 @@
         }
       ],
       "evidence_quality": "A",
-      "relationship_type": "FUNDING"
+      "relationship_type": "FUNDING",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_naouai_maffick",
@@ -5128,7 +6460,18 @@
           "independence_group": "fara_gec"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_maffick_audience",
@@ -5159,7 +6502,18 @@
           "independence_group": "fara_gec"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tvnovosti_chen",
@@ -5204,6 +6558,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
         "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5248,6 +6613,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
         "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5279,7 +6655,18 @@
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_afanasyeva_chen_scouting",
@@ -5315,6 +6702,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
         "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5359,6 +6757,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
         "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5403,6 +6812,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
         "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5434,7 +6854,18 @@
         }
       ],
       "date": "2026",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_tenet_influencers_knowing_DNC",
@@ -5465,7 +6896,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_chen_intent_contested",
@@ -5498,7 +6940,18 @@
           "independence_group": "press"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "contested",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "contested"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_tim_pool",
@@ -5534,6 +6987,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5566,7 +7030,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tim_pool_platforms",
@@ -5597,7 +7072,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tim_pool_conmedia",
@@ -5629,7 +7115,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tim_pool_cohort",
@@ -5660,7 +7157,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_dave_rubin",
@@ -5696,6 +7204,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5728,7 +7247,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dave_rubin_platforms",
@@ -5759,7 +7289,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dave_rubin_conmedia",
@@ -5791,7 +7332,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_dave_rubin_cohort",
@@ -5822,7 +7374,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_benny_johnson",
@@ -5858,6 +7421,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -5890,7 +7464,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_benny_johnson_platforms",
@@ -5921,7 +7506,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_benny_johnson_conmedia",
@@ -5953,7 +7549,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_benny_johnson_cohort",
@@ -5984,7 +7591,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_lauren_southern",
@@ -6020,6 +7638,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -6052,7 +7681,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_lauren_southern_platforms",
@@ -6083,7 +7723,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_lauren_southern_conmedia",
@@ -6115,7 +7766,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_lauren_southern_cohort",
@@ -6146,7 +7808,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_tayler_hansen",
@@ -6182,6 +7855,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -6214,7 +7898,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tayler_hansen_platforms",
@@ -6245,7 +7940,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tayler_hansen_conmedia",
@@ -6277,7 +7983,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_tayler_hansen_cohort",
@@ -6308,7 +8025,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_recruit_matt_christiansen",
@@ -6344,6 +8072,17 @@
       "verification_basis": {
         "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
         "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      },
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
       }
     },
     {
@@ -6376,7 +8115,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_matt_christiansen_platforms",
@@ -6407,7 +8157,18 @@
         "primary": false,
         "independence_group": "press"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_matt_christiansen_conmedia",
@@ -6439,7 +8200,18 @@
         "independence_group": "press"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_matt_christiansen_cohort",
@@ -6470,7 +8242,18 @@
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_blaze",
@@ -6503,7 +8286,18 @@
       },
       "evidence_quality": "C",
       "domain": "domestic",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_tpusa",
@@ -6539,7 +8333,18 @@
       "pre_tenet": true,
       "relationship_class": "DOMESTIC_MEMBERSHIP",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_conmedia",
@@ -6579,7 +8384,18 @@
         "independence_group": "press_identification"
       },
       "evidence_quality": "C",
-      "domain": "domestic"
+      "domain": "domestic",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rubin_blaze",
@@ -6612,7 +8428,18 @@
       },
       "evidence_quality": "C",
       "domain": "domestic",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_johnson_tpusa",
@@ -6648,7 +8475,18 @@
       "pre_tenet": true,
       "relationship_class": "DOMESTIC_MEMBERSHIP",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_afanasyeva_tenet_direction",
@@ -6680,7 +8518,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "A",
-      "relationship_type": "DIRECTION"
+      "relationship_type": "DIRECTION",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_grigoriann_tenet_funding",
@@ -6712,7 +8561,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "A",
-      "relationship_type": "FUNDING"
+      "relationship_type": "FUNDING",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_afanasyeva_grigoriann",
@@ -6744,7 +8604,18 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTACT"
+      "relationship_type": "CONTACT",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_russia_built_network_DNC",
@@ -6775,7 +8646,18 @@
         }
       ],
       "date": "2026",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_chen_pool_prior",
@@ -6817,7 +8699,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_chen_rubin_prior",
@@ -6867,7 +8760,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_chen_southern_prior",
@@ -6900,7 +8804,18 @@
         }
       ],
       "evidence_quality": "C",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_chen_matt_prior",
@@ -6933,7 +8848,18 @@
         }
       ],
       "evidence_quality": "C",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rubin_pool_prior",
@@ -6975,7 +8901,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rubin_johnson_prior",
@@ -7017,7 +8954,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_pool_southern_prior",
@@ -7059,7 +9007,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_pool_johnson_prior",
@@ -7101,7 +9060,18 @@
       ],
       "evidence_quality": "A",
       "relationship_type": "APPEARANCE",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_johnson_hansen_amp",
@@ -7143,7 +9113,18 @@
       },
       "evidence_quality": "C",
       "pre_tenet": true,
-      "relationship_type": "AMPLIFICATION"
+      "relationship_type": "AMPLIFICATION",
+      "evidence_state": "multi_source_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "multi_source_verified"
+        ]
+      }
     },
     {
       "id": "e_dtj_hansen_amp",
@@ -7177,7 +9158,18 @@
       ],
       "evidence_quality": "C",
       "pre_tenet": true,
-      "relationship_type": "AMPLIFICATION"
+      "relationship_type": "AMPLIFICATION",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_southern_rebel",
@@ -7210,7 +9202,18 @@
         }
       ],
       "evidence_quality": "C",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_swann_sovren",
@@ -7241,7 +9244,18 @@
           "independence_group": "press_tpm"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_southern_dugin",
@@ -7283,7 +9297,18 @@
         "independence_group": "episode_record"
       },
       "evidence_quality": "A",
-      "relationship_type": "INTERVIEW"
+      "relationship_type": "INTERVIEW",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rt_pool_via_southern_DNC",
@@ -7315,7 +9340,18 @@
         }
       ],
       "date": "2026",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_southern_contrib_2019",
@@ -7360,7 +9396,18 @@
       "evidence_quality": "A",
       "relationship_class": "INFLUENCE",
       "conduit": true,
-      "scoreboard": true
+      "scoreboard": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rt_southern_report_2022",
@@ -7397,7 +9444,18 @@
       "evidence_quality": "A",
       "relationship_class": "INFLUENCE",
       "conduit": true,
-      "scoreboard": true
+      "scoreboard": true,
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_rt_tim_pool_DNC",
@@ -7429,7 +9487,18 @@
         }
       ],
       "date": "2023",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_dave_rubin_DNC",
@@ -7461,7 +9530,18 @@
         }
       ],
       "date": "2021",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_benny_johnson_DNC",
@@ -7493,7 +9573,18 @@
         }
       ],
       "date": "2026",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_tayler_hansen_DNC",
@@ -7525,7 +9616,18 @@
         }
       ],
       "date": "2021",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_matt_christiansen_DNC",
@@ -7557,7 +9659,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_pool_office_2016",
@@ -7594,7 +9707,18 @@
       "evidence_quality": "B",
       "relationship_class": "DIRECT_CONTACT",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sputnik_pool_office_2016",
@@ -7631,7 +9755,18 @@
       "evidence_quality": "B",
       "relationship_class": "DIRECT_CONTACT",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sputnik_fairbanks_emp",
@@ -7668,7 +9803,18 @@
       "evidence_quality": "C",
       "relationship_class": "PERSONNEL_CONTINUITY",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_fairbanks_pool_emp",
@@ -7705,7 +9851,18 @@
       "evidence_quality": "C",
       "relationship_class": "PERSONNEL_CONTINUITY",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_ora_rubin_prod",
@@ -7742,7 +9899,18 @@
       "evidence_quality": "C",
       "relationship_class": "SHARED_MEDIA_INFRASTRUCTURE",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_ora_rtamerica_prod",
@@ -7778,7 +9946,18 @@
       "evidence_quality": "C",
       "relationship_class": "SHARED_MEDIA_INFRASTRUCTURE",
       "conduit": false,
-      "scoreboard": false
+      "scoreboard": false,
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rt_pool_influence_DNC",
@@ -7810,7 +9989,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_sputnik_pool_via_fairbanks_DNC",
@@ -7842,7 +10032,18 @@
         }
       ],
       "date": "2023",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_rt_rubin_via_ora_DNC",
@@ -7874,7 +10075,18 @@
         }
       ],
       "date": "2015",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_fairbanks_pool_appearance",
@@ -7911,7 +10123,18 @@
           "independence_group": "splc"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_rt_tpusa_DNC",
@@ -7943,7 +10166,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_tpusa_productions_part",
@@ -7980,7 +10214,18 @@
           "independence_group": "tpusa_self"
         }
       ],
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_johnson_tpusa_productions",
@@ -8025,7 +10270,18 @@
         "primary": false,
         "independence_group": "press_hill"
       },
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_russia_benny_virality_DNC",
@@ -8057,7 +10313,18 @@
         }
       ],
       "date": "2022",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_tpusa_produces_content",
@@ -8093,7 +10360,18 @@
           "independence_group": "ssci_new_knowledge"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_ira_tpusa_content",
@@ -8146,7 +10424,18 @@
         "primary": true,
         "independence_group": "ssci_new_knowledge"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_ira_tpusa_org_DNC",
@@ -8178,7 +10467,18 @@
         }
       ],
       "date": "2018",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_tpusa_tenet_infra_DNC",
@@ -8211,7 +10511,18 @@
         }
       ],
       "date": "2024",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_deripaska_manafort",
@@ -8246,7 +10557,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kilimnik_manafort",
@@ -8281,7 +10603,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_manafort_kilimnik_info",
@@ -8314,7 +10647,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kilimnik_deripaska",
@@ -8347,7 +10691,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kilimnik_gru_qualified",
@@ -8380,7 +10735,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "D"
+      "evidence_quality": "D",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_manafort_campaign",
@@ -8413,7 +10779,18 @@
           "independence_group": "ssci_vol5"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_mifsud_papadopoulos",
@@ -8448,7 +10825,18 @@
           "independence_group": "mueller"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_papadopoulos_timofeev",
@@ -8481,7 +10869,18 @@
           "independence_group": "mueller"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_timofeev_mfa",
@@ -8514,7 +10913,18 @@
           "independence_group": "mueller"
         }
       ],
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_polonskaya_papadopoulos",
@@ -8547,7 +10957,18 @@
           "independence_group": "mueller"
         }
       ],
-      "evidence_quality": "B"
+      "evidence_quality": "B",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_papadopoulos_campaign",
@@ -8580,7 +11001,18 @@
           "independence_group": "mueller"
         }
       ],
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_papadopoulos_witting_DNC",
@@ -8612,7 +11044,18 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_dvorkovich_page",
@@ -8648,7 +11091,18 @@
           "independence_group": "senate_judiciary"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_baranov_page",
@@ -8684,7 +11138,18 @@
           "independence_group": "senate_judiciary"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_page_campaign",
@@ -8717,7 +11182,18 @@
           "independence_group": "senate_judiciary"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "reported",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "reported"
+        ]
+      }
     },
     {
       "id": "e_sechin_page_contested",
@@ -8752,7 +11228,18 @@
           "independence_group": "steele_crossfire"
         }
       ],
-      "evidence_quality": "C"
+      "evidence_quality": "C",
+      "evidence_state": "contested",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "evidence_ledger",
+        "eligible": false,
+        "reason": [
+          "contested"
+        ]
+      }
     },
     {
       "id": "e_page_intel_conduit_DNC",
@@ -8784,7 +11271,18 @@
         }
       ],
       "date": "2016",
-      "evidence_quality": "N/A"
+      "evidence_quality": "N/A",
+      "evidence_state": "negative_finding",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
     },
     {
       "id": "e_kiriyenko_structura",
@@ -8825,7 +11323,18 @@
         "primary": true,
         "independence_group": "doj_doppelganger"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_structura_fakesites",
@@ -8859,7 +11368,18 @@
         "primary": true,
         "independence_group": "treasury_ofac"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_kiriyenko_anodialog",
@@ -8900,7 +11420,18 @@
         "primary": true,
         "independence_group": "doj_doppelganger"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     },
     {
       "id": "e_anodialog_fakesites",
@@ -8934,7 +11465,18 @@
         "primary": true,
         "independence_group": "doj_doppelganger"
       },
-      "evidence_quality": "A"
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "unaudited",
+      "identity_check": "unaudited",
+      "temporal_check": "unaudited",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
     }
   ]
 }

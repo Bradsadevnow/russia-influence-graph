@@ -332,3 +332,13 @@ Chain now runs document → relationship → network → organizational mechanis
 - Bugfix: normalize strips unknown top-level node fields (arch_profile_schema didn't survive) → v2 detected via `arch_profile.intermediary_class`. 2024 scoreboard unchanged.
 
 101 nodes / 228 edges. validate.py clean.
+
+## batch 24 (2026-09-11) — evidence_state + derived publication classification (schema lock)
+**Publication is now a DETERMINISTIC derived field; the renderer consumes it, never decides evidentiary status.**
+- New authoritative field **`evidence_state`** {primary_verified, multi_source_verified, reported, contested, conditional, negative_finding, searched_negative, cut} — audit-assigned wins; otherwise provisional from current fields.
+- New DERIVED **`publication`** {layer, eligible, reason}: `public_core` = primary_verified ∨ multi_source_verified ∨ (do_not_claim WITH provenance); `evidence_ledger` = reported ∨ contested; `research_graph` = everything else. **A do_not_claim guardrail with NO provenance object is demoted to research_graph** (a careful negative must not read as a verified positive).
+- Orthogonal red-team check fields seeded on every edge: `claim_scope` {exact/narrower/broader}, `identity_check` {exact_person/pseudonym_binding/ambiguous}, `temporal_check` {supported/partial/unsupported} — default `unaudited`.
+- normalize.py computes evidence_state + publication; validate.py ENFORCES the derivation invariant (publication must equal the deterministic derivation) and flags any do_not_claim missing provenance. Legends added.
+- **Current split: public_core 125 (99 primary_verified + 1 multi_source + 25 do_not_claim-w/-provenance), evidence_ledger 103.** These are provisional until the 75-edge audit assigns final evidence_state per edge.
+
+101 nodes / 228 edges. validate.py clean.

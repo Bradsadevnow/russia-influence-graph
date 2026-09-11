@@ -44,6 +44,41 @@ def evidence_quality(e, primary, disputed):
     return "C"                                                # secondary/journalism
 
 auto_dates = auto_q = 0
+def _cites(e):
+    return e.get("citations") or ([e["citation"]] if e.get("citation") else [])
+
+def evidence_state(e):
+    """Authoritative evidence classification. An audit-assigned e['evidence_state']
+    ALWAYS wins; otherwise a provisional state is derived from current fields."""
+    if e.get("evidence_state"): return e["evidence_state"]
+    c, v = e["confidence"], e["verification"]
+    if c == "do_not_claim": return "negative_finding"
+    if e.get("disputed") or e.get("provenance") == "contested": return "contested"
+    if e.get("provenance") == "conditional": return "conditional"
+    cits = _cites(e)
+    prim = any(x.get("primary") for x in cits)
+    origins = {x.get("independence_group") for x in cits if x.get("independence_group")}
+    if v == "verified":
+        if prim: return "primary_verified"
+        if len(origins) >= 2: return "multi_source_verified"
+        return "reported"
+    return "reported"                      # needs_primary / pending
+
+def derive_publication(e):
+    """DETERMINISTIC publication classification. The renderer consumes this; it never
+    decides evidentiary status. do_not_claim reaches public_core ONLY with provenance."""
+    st = evidence_state(e)
+    has_prov = any(x.get("url") for x in _cites(e))
+    if st in ("primary_verified", "multi_source_verified"):
+        return {"layer": "public_core", "eligible": True, "reason": [st]}
+    if st == "negative_finding":
+        if has_prov:
+            return {"layer": "public_core", "eligible": True, "reason": ["do_not_claim_with_provenance"]}
+        return {"layer": "research_graph", "eligible": False, "reason": ["do_not_claim_missing_provenance"]}
+    if st in ("reported", "contested"):
+        return {"layer": "evidence_ledger", "eligible": False, "reason": [st]}
+    return {"layer": "research_graph", "eligible": False, "reason": [st]}   # conditional/searched_negative/cut
+
 for e in g["edges"]:
     e.setdefault("provenance", "observed")
     # citation -> citations[] with independence_group (canonical: citations[])
@@ -61,6 +96,11 @@ for e in g["edges"]:
     primary = bool((cits[0].get("primary") if cits else False))
     e["evidence_quality"] = evidence_quality(e, primary, e.get("disputed"))
     auto_q += 1
+    # evidence_state (provisional unless audit-assigned) + DERIVED publication classification
+    e["evidence_state"] = evidence_state(e)
+    for k in ("claim_scope", "identity_check", "temporal_check"):
+        e.setdefault(k, "unaudited")
+    e["publication"] = derive_publication(e)
 
 # node hygiene: ensure optional keys exist consistently
 for n in g["nodes"]:
@@ -68,6 +108,11 @@ for n in g["nodes"]:
 
 g["metadata"]["schema_version"] = "1.0"
 g["metadata"]["legends"].setdefault("evidence_quality", ["A","B","C","D","N/A"])
+g["metadata"]["legends"].setdefault("evidence_state", ["primary_verified","multi_source_verified","reported","contested","conditional","negative_finding","searched_negative","cut"])
+g["metadata"]["legends"].setdefault("publication_layer", ["public_core","evidence_ledger","research_graph"])
+g["metadata"]["legends"].setdefault("claim_scope", ["exact","narrower_than_source","broader_than_source","unaudited"])
+g["metadata"]["legends"].setdefault("identity_check", ["exact_person","pseudonym_binding","ambiguous","n_a","unaudited"])
+g["metadata"]["legends"].setdefault("temporal_check", ["supported","partially_supported","unsupported","unaudited"])
 g["metadata"]["normalized"] = "2026-09-10 — schema frozen at 1.0; fields uniform across all edges/nodes."
 json.dump(g, open(p,"w"), indent=2, ensure_ascii=False)
 print(f"normalized {len(g['edges'])} edges / {len(g['nodes'])} nodes to schema 1.0")
