@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 22 (PASS 4): dangling cleanup. Doppelganger triad completed — Kiriyenko -> {SDA, Structura, ANO Dialog} -> fake_sites (all VERIFIED, DOJ+Treasury primary, network-scoped PRODUCTION). agalarov_network PRUNED (redundant abstraction, 0 unique edges, superseded by concrete Agalarov nodes). 2024 architecture now has TWO distinct observed mechanisms: RT->Tenet coupling and Presidential-Administration->PR-firms->fabricated-media (Doppelganger). Zero dangling nodes.",
+    "status": "1.0 + batch 23 (PASS 5): arch_profile v2 canonical. Media vehicles backfilled; 2016 lobbying/financial vehicles profiled (HRAGI lobbying_front_ngo [principal CONTESTED, not promoted], Prevezon financial_litigation_vehicle [ownership majority, verified], BakerHostetler law_firm + Potomac pr_government_relations both is_russian_vehicle=FALSE/contracted_service = negative controls), shell_companies shell_network, Doppelganger triad = ONE fabrication_firms class (members sda/structura/ano_dialog). intermediary_class is the comparison key; is_russian_vehicle carries {value,basis}.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -91,7 +91,56 @@
         "CONTENT",
         "DOMESTIC_MEMBERSHIP",
         "CONTENT_HARVEST"
-      ]
+      ],
+      "arch_profile_v2": {
+        "era": "year",
+        "foreign_principal": [
+          "russian_state",
+          "russian_state_media",
+          "russian_state_linked_private",
+          "russian_presidential_administration",
+          "russian_political_actor",
+          "none_demonstrated"
+        ],
+        "foreign_ownership": [
+          "majority",
+          "significant",
+          "none_demonstrated",
+          "n_a"
+        ],
+        "funding_mechanism": [
+          "direct_contract",
+          "client_payment",
+          "shell_laundering",
+          "reimbursement",
+          "foreign_funding",
+          "litigation_defense"
+        ],
+        "intermediary_class": [
+          "media_subsidiary",
+          "production_company",
+          "founder_embedded_company",
+          "fabrication_firms",
+          "shell_network",
+          "lobbying_front_ngo",
+          "financial_litigation_vehicle",
+          "law_firm",
+          "pr_government_relations"
+        ],
+        "target_layer": "multi_value: audience|congress|campaign|courts|creators",
+        "leverages_existing_network": [
+          "high",
+          "moderate",
+          "low",
+          "n_a"
+        ],
+        "concealment": [
+          "high",
+          "moderate",
+          "low"
+        ],
+        "is_russian_vehicle": "{value: bool, basis: ownership|direction_control|russian_state_creation|contracted_service|none_demonstrated}"
+      }
     },
     "rules": [
       "A connection is not a conclusion. Never merge an outlet/producer (may be state-connected) with a downstream personality (may be an unwitting amplifier).",
@@ -223,7 +272,8 @@
         "unique_edges": 0,
         "date": "2026-09-11"
       }
-    ]
+    ],
+    "arch_profile_version": "v2"
   },
   "nodes": [
     {
@@ -313,7 +363,30 @@
       "type": "operation",
       "us_class": null,
       "notes": "Doppelganger; under Kiriyenko.",
-      "actor_class": "RUSSIAN_STATE"
+      "actor_class": "RUSSIAN_STATE",
+      "arch_profile": {
+        "era": "2022-24",
+        "foreign_principal": "russian_presidential_administration",
+        "foreign_ownership": "majority",
+        "funding_mechanism": "foreign_funding",
+        "intermediary_class": "fabrication_firms",
+        "target_layer": [
+          "audience"
+        ],
+        "leverages_existing_network": "n_a",
+        "concealment": "high",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "direction_control"
+        },
+        "members": [
+          "sda",
+          "structura",
+          "ano_dialog"
+        ],
+        "members_note": "Doppelganger triad profiled as ONE architectural class (fabrication_firms) under Kiriyenko/Presidential Administration; SDA+Structura ran the 60+ impersonation-site network, ANO Dialog produced original media brands (DOJ 9/4/24 + Treasury)."
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "structura",
@@ -322,7 +395,8 @@
       "type": "operation",
       "us_class": null,
       "actor_class": "RUSSIAN_STATE",
-      "notes": "One of three Doppelganger firms (with SDA and ANO Dialog) operating under the direction/control of the Russian Presidential Administration (Kiriyenko). Treasury: a key actor implementing the Kremlin-directed campaign; SDA+Structura ran a network of 60+ impersonation news sites."
+      "notes": "One of three Doppelganger firms (with SDA and ANO Dialog) operating under the direction/control of the Russian Presidential Administration (Kiriyenko). Treasury: a key actor implementing the Kremlin-directed campaign; SDA+Structura ran a network of 60+ impersonation news sites.",
+      "arch_member_of": "doppelganger_fabrication_firms"
     },
     {
       "id": "ano_dialog",
@@ -331,7 +405,8 @@
       "type": "operation",
       "us_class": null,
       "actor_class": "RUSSIAN_STATE",
-      "notes": "Third Doppelganger firm (with SDA, Structura) under Kiriyenko. DOJ affidavit: created original media brands and coordinated closely with SDA/Structura — the same articles appeared on cybersquatted domains AND ANO Dialog media brands. Treasury: provided services for fake posts + RRN infrastructure."
+      "notes": "Third Doppelganger firm (with SDA, Structura) under Kiriyenko. DOJ affidavit: created original media brands and coordinated closely with SDA/Structura — the same articles appeared on cybersquatted domains AND ANO Dialog media brands. Treasury: provided services for fake posts + RRN infrastructure.",
+      "arch_member_of": "doppelganger_fabrication_firms"
     },
     {
       "id": "kiriyenko",
@@ -367,7 +442,23 @@
       "type": "shell",
       "us_class": null,
       "notes": "Laundered ~$9.7M RT → Tenet.",
-      "actor_class": "INTERMEDIARY"
+      "actor_class": "INTERMEDIARY",
+      "arch_profile": {
+        "era": "2023-24",
+        "foreign_principal": "russian_state_media",
+        "foreign_ownership": "n_a",
+        "funding_mechanism": "shell_laundering",
+        "intermediary_class": "shell_network",
+        "target_layer": [],
+        "target_note": "feeds Tenet (infrastructure); no direct US target layer",
+        "leverages_existing_network": "n_a",
+        "concealment": "high",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "direction_control"
+        }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "aras_agalarov",
@@ -430,12 +521,21 @@
       "us_class": "direct_state_connected",
       "notes": "Nashville firm; ~$9.7M ≈ 90% of deposits from RT via shells; ~2,000 videos, 16M+ views.",
       "arch_profile": {
+        "era": "2023-24",
+        "foreign_principal": "russian_state_media",
         "foreign_ownership": "none_demonstrated",
-        "direct_contract": "yes",
-        "american_intermediary": "founder_embedded",
-        "existing_talent_network": "high",
-        "organizational_concealment": "high",
-        "era": "2023-24"
+        "funding_mechanism": "shell_laundering",
+        "intermediary_class": "founder_embedded_company",
+        "target_layer": [
+          "creators",
+          "audience"
+        ],
+        "leverages_existing_network": "high",
+        "concealment": "high",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "direction_control"
+        }
       },
       "arch_summary": "EMBED AT THE FOUNDER LAYER: RT operatives fund/direct via shells + a fake investor, embed at Chen/Donovan (founders already inside the US creator scene), then recruit an EXISTING high-reach creator network.",
       "actor_class": "US_ACTOR",
@@ -447,7 +547,8 @@
           "public self-description",
           "contemporaneous reporting"
         ]
-      }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "swann",
@@ -466,15 +567,24 @@
       "us_class": "direct_state_connected",
       "notes": "Swann's company; FARA-disclosed >$6M from Russian state-media entities.",
       "arch_profile": {
+        "era": "2023",
+        "foreign_principal": "russian_state_media",
         "foreign_ownership": "none_demonstrated",
-        "direct_contract": "yes",
-        "american_intermediary": "production_company",
-        "existing_talent_network": "moderate",
-        "organizational_concealment": "lower",
-        "era": "2023"
+        "funding_mechanism": "direct_contract",
+        "intermediary_class": "production_company",
+        "target_layer": [
+          "audience"
+        ],
+        "leverages_existing_network": "moderate",
+        "concealment": "low",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "direction_control"
+        }
       },
       "arch_summary": "CONTRACT THE PRODUCER: Russian state-backed contract (~$4.5M) to an American production company (Rebel/Sovren/Truth in Media) to produce Swann's programming.",
-      "actor_class": "US_ACTOR"
+      "actor_class": "US_ACTOR",
+      "arch_profile_schema": "v2"
     },
     {
       "id": "truth_in_media",
@@ -638,7 +748,25 @@
       "type": "network",
       "us_class": null,
       "notes": "Katsyv's company; centre of the Magnitsky-sanctions litigation; hired BakerHostetler.",
-      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "arch_profile": {
+        "era": "2016",
+        "foreign_principal": "russian_state_linked_private",
+        "foreign_ownership": "majority",
+        "funding_mechanism": "litigation_defense",
+        "intermediary_class": "financial_litigation_vehicle",
+        "target_layer": [
+          "courts",
+          "congress"
+        ],
+        "leverages_existing_network": "low",
+        "concealment": "low",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "ownership"
+        }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "katsyv",
@@ -656,7 +784,25 @@
       "type": "network",
       "us_class": null,
       "notes": "US law firm hired by Prevezon; in turn hired Fusion GPS. NOT a Russian entity — a contracted intermediary.",
-      "actor_class": "INTERMEDIARY"
+      "actor_class": "INTERMEDIARY",
+      "arch_profile": {
+        "era": "2016",
+        "foreign_principal": "none_demonstrated",
+        "foreign_ownership": "none_demonstrated",
+        "funding_mechanism": "client_payment",
+        "intermediary_class": "law_firm",
+        "target_layer": [
+          "courts",
+          "congress"
+        ],
+        "leverages_existing_network": "n_a",
+        "concealment": "low",
+        "is_russian_vehicle": {
+          "value": false,
+          "basis": "contracted_service"
+        }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "fusion_gps",
@@ -683,7 +829,25 @@
       "type": "network",
       "us_class": null,
       "notes": "Nominal Russian-American adoption org; practical activity = anti-Magnitsky lobbying; ≥$300k from Russian interests (Akhmetshin testimony).",
-      "actor_class": "INTERMEDIARY"
+      "actor_class": "INTERMEDIARY",
+      "arch_profile": {
+        "era": "2016",
+        "foreign_principal": "russian_state_linked_private",
+        "foreign_principal_note": "CONTESTED: Katsyv-directed origin is needs_primary + disputed (e_katsyv_hragi_control; Akhmetshin-origin the alternative). Not promoted beyond current evidence.",
+        "foreign_ownership": "none_demonstrated",
+        "funding_mechanism": "foreign_funding",
+        "intermediary_class": "lobbying_front_ngo",
+        "target_layer": [
+          "congress"
+        ],
+        "leverages_existing_network": "low",
+        "concealment": "moderate",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "foreign_funding"
+        }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "rohrabacher",
@@ -797,7 +961,25 @@
       "type": "network",
       "us_class": "bridge_amplifier",
       "notes": "US PR/lobbying firm; compensated by HRAGIF for the 2016 Washington Magnitsky-film screening; later retained by the Gabbard campaign.",
-      "actor_class": "US_ACTOR"
+      "actor_class": "US_ACTOR",
+      "arch_profile": {
+        "era": "2016",
+        "foreign_principal": "none_demonstrated",
+        "foreign_ownership": "none_demonstrated",
+        "funding_mechanism": "reimbursement",
+        "intermediary_class": "pr_government_relations",
+        "target_layer": [
+          "audience",
+          "campaign"
+        ],
+        "leverages_existing_network": "moderate",
+        "concealment": "low",
+        "is_russian_vehicle": {
+          "value": false,
+          "basis": "contracted_service"
+        }
+      },
+      "arch_profile_schema": "v2"
     },
     {
       "id": "gabbard_campaign",
@@ -904,15 +1086,24 @@
       "us_class": "direct_state_connected",
       "notes": "Earlier RT-funded US-facing digital network (In The Now / Soapbox / Waste-ED). German parent 51% Ruptly-owned; ~$5.6M from TV-Novosti from Oct 2019 (FARA/GEC). ARCHITECTURAL analogue of Tenet, NOT a proven personnel link to it.",
       "arch_profile": {
-        "foreign_ownership": "high",
-        "direct_contract": "yes",
-        "american_intermediary": "low",
-        "existing_talent_network": "low",
-        "organizational_concealment": "moderate",
-        "era": "2019"
+        "era": "2019",
+        "foreign_principal": "russian_state_media",
+        "foreign_ownership": "majority",
+        "funding_mechanism": "foreign_funding",
+        "intermediary_class": "media_subsidiary",
+        "target_layer": [
+          "audience"
+        ],
+        "leverages_existing_network": "low",
+        "concealment": "moderate",
+        "is_russian_vehicle": {
+          "value": true,
+          "basis": "ownership"
+        }
       },
       "arch_summary": "OWN THE VEHICLE: Russian-owned media subsidiary (51% Ruptly) producing Western-facing brands directly.",
-      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE"
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "arch_profile_schema": "v2"
     },
     {
       "id": "anissa_naouai",

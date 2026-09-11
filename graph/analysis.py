@@ -365,23 +365,33 @@ print("  circuit, TPUSA/Blaze org intersections, and Hansen surfaced via Johnson
 print("  amplification remain). => Tenet CENTRALIZED an existing network; it did not create one.")
 print("  This is a DOMESTIC-topology finding and asserts nothing about anyone's intent.")
 
-# ---- ORGANIZATIONAL ARCHITECTURE COMPARISON (architecture-vs-cast test) --------
+# ---- ORGANIZATIONAL ARCHITECTURE COMPARISON v2 (architecture-vs-cast test) ------
 print("\n" + "="*78)
-print("ORGANIZATIONAL ARCHITECTURE  (did Russia reuse one vehicle, or adapt it?)")
+print("ORGANIZATIONAL ARCHITECTURE v2  (does the CLASS change while the SHAPE holds?)")
 print("="*78)
-DIMS=["era","foreign_ownership","direct_contract","american_intermediary","existing_talent_network","organizational_concealment"]
-vehicles=[n for n in NODES.values() if n.get("arch_profile")]
-w=max(len(label(v["id"])) for v in vehicles) if vehicles else 8
-print(f"  {'vehicle':<{w}} " + " ".join(f"{d.split('_')[0][:9]:>10}" for d in DIMS))
-for v in vehicles:
-    ap=v["arch_profile"]
-    print(f"  {label(v['id']):<{w}} " + " ".join(f"{str(ap.get(d,'-'))[:10]:>10}" for d in DIMS))
-for v in vehicles:
-    print(f"\n  {label(v['id'])}: {v.get('arch_summary','')}")
-print("\n  => The vehicle CHANGES (own -> contract -> founder-embed) while the ARCHITECTURE holds")
-print("  (foreign principal -> US intermediary CLASS -> American-facing media -> audience).")
-print("  Verdict leans: Russia ADAPTED the organizational vehicle to the target network,")
-print("  it did not rerun one fixed template. Cast varies; the architecture-shape persists.")
+vehicles=[n for n in NODES.values() if n.get("arch_profile",{}).get("intermediary_class")]
+vehicles.sort(key=lambda n: str(n["arch_profile"].get("era")))
+def irv(ap):
+    v=ap.get("is_russian_vehicle",{})
+    return ("RU:"+v.get("basis","?")) if v.get("value") else ("not-RU:"+v.get("basis","?"))
+print(f"  {'vehicle':<16}{'era':<9}{'intermediary_class':<26}{'principal':<24}{'own':<9}{'concl':<7}russian_vehicle")
+for n in vehicles:
+    ap=n["arch_profile"]
+    print(f"  {label(n['id'])[:15]:<16}{str(ap.get('era')):<9}{ap.get('intermediary_class','?'):<26}"
+          f"{ap.get('foreign_principal','?')[:22]:<24}{ap.get('foreign_ownership','?')[:8]:<9}"
+          f"{ap.get('concealment','?')[:6]:<7}{irv(ap)}")
+    if ap.get("members"): print(f"       members: {ap['members']}")
+    if ap.get("foreign_principal_note"): print(f"       ⚠ {ap['foreign_principal_note'][:90]}")
+print("\n  intermediary_class spread:", sorted({n['arch_profile'].get('intermediary_class') for n in vehicles}))
+nru=[label(n['id']) for n in vehicles if not n['arch_profile'].get('is_russian_vehicle',{}).get('value')]
+print(f"  NEGATIVE CONTROLS (is_russian_vehicle=false, contracted US service): {nru}")
+print("\n  => The intermediary CLASS changes at nearly every vehicle (media_subsidiary -> production_company")
+print("  -> founder_embedded -> fabrication_firms -> shell_network -> lobbying_front_ngo -> financial_")
+print("  litigation_vehicle -> law_firm -> pr_government_relations) while the SHAPE holds (foreign")
+print("  principal -> intermediary class -> American-facing output -> audience/Congress/courts).")
+print("  Architecture-vs-cast: Russia ADAPTS the vehicle to the target; it does not rerun one template.")
+print("  The two contracted US firms are retained as explicit NON-vehicles — the negative control that")
+print("  keeps the class comparison honest.")
 
 # ---- G0 -> G1 -> G2 STAGED EXPERIMENT + REMOVAL TESTS --------------------------
 print("\n" + "="*78)

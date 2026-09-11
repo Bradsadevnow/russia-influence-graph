@@ -322,3 +322,13 @@ Chain now runs document → relationship → network → organizational mechanis
 - **Result:** Doppelganger triad complete (Kiriyenko → {SDA, Structura, ANO Dialog} → fake_sites), giving the 2024 side TWO distinct observed mechanisms — RT→Tenet *coupling* vs Presidential-Administration→PR-firms→*fabricated media* (Doppelganger). Sharpens ⑤'s intermediary-class comparison. 2024 scoreboard unchanged.
 
 101 nodes / 228 edges. validate.py clean. Zero dangling nodes.
+
+## batch 23 (2026-09-11) — PASS ⑤: arch_profile v2 + architecture-vs-cast across 9 vehicles
+**Canonical v2 schema** (`metadata.legends.arch_profile_v2`): `foreign_principal` (6-value, adds russian_presidential_administration + russian_political_actor), `foreign_ownership` (majority/significant/none_demonstrated/n_a — not binary), `funding_mechanism` (+client_payment so a law firm's client relationship isn't a "funding mechanism"), `intermediary_class` (9 classes — the comparison key), `target_layer` (multi-value array), `leverages_existing_network`, `concealment` (low renamed), `is_russian_vehicle` ({value, basis} — not a masquerading boolean).
+- **Media vehicles backfilled** to v2: Maffick (media_subsidiary, ownership majority), Rebel/Swann (production_company), Tenet (founder_embedded_company).
+- **2016 vehicles profiled:** HRAGI (lobbying_front_ngo — principal CONTESTED, not promoted past e_katsyv_hragi_control), Prevezon (financial_litigation_vehicle, ownership majority/verified), **BakerHostetler (law_firm) + Potomac (pr_government_relations) = is_russian_vehicle:false/contracted_service — the negative controls**, shell_companies (shell_network).
+- **Doppelganger = ONE fabrication_firms class** with `members: [sda, structura, ano_dialog]` (principal russian_presidential_administration/Kiriyenko); Structura/ANO Dialog carry `arch_member_of` pointers, not independent profiles.
+- **Result — computed, not asserted:** all 9 intermediary classes distinct across 2016→2024; the CLASS changes at nearly every vehicle while the SHAPE holds (foreign principal → intermediary class → American-facing output → audience/Congress/courts). *Russia adapts the vehicle to the target; it does not rerun one template.* Two contracted US firms retained as explicit non-vehicles = the negative control keeping the comparison honest.
+- Bugfix: normalize strips unknown top-level node fields (arch_profile_schema didn't survive) → v2 detected via `arch_profile.intermediary_class`. 2024 scoreboard unchanged.
+
+101 nodes / 228 edges. validate.py clean.
