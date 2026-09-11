@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 17: TPUSA enriched as a DOMESTIC organizational hub (US_ACTOR, POLITICAL_MEDIA_ORGANIZATION) bridging Chen & Johnson; RT->Chen and Chen->TPUSA kept as SEPARATE edges. do_not_claim e_rt_tpusa_DNC: no direct Russia->TPUSA edge (searched). Banked architecture_distinctions: PERSON_MEDIATED (RT->Chen->TPUSA) vs INSTITUTION_DIRECT (not established). Scoreboard unchanged.",
+    "status": "1.0 + batch 18: TPUSA modeled as a documented DOMESTIC amplification machine ($7.2M media, 400+ creators, production/PR/events/training) with Benny Johnson (CCO Feb 2019) as operator + TPUSA Productions arm. do_not_claim: Russia did NOT cause Benny's virality (American institutional explanation). Temporal arc + OQ-02 (did Russia EXPLOIT a pre-optimized American amplifier?) banked. Still NO Russia->TPUSA. 2 of 6 documented inside TPUSA's machine pre-Tenet (Benny, Chen).",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -145,15 +145,37 @@
           "\"Tim Pool\" \"Cassandra Fairbanks\" Sputnik"
         ],
         "targets": "2016 primary/near-primary: archived bios, articles, social posts, videos, event pages, interviews, employment records. Search Fairbanks+Pool together, not Pool alone."
+      },
+      {
+        "id": "OQ-02",
+        "status": "open",
+        "edge": "(thesis; domestic-infrastructure exploitation)",
+        "question": "Did Russian influence (Tenet) EXPLOIT a pre-optimized American amplification system (TPUSA's), rather than build reach itself?",
+        "upgrades_if": "more of the six shown to have run through TPUSA's amplification apparatus pre-Tenet (ambassador/production/event ties) -> strengthens 'Russia coupled to a pre-optimized domestic amplifier'.",
+        "kills_if": "the six's reach traces to unrelated independent channels, not TPUSA's apparatus.",
+        "current": "Documented inside TPUSA's amplification machine pre-Tenet: Benny Johnson (CCO/productions) = 1 of the SIX; plus Lauren Chen (the broker, TPUSA contributor). The other five not established as TPUSA ambassadors in this pass.",
+        "note": "Still NO Russia->TPUSA edge. This tests exploitation-of-domestic-infrastructure, a different architecture from institution-direct penetration."
       }
     ],
     "architecture_distinctions": {
       "PERSON_MEDIATED": "Russian node -> American PERSON -> American INSTITUTION. Documented: RT -> Chen -> TPUSA. The institution is reached THROUGH a person; the institution itself is not Russian-linked.",
-      "INSTITUTION_DIRECT": "Russian node -> American INSTITUTION directly (funding/control/org). NOT established for TPUSA. Materially different, stronger claim; do not conflate with person-mediated proximity."
+      "INSTITUTION_DIRECT": "Russian node -> American INSTITUTION directly (funding/control/org). NOT established for TPUSA. Materially different, stronger claim; do not conflate with person-mediated proximity.",
+      "INFRASTRUCTURE_EXPLOITATION": "Russian operation plugs into a PRE-EXISTING American amplification system (e.g. TPUSA's influencer machine) that it did not build or control. Documented that the machine exists and Benny/Chen were inside it; NOT documented that Russia directed or used TPUSA. Distinct from PERSON_MEDIATED and INSTITUTION_DIRECT."
     },
     "org_penetration_sweep": {
       "turning_point_usa": "not_established (direct Russia->TPUSA); present only as PERSON_MEDIATED via Chen. Queries: TPUSA+Russia/RT/FARA/funding/government/influence."
-    }
+    },
+    "timeline_tpusa_tenet": [
+      "2018: Benny Johnson establishes TPUSA Productions.",
+      "2019-02: TPUSA hires Johnson as CCO; launches influencer-media strategy.",
+      "2020-21: ambassador/influencer network expands (275 ambassadors, ~70M claimed reach, 2021).",
+      "2021: TPUSA media branch >$7.2M.",
+      "2022: 400+ creators onboarded; explicit cross-promotion + creator training/retreats (Verge).",
+      "2022-07: Lauren Chen becomes a TPUSA contributor.",
+      "2023: Chen/Donovan assemble Tenet.",
+      "2023-11: Tenet launches with creators already inside this ecosystem.",
+      "2024-09: DOJ alleges RT covertly funded/directed Tenet."
+    ]
   },
   "nodes": [
     {
@@ -846,7 +868,7 @@
       "layer": "us_political",
       "type": "network",
       "us_class": null,
-      "notes": "Existing American conservative org; a DOMESTIC network hub, NOT Russian-linked. Both Lauren Chen (contributor, Jul 2022) and Benny Johnson (contributor / former CCO) ran through it. TPUSA removed Chen's profile from its site after the Tenet indictment became public. No documented Russia->TPUSA organizational/financial/control relationship found (see e_rt_tpusa_DNC).",
+      "notes": "DOMESTIC creator-amplification hub, NOT Russian-linked. Institutionalized influencer amplification: $7.2M media branch (2021), 400+ onboarded creators by 2022, production/PR/event/training infrastructure, deliberate cross-promotion. Benny Johnson (viral-media specialist, ex-BuzzFeed/Blaze) hired as CCO Feb 2019 to run it. Chen was a contributor. TPUSA removed Chen's profile after the Tenet indictment. No documented Russia->TPUSA relationship (e_rt_tpusa_DNC).",
       "actor_class": "US_ACTOR",
       "organization_type": "POLITICAL_MEDIA_ORGANIZATION",
       "history": [
@@ -855,7 +877,26 @@
           "event": "Removed Lauren Chen's contributor profile after the Tenet indictment became public.",
           "source": "https://www.cdmrn.ca/russian-funding-canadian-influencers"
         }
-      ]
+      ],
+      "role": "domestic creator-amplification hub",
+      "amplification_profile": {
+        "media_budget_2021_usd": 7200000,
+        "creators_onboarded_by_2022": "400+",
+        "ambassadors_2021": 275,
+        "claimed_reach_2021": "70M",
+        "capabilities": [
+          "production_support",
+          "PR_media_booking",
+          "event_content_infrastructure",
+          "creator_training",
+          "deliberate_cross_promotion"
+        ],
+        "influencer_retreat": "Kirk + Benny Johnson taught creators to be effective posters in the online culture war",
+        "sources": [
+          "https://www.theverge.com/2022/1/5/22868483/turning-point-charlie-kirk-republican-influencers-instagram-today-is-america",
+          "https://carnegieendowment.org/research/2026/08/nonprofit-organizations-how-to-engage-social-media-new-media-strategy"
+        ]
+      }
     },
     {
       "id": "us_conservative_media",
@@ -982,6 +1023,16 @@
       "us_class": null,
       "actor_class": "US_ACTOR",
       "notes": "US production company (Larry King). Produced The Rubin Report; separately produced/licensed programming to RT America. Ora stated the programming was independently produced and licensed. SHARED-INFRASTRUCTURE node, not a Russian influence conduit."
+    },
+    {
+      "id": "tpusa_productions",
+      "label": "TPUSA Productions",
+      "layer": "us_media",
+      "type": "producer",
+      "us_class": null,
+      "actor_class": "US_ACTOR",
+      "organization_type": "PRODUCTION_ARM",
+      "notes": "TPUSA's content/production arm (established 2018). The production muscle of the amplification machine Benny Johnson ran as CCO."
     }
   ],
   "edges": [
@@ -7517,6 +7568,120 @@
         }
       ],
       "date": "2024",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_tpusa_productions_part",
+      "source": "tpusa_productions",
+      "target": "turning_point_usa",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "TPUSA Productions is TPUSA's in-house content/production arm.",
+      "citation": {
+        "publisher": "TPUSA press kit",
+        "title": "TPUSA Productions established 2018; influencer-media strategy",
+        "date": "2023-03",
+        "url": "https://backend.tpusa.com/wp-content/uploads/2023/03/Press-Kit-Mar-2023.pdf",
+        "primary": true,
+        "independence_group": "tpusa_self"
+      },
+      "verification": "needs_primary",
+      "date": "2018",
+      "domain": "domestic",
+      "relationship_type": "OWNERSHIP",
+      "relationship_class": "DOMESTIC_MEMBERSHIP",
+      "conduit": false,
+      "scoreboard": false,
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "TPUSA press kit",
+          "title": "TPUSA Productions established 2018; influencer-media strategy",
+          "date": "2023-03",
+          "url": "https://backend.tpusa.com/wp-content/uploads/2023/03/Press-Kit-Mar-2023.pdf",
+          "primary": true,
+          "independence_group": "tpusa_self"
+        }
+      ],
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_johnson_tpusa_productions",
+      "source": "benny_johnson",
+      "target": "tpusa_productions",
+      "evidence_class": "documented_contact",
+      "mechanism": "production",
+      "confidence": "high",
+      "claim": "Benny Johnson, a viral-media specialist (ex-BuzzFeed/TheBlaze), was hired as TPUSA Chief Creative Officer (Feb 2019) and established/operated TPUSA's production + influencer-media strategy. His virality was institutionally produced, not spontaneous.",
+      "citations": [
+        {
+          "publisher": "The Hill",
+          "title": "Benny Johnson joining TPUSA as CCO (viral-politics editor at BuzzFeed/TheBlaze)",
+          "date": "2019-02",
+          "url": "https://thehill.com/homenews/media/428814-daily-caller-reporter-benny-johnson-joining-turning-point-usa/",
+          "primary": false,
+          "independence_group": "press_hill"
+        },
+        {
+          "publisher": "The Verge",
+          "title": "TPUSA's influencer machine: $7.2M media branch, 400+ creators, event content infrastructure, Kirk+Johnson influencer retreat",
+          "date": "2022-01-05",
+          "url": "https://www.theverge.com/2022/1/5/22868483/turning-point-charlie-kirk-republican-influencers-instagram-today-is-america",
+          "primary": false,
+          "independence_group": "press_verge"
+        }
+      ],
+      "verification": "needs_primary",
+      "date": "2019-02",
+      "domain": "domestic",
+      "relationship_type": "EMPLOYMENT",
+      "relationship_class": "DOMESTIC_MEMBERSHIP",
+      "conduit": false,
+      "scoreboard": false,
+      "pre_tenet": true,
+      "provenance": "observed",
+      "citation": {
+        "publisher": "The Hill",
+        "title": "Benny Johnson joining TPUSA as CCO (viral-politics editor at BuzzFeed/TheBlaze)",
+        "date": "2019-02",
+        "url": "https://thehill.com/homenews/media/428814-daily-caller-reporter-benny-johnson-joining-turning-point-usa/",
+        "primary": false,
+        "independence_group": "press_hill"
+      },
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_russia_benny_virality_DNC",
+      "source": "rt",
+      "target": "benny_johnson",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Russian action caused Benny Johnson's virality / short-form reach. The DOCUMENTED cause is DOMESTIC: TPUSA's institutionalized amplification machine (hired him as a viral-media specialist/CCO, built production+PR+event+training infrastructure, cross-promoted creators). An American institutional explanation, not a Russian one.",
+      "citation": {
+        "publisher": "The Verge",
+        "title": "TPUSA's influencer machine: $7.2M media branch, 400+ creators, event content infrastructure, Kirk+Johnson influencer retreat",
+        "date": "2022-01-05",
+        "url": "https://www.theverge.com/2022/1/5/22868483/turning-point-charlie-kirk-republican-influencers-instagram-today-is-america",
+        "primary": false,
+        "independence_group": "press_verge"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "The Verge",
+          "title": "TPUSA's influencer machine: $7.2M media branch, 400+ creators, event content infrastructure, Kirk+Johnson influencer retreat",
+          "date": "2022-01-05",
+          "url": "https://www.theverge.com/2022/1/5/22868483/turning-point-charlie-kirk-republican-influencers-instagram-today-is-america",
+          "primary": false,
+          "independence_group": "press_verge"
+        }
+      ],
+      "date": "2022",
       "evidence_quality": "N/A"
     }
   ]

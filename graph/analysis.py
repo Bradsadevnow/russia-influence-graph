@@ -559,3 +559,23 @@ if _oq:
         print(f"  [{q['id']}|{q['status']}] {q['question']}")
         print(f"      edge={q.get('edge')}  UPGRADE: {q.get('upgrades_if','')}")
         print(f"      KILL: {q.get('kills_if','')}")
+
+# ---- DOMESTIC AMPLIFICATION INFRASTRUCTURE (TPUSA machine) --------------------
+print("\n" + "="*78)
+print("DOMESTIC AMPLIFICATION INFRASTRUCTURE  (American institutional explanation, not Russian)")
+print("="*78)
+amp=[n for n in NODES.values() if n.get("amplification_profile")]
+for n in amp:
+    ap=n["amplification_profile"]
+    print(f"  {label(n['id'])} [{n.get('organization_type','?')}] — {n.get('role','')}")
+    print(f"     media budget 2021: ${ap.get('media_budget_2021_usd',0):,} | creators by 2022: {ap.get('creators_onboarded_by_2022')} "
+          f"| ambassadors 2021: {ap.get('ambassadors_2021')} (claimed reach {ap.get('claimed_reach_2021')})")
+    print(f"     capabilities: {', '.join(ap.get('capabilities',[]))}")
+AMP_HUBS={"turning_point_usa","tpusa_productions"}
+inside=[c for c in ["tim_pool","dave_rubin","benny_johnson","lauren_southern","tayler_hansen","matt_christiansen"]
+        if any(e.get("domain")=="domestic" and e["source"]==c and e["target"] in AMP_HUBS for e in EDGES)]
+print(f"\n  Of the six, documented INSIDE TPUSA's amplification machine pre-Tenet: {[label(x) for x in inside]} ({len(inside)}/6)")
+print("  Russia->TPUSA: NOT established (e_rt_tpusa_DNC). Russia->Benny virality: NOT established")
+print("  (e_russia_benny_virality_DNC — the documented cause is TPUSA's domestic machine).")
+print("  => This is INFRASTRUCTURE_EXPLOITATION territory: did the operation plug into a pre-optimized")
+print("  American amplifier it did not build? (OQ-02) — a different architecture from Russian penetration.")

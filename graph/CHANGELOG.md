@@ -268,3 +268,15 @@ Chain now runs document → relationship → network → organizational mechanis
 - Scoreboard unchanged: **1 direct (Southern) + 0 mediated of 6; 5 not_established.**
 
 89 nodes / 200 edges. validate.py clean.
+
+## batch 18 (2026-09-11) — TPUSA as a documented DOMESTIC amplification machine
+**Resolves "Benny's virality can't be coincidence" into an AMERICAN institutional explanation, not a Russian one.**
+- `turning_point_usa.amplification_profile`: $7.2M media budget (2021), 400+ creators onboarded by 2022, 275 ambassadors / ~70M claimed reach (2021), capabilities = production support / PR & media booking / event content infrastructure / creator training / deliberate cross-promotion; Kirk+Johnson influencer retreat. Sources: Verge, Carnegie.
+- New node `tpusa_productions` (production arm, est. 2018) + `e_johnson_tpusa_productions`: Benny Johnson, viral-media specialist (ex-BuzzFeed/Blaze), hired CCO Feb 2019 to operate it. All domestic, conduit=false.
+- **`e_russia_benny_virality_DNC` (do_not_claim):** Russia did NOT cause Benny's virality; the documented cause is TPUSA's domestic amplification machine.
+- **`metadata.timeline_tpusa_tenet`** (2018 productions → 2019 CCO/strategy → 2021 $7.2M/275 ambassadors → 2022 400+ creators/cross-promo → 2022-07 Chen contributor → 2023 Tenet assembled → 2023-11 launch → 2024-09 DOJ).
+- **`metadata.architecture_distinctions.INFRASTRUCTURE_EXPLOITATION`** added: operation plugs into a PRE-EXISTING American amplifier it did not build/control (distinct from PERSON_MEDIATED and INSTITUTION_DIRECT).
+- **`OQ-02`**: did Russian influence EXPLOIT TPUSA's pre-optimized amplifier? Current: 1 of the six (Benny) documented inside it + Chen (broker); still NO Russia→TPUSA.
+- analysis.py prints DOMESTIC AMPLIFICATION INFRASTRUCTURE. Removal test: TPUSA still not a creator-cluster cut-point (6/6), no Russian reach. Scoreboard unchanged: 1 direct (Southern) + 0 mediated.
+
+90 nodes / 203 edges. validate.py clean.
