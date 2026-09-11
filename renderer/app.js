@@ -55,64 +55,70 @@ function edgeStyle(e){
   if(e.es==="multi_source_verified")return{stroke:"#6ea8fe",w:2.0,dash:"",op:.92};
   return{stroke:"#8892a0",w:1.3,dash:"2,4",op:.6};}
 
-/* ---------- visibility (backbone / focus / full) ---------- */
+/* ---------- visibility (persistent constellation: all nodes stay; selection lights edges + dims others) ---------- */
 function baseVisible(e){
   if(e.layer==="research_graph")return showResearch;
   if(e.es==="negative_finding")return showDnc;
   if(e.layer==="evidence_ledger")return showLedger;
   if(e.domain==="domestic"||e.domain==="personnel")return showDomestic;
   return e.layer==="public_core";}
-let FOCUSSET=new Set();
-function computeFocus(){FOCUSSET=new Set();if(!focusId)return;
-  FOCUSSET.add(focusId);let frontier=[focusId];
-  for(let h=0;h<2;h++){const nx=[];frontier.forEach(id=>{
-    EDGES.forEach(e=>{if(!baseVisible(e))return;
-      if(e.s===id&&!FOCUSSET.has(e.t)){FOCUSSET.add(e.t);nx.push(e.t);}
-      if(e.t===id&&!FOCUSSET.has(e.s)){FOCUSSET.add(e.s);nx.push(e.s);}});});frontier=nx;}}
-function edgeVisible(e){
-  if(!baseVisible(e))return false;
-  if(mode==="full")return true;
-  if(focusId)return FOCUSSET.has(e.s)&&FOCUSSET.has(e.t);
-  return VEH.has(e.s)||VEH.has(e.t);   // backbone: edges touching a vehicle
+function edgeVisible(e){return baseVisible(e);}  // for the node panel's incident-edge list
+let FOCUSSET=new Set(),FOCUSHOP={};
+function bfsHops(seed,depth){const hop={};hop[seed]=0;let fr=[seed];
+  for(let h=0;h<depth;h++){const nx=[];fr.forEach(id=>{EDGES.forEach(e=>{if(!baseVisible(e))return;
+    if(e.s===id&&hop[e.t]===undefined){hop[e.t]=h+1;nx.push(e.t);}
+    if(e.t===id&&hop[e.s]===undefined){hop[e.s]=h+1;nx.push(e.s);}});});fr=nx;}return hop;}
+function computeFocus(){FOCUSHOP=focusId?bfsHops(focusId,2):{};FOCUSSET=new Set(Object.keys(FOCUSHOP));}
+let hoverId=null,HOVERHOP={};
+function computeHover(){HOVERHOP=hoverId?bfsHops(hoverId,1):{};}
+function edgesToDraw(){
+  if(mode==="full")return EDGES.filter(baseVisible);
+  if(focusId)return EDGES.filter(e=>baseVisible(e)&&FOCUSSET.has(e.s)&&FOCUSSET.has(e.t));
+  if(hoverId)return EDGES.filter(e=>baseVisible(e)&&(e.s===hoverId||e.t===hoverId));
+  return EDGES.filter(e=>baseVisible(e)&&(VEH.has(e.s)||VEH.has(e.t)));  // landing: faint architecture backbone
 }
-function visibleNodeIds(){const s=new Set();EDGES.forEach(e=>{if(edgeVisible(e)){s.add(e.s);s.add(e.t);}});
-  // ensure lone vehicles show in backbone even if all their edges are filtered
-  if(mode==="backbone"&&!focusId)VEH.forEach(v=>s.add(v));
-  return s;}
-
-/* ---------- layered layout over the CURRENTLY VISIBLE subset ---------- */
+/* ---------- layered layout over ALL nodes (computed once; stable across selection) ---------- */
 const svg=document.getElementById("svg"),gEdges=document.getElementById("edges"),gNodes=document.getElementById("nodes"),gView=document.getElementById("view");
-let W=1000,H=700,P={},TGT={};
+let W=1000,H=700,P={},TGT={},laidOut=false;
 svg.insertAdjacentHTML("afterbegin",'<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#6b7280"/></marker></defs>');
 function laneX(l){return (l+.5)/6*W;}
-function relayout(){
+function assignAll(){
   const st=document.getElementById("stage").getBoundingClientRect();
   W=Math.max(600,st.width);H=Math.max(400,st.height);
-  const vis=[...visibleNodeIds()].map(id=>NBYID[id]).filter(Boolean);
-  const cnt={},idx={};vis.forEach(n=>{const l=lane(n);cnt[l]=(cnt[l]||0)+1;});
-  vis.forEach(n=>{const l=lane(n);idx[l]=idx[l]||0;const k=idx[l]++,c=cnt[l];
-    const tx=laneX(l),ty=H*(0.08+0.84*((k+0.5)/c));TGT[n.id]={x:tx,y:ty};
-    if(!P[n.id])P[n.id]={x:tx+(Math.random()*20-10),y:ty+(Math.random()*20-10)};
-    else {P[n.id].x=tx+(Math.random()*8-4);P[n.id].y=ty+(Math.random()*8-4);} });
-  let f=0;(function loop(){if(f++<170){settle(vis);draw();requestAnimationFrame(loop);}else draw();})();
+  const cnt={},idx={};NODES.forEach(n=>{const l=lane(n);cnt[l]=(cnt[l]||0)+1;});
+  NODES.forEach(n=>{const l=lane(n);idx[l]=idx[l]||0;const k=idx[l]++,c=cnt[l];
+    TGT[n.id]={x:laneX(l),y:H*(0.05+0.90*((k+0.5)/c))};
+    if(!P[n.id])P[n.id]={x:TGT[n.id].x+(Math.random()*20-10),y:TGT[n.id].y+(Math.random()*20-10)};});
 }
-function settle(vis){
-  for(let i=0;i<vis.length;i++)for(let j=i+1;j<vis.length;j++){
-    const a=P[vis[i].id],b=P[vis[j].id];let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+.01;
-    if(d2<3200){const d=Math.sqrt(d2),fo=1100/d2;a.x+=fo*dx/d;a.y+=fo*dy/d;b.x-=fo*dx/d;b.y-=fo*dy/d;}}
-  vis.forEach(n=>{const p=P[n.id],t=TGT[n.id];p.x+=(t.x-p.x)*.12;p.y+=(t.y-p.y)*.10;
-    p.x=Math.max(30,Math.min(W-30,p.x));p.y=Math.max(34,Math.min(H-30,p.y));});
+function settle(){
+  for(let i=0;i<NODES.length;i++)for(let j=i+1;j<NODES.length;j++){
+    const a=P[NODES[i].id],b=P[NODES[j].id];let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+.01;
+    if(d2<2600){const d=Math.sqrt(d2),fo=900/d2;a.x+=fo*dx/d;a.y+=fo*dy/d;b.x-=fo*dx/d;b.y-=fo*dy/d;}}
+  NODES.forEach(n=>{const p=P[n.id],t=TGT[n.id];p.x+=(t.x-p.x)*.11;p.y+=(t.y-p.y)*.09;
+    p.x=Math.max(30,Math.min(W-30,p.x));p.y=Math.max(34,Math.min(H-26,p.y));});
 }
+function relayout(){assignAll();let f=0;(function loop(){if(f++<200){settle();draw();requestAnimationFrame(loop);}else{laidOut=true;draw();}})();}
 function draw(){
-  const vis=EDGES.filter(edgeVisible),visN=visibleNodeIds();
-  gEdges.innerHTML=vis.map(e=>{const a=P[e.s],b=P[e.t];if(!a||!b)return"";const st=edgeStyle(e);
-    return `<line data-e="${e.id}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${st.stroke}" stroke-width="${st.w}" stroke-dasharray="${st.dash}" opacity="${st.op}" marker-end="url(#arr)" style="cursor:pointer"/>`;}).join("");
-  gNodes.innerHTML=[...visN].map(id=>NBYID[id]).filter(Boolean).map(n=>{const p=P[n.id];if(!p)return"";const c=nodeColor(n);
-    const veh=VEH.has(n.id),r=veh?9:((n.layer==="platform"||n.type==="audience")?4.5:6.5);
+  const ed=edgesToDraw(),focusOn=!!focusId&&mode!=="full",hoverOn=!focusOn&&!!hoverId&&mode!=="full";
+  const HOP = focusOn?FOCUSHOP:(hoverOn?HOVERHOP:null);
+  function nOp(id){
+    if(mode==="full")return 1;
+    if(HOP){const h=HOP[id];if(h===0)return 1;if(h===1)return .85;if(h===2)return .45;return .20;}
+    return VEH.has(id)?1:.55;                 // landing: vehicles prominent, rest present-but-quiet
+  }
+  gEdges.innerHTML=ed.map(e=>{const a=P[e.s],b=P[e.t];if(!a||!b)return"";const st=edgeStyle(e);
+    let op=st.op;
+    if(mode!=="full"&&!focusOn&&!hoverOn)op=st.op*0.42;         // subdued landing backbone
+    return `<line data-e="${e.id}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${st.stroke}" stroke-width="${st.w}" stroke-dasharray="${st.dash}" opacity="${op}" marker-end="url(#arr)" style="cursor:pointer"/>`;}).join("");
+  gNodes.innerHTML=NODES.map(n=>{const p=P[n.id];if(!p)return"";const c=nodeColor(n),veh=VEH.has(n.id),op=nOp(n.id);
+    const r=veh?9:((n.layer==="platform"||n.type==="audience")?4.5:6.5);
     const ring=n.ru===true?'stroke="#e5484d" stroke-width="2.6"':(n.ru===false?'stroke="#4bb96b" stroke-width="2.6"':(veh?'stroke="#dfe6f2" stroke-width="1.6"':'stroke="#0e1116" stroke-width="1"'));
-    const big=(veh||showLabels);
-    const lbl=big?`<text x="${p.x+(veh?12:9)}" y="${p.y+4}" font-size="${veh?"12":"10.5"}" font-weight="${veh?"600":"400"}" fill="${veh?"#eef2f8":"#c3cbd8"}" style="pointer-events:none">${esc(n.label).slice(0,40)}</text>`:"";
-    return `<g><circle data-n="${n.id}" cx="${p.x}" cy="${p.y}" r="${r}" fill="${c}" ${ring} style="cursor:pointer"/>${lbl}</g>`;}).join("");
+    // labels stay legible for the relevant set; vehicles always; unrelated stay dots (dim weight, not soup)
+    const relevant = HOP ? (HOP[n.id]!==undefined) : (mode==="full"?showLabels:veh);
+    const doLabel = veh || (relevant && (HOP? true : (mode==="full"&&showLabels)));
+    const lblOp = Math.max(op,0.55);
+    const lbl=doLabel?`<text x="${p.x+(veh?12:9)}" y="${p.y+4}" font-size="${veh?"12":"10.5"}" font-weight="${veh?"600":"400"}" fill="${veh?"#eef2f8":"#d3dae6"}" opacity="${lblOp}" style="pointer-events:none">${esc(n.label).slice(0,40)}</text>`:"";
+    return `<g><circle data-n="${n.id}" cx="${p.x}" cy="${p.y}" r="${r}" fill="${c}" ${ring} opacity="${op}" style="cursor:pointer"/></g>${lbl}`;}).join("");
 }
 
 /* ---------- pan / zoom ---------- */
@@ -128,7 +134,7 @@ function updateBanner(){const b=document.getElementById("banner");
   if(mode==="full"){b.innerHTML=`<b>Full database view</b> &mdash; all ${META.counts.pv+META.counts.multi} verified + ${META.counts.dnc} not-established edges. <span class="muted">The explanation view is the architecture backbone.</span>`;return;}
   if(focusId){const n=NBYID[focusId],a=n.arch_profile||{};
     b.innerHTML=`<button class="back" id="btn-back">&larr; all 9 architectures</button> <b>${esc(n.label)}</b> <span class="pill">${esc(a.intermediary_class||"")}</span> <span class="pill">${esc(a.era||"")}</span> &mdash; <span class="muted">its people, organizations, edges &amp; evidence. Click any edge for the primary source.</span>`;
-    document.getElementById("btn-back").onclick=()=>{focusId=null;computeFocus();relayout();updateBanner();};return;}
+    document.getElementById("btn-back").onclick=()=>{focusId=null;computeFocus();draw();updateBanner();};return;}
   b.innerHTML=`<b>9 documented intermediary architectures</b>, by era. <span class="muted">Click a vehicle (large node) to expand its underlying people, organizations, edges &amp; evidence.</span>`;
 }
 
@@ -137,9 +143,13 @@ const side=document.getElementById("side");
 function badge(es){const m={primary_verified:["b-pv","PRIMARY VERIFIED"],multi_source_verified:["b-multi","MULTI-SOURCE VERIFIED"],negative_finding:["b-dnc","NOT ESTABLISHED"],contested:["b-contested","CONTESTED"],reported:["b-reported","REPORTED"]};const x=m[es]||["b-reported",esc(es||"?")];return `<span class="badge ${x[0]}">${x[1]}</span>`;}
 function cites(cs){return cs.map(c=>c.url?`<a class="cite" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.publisher||"")} <span class="p">${c.primary?"· primary":""} ${esc(c.date||"")} ↗</span></a>`:`<span class="cite">${esc(c.publisher||"")}</span>`).join("");}
 svg.addEventListener("click",e=>{const n=e.target.dataset.n,ed=e.target.dataset.e;
-  if(n){const node=NBYID[n];if(VEH.has(n)&&mode==="backbone"&&focusId!==n){focusId=n;computeFocus();relayout();updateBanner();}showNode(node);}
-  else if(ed)showEdge(EDGES.find(x=>x.id===ed));});
+  if(n){const node=NBYID[n];if(mode!=="full"&&focusId!==n){focusId=n;hoverId=null;computeFocus();draw();updateBanner();}showNode(node);}
+  else if(ed)showEdge(EDGES.find(x=>x.id===ed));
+  else if(!n&&!ed&&focusId&&mode!=="full"){focusId=null;computeFocus();draw();updateBanner();side.innerHTML='<div class="hint">Selection cleared. Click any node to light up its relationships; click a vehicle to expand an architecture.</div>';}});
 window.__pick=id=>{const e=EDGES.find(x=>x.id===id);if(e)showEdge(e);};
+svg.addEventListener("mouseover",e=>{const id=e.target&&e.target.dataset&&e.target.dataset.n;if(id&&id!==hoverId&&!focusId){hoverId=id;computeHover();draw();}});
+svg.addEventListener("mouseout",e=>{const id=e.target&&e.target.dataset&&e.target.dataset.n;if(id&&hoverId===id){hoverId=null;computeHover();draw();}});
+
 function showEdge(e){const s=NBYID[e.s],t=NBYID[e.t],pc=e.pc||{},open=(e.cites.find(c=>c.url)||{}).url;
   side.innerHTML=`<h2>Relationship &middot; ${esc(e.rel||"")}</h2>
    <div class="rel"><b>${esc(s.label)}</b> &rarr; <b>${esc(t.label)}</b></div>
@@ -185,13 +195,13 @@ function buildLegend(){document.getElementById("legend").innerHTML=`
    <div class="row"><span class="dot" style="width:14px;height:14px;background:#e8a13a;border:1.6px solid #dfe6f2"></span>large + ring = an architecture vehicle</div>
    <div class="row"><span class="dot" style="background:#0e1116;border:2px solid #4bb96b"></span>green ring = NOT a Russian vehicle</div>`;}
 function bindUI(){
-  const cb=(id,fn)=>document.getElementById(id).addEventListener("change",e=>{fn(e.target.checked);computeFocus();relayout();});
+  const cb=(id,fn)=>document.getElementById(id).addEventListener("change",e=>{fn(e.target.checked);computeFocus();draw();});
   cb("cb-dnc",v=>showDnc=v);cb("cb-domestic",v=>showDomestic=v);cb("cb-labels",v=>showLabels=v);
-  document.getElementById("ly-ledger").onclick=e=>{showLedger=!showLedger;e.target.classList.toggle("on",showLedger);computeFocus();relayout();};
-  document.getElementById("ly-research").onclick=e=>{showResearch=!showResearch;e.target.classList.toggle("on",showResearch);computeFocus();relayout();};
+  document.getElementById("ly-ledger").onclick=e=>{showLedger=!showLedger;e.target.classList.toggle("on",showLedger);computeFocus();draw();};
+  document.getElementById("ly-research").onclick=e=>{showResearch=!showResearch;e.target.classList.toggle("on",showResearch);computeFocus();draw();};
   const mb=document.getElementById("mode-backbone"),mf=document.getElementById("mode-full");
-  mb.onclick=()=>{mode="backbone";focusId=null;computeFocus();mb.classList.add("on");mf.classList.remove("on");relayout();updateBanner();};
-  mf.onclick=()=>{mode="full";focusId=null;computeFocus();mf.classList.add("on");mb.classList.remove("on");relayout();updateBanner();};
+  mb.onclick=()=>{mode="backbone";focusId=null;computeFocus();mb.classList.add("on");mf.classList.remove("on");draw();updateBanner();};
+  mf.onclick=()=>{mode="full";focusId=null;computeFocus();mf.classList.add("on");mb.classList.remove("on");draw();updateBanner();};
   document.querySelectorAll("button.tab").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
   addEventListener("resize",()=>relayout());
 }
@@ -218,7 +228,7 @@ function archView(){
    ${dl?`<h2 class="big" style="margin-top:26px">Interaction modes</h2><div style="max-width:1000px">${dl}</div>`:""}`;
 }
 function wireArch(){document.querySelectorAll("tr.arow").forEach(r=>r.style.cursor="pointer");
-  document.querySelectorAll("tr.arow").forEach(r=>r.onclick=()=>{mode="backbone";focusId=r.dataset.v;computeFocus();setTab("graph");document.querySelector('button.tab[data-tab="graph"]').classList.add("on");document.querySelector('button.tab[data-tab="arch"]').classList.remove("on");relayout();updateBanner();showNode(NBYID[r.dataset.v]);});}
+  document.querySelectorAll("tr.arow").forEach(r=>r.onclick=()=>{mode="backbone";focusId=r.dataset.v;computeFocus();setTab("graph");document.querySelector('button.tab[data-tab="graph"]').classList.add("on");document.querySelector('button.tab[data-tab="arch"]').classList.remove("on");draw();updateBanner();showNode(NBYID[r.dataset.v]);});}
 function dncView(){const rows=EDGES.filter(e=>e.es==="negative_finding").map(e=>`<tr><td><b>${esc(NBYID[e.s].label)} &rarr; ${esc(NBYID[e.t].label)}</b><div class="muted">${esc(e.claim)}</div></td><td>${cites(e.cites)||'<span class="muted">cites the absence</span>'}</td></tr>`).join("");
   return `<h2 class="big">What we do NOT claim (${META.counts.dnc})</h2>
    <p class="muted" style="max-width:1000px">These negative findings are kept as data, not hidden. A connection is not a conclusion; a documented event does not verify the interpretation someone might attach to it.</p>
