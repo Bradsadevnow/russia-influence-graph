@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 19: IRA->TPUSA_CONTENT (2016 CONTENT_HARVEST) — a Russian-side edge to the TPUSA ecosystem INDEPENDENT of Chen, modeled on a SEPARATE tpusa_content node so it never transits to the org/Benny/creators. do_not_claim reaffirmed: NO IRA/Russia->TPUSA organizational relationship. Two documented Russian interaction modes banked (2016 content-harvest vs 2021-24 coupling). Scoreboard unchanged.",
+    "status": "1.0 + batch 20: PASS 1 (DOJ indictment). Conduct edges (RT->Founder-1 contract ~217 videos, RT/Ruptly->Founder-2, founders operate Company-1/Tenet, ~$10M shells, Grigoriann scouting, concealment) upgraded to VERIFIED on the DOJ primary; identity bindings (Founder-1=Chen, Founder-2=Donovan, Company-1=Tenet) kept VERIFIED multi-source (NOT downgraded) via verification_basis. Founders WITTING ('the Russians' comms, primary-alleged, still disputed=charged-not-convicted) vs commentators UNWITTING (concealment, primary). OQ-01 + OQ-02 stay OPEN with sharpened dispositions; TPUSA->Tenet infrastructure-exploitation = do_not_claim. evidence_model banked.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -146,7 +146,17 @@
           "\"Tim Pool\" \"Cassandra Fairbanks\" Russia Today",
           "\"Tim Pool\" \"Cassandra Fairbanks\" Sputnik"
         ],
-        "targets": "2016 primary/near-primary: archived bios, articles, social posts, videos, event pages, interviews, employment records. Search Fairbanks+Pool together, not Pool alone."
+        "targets": "2016 primary/near-primary: archived bios, articles, social posts, videos, event pages, interviews, employment records. Search Fairbanks+Pool together, not Pool alone.",
+        "disposition": "OFFICE_VISIT stands; no qualifying conduit established. Pool's own later recollection gives contact/location, not relationship semantics. NOT upgraded, NOT a searched-negative. Next queries target the EVENT (contemporaneous 2016 material), not 'Tim Pool Russia' generally.",
+        "queries_refined": [
+          "\"Tim Pool\" \"Cassandra Fairbanks\" RT 2016",
+          "\"Tim Pool\" \"Cassandra Fairbanks\" Sputnik 2016",
+          "\"Tim Pool\" RT 2016 election interview",
+          "\"Tim Pool\" Sputnik 2016 election interview",
+          "\"Tim Pool\" RT America 2016",
+          "\"Cassandra Fairbanks\" RT 2016",
+          "\"Cassandra Fairbanks\" Sputnik 2016"
+        ]
       },
       {
         "id": "OQ-02",
@@ -156,7 +166,8 @@
         "upgrades_if": "more of the six shown to have run through TPUSA's amplification apparatus pre-Tenet (ambassador/production/event ties) -> strengthens 'Russia coupled to a pre-optimized domestic amplifier'.",
         "kills_if": "the six's reach traces to unrelated independent channels, not TPUSA's apparatus.",
         "current": "Documented inside TPUSA's amplification machine pre-Tenet: Benny Johnson (CCO/productions) = 1 of the SIX; plus Lauren Chen (the broker, TPUSA contributor). The other five not established as TPUSA ambassadors in this pass.",
-        "note": "Still NO Russia->TPUSA edge. This tests exploitation-of-domestic-infrastructure, a different architecture from institution-direct penetration."
+        "note": "Still NO Russia->TPUSA edge. This tests exploitation-of-domestic-infrastructure, a different architecture from institution-direct penetration.",
+        "disposition": "People overlap ESTABLISHED (TPUSA->Chen, TPUSA->Johnson, Chen->Tenet, Johnson->Tenet). Infrastructure exploitation NOT established (e_tpusa_tenet_infra_DNC): reporting says Tenet used the creators' OWN audiences, not TPUSA's machinery. Sharpened question: did Tenet operationally REUSE TPUSA's influencer/production/PR/ambassador/event/cross-promo/distribution apparatus, vs merely recruiting people who had participated in that ecosystem?"
       }
     ],
     "architecture_distinctions": {
@@ -183,6 +194,9 @@
       "2016_CONTENT_HARVEST": "IRA harvested/rebranded authentic TPUSA content for its own distribution (IRA -> tpusa_content). Exploitation of output; no org relationship.",
       "2021_2024_COUPLING": "RT personnel/organizational coupling: RT -> Chen (contribution) -> Tenet -> existing creator network. Founder-level access to people embedded in the ecosystem.",
       "finding": "Same American information ecosystem, two fundamentally different Russian interaction modes, ~5-8 years apart. Russia did not create the network in either case; in 2016 it exploited authentic content, later it coupled at the founder level."
+    },
+    "evidence_model": {
+      "conduct_vs_identity": "For pseudonymous primary sources: CONDUCT the primary doc establishes (DOJ re Founder-1/2/Company-1) is graded on that primary; the IDENTITY binding of the pseudonym to a named person/company is graded on its OWN sources (corporate records + multi-source reporting). An edge is 'verified' when both legs hold; verification_basis records each. Primary verification of conduct need not be the same source that establishes the pseudonym binding — and a primary doc's silence on identity does NOT downgrade an identity already multi-source-established."
     }
   },
   "nodes": [
@@ -404,7 +418,16 @@
         "era": "2023-24"
       },
       "arch_summary": "EMBED AT THE FOUNDER LAYER: RT operatives fund/direct via shells + a fake investor, embed at Chen/Donovan (founders already inside the US creator scene), then recruit an EXISTING high-reach creator network.",
-      "actor_class": "US_ACTOR"
+      "actor_class": "US_ACTOR",
+      "identity_binding": {
+        "pseudonym": "U.S. Company-1",
+        "status": "STRONGLY_CORROBORATED",
+        "basis": [
+          "Tennessee incorporation 2022-01-19",
+          "public self-description",
+          "contemporaneous reporting"
+        ]
+      }
     },
     {
       "id": "swann",
@@ -811,7 +834,17 @@
         "Founder-1"
       ],
       "notes": "Charged (DOJ, Sep 2024, uncharged conduct pseudonym 'Founder-1' identified in reporting). Had a written ANO TV-Novosti content contract 2021-22 BEFORE co-founding Tenet; later received an RT 'Influencer Talent Scouting' contract. THE longitudinal RT->Tenet personnel bridge.",
-      "actor_class": "US_ACTOR"
+      "actor_class": "US_ACTOR",
+      "identity_binding": {
+        "pseudonym": "Founder-1",
+        "status": "VERIFIED_MULTISOURCE",
+        "basis": [
+          "Tennessee corporate records",
+          "Canada Foreign Interference Commission transcript",
+          "CBS",
+          "The Tyee"
+        ]
+      }
     },
     {
       "id": "liam_donovan",
@@ -823,7 +856,16 @@
         "Founder-2"
       ],
       "notes": "Chen's husband; 'Founder-2' per reporting. Worked directly with RT and Ruptly ~Oct 2021-May 2022; co-founded Tenet. Charged (DOJ Sep 2024).",
-      "actor_class": "US_ACTOR"
+      "actor_class": "US_ACTOR",
+      "identity_binding": {
+        "pseudonym": "Founder-2",
+        "status": "VERIFIED_MULTISOURCE",
+        "basis": [
+          "corporate records",
+          "reporting",
+          "Canada Commission"
+        ]
+      }
     },
     {
       "id": "ruptly",
@@ -1094,27 +1136,27 @@
       "confidence": "very_high",
       "claim": "Kalashnikov and Afanasyeva were RT employees.",
       "citation": {
-        "publisher": "DOJ OPA",
-        "title": "Two RT Employees Indicted...",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "doj_tenet_indictment"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ OPA",
-          "title": "Two RT Employees Indicted...",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "doj_tenet_indictment"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A"
     },
     {
       "id": "e_employees_shells",
@@ -1125,27 +1167,27 @@
       "confidence": "very_high",
       "claim": "RT employees funneled funds through foreign shell companies.",
       "citation": {
-        "publisher": "DOJ indictment",
-        "title": "US v. Kalashnikov & Afanasyeva",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/opa/media/1366266/dl",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "doj_tenet_indictment"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ indictment",
-          "title": "US v. Kalashnikov & Afanasyeva",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/opa/media/1366266/dl",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "doj_tenet_indictment"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A"
     },
     {
       "id": "e_shells_tenet",
@@ -1156,27 +1198,27 @@
       "confidence": "very_high",
       "claim": "~$9.7M (≈90% of Tenet deposits) reached Tenet via shells in Turkey/UAE/Mauritius.",
       "citation": {
-        "publisher": "DOJ indictment",
-        "title": "US v. Kalashnikov & Afanasyeva",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/opa/media/1366266/dl",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "doj_tenet_indictment"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ indictment",
-          "title": "US v. Kalashnikov & Afanasyeva",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/opa/media/1366266/dl",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "doj_tenet_indictment"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A"
     },
     {
       "id": "e_rt_tenet_direction",
@@ -1187,27 +1229,27 @@
       "confidence": "high",
       "claim": "RT personnel exercised editorial influence over Tenet while concealing the relationship.",
       "citation": {
-        "publisher": "DOJ OPA",
-        "title": "Two RT Employees Indicted...",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
-        "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
-        "independence_group": "DOJ"
+        "independence_group": "doj_tenet_indictment"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "DOJ OPA",
-          "title": "Two RT Employees Indicted...",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
-          "url": "https://www.justice.gov/archives/opa/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published-thousands",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
-          "independence_group": "DOJ"
+          "independence_group": "doj_tenet_indictment"
         }
       ],
       "date": "2024",
-      "evidence_quality": "B"
+      "evidence_quality": "A"
     },
     {
       "id": "e_tenet_influencers",
@@ -4798,39 +4840,43 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "content_creation",
       "confidence": "very_high",
-      "claim": "Per the DOJ Tenet indictment, 'Founder-1' operated under a written contract with ANO TV-Novosti ~March 2021-Feb 2022, producing videos, social content, and articles (not always branded as RT). Reporting and a Canadian foreign-interference inquiry identify Founder-1 as Lauren Chen. Verification held at needs_primary until the indictment is pulled and the identification confirmed.",
+      "claim": "DOJ indictment: Founder-1 held a written contract with ANO TV-Novosti (~Mar 2021-Feb 2022) producing videos/social/articles — ~217 videos invoiced (~209 on Founder-1's YouTube) + ~25 articles; Founder-1 incorporated the company in Tennessee 2022-01-19 (later Tenet). CONDUCT primary; Founder-1=Lauren Chen established multi-source (corporate records + reporting + Canadian Commission).",
       "citations": [
         {
-          "publisher": "Foreign Interference Commission (Canada)",
-          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-          "date": "2024-09-25",
-          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         },
         {
-          "publisher": "Yahoo News",
-          "title": "She allegedly became a Russian asset (Founder-1 identified as Lauren Chen)",
-          "date": "2024-09",
-          "url": "https://www.yahoo.com/news/she-allegedly-became-russian-asset-235019662.html",
-          "primary": false,
-          "independence_group": "press_identification"
+          "publisher": "Canada Foreign Interference Commission",
+          "title": "Founder-1 identified in media reports as Lauren Chen (examining the indictment)",
+          "date": "2024-09-25",
+          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "primary": true,
+          "independence_group": "canada_secu"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2021",
       "provenance": "observed",
       "citation": {
-        "publisher": "Foreign Interference Commission (Canada)",
-        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-        "date": "2024-09-25",
-        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
+      "evidence_quality": "A",
       "relationship_type": "CONTRACT",
-      "relationship_class": "INFLUENCE"
+      "relationship_class": "INFLUENCE",
+      "verification_basis": {
+        "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
+        "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      }
     },
     {
       "id": "e_ruptly_donovan",
@@ -4839,38 +4885,42 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "content_creation",
       "confidence": "high",
-      "claim": "'Founder-2' (identified in reporting as Liam Donovan, Chen's husband) worked directly with RT and Ruptly ~Oct 2021-May 2022.",
+      "claim": "DOJ indictment: Founder-2 worked directly for RT and Ruptly (~Oct 2021-May 2022). CONDUCT primary; Founder-2=Liam Donovan multi-source.",
       "citations": [
         {
-          "publisher": "Foreign Interference Commission (Canada)",
-          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-          "date": "2024-09-25",
-          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         },
         {
-          "publisher": "Insight Threat Intel",
-          "title": "Networks of Deception: Russian propaganda (Donovan/Founder-2 worked with RT and Ruptly Oct 2021-May 2022)",
-          "date": "2024",
-          "url": "https://newsletter.insightthreatintel.com/p/networks-of-deception-russian-propaganda",
+          "publisher": "CBS News",
+          "title": "Founder-1/Founder-2 matched to Chen/Donovan via corporate records + identifying details",
+          "date": "2024-09-04",
+          "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
           "primary": false,
           "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2021",
       "provenance": "observed",
       "citation": {
-        "publisher": "Foreign Interference Commission (Canada)",
-        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-        "date": "2024-09-25",
-        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "evidence_quality": "A",
+      "relationship_type": "CONTRACT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
+        "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      }
     },
     {
       "id": "e_donovan_chen",
@@ -4910,38 +4960,34 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "introduction",
       "confidence": "very_high",
-      "claim": "Per the indictment, in Jan 2023 the RT operatives gave 'Founder-1' (Chen) an 'Influencer Talent Scouting' contract to find commentators for the new network. Afanasyeva named as an operative directing the effort.",
+      "claim": "DOJ indictment: beginning late 2022/early 2023, Founder-1 scouted influencers for the purported investor 'Eduard Grigoriann'. CONDUCT primary; Founder-1=Chen identity multi-source.",
       "citations": [
         {
-          "publisher": "Foreign Interference Commission (Canada)",
-          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-          "date": "2024-09-25",
-          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "Yahoo News",
-          "title": "She allegedly became a Russian asset (Founder-1 identified as Lauren Chen)",
-          "date": "2024-09",
-          "url": "https://www.yahoo.com/news/she-allegedly-became-russian-asset-235019662.html",
-          "primary": false,
-          "independence_group": "press_identification"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023-01",
       "provenance": "observed",
       "citation": {
-        "publisher": "Foreign Interference Commission (Canada)",
-        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-        "date": "2024-09-25",
-        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
+        "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      }
     },
     {
       "id": "e_chen_tenet_founder",
@@ -4950,38 +4996,42 @@
       "evidence_class": "documented_contact",
       "mechanism": "ownership",
       "confidence": "very_high",
-      "claim": "Chen co-founded and operated Tenet Media, into which she recruited established American commentators; RT-controlled funds (~$9.7M) flowed to Tenet.",
+      "claim": "DOJ indictment: Founder-1 (with Founder-2) jointly controlled and operated U.S. Company-1 (incorporated TN 2022-01-19, later Tenet). CONDUCT primary; Founder-1=Chen / Company-1=Tenet identity multi-source/strongly corroborated.",
       "citations": [
         {
-          "publisher": "Foreign Interference Commission (Canada)",
-          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-          "date": "2024-09-25",
-          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         },
         {
           "publisher": "CBS News",
-          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "title": "Founder-1/Founder-2 matched to Chen/Donovan via corporate records + identifying details",
           "date": "2024-09-04",
           "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
           "primary": false,
           "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2022-01",
       "provenance": "observed",
       "citation": {
-        "publisher": "Foreign Interference Commission (Canada)",
-        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-        "date": "2024-09-25",
-        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "OWNERSHIP"
+      "evidence_quality": "A",
+      "relationship_type": "OWNERSHIP",
+      "verification_basis": {
+        "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
+        "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      }
     },
     {
       "id": "e_donovan_tenet_founder",
@@ -4990,38 +5040,42 @@
       "evidence_class": "documented_contact",
       "mechanism": "ownership",
       "confidence": "very_high",
-      "claim": "Donovan co-founded Tenet Media with Chen.",
+      "claim": "DOJ indictment: Founder-2 (with Founder-1) jointly controlled and operated U.S. Company-1 (later Tenet). CONDUCT primary; identity multi-source.",
       "citations": [
         {
-          "publisher": "Foreign Interference Commission (Canada)",
-          "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-          "date": "2024-09-25",
-          "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+          "date": "2024-09-04",
+          "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         },
         {
           "publisher": "CBS News",
-          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "title": "Founder-1/Founder-2 matched to Chen/Donovan via corporate records + identifying details",
           "date": "2024-09-04",
           "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
           "primary": false,
           "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2022-01",
       "provenance": "observed",
       "citation": {
-        "publisher": "Foreign Interference Commission (Canada)",
-        "title": "Public Hearings Vol. 22 transcript (reproduces DOJ Tenet indictment language)",
-        "date": "2024-09-25",
-        "url": "https://foreigninterferencecommission.ca/fileadmin/user_upload/PIFI_-_Public_Hearings_-_Volume_22_-_September_25__2024-Floor_transcript.pdf",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
+        "date": "2024-09-04",
+        "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "OWNERSHIP"
+      "evidence_quality": "A",
+      "relationship_type": "OWNERSHIP",
+      "verification_basis": {
+        "conduct": "DOJ_primary (indictment, pseudonymous Founder-1/2/Company-1)",
+        "identity": "multi_source (TN corporate records + Canada Commission + CBS + Tyee)"
+      }
     },
     {
       "id": "e_maffick_tenet_DNC",
@@ -5061,7 +5115,7 @@
       "evidence_class": "documented_contact",
       "mechanism": "content_creation",
       "confidence": "do_not_claim",
-      "claim": "NOT ESTABLISHED: that the six Tenet commentators knew their funding was Russian state-controlled. The DOJ alleges the operators CONCEALED the Russian involvement from the influencers, who were not charged. They are influence recipients, not proven witting agents.",
+      "claim": "NOT ESTABLISHED that the six commentators knew the funding was Russian: the DOJ indictment alleges the Russian personnel and the two founders CONCEALED RT's funding source from the recruited commentators (who were not charged). Concealment is primary-alleged. [Distinct from the FOUNDERS, whose comms referred to 'the Russians' — see e_chen_intent_contested.]",
       "citation": {
         "publisher": "CBS News",
         "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
@@ -5093,8 +5147,8 @@
       "mechanism": "communication",
       "confidence": "medium",
       "disputed": true,
-      "dispute_note": "Criminal knowledge/intent alleged in the DOJ indictment (Chen & Donovan charged Sep 2024); NOT adjudicated. Charged is not convicted.",
-      "claim": "CONTESTED: the full extent of Chen's and Donovan's knowledge of Russian state control at each stage is ALLEGED in the indictment, not proven. The documented contracts stand; the criminal-knowledge question is unresolved.",
+      "dispute_note": "Founder knowledge is primary-ALLEGED in the DOJ indictment (private comms referring to the RT sponsor as 'the Russians' and discussing billing them), but charged is not convicted — unadjudicated.",
+      "claim": "CONTESTED: the founders' (Chen/Donovan) knowledge that their sponsor was Russian state media. The DOJ indictment alleges their private comms referred to the sponsor as 'the Russians' and discussed billing them — strong primary-ALLEGED evidence — but the case is charged, not adjudicated. Kept disputed; the documented CONTRACTS stand independently.",
       "citation": {
         "publisher": "CBS News",
         "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
@@ -5128,35 +5182,31 @@
       "claim": "Chen (as talent scout) recruited Tim Pool into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_tim_pool",
@@ -5294,35 +5344,31 @@
       "claim": "Chen (as talent scout) recruited Dave Rubin into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_dave_rubin",
@@ -5460,35 +5506,31 @@
       "claim": "Chen (as talent scout) recruited Benny Johnson into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_benny_johnson",
@@ -5626,35 +5668,31 @@
       "claim": "Chen (as talent scout) recruited Lauren Southern into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_lauren_southern",
@@ -5792,35 +5830,31 @@
       "claim": "Chen (as talent scout) recruited Tayler Hansen into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_tayler_hansen",
@@ -5958,35 +5992,31 @@
       "claim": "Chen (as talent scout) recruited Matt Christiansen into Tenet; DOJ alleges Chen approached the commentators to be the 'face' of the operation.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
-        },
-        {
-          "publisher": "ABC17/CNN",
-          "title": "DOJ alleges Russia funded US media company linked to right-wing social-media stars (creators in overlapping circles)",
-          "date": "2024-09-04",
-          "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/09/04/doj-alleges-russia-funded-us-media-company-linked-to-right-wing-social-media-stars/",
-          "primary": false,
-          "independence_group": "press"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
-      "relationship_type": "RECRUITMENT"
+      "evidence_quality": "A",
+      "relationship_type": "RECRUITMENT",
+      "verification_basis": {
+        "conduct": "DOJ_primary (Founder-1 scouted/recruited the commentator network)",
+        "identity": "corroborated (Commentator-N = specific creator, via reporting + Tenet roster)"
+      }
     },
     {
       "id": "e_tenet_matt_christiansen",
@@ -6302,26 +6332,26 @@
       "claim": "DOJ: the RT operatives directed Tenet's hiring, issued editorial requests, and monitored content, while concealing their RT roles.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
+      "evidence_quality": "A",
       "relationship_type": "DIRECTION"
     },
     {
@@ -6331,29 +6361,29 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "laundering",
       "confidence": "very_high",
-      "claim": "DOJ: Tenet's Russian funding was routed behind a fictitious investor persona ('Eduard Grigoriann') to conceal its origin.",
+      "claim": "DOJ indictment: RT and the defendants deployed nearly $10M through foreign shell entities to fund and direct U.S. Company-1, behind the fictitious 'Eduard Grigoriann' investor persona.",
       "citations": [
         {
-          "publisher": "U.S. DOJ (SDNY)",
-          "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+          "publisher": "U.S. DOJ / SDNY",
+          "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
           "date": "2024-09-04",
           "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
           "primary": true,
           "independence_group": "doj_tenet_indictment"
         }
       ],
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2023",
       "provenance": "observed",
       "citation": {
-        "publisher": "U.S. DOJ (SDNY)",
-        "title": "Two RT Employees Indicted for Covertly Funding and Directing a U.S. Company That Published Content on Social Media",
+        "publisher": "U.S. DOJ / SDNY",
+        "title": "Indictment, United States v. Kalashnikov & Afanasyeva (32 pp): RT covertly funded/directed U.S. Company-1 (~$10M via shell entities); Founder-1 ANO TV-Novosti contract ~Mar2021-Feb2022 (~217 videos invoiced, ~209 on Founder-1 YouTube, ~25 articles); Founder-2 worked for RT/Ruptly ~Oct2021-May2022; Company-1 incorporated in Tennessee 2022-01-19, later operated as Tenet; founders' comms referred to sponsor as 'the Russians' and discussed billing; concealment of RT funding from commentators",
         "date": "2024-09-04",
         "url": "https://www.justice.gov/usao-sdny/pr/two-rt-employees-indicted-covertly-funding-and-directing-us-company-published",
         "primary": true,
         "independence_group": "doj_tenet_indictment"
       },
-      "evidence_quality": "B",
+      "evidence_quality": "A",
       "relationship_type": "FUNDING"
     },
     {
@@ -7820,6 +7850,39 @@
         }
       ],
       "date": "2018",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_tpusa_tenet_infra_DNC",
+      "source": "turning_point_usa",
+      "target": "tenet",
+      "evidence_class": "documented_contact",
+      "mechanism": "amplification",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Tenet operationally REUSED TPUSA's influencer/amplification infrastructure (recruitment program, production, PR team, ambassador network, events, cross-promotion, distribution). The people overlap is real (TPUSA->Chen, TPUSA->Johnson; Chen/Johnson->Tenet), but reporting describes Tenet leveraging the recruited creators' OWN existing audiences — not TPUSA's machinery. Personnel overlap != infrastructure exploitation. OQ-02 remains OPEN.",
+      "citation": {
+        "publisher": "Nashville Scene",
+        "title": "Tenet leveraged the recruited influencers' OWN audiences (not TPUSA's org infrastructure)",
+        "date": "2024-09",
+        "url": "https://www.nashvillescene.com/news/pithinthewind/tenet-media-russian-propaganda/article_2f5f1514-6ba5-11ef-a6bb-73b376b81c8a.html",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "domain": "domestic",
+      "relationship_class": "CONTENT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Nashville Scene",
+          "title": "Tenet leveraged the recruited influencers' OWN audiences (not TPUSA's org infrastructure)",
+          "date": "2024-09",
+          "url": "https://www.nashvillescene.com/news/pithinthewind/tenet-media-russian-propaganda/article_2f5f1514-6ba5-11ef-a6bb-73b376b81c8a.html",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2024",
       "evidence_quality": "N/A"
     }
   ]
