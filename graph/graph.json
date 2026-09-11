@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 16: PERSONNEL lane formalized (domain=personnel + relationship_class + conduit/scoreboard flags) for Sputnik->Fairbanks->Pool; Fairbanks prior-appearance-before-hire recorded. Open question OQ-01 banked (what was the 2016 RT/Sputnik visit for? upgrade->2nd direct entry, or kill). Scoreboard unchanged: 1 direct (Southern).",
+    "status": "1.0 + batch 17: TPUSA enriched as a DOMESTIC organizational hub (US_ACTOR, POLITICAL_MEDIA_ORGANIZATION) bridging Chen & Johnson; RT->Chen and Chen->TPUSA kept as SEPARATE edges. do_not_claim e_rt_tpusa_DNC: no direct Russia->TPUSA edge (searched). Banked architecture_distinctions: PERSON_MEDIATED (RT->Chen->TPUSA) vs INSTITUTION_DIRECT (not established). Scoreboard unchanged.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -87,7 +87,8 @@
         "DIRECT_CONTACT",
         "PERSONNEL_CONTINUITY",
         "SHARED_MEDIA_INFRASTRUCTURE",
-        "CONTENT"
+        "CONTENT",
+        "DOMESTIC_MEMBERSHIP"
       ]
     },
     "rules": [
@@ -145,7 +146,14 @@
         ],
         "targets": "2016 primary/near-primary: archived bios, articles, social posts, videos, event pages, interviews, employment records. Search Fairbanks+Pool together, not Pool alone."
       }
-    ]
+    ],
+    "architecture_distinctions": {
+      "PERSON_MEDIATED": "Russian node -> American PERSON -> American INSTITUTION. Documented: RT -> Chen -> TPUSA. The institution is reached THROUGH a person; the institution itself is not Russian-linked.",
+      "INSTITUTION_DIRECT": "Russian node -> American INSTITUTION directly (funding/control/org). NOT established for TPUSA. Materially different, stronger claim; do not conflate with person-mediated proximity."
+    },
+    "org_penetration_sweep": {
+      "turning_point_usa": "not_established (direct Russia->TPUSA); present only as PERSON_MEDIATED via Chen. Queries: TPUSA+Russia/RT/FARA/funding/government/influence."
+    }
   },
   "nodes": [
     {
@@ -838,8 +846,16 @@
       "layer": "us_political",
       "type": "network",
       "us_class": null,
-      "notes": "Existing American conservative org. Context node — Chen and Benny Johnson circles pre-Tenet. Not Russian-connected.",
-      "actor_class": "US_ACTOR"
+      "notes": "Existing American conservative org; a DOMESTIC network hub, NOT Russian-linked. Both Lauren Chen (contributor, Jul 2022) and Benny Johnson (contributor / former CCO) ran through it. TPUSA removed Chen's profile from its site after the Tenet indictment became public. No documented Russia->TPUSA organizational/financial/control relationship found (see e_rt_tpusa_DNC).",
+      "actor_class": "US_ACTOR",
+      "organization_type": "POLITICAL_MEDIA_ORGANIZATION",
+      "history": [
+        {
+          "date": "2024",
+          "event": "Removed Lauren Chen's contributor profile after the Tenet indictment became public.",
+          "source": "https://www.cdmrn.ca/russian-funding-canadian-influencers"
+        }
+      ]
     },
     {
       "id": "us_conservative_media",
@@ -4745,7 +4761,8 @@
         "independence_group": "doj_tenet_indictment"
       },
       "evidence_quality": "B",
-      "relationship_type": "CONTRACT"
+      "relationship_type": "CONTRACT",
+      "relationship_class": "INFLUENCE"
     },
     {
       "id": "e_ruptly_donovan",
@@ -6072,28 +6089,31 @@
       "claim": "TPUSA announced Lauren Chen as a contributor in July 2022 (noting her Blaze/CRTV background) — an org intersection with Benny Johnson (TPUSA CCO).",
       "citations": [
         {
-          "publisher": "Forbes",
-          "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
-          "date": "2024-09-06",
-          "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+          "publisher": "KUOW/NPR",
+          "title": "How Russian operatives covertly hired U.S. influencers (Chen = TPUSA contributor w/ RT relationship)",
+          "date": "2024-09",
+          "url": "https://www.kuow.org/stories/how-russian-operatives-covertly-hired-u-s-influencers-to-create-viral-videos",
           "primary": false,
-          "independence_group": "press_identification"
+          "independence_group": "press"
         }
       ],
       "verification": "verified",
       "date": "2022-07",
       "provenance": "observed",
       "citation": {
-        "publisher": "Forbes",
-        "title": "Who Is Lauren Chen — the influencer behind the alleged Russia-funded outlet (RT work 2021-22)",
-        "date": "2024-09-06",
-        "url": "https://www.forbes.com/sites/tylerroush/2024/09/06/who-is-lauren-chen-what-to-know-about-the-influencer-behind-alleged-russia-funded-outlet/",
+        "publisher": "KUOW/NPR",
+        "title": "How Russian operatives covertly hired U.S. influencers (Chen = TPUSA contributor w/ RT relationship)",
+        "date": "2024-09",
+        "url": "https://www.kuow.org/stories/how-russian-operatives-covertly-hired-u-s-influencers-to-create-viral-videos",
         "primary": false,
-        "independence_group": "press_identification"
+        "independence_group": "press"
       },
       "evidence_quality": "C",
       "domain": "domestic",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "relationship_class": "DOMESTIC_MEMBERSHIP",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_chen_conmedia",
@@ -6199,7 +6219,10 @@
       },
       "evidence_quality": "C",
       "domain": "domestic",
-      "pre_tenet": true
+      "pre_tenet": true,
+      "relationship_class": "DOMESTIC_MEMBERSHIP",
+      "conduit": false,
+      "scoreboard": false
     },
     {
       "id": "e_afanasyeva_tenet_direction",
@@ -7463,6 +7486,38 @@
         }
       ],
       "evidence_quality": "C"
+    },
+    {
+      "id": "e_rt_tpusa_DNC",
+      "source": "rt",
+      "target": "turning_point_usa",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "funding",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: a direct organizational Russia->TPUSA relationship (funding / control / organizational). Searched TPUSA + Russia/RT/FARA/Russian-funding/Russian-government/Russian-influence; results resolve to Chen's RT relationship, Russia-related political content, or unrelated TPUSA activity. The documented shape is Russia -> Chen (PERSON) -> TPUSA (INSTITUTION), never Russia -> TPUSA.",
+      "citation": {
+        "publisher": "KUOW/NPR",
+        "title": "How Russian operatives covertly hired U.S. influencers (Chen = TPUSA contributor w/ RT relationship)",
+        "date": "2024-09",
+        "url": "https://www.kuow.org/stories/how-russian-operatives-covertly-hired-u-s-influencers-to-create-viral-videos",
+        "primary": false,
+        "independence_group": "press"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "KUOW/NPR",
+          "title": "How Russian operatives covertly hired U.S. influencers (Chen = TPUSA contributor w/ RT relationship)",
+          "date": "2024-09",
+          "url": "https://www.kuow.org/stories/how-russian-operatives-covertly-hired-u-s-influencers-to-create-viral-videos",
+          "primary": false,
+          "independence_group": "press"
+        }
+      ],
+      "date": "2024",
+      "evidence_quality": "N/A"
     }
   ]
 }

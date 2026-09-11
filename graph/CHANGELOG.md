@@ -259,3 +259,12 @@ Chain now runs document → relationship → network → organizational mechanis
 - analysis.py prints the PERSONNEL-CONTINUITY LANE and OPEN QUESTIONS sections. Scoreboard unchanged: **1 direct (Southern) + 0 mediated of 6; 5 not_established.**
 
 89 nodes / 199 edges. validate.py clean.
+
+## batch 17 (2026-09-11) — TPUSA as domestic hub; the person-mediated vs institution-direct line
+**TPUSA enriched as a DOMESTIC organizational hub** (`actor_class: US_ACTOR`, `organization_type: POLITICAL_MEDIA_ORGANIZATION`), bridging Chen (contributor Jul 2022) and Benny Johnson (contributor/former CCO). Node `history` records TPUSA removing Chen's profile after the indictment. The two real edges kept SEPARATE: `RT→Chen` (INFLUENCE/CONTRIBUTION) and `Chen→TPUSA` (domestic membership).
+- **`e_rt_tpusa_DNC` (do_not_claim):** NO direct organizational Russia→TPUSA relationship established. Searched TPUSA+Russia/RT/FARA/funding/government/influence — all resolve to Chen's RT relationship, Russia content, or unrelated TPUSA activity. Documented shape is **Russia → Chen (person) → TPUSA (institution)**, never Russia → TPUSA.
+- **`metadata.architecture_distinctions`** banked (reusable finding): **PERSON_MEDIATED** (RT→Chen→TPUSA) vs **INSTITUTION_DIRECT** (not established for TPUSA) — a materially different, stronger claim; do not conflate.
+- **Removal test:** removing TPUSA leaves the creator cluster 6/6 (not a cut-point) and Russian→creator reach 6/6 (unaffected — TPUSA carries no influence in-edge). TPUSA is a shared domestic membership, not a load-bearing bridge and not Russian-linked.
+- Scoreboard unchanged: **1 direct (Southern) + 0 mediated of 6; 5 not_established.**
+
+89 nodes / 200 edges. validate.py clean.
