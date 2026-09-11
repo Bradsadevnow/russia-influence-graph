@@ -409,3 +409,13 @@ The indictment segments the six, so the batch is segmented (not one blanket "con
 - Figure corrected to **"nearly $10 million."** Public core 153→170; primary_verified 122→139.
 
 104 nodes / 236 edges. validate.py clean.
+
+## batch 33 (2026-09-11) — C3 CLOSED: FARA-anchored RT-media vehicles + Maffick GmbH/LLC split
+- **Rebel/Swann/TV-Novosti** primary_verified from **FARA reg 7151**: Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti; ~$4.5M (Mar–Aug 2023, TPM). `e_novosti_rebel`, `e_rebel_swann` (DIRECTOR), `e_swann_rt_prog` (scoped to contracted production for TV-Novosti).
+- **Maffick SPLIT** (Brad's scope catch): `maffick` = historical **Maffick Media GmbH** (Ruptly 51% / Naouai 49%, State GEC + ASD) — `e_naouai_maffick` scoped to that historical 49%. NEW node `maffick_llc` = Delaware FARA registrant: `e_naouai_maffick_llc` (RESPONSIBLE_INDIVIDUAL, FARA reg 7063), `e_tvnovosti_maffick_llc` (TV-Novosti "Soapbox" agreement, 70 eps/$1.75M, FARA exhibit 7063). Ownership and registration no longer conflated.
+- `e_zelensky_dtj` multi_source_verified (AP: Trump Jr. promoted "Zelenskyy Unmasked" — scoped, no knowledge/coordination); `e_donovan_chen` multi_source_verified (CBS + TN records); `e_swann_tim` reported (single AP).
+- Added relationship_types DIRECTOR, RESPONSIBLE_INDIVIDUAL, PROMOTED. Bugfix: two new edges needed full source/target/confidence fields. **Public core 171→179; primary_verified 146, multi_source 4, negative 29, contested 4, reported 55.**
+
+**All pull-clusters (A/B/C1/C2/C3) closed.** Remaining: relabel/cut sweep of ~domestic reported edges, then renderer.
+
+105 nodes / 238 edges. validate.py clean.

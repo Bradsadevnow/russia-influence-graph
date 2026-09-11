@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 31 (C1, proposition-aware): Tenet payment spine primary_verified from the DOJ indictment. Cohort-level (six named creators FEATURED_TALENT + cohort membership + influencers + platforms). TWO explicit contracts at PSEUDONYM level (commentator_1 $400k/mo, commentator_2 $100k/video) — real-name binding corroborated-not-asserted. tenet.commentator_segmentation records C1-6 differentiated propositions. Grigoriann scoped to persona INFRASTRUCTURE. Figure corrected to 'nearly $10 million'.",
+    "status": "1.0 + batch 33 (C3 CLOSED): FARA-anchored RT-media vehicles. Rebel/Swann/TV-Novosti primary_verified (FARA reg 7151, Director Swann, ~$4.5M). Maffick SPLIT: GmbH (historical Ruptly51/Naouai49, State GEC) vs NEW maffick_llc (FARA registrant, Naouai responsible individual, TV-Novosti Soapbox 70eps/$1.75M, FARA 7063). Zelenskyy-Unmasked->DTJ + Donovan<->Chen multi_source_verified (scoped: promotion/marriage, no knowledge/coordination). Swann->Truth-in-Media reported (single AP). All damaging person-claims now verified/multi-source/contested/DNC except the ~15 domestic relabel-or-cut set.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -89,7 +89,10 @@
         "RECEIVED_MATERIAL",
         "CONTRACTED_AND_PAID",
         "FEATURED_TALENT",
-        "AUTHORED"
+        "AUTHORED",
+        "DIRECTOR",
+        "RESPONSIBLE_INDIVIDUAL",
+        "PROMOTED"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -1132,11 +1135,11 @@
     },
     {
       "id": "maffick",
-      "label": "Maffick Media",
+      "label": "Maffick Media GmbH (historical)",
       "layer": "us_media",
       "type": "outlet",
       "us_class": "direct_state_connected",
-      "notes": "Earlier RT-funded US-facing digital network (In The Now / Soapbox / Waste-ED). German parent 51% Ruptly-owned; ~$5.6M from TV-Novosti from Oct 2019 (FARA/GEC). ARCHITECTURAL analogue of Tenet, NOT a proven personnel link to it.",
+      "notes": "Historical German entity: Ruptly held 51%, Anissa Naouai 49% (State GEC; ASD). ~$5.6M from TV-Novosti from Oct 2019. DISTINCT from the later Maffick LLC (US FARA registrant). arch_profile (media_subsidiary) describes this historical Russian-owned phase.",
       "arch_profile": {
         "era": "2019",
         "foreign_principal": "russian_state_media",
@@ -1480,6 +1483,15 @@
       "us_class": "downstream",
       "actor_class": "US_ACTOR",
       "notes": "Indictment pseudonym. Real-name binding corroborated in reporting but NOT encoded until pulled. Held the $100k/video contract."
+    },
+    {
+      "id": "maffick_llc",
+      "label": "Maffick LLC",
+      "layer": "us_media",
+      "type": "outlet",
+      "us_class": "direct_state_connected",
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "notes": "Delaware LLC (organized July 29 2019); registered under FARA (2021), responsible individual Anissa Naouai; held a TV-Novosti 'Soapbox' production agreement (70 episodes, $1.75M). The later US-registered phase, distinct from Maffick Media GmbH."
     }
   ],
   "edges": [
@@ -1844,40 +1856,55 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "very_high",
-      "claim": "Rebel Media Productions received ~$4.5M under a Russian state-backed contract during March-August 2023 to produce Swann's content.",
+      "claim": "FARA: Rebel Media Productions LLC (represented by Director Ben Swann) contracted with TV-Novosti; Rebel's FARA disclosures show ~$4.5M received from a Russian-government-backed firm Mar-Aug 2023.",
       "citation": {
-        "publisher": "Talking Points Memo",
-        "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
-        "date": "2024",
-        "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
-        "primary": false,
-        "independence_group": "press_tpm"
+        "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+        "date": "2022-08-05",
+        "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+        "primary": true,
+        "independence_group": "FARA"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
+          "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+          "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+          "date": "2022-08-05",
+          "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+          "primary": true,
+          "independence_group": "FARA"
+        },
+        {
           "publisher": "Talking Points Memo",
-          "title": "Inside the Russian propaganda mill beaming out of a Florida strip mall (Rebel/Sovren/Truth in Media; $4.5M Mar-Aug 2023)",
+          "title": "Rebel FARA disclosures: ~$4.5M from a Russian govt-backed firm Mar-Aug 2023",
           "date": "2024",
           "url": "https://talkingpointsmemo.com/news/inside-the-russian-propaganda-mill-beaming-out-of-a-florida-strip-mall",
           "primary": false,
-          "independence_group": "press_tpm"
+          "independence_group": "TPM"
         }
       ],
       "date": "2023",
-      "evidence_quality": "C",
+      "evidence_quality": "A",
       "relationship_type": "FUNDING",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "section": "FARA reg 7151",
+        "proposition": "Rebel Media Productions LLC contracted with TV-Novosti (~$4.5M, 2023).",
+        "supporting_quote": "Rebel Media Productions LLC ... TV-Novosti"
       }
     },
     {
@@ -1887,40 +1914,47 @@
       "evidence_class": "documented_contact",
       "mechanism": "ownership",
       "confidence": "very_high",
-      "claim": "Rebel Media Productions is Ben Swann's company.",
+      "claim": "FARA identifies Rebel Media Productions LLC as represented by its Director, Ben Swann.",
       "citation": {
-        "publisher": "AP News",
-        "title": "Right-wing influencers hyped anti-Ukraine videos...",
-        "date": "2024-10-18",
-        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
-        "primary": false,
-        "independence_group": "AP"
+        "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+        "date": "2022-08-05",
+        "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+        "primary": true,
+        "independence_group": "FARA"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "AP News",
-          "title": "Right-wing influencers hyped anti-Ukraine videos...",
-          "date": "2024-10-18",
-          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
-          "primary": false,
-          "independence_group": "AP"
+          "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+          "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+          "date": "2022-08-05",
+          "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+          "primary": true,
+          "independence_group": "FARA"
         }
       ],
       "date": "2024",
-      "evidence_quality": "C",
-      "relationship_type": "CONTRACT",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "relationship_type": "DIRECTOR",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "section": "FARA reg 7151",
+        "proposition": "Ben Swann is the director of Rebel Media Productions LLC.",
+        "supporting_quote": "represented by Director Ben Swann"
       }
     },
     {
@@ -1930,39 +1964,47 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "production",
       "confidence": "very_high",
-      "claim": "Swann produced RT programming for Russian state media.",
+      "claim": "Rebel Media Productions (Swann) undertook production work for TV-Novosti under the FARA-disclosed contract. (Scoped to contracted production for TV-Novosti; not 'produced Russian propaganda' as a separate proposition.)",
       "citation": {
-        "publisher": "AP News",
-        "title": "Right-wing influencers hyped anti-Ukraine videos...",
-        "date": "2024-10-18",
-        "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
-        "primary": false,
-        "independence_group": "AP"
+        "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+        "date": "2022-08-05",
+        "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+        "primary": true,
+        "independence_group": "FARA"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "AP News",
-          "title": "Right-wing influencers hyped anti-Ukraine videos...",
-          "date": "2024-10-18",
-          "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
-          "primary": false,
-          "independence_group": "AP"
+          "publisher": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+          "title": "Rebel Media Productions LLC (Director Ben Swann) contracted with TV-Novosti",
+          "date": "2022-08-05",
+          "url": "https://efile.fara.gov/docs/7151-Exhibit-AB-20220805-1.pdf",
+          "primary": true,
+          "independence_group": "FARA"
         }
       ],
       "date": "2024",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "production",
+      "primary_candidate": {
+        "document": "DOJ FARA — Rebel Media Productions LLC (Exhibit A/B)",
+        "section": "FARA reg 7151",
+        "proposition": "Rebel/Swann produced programming under contract for TV-Novosti.",
+        "supporting_quote": "production work for ... TV-Novosti"
       }
     },
     {
@@ -1972,22 +2014,22 @@
       "evidence_class": "documented_contact",
       "mechanism": "ownership",
       "confidence": "high",
-      "claim": "Swann runs the U.S.-facing outlet Truth in Media.",
+      "claim": "AP: Ben Swann runs the U.S.-facing outlet Truth in Media.",
       "citation": {
         "publisher": "AP News",
-        "title": "Right-wing influencers hyped anti-Ukraine videos...",
-        "date": "2024-10-18",
+        "title": "Trump Jr. among influencers who promoted Swann's 'Zelenskyy Unmasked'",
+        "date": "2024",
         "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
         "primary": false,
         "independence_group": "AP"
       },
-      "verification": "pending",
+      "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
           "publisher": "AP News",
-          "title": "Right-wing influencers hyped anti-Ukraine videos...",
-          "date": "2024-10-18",
+          "title": "Trump Jr. among influencers who promoted Swann's 'Zelenskyy Unmasked'",
+          "date": "2024",
           "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
           "primary": false,
           "independence_group": "AP"
@@ -1996,15 +2038,23 @@
       "date": "2024",
       "evidence_quality": "C",
       "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "evidence_ledger",
         "eligible": false,
         "reason": [
           "reported"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "ownership",
+      "primary_candidate": {
+        "document": "AP News",
+        "section": "Swann/Truth in Media",
+        "proposition": "Swann runs Truth in Media.",
+        "status": "reported (single strong source)"
       }
     },
     {
@@ -2056,23 +2106,23 @@
       "evidence_class": "documented_contact",
       "mechanism": "amplification",
       "confidence": "high",
-      "claim": "Trump Jr. promoted 'Zelenskyy Unmasked' to his followers.",
+      "claim": "AP: Trump Jr. was among the influencers who promoted Ben Swann's 12-part 'Zelenskyy Unmasked' series. Does NOT establish that Trump Jr. knew of Swann's Russian funding / FARA relationship or coordinated with Russian actors.",
       "quote": "AP documented the promotion; does NOT establish Trump Jr. knew of Swann's Russian funding.",
       "citation": {
         "publisher": "AP News",
-        "title": "Right-wing influencers hyped anti-Ukraine videos...",
-        "date": "2024-10-18",
+        "title": "Trump Jr. among influencers who promoted Swann's 'Zelenskyy Unmasked'",
+        "date": "2024",
         "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
         "primary": false,
         "independence_group": "AP"
       },
-      "verification": "pending",
+      "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
           "publisher": "AP News",
-          "title": "Right-wing influencers hyped anti-Ukraine videos...",
-          "date": "2024-10-18",
+          "title": "Trump Jr. among influencers who promoted Swann's 'Zelenskyy Unmasked'",
+          "date": "2024",
           "url": "https://apnews.com/article/9d4281756246b94eda05c478f3dac203",
           "primary": false,
           "independence_group": "AP"
@@ -2080,16 +2130,24 @@
       ],
       "date": "2024",
       "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_state": "multi_source_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "multi_source_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "PROMOTED",
+      "primary_candidate": {
+        "document": "AP News",
+        "section": "AP",
+        "proposition": "Trump Jr. promoted Swann's 'Zelenskyy Unmasked' series.",
+        "supporting_quote": "Donald Trump Jr. ... promoted"
       }
     },
     {
@@ -6762,39 +6820,55 @@
       "evidence_class": "documented_state_connection",
       "mechanism": "ownership",
       "confidence": "high",
-      "claim": "RT anchor Anissa Naouai was a minority owner in Maffick's structure.",
+      "claim": "Anissa Naouai held a 49% minority stake in the historical Maffick Media GmbH (Ruptly held 51%). Distinct from Maffick LLC, the later Delaware FARA registrant on which she is the responsible individual.",
       "citation": {
-        "publisher": "Lawfare",
-        "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
-        "date": "2019",
-        "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
-        "primary": false,
-        "independence_group": "fara_gec"
+        "publisher": "U.S. State Dept (GEC)",
+        "title": "Kremlin-Funded Media: Maffick Media GmbH 51% Ruptly / 49% Naouai",
+        "date": "2022-01",
+        "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+        "primary": true,
+        "independence_group": "state_gec"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2019",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Lawfare",
-          "title": "Facebook, FARA, and Foreign Media (Ruptly 51% owner of Maffick's German parent; ~$5.6M TV-Novosti->Maffick from Oct 2019; GEC)",
+          "publisher": "U.S. State Dept (GEC)",
+          "title": "Kremlin-Funded Media: Maffick Media GmbH 51% Ruptly / 49% Naouai",
+          "date": "2022-01",
+          "url": "https://2021-2025.state.gov/wp-content/uploads/2022/01/Kremlin-Funded-Media_January_update-19.pdf",
+          "primary": true,
+          "independence_group": "state_gec"
+        },
+        {
+          "publisher": "Alliance for Securing Democracy (GMF)",
+          "title": "Maffick Media GmbH: Ruptly 51% / Naouai 49%",
           "date": "2019",
-          "url": "https://www.lawfaremedia.org/article/facebook-fara-and-foreign-media",
+          "url": "https://securingdemocracy.isd.ngo/russias-network-of-millennial-media/",
           "primary": false,
-          "independence_group": "fara_gec"
+          "independence_group": "ASD"
         }
       ],
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "OWNERSHIP",
+      "primary_candidate": {
+        "document": "U.S. State Dept (GEC)",
+        "section": "State GEC / ASD",
+        "proposition": "Naouai held 49% of Maffick Media GmbH (Ruptly 51%).",
+        "supporting_quote": "Ruptly ... 51 percent ... Naouai ... 49 percent"
       }
     },
     {
@@ -6957,14 +7031,14 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "very_high",
-      "claim": "Liam Donovan and Lauren Chen are spouses and Tenet co-founders.",
+      "claim": "Liam Donovan and Lauren Chen are married co-founders of Tenet Media (Tennessee records: incorporated Jan 19, 2022).",
       "citation": {
         "publisher": "CBS News",
-        "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+        "title": "TN records: Tenet incorporated Jan 19 2022; founded by Liam Donovan and wife Lauren Chen",
         "date": "2024-09-04",
         "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
         "primary": false,
-        "independence_group": "press"
+        "independence_group": "CBS"
       },
       "verification": "needs_primary",
       "date": "2022",
@@ -6972,24 +7046,32 @@
       "citations": [
         {
           "publisher": "CBS News",
-          "title": "Russia, Tenet Media, right-wing influencers, DOJ (operators concealed involvement; influencers uncharged)",
+          "title": "TN records: Tenet incorporated Jan 19 2022; founded by Liam Donovan and wife Lauren Chen",
           "date": "2024-09-04",
           "url": "https://www.cbsnews.com/news/russia-tenet-media-right-wing-influencers-justice-department/",
           "primary": false,
-          "independence_group": "press"
+          "independence_group": "CBS"
         }
       ],
       "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_state": "multi_source_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "multi_source_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "business_relationship",
+      "primary_candidate": {
+        "document": "CBS News",
+        "section": "CBS + TN corporate records",
+        "proposition": "Donovan and Chen are married co-founders of Tenet.",
+        "supporting_quote": "Liam Donovan and his wife Lauren Chen"
       }
     },
     {
@@ -12343,6 +12425,108 @@
         "independence_group": "DOJ-SDNY"
       },
       "date": "2024",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
+    },
+    {
+      "id": "e_naouai_maffick_llc",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "verification": "verified",
+      "citations": [
+        {
+          "publisher": "DOJ FARA — Maffick LLC registration",
+          "title": "Maffick LLC registrant; responsible individual Anissa Naouai; organized July 29 2019",
+          "date": "2021-12-20",
+          "url": "https://efile.fara.gov/docs/7063-Registration-Statement-20211220-1.pdf",
+          "primary": true,
+          "independence_group": "FARA"
+        }
+      ],
+      "relationship_type": "RESPONSIBLE_INDIVIDUAL",
+      "claim": "FARA registration: Anissa Naouai is the responsible individual of Maffick LLC (organized July 29 2019).",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "DOJ FARA — Maffick LLC registration",
+        "section": "FARA reg 7063",
+        "proposition": "Naouai is the FARA responsible individual of Maffick LLC.",
+        "supporting_quote": "responsible individual ... Anissa Naouai"
+      },
+      "source": "anissa_naouai",
+      "target": "maffick_llc",
+      "confidence": "very_high",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "domain": "influence",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "DOJ FARA — Maffick LLC registration",
+        "title": "Maffick LLC registrant; responsible individual Anissa Naouai; organized July 29 2019",
+        "date": "2021-12-20",
+        "url": "https://efile.fara.gov/docs/7063-Registration-Statement-20211220-1.pdf",
+        "primary": true,
+        "independence_group": "FARA"
+      },
+      "date": "2019",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      }
+    },
+    {
+      "id": "e_tvnovosti_maffick_llc",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "verification": "verified",
+      "citations": [
+        {
+          "publisher": "DOJ FARA — Maffick LLC (Exhibit A/B)",
+          "title": "Maffick LLC–TV-Novosti 'Soapbox' agreement (70 episodes, $1.75M), signed by CEO Naouai & TV-Novosti GD",
+          "date": "2021-12-20",
+          "url": "https://efile.fara.gov/docs/7063-Exhibit-AB-20211220-1.pdf",
+          "primary": true,
+          "independence_group": "FARA"
+        }
+      ],
+      "relationship_type": "CONTRACT",
+      "claim": "FARA exhibit: Maffick LLC held a 'Soapbox' production agreement with TV-Novosti (70 episodes, $1.75M), signed by CEO Naouai and TV-Novosti's general director.",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "DOJ FARA — Maffick LLC (Exhibit A/B)",
+        "section": "FARA exhibit 7063",
+        "proposition": "Maffick LLC had a TV-Novosti Soapbox contract (70 eps, $1.75M).",
+        "supporting_quote": "Soapbox ... 70 episodes ... $1,750,000"
+      },
+      "source": "tv_novosti",
+      "target": "maffick_llc",
+      "confidence": "very_high",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "funding",
+      "domain": "influence",
+      "provenance": "observed",
+      "citation": {
+        "publisher": "DOJ FARA — Maffick LLC (Exhibit A/B)",
+        "title": "Maffick LLC–TV-Novosti 'Soapbox' agreement (70 episodes, $1.75M), signed by CEO Naouai & TV-Novosti GD",
+        "date": "2021-12-20",
+        "url": "https://efile.fara.gov/docs/7063-Exhibit-AB-20211220-1.pdf",
+        "primary": true,
+        "independence_group": "FARA"
+      },
+      "date": "2021",
       "evidence_quality": "A",
       "publication": {
         "layer": "public_core",
