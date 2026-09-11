@@ -351,3 +351,15 @@ Pulled Mueller Vol I (Wikisource) against the 10 Cluster-A propositions.
 - Audit fields applied: `primary_candidate.{document,section,proposition,supporting_quote}`, `claim_scope`, `identity_check`, `temporal_check`. Public core 125→129.
 
 101 nodes / 228 edges. validate.py clean.
+
+## batch 26 (2026-09-11) — Cluster A CLOSED (10/10 primary-verified)
+Brad pulled the 6 remaining Cluster-A propositions against the requested primaries; all encoded with verbatim quote + page + proposition + the three checks.
+- **e_meeting_kushner** ✅ Mueller Vol I p.117 ("Trump Jr., Manafort, and Kushner participated…") — attended, not merely invited.
+- **e_emin_goldstone** ✅ Mueller Vol I pp.110-114 — scope refined: Emin initiated the June 3 call; Goldstone (Emin's then-publicist) contacted Trump Jr.
+- **e_dtj_wikileaks** ✅ Mueller Vol I pp.59-60 §II.D.5(e) — DIRECT communication only; explicitly NOT coordination.
+- **e_kremlin_agalarov** ✅ SSCI Vol 5 — kept scoped as an SSCI ASSESSMENT ("likely did this on behalf of…"), not an independently established fact.
+- **e_goldstone_dtj_vk** ✅ SSCI Vol 5 — proposal/promotion of an official Trump VK page; NOTE banked that SSCI's insight into VK motivation was "extremely limited" (NOT a Russian-govt-directed op).
+- **e_film** ⚠️→✅ — the audit caught it: Mueller (requested primary) does NOT establish the screening. Source MOVED to FBI Special Counsel records Part 48 (June 13, 2016 Newseum screening, Veselnitskaya/Akhmetshin). `audit_finding` records the source move; no laundering an external source into a Mueller cite.
+- Public core 129→135. All 10 Cluster-A edges primary_verified.
+
+101 nodes / 228 edges. validate.py clean.

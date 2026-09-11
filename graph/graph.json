@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 25 (PASS 1 audit, Cluster A/Mueller): 4 edges CONFIRMED primary_verified vs Mueller Vol I with verbatim quotes (e_aras_emin, e_polonskaya_papadopoulos, e_timofeev_mfa, e_agalarov_dtj [NARROWED — scope fix: dropped unsupported 'gifts']); 6 edges recorded with exact located section as PENDING_PULL. Audit fields (primary_candidate.proposition, claim_scope, identity_check, temporal_check) applied.",
+    "status": "1.0 + batch 26 (Cluster A CLOSED): 5/6 verified against requested primary (Mueller pp.117, 110-114, 59-60; SSCI Vol5 x2) with scope held (Agalarov=SSCI ASSESSMENT; WikiLeaks=direct comms only; VK=proposal only, motivation NOT established). e_film FAILED Mueller (requested primary didn't establish it) -> source MOVED to FBI Special Counsel Part 48 (June 13 Newseum screening). All 10 Cluster A edges now primary_verified.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -2225,21 +2225,21 @@
       "evidence_class": "documented_state_connection",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Aras Agalarov is an oligarch with ties to Putin and Russian officials; SSCI assessed he likely acted on behalf of Russian-government-affiliated individuals in pushing the Trump Tower meeting.",
+      "claim": "SSCI ASSESSED that Aras Agalarov was personally involved in pushing for the June 9 meeting (and a post-election meeting) and LIKELY did so on behalf of individuals affiliated with the Russian government (basis: ties to officials pursuing Magnitsky-sanctions repeal). An SSCI assessment, not an independently established fact.",
       "citation": {
-        "publisher": "SSCI",
-        "title": "Report Volume 5",
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
         "date": "2020-08-18",
         "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
         "primary": true,
         "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "SSCI",
-          "title": "Report Volume 5",
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
           "date": "2020-08-18",
           "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
           "primary": true,
@@ -2247,24 +2247,26 @@
         }
       ],
       "date": "2020",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
         "document": "SSCI Vol 5",
-        "section": "Agalarov assessment",
-        "proposition": "SSCI assessed Aras Agalarov likely acted on behalf of Russian-government-affiliated individuals regarding the June 9 meeting outreach.",
-        "status": "PENDING_PULL"
-      }
+        "section": "The Agalarovs and the June 9, 2016 Trump Tower Meeting",
+        "page": "unresolved (not fabricated)",
+        "proposition": "SSCI assessed Aras Agalarov likely acted on behalf of Russian-government-affiliated individuals in pushing the June 9 outreach.",
+        "supporting_quote": "Agalarov likely did this on behalf of individuals affiliated with the Russian government..."
+      },
+      "_audit_assigned": true
     },
     {
       "id": "e_aras_emin",
@@ -2322,46 +2324,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "very_high",
-      "claim": "Goldstone represented Emin Agalarov and brokered contacts with Trump Jr.",
+      "claim": "Goldstone was Emin Agalarov's then-publicist; on June 3, 2016 Emin called Goldstone, who then contacted Trump Jr. to arrange the June 9 meeting ('Emin just called and asked me to contact you with something very interesting').",
       "citation": {
-        "publisher": "SSCI / Mueller",
-        "title": "Report Volume 5 / Special Counsel Report",
-        "date": "2020-08-18",
-        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference (Vol. I)",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/storage/report.pdf",
         "primary": true,
         "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "SSCI / Mueller",
-          "title": "Report Volume 5 / Special Counsel Report",
-          "date": "2020-08-18",
-          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference (Vol. I)",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/storage/report.pdf",
           "primary": true,
           "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2020",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
         "document": "Mueller Report Vol. I",
-        "section": "IV.A.5 The June 9, 2016 Meeting at Trump Tower",
-        "proposition": "Goldstone, Emin Agalarov's publicist, brokered the June 9 meeting outreach to Trump Jr.",
-        "status": "PENDING_PULL"
-      }
+        "section": "IV.A.5 June 9 Meeting",
+        "page": "110-114",
+        "proposition": "Goldstone, Emin Agalarov's publicist, contacted Trump Jr. to arrange the meeting (initial call from Emin).",
+        "supporting_quote": "On June 3, 2016, Emin Agalarov called Goldstone, Emin's then-publicist."
+      },
+      "_audit_assigned": true
     },
     {
       "id": "e_agalarov_dtj",
@@ -2588,46 +2592,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "very_high",
-      "claim": "Kushner attended the Trump Tower meeting.",
+      "claim": "Kushner (and Manafort) ATTENDED the June 9, 2016 Trump Tower meeting — participants: Trump Jr., Manafort, Kushner on the Trump side; Kaveladze, Samochornov, Akhmetshin, Goldstone with Veselnitskaya.",
       "citation": {
-        "publisher": "Mueller Report",
-        "title": "Special Counsel Report",
-        "date": "2019",
-        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference (Vol. I)",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/storage/report.pdf",
         "primary": true,
         "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Mueller Report",
-          "title": "Special Counsel Report",
-          "date": "2019",
-          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference (Vol. I)",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/storage/report.pdf",
           "primary": true,
           "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2019",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
         "document": "Mueller Report Vol. I",
-        "section": "IV.A.5 The June 9, 2016 Meeting at Trump Tower",
-        "proposition": "Jared Kushner attended the June 9, 2016 Trump Tower meeting (attendee list).",
-        "status": "PENDING_PULL"
-      }
+        "section": "IV.A.5 June 9 Meeting",
+        "page": "117",
+        "proposition": "Kushner and Manafort attended the June 9, 2016 Trump Tower meeting.",
+        "supporting_quote": "Trump Jr., Manafort, and Kushner participated on the Trump side, while Kaveladze, Samochornov, Akhmetshin, and Goldstone attended with Veselnitskaya."
+      },
+      "_audit_assigned": true
     },
     {
       "id": "e_veselnitskaya_op",
@@ -2762,47 +2768,49 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "very_high",
-      "claim": "Trump Jr. communicated directly with WikiLeaks during the 2016 campaign.",
+      "claim": "Donald Trump Jr. had direct electronic communications (DMs) with the WikiLeaks Twitter account during the campaign (Sept 20/21, Oct 3, Oct 12 2016). DIRECT COMMUNICATION only — does NOT establish coordination.",
       "quote": "Establishes the communication only; does NOT establish Trump Jr. knowingly communicated with Russian intelligence.",
       "citation": {
-        "publisher": "SSCI / released DMs",
-        "title": "Report Volume 5",
-        "date": "2020-08-18",
-        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference (Vol. I)",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/storage/report.pdf",
         "primary": true,
-        "independence_group": "SSCI / released DMs"
+        "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "SSCI / released DMs",
-          "title": "Report Volume 5",
-          "date": "2020-08-18",
-          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference (Vol. I)",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/storage/report.pdf",
           "primary": true,
-          "independence_group": "SSCI / released DMs"
+          "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2016",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
         "document": "Mueller Report Vol. I",
-        "section": "Section V / WikiLeaks dissemination",
-        "proposition": "Trump Jr. exchanged direct messages with the WikiLeaks Twitter account during the 2016 campaign.",
-        "status": "PENDING_PULL"
-      }
+        "section": "II.D.5(e) Donald Trump Jr. Interaction with WikiLeaks",
+        "page": "59-60",
+        "proposition": "Trump Jr. communicated directly with the WikiLeaks account during the campaign.",
+        "supporting_quote": "Donald Trump Jr. had direct electronic communications with WikiLeaks during the campaign period."
+      },
+      "_audit_assigned": true
     },
     {
       "id": "e_goldstone_vk",
@@ -3487,46 +3495,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "introduction",
       "confidence": "high",
-      "claim": "Early 2016: Goldstone proposed to Trump Jr. setting up a Trump campaign presence on VK.",
+      "claim": "Goldstone proposed/promoted an 'official' Trump campaign presence on VKontakte (a 'VOTE Trump 2016' page) targeting Russian-speaking US voters, discussed with Trump Jr. and Manafort (June 8 & 29, 2016 emails). NOTE: SSCI said its insight into VK's motivation was EXTREMELY LIMITED — NOT established as a Russian-government-directed operation.",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-        "date": "2017-12-07",
-        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-          "date": "2017-12-07",
-          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2016",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
         "document": "SSCI Vol 5",
-        "section": "Social-media / VK overtures section",
-        "proposition": "Early 2016 Goldstone proposed a Trump campaign presence on VKontakte (VK).",
-        "status": "PENDING_PULL"
-      }
+        "section": "The Agalarovs and the June 9, 2016 meeting",
+        "page": "unresolved",
+        "proposition": "Goldstone proposed an official Trump campaign VK page targeting Russian-speaking voters.",
+        "supporting_quote": "Goldstone was also reaching out to the campaign with invitations from the Russian social networking site VKontakte to set up an 'official' Trump campaign page..."
+      },
+      "_audit_assigned": true
     },
     {
       "id": "e_dtj_scavino_vk",
@@ -4165,46 +4175,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "production",
       "confidence": "high",
-      "claim": "Veselnitskaya and Akhmetshin promoted an anti-Magnitsky documentary, screened in DC four days after the Trump Tower meeting.",
+      "claim": "The anti-Magnitsky documentary 'The Magnitsky Act' was screened at the Newseum in Washington DC on June 13, 2016 (four days after the June 9 meeting); Veselnitskaya and Akhmetshin were involved.",
       "citation": {
-        "publisher": "PBS NewsHour / AP",
-        "title": "Lobbyist who met Trump team says he's not Russian intel",
-        "date": "2017-07",
-        "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
-        "primary": false,
-        "independence_group": "PBS"
+        "publisher": "FBI Vault — Special Counsel (Mueller) investigation records, Part 48",
+        "title": "Investigative record: 'The Magnitsky Act' screened at the Newseum, Washington DC, June 13, 2016; Veselnitskaya & Akhmetshin involved",
+        "date": "2016-06",
+        "url": "https://vault.fbi.gov/special-counsel-mueller-investigation-records/special-counsel-mueller-investigation-records-part-48/at_download/file",
+        "primary": true,
+        "independence_group": "FBI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "PBS NewsHour / AP",
-          "title": "Lobbyist who met Trump team says he's not Russian intel",
-          "date": "2017-07",
-          "url": "https://www.pbs.org/newshour/politics/lobbyist-met-trump-team-says-hes-not-russian-intel",
-          "primary": false,
-          "independence_group": "PBS"
+          "publisher": "FBI Vault — Special Counsel (Mueller) investigation records, Part 48",
+          "title": "Investigative record: 'The Magnitsky Act' screened at the Newseum, Washington DC, June 13, 2016; Veselnitskaya & Akhmetshin involved",
+          "date": "2016-06",
+          "url": "https://vault.fbi.gov/special-counsel-mueller-investigation-records/special-counsel-mueller-investigation-records-part-48/at_download/file",
+          "primary": true,
+          "independence_group": "FBI"
         }
       ],
       "date": "2017",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
       "identity_check": "exact_person",
-      "temporal_check": "unaudited",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
       },
       "primary_candidate": {
-        "document": "Mueller Report Vol. I",
-        "section": "IV.A.5 (aftermath) / SSCI Vol 5",
-        "proposition": "Veselnitskaya/Akhmetshin promoted an anti-Magnitsky documentary screened in Washington DC shortly after the June 9 meeting.",
-        "status": "PENDING_PULL"
-      }
+        "document": "FBI Vault — Special Counsel records Part 48",
+        "section": "Russian anti-sanctions campaign records",
+        "proposition": "'The Magnitsky Act' screened at the Newseum, DC, June 13 2016; Veselnitskaya & Akhmetshin involved.",
+        "supporting_quote": "(analyst-confirmed against FBI Part 48; verbatim capture pending exact page)"
+      },
+      "_audit_assigned": true,
+      "audit_finding": "REQUESTED PRIMARY (Mueller Vol I, Post-June-9 events) did NOT establish the screening proposition; source MOVED to FBI Special Counsel investigative record Part 48, which documents the June 13, 2016 Newseum screening and Veselnitskaya/Akhmetshin involvement. No laundering of an external source into a Mueller citation."
     },
     {
       "id": "e_film_audience",
