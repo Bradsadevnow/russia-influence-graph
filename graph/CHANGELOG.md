@@ -363,3 +363,13 @@ Brad pulled the 6 remaining Cluster-A propositions against the requested primari
 - Public core 129→135. All 10 Cluster-A edges primary_verified.
 
 101 nodes / 228 edges. validate.py clean.
+
+## batch 27 (2026-09-11) — SSCI Vol 5 Key-Finding NEGATIVES locked (the defensible backbone)
+Using the Committee's own verbatim Key Findings (primary Senate publication) — the load-bearing scope limits that make the public artifact defensible:
+- **`e_june9_ssci_negatives_DNC` (NEW do_not_claim):** SSCI found NO reliable evidence that benefit-information was transmitted at the June 9 meeting, or that Trump had foreknowledge. (This negative did not previously exist in the graph.)
+- **`e_papadopoulos_witting_DNC`** strengthened with exact SSCI language ("not a witting cooptee … but … a potential vector for malign Russian influence").
+- **`e_manafort_scope_DNC` (NEW):** SCOPE ANCHOR — SSCI framed Manafort as creating "opportunities for Russian intelligence … to exert influence over, and acquire confidential information on, the Campaign," NOT as an asset. Guards the Manafort cluster against upgrade.
+- `e_ves_intel` / `e_akh_intel` scope-anchored with the SSCI Key Finding (significant Russian-govt incl. intelligence connections).
+- All as negative_finding/verified with provenance → public_core. Granular B edges (Page/VK/Sidorkov/HRAGI/Gabbard) pending page-level pulls. Public core 136→138.
+
+101 nodes / 230 edges. validate.py clean.

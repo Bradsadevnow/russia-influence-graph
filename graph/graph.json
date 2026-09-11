@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 26 (Cluster A CLOSED): 5/6 verified against requested primary (Mueller pp.117, 110-114, 59-60; SSCI Vol5 x2) with scope held (Agalarov=SSCI ASSESSMENT; WikiLeaks=direct comms only; VK=proposal only, motivation NOT established). e_film FAILED Mueller (requested primary didn't establish it) -> source MOVED to FBI Special Counsel Part 48 (June 13 Newseum screening). All 10 Cluster A edges now primary_verified.",
+    "status": "1.0 + batch 27: SSCI Vol5 Key-Finding NEGATIVES locked (primary Senate publication) — June 9 'no benefit transmitted / no Trump foreknowledge' (new do_not_claim), Papadopoulos 'not a witting cooptee' (strengthened w/ verbatim), Manafort SCOPE anchor ('opportunities to influence/acquire', NOT asset). Veselnitskaya/Akhmetshin 'significant Russian-government incl. intelligence connections' scope-anchored. Granular B edges (Page/VK/Sidorkov/HRAGI/Gabbard) pending Brad's page-level pulls.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -3866,14 +3866,22 @@
           "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
           "primary": true,
           "independence_group": "SSCI"
+        },
+        {
+          "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+          "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2020",
       "evidence_quality": "A",
       "evidence_state": "primary_verified",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "public_core",
         "eligible": true,
@@ -3908,14 +3916,22 @@
           "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
           "primary": true,
           "independence_group": "SSCI"
+        },
+        {
+          "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+          "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2020",
       "evidence_quality": "A",
       "evidence_state": "primary_verified",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "public_core",
         "eligible": true,
@@ -11105,7 +11121,7 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "do_not_claim",
-      "claim": "NOT ESTABLISHED: that Papadopoulos was a WITTING cooperator of Russian intelligence. SSCI characterizes him as a POTENTIAL VECTOR for Russian influence, not a witting cooperator. Documented mediated pathway (Mifsud/Timofeev) without a finding of knowing service to Russian intelligence.",
+      "claim": "NOT ESTABLISHED (SSCI Vol 5 Key Findings): George Papadopoulos was NOT a witting cooptee of the Russian intelligence services, but nonetheless presented a prime intelligence target and potential vector for malign Russian influence. Documented mediated pathway (Mifsud/Timofeev) without a finding of knowing service to Russian intelligence.",
       "citation": {
         "publisher": "SSCI Vol 5",
         "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
@@ -11130,15 +11146,22 @@
       "date": "2020",
       "evidence_quality": "N/A",
       "evidence_state": "negative_finding",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "public_core",
         "eligible": true,
         "reason": [
           "do_not_claim_with_provenance"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5 (Key Findings)",
+        "section": "Papadopoulos",
+        "proposition": "Papadopoulos was not a witting cooptee of Russian intelligence but was a potential vector for malign Russian influence.",
+        "supporting_quote": "George Papadopoulos was not a witting cooptee of the Russian intelligence services, but nonetheless presented a prime intelligence target and potential vector for malign Russian influence."
       }
     },
     {
@@ -11559,6 +11582,106 @@
         "eligible": true,
         "reason": [
           "primary_verified"
+        ]
+      }
+    },
+    {
+      "id": "e_june9_ssci_negatives_DNC",
+      "source": "trump_tower_meeting",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED (SSCI Vol 5 Key Findings): the Committee found NO reliable evidence that information of benefit to the Campaign was transmitted at the June 9, 2016 meeting, or that then-candidate Trump had foreknowledge of the meeting. (It separately assessed that two meeting participants — Veselnitskaya and Akhmetshin — had significant Russian-government connections.)",
+      "citation": {
+        "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+        "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "evidence_state": "negative_finding",
+      "_audit_assigned": true,
+      "claim_scope": "exact",
+      "identity_check": "n_a",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5 (Key Findings)",
+        "section": "June 9, 2016 meeting",
+        "proposition": "No reliable evidence benefit-information was transmitted at the June 9 meeting, or that Trump had foreknowledge.",
+        "supporting_quote": "The Committee ... found no reliable evidence that information of benefit to the Campaign was transmitted at the meeting, or that then-candidate Trump had foreknowledge of the meeting."
+      },
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+          "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2016-06-09",
+      "evidence_quality": "N/A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
+    },
+    {
+      "id": "e_manafort_scope_DNC",
+      "source": "manafort",
+      "target": "russian_intel",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "do_not_claim",
+      "claim": "SCOPE ANCHOR / NOT ESTABLISHED that Manafort was a Russian intelligence ASSET. SSCI Vol 5's finding is scoped: Manafort's presence and proximity to Trump 'created opportunities for Russian intelligence services to exert influence over, and acquire confidential information on, the Trump Campaign.' Opportunity-and-exposure, not controlled agency. (The specific documented act is Manafort sharing polling/strategy with Kilimnik — see e_manafort_kilimnik_info.)",
+      "citation": {
+        "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+        "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "evidence_state": "negative_finding",
+      "_audit_assigned": true,
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5 (Key Findings)",
+        "section": "Manafort",
+        "proposition": "Manafort's proximity created opportunities for Russian intelligence to influence/acquire info on the campaign (not: Manafort was an asset).",
+        "supporting_quote": "Paul Manafort's presence on the Trump Campaign and proximity to then-Candidate Trump created opportunities for Russian intelligence services to exert influence over, and acquire confidential information on, the Trump Campaign."
+      },
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI (Vol 5 Key Findings, Rubio/Warner release)",
+          "title": "Senate Intel release of Vol 5 — official Committee Key Findings",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/2020/08/18/press-rubio-statement-senate-intel-release-volume-5-bipartisan-russia-report/",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "N/A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
         ]
       }
     }
