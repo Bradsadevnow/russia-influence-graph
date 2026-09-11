@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Russia&rarr;US Influence &mdash; Evidence Graph</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Russia &rarr; U.S. media &amp; political influence &mdash; a public-record reconstruction</h1>
+    <p>A connection is not a conclusion. Every edge is typed, confidence-rated, and clicks through to its primary source.
+       The comparison across vehicles is <b>architectural</b> &mdash; not a claim that these cases constitute one continuous operation.
+       Negative findings ("not established") are kept as data, never hidden. The renderer displays the audited substrate; it does not decide it.</p>
+    <div class="bar">
+      <span class="stat"><b id="s-pv">&middot;</b> primary-verified</span>
+      <span class="stat"><b id="s-multi">&middot;</b> multi-source</span>
+      <span class="stat"><b id="s-dnc">&middot;</b> not-established (kept)</span>
+      <span class="stat"><b id="s-con">&middot;</b> contested</span>
+      <span style="flex:1"></span>
+      <button class="tab on" data-tab="graph">Graph</button>
+      <button class="tab" data-tab="arch">Architecture-vs-cast</button>
+      <button class="tab" data-tab="dnc">What we do NOT claim</button>
+    </div>
+    <div class="bar">
+      <span class="stat">layers:</span>
+      <button class="layer on" id="ly-core" disabled title="always shown">PUBLIC CORE</button>
+      <button class="layer ledger" id="ly-ledger">+ EVIDENCE LEDGER</button>
+      <button class="layer research" id="ly-research">+ RESEARCH / CONDITIONAL</button>
+    </div>
+  </header>
+
+  <div id="stage">
+    <svg id="svg"><g id="view"><g id="edges"></g><g id="nodes"></g></g></svg>
+    <div id="tools" class="overlay">
+      <label><input type="checkbox" id="cb-dnc" checked> "not established" edges</label>
+      <label><input type="checkbox" id="cb-domestic" checked> US-domestic ties</label>
+      <label><input type="checkbox" id="cb-labels" checked> node labels</label>
+    </div>
+    <div id="legend" class="overlay"></div>
+  </div>
+
+  <div id="side"><div class="hint">Loading the evidence graph&hellip;</div></div>
+
+  <div class="page hidden" id="page-arch"></div>
+  <div class="page hidden" id="page-dnc"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
