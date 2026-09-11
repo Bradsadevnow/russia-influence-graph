@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 29 (Cluster B, SSCI Vol5 page-level): Page (Dvorkovich p542/570-1, Baranov p561, adviser p561) VERIFIED + strong Page NEGATIVE (no substantive contribution/never met Trump); VK/Sidorkov — Sidorkov->Scavino DIRECT verified, Sidorkov->DTJ NARROWED to cc-recipient, Sidorkov->Graff NARROWED to MEDIATED (via Goldstone), Sidorkov->campaign + Goldstone VK 'VOTE Trump 2016' (Manafort welcomed) p396 verified; VK NEGATIVE (Sidorkov motivations 'extremely limited', not gov-directed). HRAGI: e_katsyv_hragi held/narrowed (Katsyv a smaller contributor, not controller); e_ves_hragi NEW verified (Veselnitskaya helped establish HRAGI, p353).",
+    "status": "1.0 + batch 30 (Cluster B CLOSED): Rohrabacher SPLIT — e_kosachev_rohrabacher NEW primary_verified (SSCI: Russian Magnitsky material delivered/accepted; substantial similarity to Veselnitskaya's material), e_rohrabacher_congress narrowed to REPORTED (causal lobbying->record not SSCI-primary). e_akh_dellums MULTI_SOURCE_VERIFIED (WaPo hired Dellums + SJC + RFE + Hermitage; Dellums contradiction preserved). e_dellums_congress REPORTED (anonymous Daily Beast staffer account; contradiction preserved). Personnel edge > action edge. Cluster B done.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -83,7 +83,10 @@
         "DIRECTION",
         "CONTENT_REUSE",
         "DIRECT_COMMUNICATION",
-        "MEDIATED_OUTREACH"
+        "MEDIATED_OUTREACH",
+        "HIRED_FOR_LOBBYING",
+        "LOBBIED",
+        "RECEIVED_MATERIAL"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -1438,6 +1441,15 @@
       "us_class": null,
       "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
       "notes": "Rosneft CEO, Putin ally. Alleged July-2016 Page meeting rests on Steele/Crossfire intelligence reporting — contested, not a clean primary."
+    },
+    {
+      "id": "kosachev",
+      "label": "Konstantin Kosachev",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE",
+      "notes": "Chair, Russian Federation Council Foreign Affairs Committee. In Moscow asked Rohrabacher if he would accept 'sensitive documents'; a folder of Magnitsky material was then handed to Rohrabacher (SSCI Vol 5)."
     }
   ],
   "edges": [
@@ -4217,39 +4229,54 @@
       "evidence_class": "documented_contact",
       "mechanism": "lobbying",
       "confidence": "high",
-      "claim": "The lobbying campaign persuaded Rohrabacher to enter material from the anti-Magnitsky documentary into the congressional record. INFLUENCE RECIPIENT, not a controlled asset.",
+      "claim": "REPORTED (not SSCI-primary): that the anti-Magnitsky lobbying persuaded Rohrabacher to enter documentary material into the congressional record. SSCI PRIMARY establishes the RECEIPT of Russian material (see e_kosachev_rohrabacher); the CAUSAL lobbying-to-legislative-action chain rests on secondary reporting/complaint. Rohrabacher = influence recipient, NOT a controlled asset. (The legislative event itself — Rohrabacher's amendment considered by HFAC May 18 2016 — is separately documented.)",
       "citation": {
-        "publisher": "Los Angeles Times",
-        "title": "Rohrabacher-Russia timeline",
-        "date": "2017-08-04",
-        "url": "https://www.latimes.com/politics/la-pol-rohrabacher-russia-timeline-20170804-htmlstory.html",
+        "publisher": "Senate Judiciary Committee (2017)",
+        "title": "Akhmetshin & Dellums reportedly lobbied HFAC (cites Daily Beast)",
+        "date": "2017-03-31",
+        "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
         "primary": false,
-        "independence_group": "LAT"
+        "independence_group": "SJC"
       },
       "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Los Angeles Times",
-          "title": "Rohrabacher-Russia timeline",
-          "date": "2017-08-04",
-          "url": "https://www.latimes.com/politics/la-pol-rohrabacher-russia-timeline-20170804-htmlstory.html",
+          "publisher": "Senate Judiciary Committee (2017)",
+          "title": "Akhmetshin & Dellums reportedly lobbied HFAC (cites Daily Beast)",
+          "date": "2017-03-31",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
           "primary": false,
-          "independence_group": "LAT"
+          "independence_group": "SJC"
+        },
+        {
+          "publisher": "RFE/RL",
+          "title": "Akhmetshin lobbying; Dellums's contrary characterization (adoptions; didn't know Prevezon)",
+          "date": "2016-07-17",
+          "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+          "primary": false,
+          "independence_group": "RFE"
         }
       ],
       "date": "2017",
       "evidence_quality": "C",
       "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "narrower_than_source",
+      "identity_check": "exact_person",
+      "temporal_check": "partially_supported",
       "publication": {
         "layer": "evidence_ledger",
         "eligible": false,
         "reason": [
           "reported"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "secondary (SJC complaint / reporting)",
+        "section": "Magnitsky lobbying",
+        "proposition": "Lobbying persuaded Rohrabacher to enter material into the congressional record.",
+        "status": "HELD_reported — causal attribution not SSCI-primary"
       }
     },
     {
@@ -5939,39 +5966,72 @@
       "evidence_class": "documented_contact",
       "mechanism": "lobbying",
       "confidence": "high",
-      "claim": "Akhmetshin and Ron Dellums met with congressional offices regarding Magnitsky.",
+      "claim": "Akhmetshin hired former Congressman Ron Dellums for the 2016 Capitol Hill anti-Magnitsky lobbying effort (WaPo; Dellums's involvement was brief). CONTRADICTION: Dellums told RFE/RL his role concerned resuming Russian adoptions and that he knew nothing about Prevezon.",
       "citation": {
-        "publisher": "RFE/RL",
-        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
-        "date": "2016",
-        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "publisher": "Washington Post",
+        "title": "Akhmetshin hired former congressman Ron Dellums for the 2016 lobbying effort",
+        "date": "2017-07-14",
+        "url": "https://www.washingtonpost.com/politics/russian-american-lobbyist-was-present-at-trump-jrs-meeting-with-kremlin-connected-lawyer/2017/07/14/1b96f25a-68aa-11e7-9928-22d00a47778f_story.html",
         "primary": false,
-        "independence_group": "RFE/RL"
+        "independence_group": "WaPo"
       },
       "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
+          "publisher": "Washington Post",
+          "title": "Akhmetshin hired former congressman Ron Dellums for the 2016 lobbying effort",
+          "date": "2017-07-14",
+          "url": "https://www.washingtonpost.com/politics/russian-american-lobbyist-was-present-at-trump-jrs-meeting-with-kremlin-connected-lawyer/2017/07/14/1b96f25a-68aa-11e7-9928-22d00a47778f_story.html",
+          "primary": false,
+          "independence_group": "WaPo"
+        },
+        {
+          "publisher": "Senate Judiciary Committee (2017)",
+          "title": "Akhmetshin & Dellums reportedly lobbied HFAC (cites Daily Beast)",
+          "date": "2017-03-31",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "primary": false,
+          "independence_group": "SJC"
+        },
+        {
           "publisher": "RFE/RL",
-          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
-          "date": "2016",
+          "title": "Akhmetshin lobbying; Dellums's contrary characterization (adoptions; didn't know Prevezon)",
+          "date": "2016-07-17",
           "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
           "primary": false,
-          "independence_group": "RFE/RL"
+          "independence_group": "RFE"
+        },
+        {
+          "publisher": "Hermitage FARA complaint (filed w/ DOJ)",
+          "title": "Complaint lists Akhmetshin, Dellums, Cymrot, Schweitzer as Magnitsky lobbyists (complainant submission)",
+          "date": "2017-03-31",
+          "url": "https://www.grassley.senate.gov/imo/media/doc/judiciary/upload/Russia%2C%2003-31-17%2C%20Magnitsky%20Act%20-%202016-%2007-15%20HCM%20Complaint%20to%20FARA%20%28003%29_Redacted.pdf",
+          "primary": false,
+          "independence_group": "Hermitage"
         }
       ],
       "date": "2016",
       "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_state": "multi_source_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "multi_source_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "HIRED_FOR_LOBBYING",
+      "contradiction": "Dellums (RFE/RL) characterized his role as adoption-focused and said he was unaware of Prevezon.",
+      "primary_candidate": {
+        "document": "WaPo 2017-07-14 (+ SJC, RFE, Hermitage FARA complaint)",
+        "section": "lobbying",
+        "proposition": "Akhmetshin hired Dellums for the 2016 Magnitsky lobbying effort.",
+        "supporting_quote": "Akhmetshin hired former Democratic congressman Ron Dellums"
       }
     },
     {
@@ -5981,39 +6041,64 @@
       "evidence_class": "documented_contact",
       "mechanism": "lobbying",
       "confidence": "high",
-      "claim": "Dellums lobbied congressional offices on Magnitsky.",
+      "claim": "REPORTED (contemporaneous, anonymous staffer account via Daily Beast; reproduced by SJC; RFE/RL corroboration): Dellums and Akhmetshin appeared at Congress without an appointment saying they lobbied for Prevezon, asking to delay the Global Magnitsky Act or remove 'Magnitsky' from its name. Underlying source is an anonymous staffer — kept REPORTED, not primary.",
       "citation": {
-        "publisher": "RFE/RL",
-        "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
-        "date": "2016",
-        "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
+        "publisher": "The Daily Beast",
+        "title": "Congressional staffer: Dellums & Akhmetshin lobbied without appointment re Global Magnitsky Act",
+        "date": "2016-05-18",
+        "url": "https://www.thedailybeast.com/putins-dirty-game-in-the-us-congress/",
         "primary": false,
-        "independence_group": "RFE/RL"
+        "independence_group": "DailyBeast"
       },
       "verification": "needs_primary",
       "provenance": "observed",
       "citations": [
         {
+          "publisher": "The Daily Beast",
+          "title": "Congressional staffer: Dellums & Akhmetshin lobbied without appointment re Global Magnitsky Act",
+          "date": "2016-05-18",
+          "url": "https://www.thedailybeast.com/putins-dirty-game-in-the-us-congress/",
+          "primary": false,
+          "independence_group": "DailyBeast"
+        },
+        {
+          "publisher": "Senate Judiciary Committee (2017)",
+          "title": "Akhmetshin & Dellums reportedly lobbied HFAC (cites Daily Beast)",
+          "date": "2017-03-31",
+          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "primary": false,
+          "independence_group": "SJC"
+        },
+        {
           "publisher": "RFE/RL",
-          "title": "Rinat Akhmetshin: Russia's gun-for-hire in Washington",
-          "date": "2016",
+          "title": "Akhmetshin lobbying; Dellums's contrary characterization (adoptions; didn't know Prevezon)",
+          "date": "2016-07-17",
           "url": "https://www.rferl.org/a/rinat-akmetshin-russia-gun-for-hire-washington-lobbying-magnitsky-browder/27863265.html",
           "primary": false,
-          "independence_group": "RFE/RL"
+          "independence_group": "RFE"
         }
       ],
       "date": "2016",
       "evidence_quality": "C",
       "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact_as_reported",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "evidence_ledger",
         "eligible": false,
         "reason": [
           "reported"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "LOBBIED",
+      "contradiction": "Dellums (RFE/RL) said his role concerned Russian adoptions and that he did not know about Prevezon.",
+      "primary_candidate": {
+        "document": "Daily Beast 2016-05-18 (+ SJC reproduction, RFE)",
+        "section": "congressional lobbying",
+        "proposition": "Dellums lobbied congressional staff to delay/rename the Global Magnitsky Act.",
+        "status": "REPORTED — anonymous staffer account"
       }
     },
     {
@@ -11953,6 +12038,58 @@
           "primary_verified"
         ]
       }
+    },
+    {
+      "id": "e_kosachev_rohrabacher",
+      "source": "kosachev",
+      "target": "rohrabacher",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "relationship_type": "RECEIVED_MATERIAL",
+      "domain": "influence",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "claim": "SSCI Vol 5: in Moscow, Yakunin told Rohrabacher to review the Russian prosecutors' Magnitsky report; Kosachev then asked if Rohrabacher would accept 'sensitive documents,' and two men (Rohrabacher believed from the prosecutor's office) handed him a folder. SSCI obtained the documents and found substantial similarity to material later used by Veselnitskaya. Rohrabacher = influence RECIPIENT.",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Rohrabacher",
+        "page": "unresolved (not fabricated)",
+        "proposition": "Russian-origin Magnitsky material was delivered to and accepted by Rohrabacher in Moscow.",
+        "supporting_quote": "Kosachev asked whether Rohrabacher would accept 'sensitive documents' ... two men subsequently handed him a folder."
+      },
+      "provenance": "observed",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "date": "2020",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
+        ]
+      },
+      "verification": "verified"
     }
   ]
 }

@@ -389,3 +389,13 @@ Using the Committee's own verbatim Key Findings (primary Senate publication) —
 **HRAGI** — `e_katsyv_hragi` narrowed to `reported` (p.353: Akhmetshin believed Katsyv a *smaller contributor*, not controller); **NEW `e_ves_hragi`** ✅ (p.353: Veselnitskaya helped establish HRAGI). Added relationship_types DIRECT_COMMUNICATION, MEDIATED_OUTREACH. Public core 140→151.
 
 101 nodes / 233 edges. validate.py clean.
+
+## batch 30 (2026-09-11) — Cluster B CLOSED (Rohrabacher / Dellums, scope-split)
+- **Rohrabacher SPLIT:** NEW `e_kosachev_rohrabacher` primary_verified (SSCI Vol 5 — Yakunin/Kosachev; Russian Magnitsky material delivered to & accepted by Rohrabacher; SSCI found substantial similarity to material later used by Veselnitskaya; Rohrabacher = recipient). `e_rohrabacher_congress` narrowed to REPORTED (the causal "lobbying persuaded him to enter material into the record" is secondary/complaint, NOT SSCI-primary). New node `kosachev`.
+- **`e_akh_dellums` MULTI_SOURCE_VERIFIED** — WaPo ("Akhmetshin hired former congressman Ron Dellums") + SJC + RFE/RL + Hermitage FARA complaint. `contradiction` field preserves Dellums's own account (adoptions, unaware of Prevezon). Personnel edge is stronger than the action edge.
+- **`e_dellums_congress` REPORTED** — anonymous congressional-staffer account (Daily Beast), reproduced by SJC, RFE corroboration; kept REPORTED not primary; contradiction preserved.
+- Added relationship_types HIRED_FOR_LOBBYING, LOBBIED, RECEIVED_MATERIAL. Bugfix: an edge was missing `verification` (now guarded). Public core 151→153; evidence_state: 122 primary_verified, 2 multi_source_verified, 29 negative_finding, 4 contested, 77 reported.
+
+**Cluster B complete.** Next: Cluster C (DOJ/FARA, ~33 — mostly already verified from indictment work), then relabel/cut the 14 no-primary.
+
+102 nodes / 234 edges. validate.py clean.
