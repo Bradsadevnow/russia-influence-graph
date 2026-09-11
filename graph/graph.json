@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 28 (Cluster B partial): Gabbard/Potomac primary-verified (FEC filing $19,400 Oct 2017 + Cooper's own 'consultant to Gabbard' letter) — scoped as personnel continuity, no Russian attribution. Akhmetshin->HRAGI strengthened with his OWN admission ('working lobbyist for HRAGI') + Browder (Delaware Feb 2016, hired through HRAGI). Katsyv->HRAGI HELD at reported (control rests on adversarial-witness Browder + disputed origin). Rohrabacher/Dellums/Page/VK still pending SSCI Vol5 page passages.",
+    "status": "1.0 + batch 29 (Cluster B, SSCI Vol5 page-level): Page (Dvorkovich p542/570-1, Baranov p561, adviser p561) VERIFIED + strong Page NEGATIVE (no substantive contribution/never met Trump); VK/Sidorkov — Sidorkov->Scavino DIRECT verified, Sidorkov->DTJ NARROWED to cc-recipient, Sidorkov->Graff NARROWED to MEDIATED (via Goldstone), Sidorkov->campaign + Goldstone VK 'VOTE Trump 2016' (Manafort welcomed) p396 verified; VK NEGATIVE (Sidorkov motivations 'extremely limited', not gov-directed). HRAGI: e_katsyv_hragi held/narrowed (Katsyv a smaller contributor, not controller); e_ves_hragi NEW verified (Veselnitskaya helped establish HRAGI, p353).",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -81,7 +81,9 @@
         "CONTACT",
         "OWNERSHIP",
         "DIRECTION",
-        "CONTENT_REUSE"
+        "CONTENT_REUSE",
+        "DIRECT_COMMUNICATION",
+        "MEDIATED_OUTREACH"
       ],
       "relationship_class": [
         "INFLUENCE",
@@ -2828,39 +2830,47 @@
       "evidence_class": "documented_contact",
       "mechanism": "introduction",
       "confidence": "high",
-      "claim": "June 2016: Goldstone followed up copying Sidorkov, saying Manafort had welcomed the VK idea and that VK had prepared a sample 'Vote Trump 2016' page.",
+      "claim": "June 29, 2016: Goldstone emailed Scavino about the prior offers to create a 'VOTE Trump 2016' VK page (attaching a PDF Sidorkov had sent), saying Manafort 'had said he would welcome it.'",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-        "date": "2017-12-07",
-        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-          "date": "2017-12-07",
-          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2016-06",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "396",
+        "proposition": "Goldstone relayed the 'VOTE Trump 2016' VK page offer; Manafort welcomed it.",
+        "supporting_quote": "Paul Manafort 'had said he would welcome it.'"
       }
     },
     {
@@ -2870,39 +2880,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "VK exec Sidorkov made 2016 overtures to Trump Jr. and Scavino to promote the campaign to VK's audience.",
+      "claim": "NARROWED: Trump Jr. was a COPIED recipient (cc) of Sidorkov's Jan 20, 2016 email to Scavino — NOT the addressee. Supports 'the VK overture reached Trump Jr.', not 'Sidorkov directly solicited Trump Jr.'",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Russian social media executive sought to help Trump campaign...",
-        "date": "2017-12-07",
-        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Russian social media executive sought to help Trump campaign...",
-          "date": "2017-12-07",
-          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2016",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "narrower_than_source",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "CONTACT",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "~390-397",
+        "proposition": "Trump Jr. was cc'd on Sidorkov's Jan 20 email to Scavino.",
+        "supporting_quote": "(Jan 20, 2016 Sidorkov->Scavino email, copying ... Trump Jr.)"
       }
     },
     {
@@ -2912,39 +2931,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "The VK overture also targeted Dan Scavino.",
+      "claim": "On Jan 20, 2016, VK's Konstantin Sidorkov wrote directly to Dan Scavino (cc Goldstone, Graff, Trump Jr.) about VK's audience, registration, managing a Trump campaign page, Russian translation, and reaching more audiences. DIRECT communication.",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Russian social media executive sought to help Trump campaign...",
-        "date": "2017-12-07",
-        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Russian social media executive sought to help Trump campaign...",
-          "date": "2017-12-07",
-          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2017",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "DIRECT_COMMUNICATION",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "~390-397",
+        "proposition": "Sidorkov wrote directly to Scavino (Jan 20, 2016) re a Trump VK campaign page.",
+        "supporting_quote": "On January 20, 2016, Sidorkov wrote to Scavino ..."
       }
     },
     {
@@ -3596,39 +3624,47 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "Sidorkov (VK director of partnership marketing) contacted the Trump campaign offering assistance and promotion to VK's Russian/Russian-American user base.",
+      "claim": "Sidorkov (VK) reached the Trump campaign via Scavino (Jan 20, 2016), describing how VK could help establish/manage the campaign's presence for Russian/Russian-American users. NOT a Russian-government operation — see e_sidorkov_russia_DNC.",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-        "date": "2017-12-07",
-        "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Russian social media executive sought to help Trump campaign in 2016, emails show",
-          "date": "2017-12-07",
-          "url": "https://www.washingtonpost.com/politics/russian-social-media-executive-sought-to-help-trump-campaign-in-2016-emails-show/2017/12/07/31ec8d90-db9a-11e7-b859-fb0995360725_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2017",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "~390-397",
+        "proposition": "Sidorkov offered VK's help managing a Trump campaign presence.",
+        "supporting_quote": "VK could help ... manage the campaign's presence"
       }
     },
     {
@@ -4047,7 +4083,7 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "REPORTED (not primary-established): HRAGI connected to the Katsyv/Prevezon anti-Magnitsky effort. The stronger 'Katsyv set up/controlled HRAGI' language comes via Browder's adversarial testimony/FARA complaint, and the origin is separately DISPUTED (see e_katsyv_hragi_control). Not promoted to a verified factual edge.",
+      "claim": "REPORTED/NARROWED (SSCI Vol 5 p.353): Akhmetshin said he believed Katsyv was one of the SMALLER contributors to HRAGI and didn't know the other financial backers. This supports Katsyv as a contributor — NOT that Katsyv established or controlled HRAGI (that stronger claim rests on adversarial testimony and a disputed origin, see e_katsyv_hragi_control).",
       "citation": {
         "publisher": "PBS NewsHour / AP",
         "title": "Lobbyist who met Trump team says he's not Russian intel",
@@ -4073,7 +4109,7 @@
       "evidence_state": "reported",
       "claim_scope": "narrower_than_source",
       "identity_check": "exact_person",
-      "temporal_check": "partially_supported",
+      "temporal_check": "supported",
       "publication": {
         "layer": "evidence_ledger",
         "eligible": false,
@@ -4083,11 +4119,11 @@
       },
       "_audit_assigned": true,
       "primary_candidate": {
-        "document": "SJC — Browder testimony",
-        "section": "HRAGI/Prevezon",
-        "proposition": "Katsyv set up/controlled HRAGI.",
-        "supporting_quote": "(Browder testimony — adversarial witness; origin disputed per e_katsyv_hragi_control)",
-        "status": "HELD_reported"
+        "document": "SSCI Vol 5",
+        "section": "HRAGI",
+        "page": "353",
+        "proposition": "Akhmetshin believed Katsyv was a smaller HRAGI contributor.",
+        "supporting_quote": "believed Katsyv was one of the smaller contributors ... did not know who the other ... backers were"
       }
     },
     {
@@ -4525,39 +4561,48 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "VK exec Sidorkov also contacted Rhona Graff at the Trump Organization.",
+      "claim": "NARROWED to MEDIATED: the documented chain is Sidorkov -> Goldstone -> Graff (Graff copying Trump Jr. and Scavino), NOT a direct Sidorkov-Graff exchange.",
       "citation": {
-        "publisher": "Washington Post",
-        "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
-        "date": "2017-12-14",
-        "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
-        "primary": false,
-        "independence_group": "WaPo"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Washington Post",
-          "title": "Music promoter dangled possible Putin meeting for Trump during campaign",
-          "date": "2017-12-14",
-          "url": "https://www.washingtonpost.com/politics/music-promoter-dangled-possible-putin-meeting-for-trump-during-campaign/2017/12/14/38d6a8e2-dec5-11e7-89e8-edec16379010_story.html",
-          "primary": false,
-          "independence_group": "WaPo"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
       "date": "2017",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "narrower_than_source",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "relationship_type": "MEDIATED_OUTREACH",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "~390-397",
+        "proposition": "Sidorkov's outreach reached Graff via Goldstone (mediated, not direct).",
+        "supporting_quote": "Goldstone ... Graff (copying Trump Jr. and Scavino)"
       }
     },
     {
@@ -11217,16 +11262,16 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "Page traveled to Moscow in 2016 and met then-Deputy PM Arkady Dvorkovich (Page acknowledged the meeting). A DIRECT contact with a senior Russian official.",
+      "claim": "Page had a dinner meeting with Deputy PM Arkady Dvorkovich during his December 2016 Moscow trip (Page asked NES's Weber to invite him; discussion of future/economic US-Russia relations). MEETING/CONTACT only.",
       "citation": {
-        "publisher": "Senate Judiciary Committee",
-        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-        "date": "2020",
-        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-        "primary": false,
-        "independence_group": "senate_judiciary"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2016-07",
       "domain": "influence",
       "relationship_type": "MEETING",
@@ -11236,25 +11281,33 @@
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Senate Judiciary Committee",
-          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-          "date": "2020",
-          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-          "primary": false,
-          "independence_group": "senate_judiciary"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Carter Page",
+        "page": "542, 570-571",
+        "proposition": "Page met Deputy PM Dvorkovich at a Dec 2016 Moscow dinner.",
+        "supporting_quote": "Page ... had a longer dinner meeting with Deputy Prime Minister Arkady Dvorkovich."
       }
     },
     {
@@ -11264,16 +11317,16 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "high",
-      "claim": "Page met Rosneft's Andrey Baranov in Moscow 2016 (Page acknowledged). Direct contact with a Russian business figure.",
+      "claim": "Page met Andrey Baranov (Rosneft head of investor relations) during the July 2016 Moscow visit at a Morgan Stanley social event; Page said no deals were discussed; met again in December. MEETING/CONTACT only.",
       "citation": {
-        "publisher": "Senate Judiciary Committee",
-        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-        "date": "2020",
-        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-        "primary": false,
-        "independence_group": "senate_judiciary"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2016-07",
       "domain": "influence",
       "relationship_type": "MEETING",
@@ -11283,25 +11336,33 @@
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Senate Judiciary Committee",
-          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-          "date": "2020",
-          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-          "primary": false,
-          "independence_group": "senate_judiciary"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Carter Page",
+        "page": "561",
+        "proposition": "Page met Rosneft's Baranov during the July 2016 Moscow visit.",
+        "supporting_quote": "Page ... met Andrey Baranov ... they met at a Morgan Stanley social event ... no deals were discussed."
       }
     },
     {
@@ -11311,41 +11372,49 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "very_high",
-      "claim": "Page was a Trump campaign foreign-policy adviser.",
+      "claim": "Page was a foreign-policy adviser to the Trump Campaign. (SSCI also: he asked NES to remove reference to his Trump-adviser role, but gave the impression of being one.)",
       "citation": {
-        "publisher": "Senate Judiciary Committee",
-        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-        "date": "2020",
-        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-        "primary": false,
-        "independence_group": "senate_judiciary"
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "date": "2016",
       "domain": "domestic",
       "relationship_type": "EMPLOYMENT",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Senate Judiciary Committee",
-          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
-          "date": "2020",
-          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
-          "primary": false,
-          "independence_group": "senate_judiciary"
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
         }
       ],
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Carter Page",
+        "page": "561",
+        "proposition": "Page was a Trump campaign foreign-policy adviser.",
+        "supporting_quote": "a foreign policy adviser to the Trump Campaign"
       }
     },
     {
@@ -11728,6 +11797,160 @@
         "eligible": true,
         "reason": [
           "do_not_claim_with_provenance"
+        ]
+      }
+    },
+    {
+      "id": "e_page_influence_DNC",
+      "source": "carter_page",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "do_not_claim",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "claim": "NOT ESTABLISHED (SSCI Vol 5): that Page made any substantive contribution to the Campaign or ever met Trump; the Campaign took no action on his offers regarding a Trump-Putin meeting, and SSCI found no indication Page had useful campaign information for Russian intelligence to extract or meaningful influence to exploit.",
+      "verification": "verified",
+      "domain": "influence",
+      "evidence_state": "negative_finding",
+      "_audit_assigned": true,
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "Carter Page",
+        "page": "542, 561",
+        "proposition": "Page made no substantive campaign contribution; no useful info to extract.",
+        "supporting_quote": "no evidence [Page] made any substantive contribution to the Campaign or ever met Trump"
+      },
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "N/A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
+    },
+    {
+      "id": "e_sidorkov_russia_DNC",
+      "source": "kremlin",
+      "target": "sidorkov",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "coordination",
+      "confidence": "do_not_claim",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "claim": "NOT ESTABLISHED (SSCI Vol 5): that Sidorkov's VK outreach was directed by the Russian government or intelligence services. The Committee's insight into Sidorkov's motivations was 'extremely limited,' and Goldstone was unaware of Sidorkov being directed by anyone or of any Sidorkov connection to the Russian government/intelligence.",
+      "verification": "verified",
+      "domain": "influence",
+      "evidence_state": "negative_finding",
+      "_audit_assigned": true,
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "VK outreach",
+        "page": "396",
+        "proposition": "Sidorkov's motivations/direction were not established.",
+        "supporting_quote": "The Committee's insight into Sidorkov's motivations is extremely limited."
+      },
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "N/A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "do_not_claim_with_provenance"
+        ]
+      }
+    },
+    {
+      "id": "e_ves_hragi",
+      "source": "veselnitskaya",
+      "target": "hragi",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+        "primary": true,
+        "independence_group": "SSCI"
+      },
+      "claim": "SSCI Vol 5: Veselnitskaya helped establish HRAGI, which served as a platform for the anti-Magnitsky influence campaign.",
+      "verification": "verified",
+      "domain": "influence",
+      "evidence_state": "primary_verified",
+      "_audit_assigned": true,
+      "relationship_type": "business_relationship",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
+      "primary_candidate": {
+        "document": "SSCI Vol 5",
+        "section": "HRAGI",
+        "page": "353",
+        "proposition": "Veselnitskaya helped establish HRAGI, a platform for the anti-Magnitsky campaign.",
+        "supporting_quote": "Veselnitskaya helped establish HRAGI"
+      },
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/wp-content/uploads/2024/08/sites-default-files-documents-report-volume5.pdf",
+          "primary": true,
+          "independence_group": "SSCI"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "A",
+      "publication": {
+        "layer": "public_core",
+        "eligible": true,
+        "reason": [
+          "primary_verified"
         ]
       }
     }

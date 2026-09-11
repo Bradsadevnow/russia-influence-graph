@@ -382,3 +382,10 @@ Using the Committee's own verbatim Key Findings (primary Senate publication) —
 - Still pending SSCI Vol 5 page passages: `e_rohrabacher_congress`, `e_akh_dellums`, `e_dellums_congress`, and the Page (Dvorkovich/Baranov) + VK/Sidorkov cluster. Public core 138→140.
 
 101 nodes / 230 edges. validate.py clean.
+
+## batch 29 (2026-09-11) — Cluster B, SSCI Vol 5 page-level (Page + VK/Sidorkov)
+**Carter Page** ✅ — `e_dvorkovich_page` (p.542, 570-571, Dec 2016 dinner), `e_baranov_page` (p.561, Jul 2016 Morgan Stanley event, no deals), `e_page_campaign` (p.561, foreign-policy adviser). All scoped MEETING/adviser only. **NEW `e_page_influence_DNC`** (do_not_claim, SSCI's own ceiling): no evidence Page made a substantive contribution or ever met Trump; no useful info to extract.
+**VK / Sidorkov** — `e_sidorkov_scavino` ✅ DIRECT (Jan 20 2016 email); **`e_sidorkov_dtj` NARROWED** to copied-recipient (cc, not addressee); **`e_sidorkov_graff` NARROWED** to MEDIATED_OUTREACH (via Goldstone, not direct); `e_sidorkov_campaign` ✅; `e_goldstone_vk` ✅ (p.396, "VOTE Trump 2016" page, Manafort "would welcome it"). **NEW `e_sidorkov_russia_DNC`** (do_not_claim): SSCI's insight into Sidorkov's motivations "extremely limited"; Goldstone unaware of any Russian-govt/intel direction — the anti-overinterpretation guard rendered adjacent to the VK edges.
+**HRAGI** — `e_katsyv_hragi` narrowed to `reported` (p.353: Akhmetshin believed Katsyv a *smaller contributor*, not controller); **NEW `e_ves_hragi`** ✅ (p.353: Veselnitskaya helped establish HRAGI). Added relationship_types DIRECT_COMMUNICATION, MEDIATED_OUTREACH. Public core 140→151.
+
+101 nodes / 233 edges. validate.py clean.
