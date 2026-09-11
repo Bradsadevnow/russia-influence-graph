@@ -2550,39 +2550,47 @@
       "evidence_class": "documented_contact",
       "mechanism": "communication",
       "confidence": "very_high",
-      "claim": "Manafort attended the Trump Tower meeting.",
+      "claim": "Paul Manafort attended the June 9, 2016 Trump Tower meeting.",
       "citation": {
-        "publisher": "Mueller Report",
-        "title": "Special Counsel Report",
-        "date": "2019",
-        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "publisher": "DOJ / Mueller Report Vol. I",
+        "title": "Report on the Investigation into Russian Interference (Vol. I)",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/storage/report.pdf",
         "primary": true,
         "independence_group": "DOJ-SCO(Mueller)"
       },
-      "verification": "pending",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Mueller Report",
-          "title": "Special Counsel Report",
-          "date": "2019",
-          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "publisher": "DOJ / Mueller Report Vol. I",
+          "title": "Report on the Investigation into Russian Interference (Vol. I)",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/storage/report.pdf",
           "primary": true,
           "independence_group": "DOJ-SCO(Mueller)"
         }
       ],
       "date": "2019",
-      "evidence_quality": "B",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Mueller Report Vol. I",
+        "section": "IV.A.5 June 9 Meeting",
+        "page": "117",
+        "proposition": "Manafort attended the June 9, 2016 Trump Tower meeting.",
+        "supporting_quote": "Trump Jr., Manafort, and Kushner participated on the Trump side..."
       }
     },
     {
