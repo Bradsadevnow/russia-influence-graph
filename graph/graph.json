@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 27: SSCI Vol5 Key-Finding NEGATIVES locked (primary Senate publication) — June 9 'no benefit transmitted / no Trump foreknowledge' (new do_not_claim), Papadopoulos 'not a witting cooptee' (strengthened w/ verbatim), Manafort SCOPE anchor ('opportunities to influence/acquire', NOT asset). Veselnitskaya/Akhmetshin 'significant Russian-government incl. intelligence connections' scope-anchored. Granular B edges (Page/VK/Sidorkov/HRAGI/Gabbard) pending Brad's page-level pulls.",
+    "status": "1.0 + batch 28 (Cluster B partial): Gabbard/Potomac primary-verified (FEC filing $19,400 Oct 2017 + Cooper's own 'consultant to Gabbard' letter) — scoped as personnel continuity, no Russian attribution. Akhmetshin->HRAGI strengthened with his OWN admission ('working lobbyist for HRAGI') + Browder (Delaware Feb 2016, hired through HRAGI). Katsyv->HRAGI HELD at reported (control rests on adversarial-witness Browder + disputed origin). Rohrabacher/Dellums/Page/VK still pending SSCI Vol5 page passages.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -881,7 +881,8 @@
           "basis": "foreign_funding"
         }
       },
-      "arch_profile_schema": "v2"
+      "arch_profile_schema": "v2",
+      "founded": "Delaware, February 2016 (Browder Senate Judiciary testimony)"
     },
     {
       "id": "rohrabacher",
@@ -3989,39 +3990,54 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "very_high",
-      "claim": "Akhmetshin helped establish HRAGI (he said he proposed it to Veselnitskaya and Katsyv); its practical activity was anti-Magnitsky lobbying.",
+      "claim": "Akhmetshin acted as a 'working lobbyist for HRAGI' (his own Senate Judiciary testimony); HRAGI (established in Delaware, Feb 2016 per Browder) was used to pay Washington lobbyists for the anti-Magnitsky repeal effort, and Akhmetshin was hired through it. (He also told SSCI he proposed establishing HRAGI to Veselnitskaya and Katsyv.)",
       "citation": {
-        "publisher": "Senate Judiciary Committee",
-        "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
-        "date": "2018",
-        "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+        "publisher": "Senate Judiciary Committee — Akhmetshin transcript",
+        "title": "Akhmetshin: acted as a 'working lobbyist for HRAGI'",
+        "date": "2017-11",
+        "url": "https://www.judiciary.senate.gov/imo/media/doc/Akhmetshin%20Transcript_redacted.pdf",
         "primary": true,
-        "independence_group": "SJC"
+        "independence_group": "SJC-Akhmetshin"
       },
       "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Senate Judiciary Committee",
-          "title": "Trump Tower meeting transcripts/documents (Grassley); Akhmetshin & Simpson transcripts",
-          "date": "2018",
-          "url": "https://www.judiciary.senate.gov/press/rep/releases/complaint-firm-behind-dossier-and-former-russian-intel-officer-joined-lobbying-effort-to-kill-pro-whistleblower-sanctions-for-kremlin",
+          "publisher": "Senate Judiciary Committee — Akhmetshin transcript",
+          "title": "Akhmetshin: acted as a 'working lobbyist for HRAGI'",
+          "date": "2017-11",
+          "url": "https://www.judiciary.senate.gov/imo/media/doc/Akhmetshin%20Transcript_redacted.pdf",
           "primary": true,
-          "independence_group": "SJC"
+          "independence_group": "SJC-Akhmetshin"
+        },
+        {
+          "publisher": "Senate Judiciary Committee — Browder testimony",
+          "title": "Browder: HRAGI established Delaware Feb 2016; used to pay Washington lobbyists; Akhmetshin hired through HRAGI",
+          "date": "2017-07-26",
+          "url": "https://www.judiciary.senate.gov/imo/media/doc/07-26-17%20Browder%20Testimony.pdf",
+          "primary": true,
+          "independence_group": "SJC-Browder"
         }
       ],
       "date": "2018",
       "evidence_quality": "A",
       "evidence_state": "primary_verified",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
         "layer": "public_core",
         "eligible": true,
         "reason": [
           "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SJC — Akhmetshin transcript (+ Browder testimony)",
+        "section": "HRAGI lobbying",
+        "proposition": "Akhmetshin was a working lobbyist for HRAGI, hired through it for the anti-Magnitsky effort.",
+        "supporting_quote": "working lobbyist for HRAGI"
       }
     },
     {
@@ -4031,7 +4047,7 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "funding",
       "confidence": "high",
-      "claim": "HRAGI was connected to Katsyv and substantially funded by Russian interests (Akhmetshin: ≥$300k from Russian oligarchs).",
+      "claim": "REPORTED (not primary-established): HRAGI connected to the Katsyv/Prevezon anti-Magnitsky effort. The stronger 'Katsyv set up/controlled HRAGI' language comes via Browder's adversarial testimony/FARA complaint, and the origin is separately DISPUTED (see e_katsyv_hragi_control). Not promoted to a verified factual edge.",
       "citation": {
         "publisher": "PBS NewsHour / AP",
         "title": "Lobbyist who met Trump team says he's not Russian intel",
@@ -4055,15 +4071,23 @@
       "date": "2017",
       "evidence_quality": "C",
       "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "claim_scope": "narrower_than_source",
+      "identity_check": "exact_person",
+      "temporal_check": "partially_supported",
       "publication": {
         "layer": "evidence_ledger",
         "eligible": false,
         "reason": [
           "reported"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "SJC — Browder testimony",
+        "section": "HRAGI/Prevezon",
+        "proposition": "Katsyv set up/controlled HRAGI.",
+        "supporting_quote": "(Browder testimony — adversarial witness; origin disputed per e_katsyv_hragi_control)",
+        "status": "HELD_reported"
       }
     },
     {
@@ -5596,39 +5620,54 @@
       "evidence_class": "documented_material_exchange",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Gabbard's campaign paid Potomac Square Group ~$19,400 for media consulting in 2017 (FEC records).",
+      "claim": "FEC record (Tulsi for Hawaii, Schedule B): the Gabbard campaign paid Potomac Square Group $19,400 for media consulting, October 2017. A documented PAYMENT; significance is Cooper/Potomac personnel continuity into a later campaign — NOT evidence Gabbard was a Russian vehicle.",
       "citation": {
-        "publisher": "Hawaii Free Press",
-        "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
-        "date": "2019",
-        "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
-        "primary": false,
-        "independence_group": "Hawaii Free Press"
+        "publisher": "FEC — Tulsi for Hawaii, Schedule B disbursement",
+        "title": "$19,400 to Potomac Square Group, Oct 2017",
+        "date": "2017-10",
+        "url": "https://docquery.fec.gov/pdf/932/201704159052269932/201704159052269932.pdf",
+        "primary": true,
+        "independence_group": "FEC"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Hawaii Free Press",
-          "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
-          "date": "2019",
-          "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
+          "publisher": "FEC — Tulsi for Hawaii, Schedule B disbursement",
+          "title": "$19,400 to Potomac Square Group, Oct 2017",
+          "date": "2017-10",
+          "url": "https://docquery.fec.gov/pdf/932/201704159052269932/201704159052269932.pdf",
+          "primary": true,
+          "independence_group": "FEC"
+        },
+        {
+          "publisher": "Wall Street Journal",
+          "title": "Gabbard campaign paid Potomac Square Group $19,400 in Oct 2017 (per FEC)",
+          "date": "2025",
+          "url": "https://www.wsj.com/politics/policy/tulsi-gabbard-science-of-identity-qi-group-ed51c890",
           "primary": false,
-          "independence_group": "Hawaii Free Press"
+          "independence_group": "WSJ"
         }
       ],
       "date": "2017",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "FEC — Tulsi for Hawaii Schedule B",
+        "section": "2017 disbursements",
+        "proposition": "Gabbard's campaign paid Potomac Square Group $19,400 in Oct 2017.",
+        "supporting_quote": "(FEC filing 201704159052269932 — Schedule B disbursement to Potomac Square Group, $19,400)"
       }
     },
     {
@@ -5638,39 +5677,46 @@
       "evidence_class": "documented_contact",
       "mechanism": "business_relationship",
       "confidence": "high",
-      "claim": "Cooper described himself as a consultant to Gabbard and communicated with a Hawaii publication about coverage of her.",
+      "claim": "In a contemporaneous 2017 letter, Christopher Cooper described himself as 'a consultant to Rep. Tulsi Gabbard.' A self-described consulting relationship — does not by itself carry any Russian attribution.",
       "citation": {
-        "publisher": "Hawaii Free Press",
-        "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
-        "date": "2019",
-        "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
-        "primary": false,
-        "independence_group": "Hawaii Free Press"
+        "publisher": "Christopher Cooper 2017 letter (Hawaii Free Press-hosted)",
+        "title": "Cooper: 'a consultant to Rep. Tulsi Gabbard'",
+        "date": "2017",
+        "url": "https://www.hawaiifreepress.com/Portals/0/Article%20Attachments/gabbard%20cooper%20letter.pdf",
+        "primary": true,
+        "independence_group": "cooper_letter"
       },
-      "verification": "needs_primary",
+      "verification": "verified",
       "provenance": "observed",
       "citations": [
         {
-          "publisher": "Hawaii Free Press",
-          "title": "Gabbard–Cooper letter / FEC records (Potomac Square Group ~$19,400, 2017)",
-          "date": "2019",
-          "url": "https://www.hawaiifreepress.com/Articles-Main/ID/21739/Open-Letter-from-Journalist-Harassed-by-Tulsi-Gabbard",
-          "primary": false,
-          "independence_group": "Hawaii Free Press"
+          "publisher": "Christopher Cooper 2017 letter (Hawaii Free Press-hosted)",
+          "title": "Cooper: 'a consultant to Rep. Tulsi Gabbard'",
+          "date": "2017",
+          "url": "https://www.hawaiifreepress.com/Portals/0/Article%20Attachments/gabbard%20cooper%20letter.pdf",
+          "primary": true,
+          "independence_group": "cooper_letter"
         }
       ],
       "date": "2019",
-      "evidence_quality": "C",
-      "evidence_state": "reported",
-      "claim_scope": "unaudited",
-      "identity_check": "unaudited",
-      "temporal_check": "unaudited",
+      "evidence_quality": "A",
+      "evidence_state": "primary_verified",
+      "claim_scope": "exact",
+      "identity_check": "exact_person",
+      "temporal_check": "supported",
       "publication": {
-        "layer": "evidence_ledger",
-        "eligible": false,
+        "layer": "public_core",
+        "eligible": true,
         "reason": [
-          "reported"
+          "primary_verified"
         ]
+      },
+      "_audit_assigned": true,
+      "primary_candidate": {
+        "document": "Christopher Cooper 2017 letter",
+        "section": "letterhead/body",
+        "proposition": "Cooper described himself as a consultant to Rep. Tulsi Gabbard.",
+        "supporting_quote": "a consultant to Rep. Tulsi Gabbard"
       }
     },
     {

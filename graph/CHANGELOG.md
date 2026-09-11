@@ -373,3 +373,12 @@ Using the Committee's own verbatim Key Findings (primary Senate publication) —
 - All as negative_finding/verified with provenance → public_core. Granular B edges (Page/VK/Sidorkov/HRAGI/Gabbard) pending page-level pulls. Public core 136→138.
 
 101 nodes / 230 edges. validate.py clean.
+
+## batch 28 (2026-09-11) — Cluster B partial: Gabbard/Potomac + HRAGI (scope-disciplined)
+- **`e_potomac_gabbard`** ✅ primary_verified — FEC filing (Tulsi for Hawaii Schedule B): $19,400 to Potomac Square Group, Oct 2017. Scoped as Cooper/Potomac personnel continuity; NO Russian attribution (Potomac is already is_russian_vehicle:false).
+- **`e_cooper_gabbard`** ✅ primary_verified — Cooper's own 2017 letter ("a consultant to Rep. Tulsi Gabbard").
+- **`e_akh_hragi`** ✅ strengthened — Akhmetshin's OWN Senate Judiciary transcript ("working lobbyist for HRAGI") + Browder testimony (HRAGI est. Delaware Feb 2016, used to pay lobbyists, Akhmetshin hired through it). Admission-against-interest > adversarial characterization. hragi node gains founding fact.
+- **`e_katsyv_hragi`** ⏸ HELD at `reported` — "Katsyv set up/controlled HRAGI" rests on adversarial witness (Browder testimony/FARA complaint) and the origin is separately DISPUTED (`e_katsyv_hragi_control`). Not promoted; claim_scope=narrower_than_source. This is the audit refusing to launder testimony into fact.
+- Still pending SSCI Vol 5 page passages: `e_rohrabacher_congress`, `e_akh_dellums`, `e_dellums_congress`, and the Page (Dvorkovich/Baranov) + VK/Sidorkov cluster. Public core 138→140.
+
+101 nodes / 230 edges. validate.py clean.
