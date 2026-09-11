@@ -298,3 +298,16 @@ Chain now runs document → relationship → network → organizational mechanis
 - **Founders WITTING vs commentators UNWITTING, both primary-anchored:** `e_tenet_influencers_knowing_DNC` verified (concealment primary-alleged); `e_chen_intent_contested` strengthened with the founders' "the Russians" comms (primary-ALLEGED) but kept disputed (charged ≠ convicted).
 - **OQ-02:** `e_tpusa_tenet_infra_DNC` — TPUSA infrastructure-exploitation NOT established (Tenet used creators' OWN audiences, not TPUSA machinery); people-overlap established. Both OQ-01/OQ-02 stay OPEN with sharpened dispositions + refined query sets.
 - Verified edges 92→110; 2024-media architecture 25→43 verified. Scoreboard unchanged (1 direct + 0 mediated). 91 nodes / 207 edges. validate.py clean.
+
+## batch 21 (2026-09-11) — PASS ③: 2016 cast entry-point sweep (longitudinal keystone)
+**Same 4-state surface as the 2024 creator sweep; intent tracked separately from relationship.** New branches:
+- **Manafort** (the heavyweight): `deripaska`→Manafort (influence-ops employment since 2004, DIRECT), `kilimnik`↔Manafort (Kilimnik = Russian intel officer, liaison), **`e_manafort_kilimnik_info`** (Manafort → Kilimnik internal polling + strategy — observed campaign-info OUTFLOW), `kilimnik`→`deripaska`, `e_kilimnik_gru_qualified` (low/qualified GRU hack-leak link). SSCI Vol 5.
+- **Papadopoulos**: `mifsud`→Papadopoulos→`timofeev`→`russian_mfa`; `polonskaya`→Papadopoulos. `e_papadopoulos_witting_DNC`: potential vector, NOT a witting Russian-intel cooperator (SSCI). Mueller.
+- **Carter Page**: `dvorkovich`→Page, `baranov`→Page (2016 Moscow meetings, Page acknowledged — DIRECT contact). `e_sechin_page_contested` (disputed — Steele/Crossfire intel reporting, not clean primary) + `e_page_intel_conduit_DNC` (intelligence-conduit NOT established).
+- **Kilimnik**: modeled as a RUSSIAN-SIDE intermediary node (intel officer), excluded from the American scoreboard.
+- Trump Jr. / Stone branches already present (Agalarov→Goldstone; GRU→Guccifer 2.0→Stone) with their do_not_claim negatives.
+
+**`metadata.cast_sweep_2016`** records the adjudicated matrix; analysis.py prints raw topology (code) + analyst verdict (metadata), keeping the "direct entry is a substance call" distinction (Deripaska influence-ops employment counts; a social tie to a state-linked businessman does not).
+- **Scoreboard:** DIRECT {Manafort, Page}; MEDIATED {Trump Jr, Stone, Manafort, Papadopoulos}; Kilimnik unscored.
+- **Finding:** the 2016 cast is HETEROGENEOUS (intermediary / intel-persona / deep-intermediary+info-outflow / potential-vector / direct-official-contact) — the variation the architecture-vs-cast hypothesis needs. Same vocabulary now spans 2016↔2024.
+- 2024 scoreboard unchanged (1 direct + 0 mediated). Verified 110→120. 102 nodes / 224 edges. validate.py clean.

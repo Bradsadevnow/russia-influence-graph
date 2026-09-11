@@ -588,3 +588,33 @@ _m=g.get("metadata",{}).get("russian_interaction_modes",{})
 for k in ("2016_CONTENT_HARVEST","2021_2024_COUPLING"):
     if k in _m: print(f"  {k}: {_m[k]}")
 if _m.get("finding"): print(f"  => {_m['finding']}")
+
+# ---- 2016 CAST ENTRY-POINT SWEEP (topology cross-check; verdict = cast_sweep_2016) ----
+print("\n" + "="*78)
+print("2016 CAST ENTRY-POINT SWEEP  (code shows raw topology; analyst verdict below)")
+print("="*78)
+CAST16=["dtj","stone","manafort","papadopoulos","carter_page"]  # Kilimnik = Russian-side, excluded
+RUS16={nid for nid,n in NODES.items() if n.get("actor_class") in ("RUSSIAN_STATE","RUSSIAN_STATE_MEDIA","RUSSIAN_STATE_LINKED_PRIVATE")}
+INT16={nid for nid,n in NODES.items() if n.get("actor_class")=="INTERMEDIARY"} | {"kilimnik"}
+obs16=[e for e in EDGES if not is_contested(e) and e.get("domain") not in ("domestic","personnel")]
+into={}
+for e in obs16: into.setdefault(e["target"],[]).append(e)
+def cls(nid): return NODES.get(nid,{}).get("actor_class","?")
+for c in CAST16:
+    ins=into.get(c,[])
+    direct=[(e["source"],cls(e["source"]),e.get("relationship_type","?")) for e in ins if e["source"] in RUS16]
+    med=[e["source"] for e in ins if e["source"] in INT16 and any(x["source"] in RUS16|INT16 for x in into.get(e["source"],[]))]
+    print(f"\n  {label(c)}")
+    print(f"     direct Russian-side in-edges: " + (", ".join(f"{label(s)}[{k.split('_')[-1]},{rt}]" for s,k,rt in direct) or "none"))
+    print(f"     one-hop mediating intermediaries: " + (", ".join(dict.fromkeys(label(x) for x in med)) or "none"))
+_cs=g.get("metadata",{}).get("cast_sweep_2016",{})
+print("\n  --- ANALYST VERDICT (cast_sweep_2016) ---")
+for k in ["trump_jr","stone","manafort","papadopoulos","carter_page","kilimnik"]:
+    if k in _cs: print(f"    {k}: {_cs[k]}")
+if _cs.get("scoreboard"): print(f"\n  SCOREBOARD: {_cs['scoreboard']}")
+if _cs.get("finding"):   print(f"  FINDING: {_cs['finding']}")
+print("\n  LONGITUDINAL: the 2016 cast is HETEROGENEOUS across architecture types; the same")
+print("  vocabulary (direct / mediated / intel-persona / info-outflow / proximity) now spans")
+print("  2016 and 2024. Note: 'direct entry' is an analyst call on the SUBSTANCE of a tie")
+print("  (Deripaska influence-ops employment counts; a social tie to a state-linked businessman")
+print("  does not) — the code prints topology; cast_sweep_2016 states the adjudicated verdict.")

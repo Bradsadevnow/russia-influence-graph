@@ -3,7 +3,7 @@
     "schema_version": "1.0",
     "generated": "2026-09-09",
     "title": "Russia → U.S. media/political influence — evidence graph",
-    "status": "1.0 + batch 20: PASS 1 (DOJ indictment). Conduct edges (RT->Founder-1 contract ~217 videos, RT/Ruptly->Founder-2, founders operate Company-1/Tenet, ~$10M shells, Grigoriann scouting, concealment) upgraded to VERIFIED on the DOJ primary; identity bindings (Founder-1=Chen, Founder-2=Donovan, Company-1=Tenet) kept VERIFIED multi-source (NOT downgraded) via verification_basis. Founders WITTING ('the Russians' comms, primary-alleged, still disputed=charged-not-convicted) vs commentators UNWITTING (concealment, primary). OQ-01 + OQ-02 stay OPEN with sharpened dispositions; TPUSA->Tenet infrastructure-exploitation = do_not_claim. evidence_model banked.",
+    "status": "1.0 + batch 21: PASS 3 (2016 cast sweep). Added Manafort/Kilimnik/Deripaska, Papadopoulos/Mifsud/Timofeev/Polonskaya, Page/Dvorkovich/Baranov/Sechin branches. cast_sweep_2016: DIRECT{Manafort,Page} MEDIATED{TrumpJr,Stone,Manafort,Papadopoulos}; Kilimnik=Russian-side intermediary (unscored). Intent tracked separately (Papadopoulos not witting; Stone knowledge NOT est; Page intel-conduit NOT est/contested Sechin). Heterogeneous cast = good for the longitudinal test.",
     "methodology_ref": "../README.md",
     "legends": {
       "layer": [
@@ -197,6 +197,17 @@
     },
     "evidence_model": {
       "conduct_vs_identity": "For pseudonymous primary sources: CONDUCT the primary doc establishes (DOJ re Founder-1/2/Company-1) is graded on that primary; the IDENTITY binding of the pseudonym to a named person/company is graded on its OWN sources (corporate records + multi-source reporting). An edge is 'verified' when both legs hold; verification_basis records each. Primary verification of conduct need not be the same source that establishes the pseudonym binding — and a primary doc's silence on identity does NOT downgrade an identity already multi-source-established."
+    },
+    "cast_sweep_2016": {
+      "method": "Same 4-state surface as the 2024 creator sweep. DIRECT = RUSSIAN_STATE* actor -> principal (observed); MEDIATED = via intermediary; PROXIMITY = contact/meeting non-conduit; SEARCHED_NEGATIVE / NOT_ESTABLISHED. Intent (witting cooperation) tracked SEPARATELY from relationship.",
+      "trump_jr": "DIRECT not_established (e_dtj_state_direct DNC); MEDIATED established (Agalarov network -> Goldstone -> Trump Jr; Trump Tower meeting -> Veselnitskaya/Akhmetshin/Kaveladze). Knowing coordination NOT established (e_dtj_knowing DNC).",
+      "stone": "DIRECT no; MEDIATED established (GRU -> Guccifer 2.0 -> Stone). Persona = intelligence concealment layer. Stone's KNOWLEDGE the persona was GRU NOT established (e_stone_gru_knowledge DNC).",
+      "manafort": "DIRECT established (Deripaska since 2004) AND MEDIATED established (Kilimnik = Russian intel officer, liaison). Observed campaign-information OUTFLOW: Manafort -> Kilimnik (internal polling + strategy). The heavyweight.",
+      "papadopoulos": "DIRECT not_established; MEDIATED established (Mifsud -> Papadopoulos -> Timofeev -> Russian MFA; Polonskaya). Witting cooperation with Russian intelligence NOT established (potential vector, e_papadopoulos_witting_DNC).",
+      "carter_page": "DIRECT established (documented 2016 Moscow meetings w/ Dvorkovich, Baranov — Page acknowledged). Intelligence-conduit status NOT established (Steele-derived, contested; e_page_intel_conduit_DNC; e_sechin_page_contested disputed).",
+      "kilimnik": "NOT an American recipient — a RUSSIAN-SIDE intermediary/infrastructure node (Russian intel officer). Excluded from the American scoreboard. Possible/qualified GRU hack-leak link.",
+      "scoreboard": "DIRECT: Manafort, Page. MEDIATED: Trump Jr, Stone, Manafort, Papadopoulos. NOT_ESTABLISHED direct: Trump Jr, Stone, Papadopoulos. Kilimnik = intermediary, unscored.",
+      "finding": "The 2016 cast is HETEROGENEOUS — intermediary architecture (Trump Jr), intelligence-persona (Stone), deep intermediary + info outflow (Manafort), potential-vector/diplomatic (Papadopoulos), direct official contact (Page), Russian-side intermediary (Kilimnik). Variation the hypothesis needs to survive."
     }
   },
   "nodes": [
@@ -1092,6 +1103,104 @@
       "us_class": "downstream",
       "actor_class": "US_ACTOR",
       "notes": "Turning Point USA's authentic media output (memes/content). MODELED AS A DISTINCT NODE from the TPUSA org so that Russian amplification of CONTENT can never transit to the organization, Benny, or the creators. Dead-ends the IRA edge."
+    },
+    {
+      "id": "deripaska",
+      "label": "Oleg Deripaska",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "notes": "Russian-aligned oligarch; Manafort's client/creditor since ~2004 (influence operations for Deripaska/Russian-aligned interests, per SSCI Vol 5)."
+    },
+    {
+      "id": "kilimnik",
+      "label": "Konstantin Kilimnik",
+      "layer": "intermediary",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE",
+      "notes": "Assessed by SSCI Vol 5 as a RUSSIAN INTELLIGENCE OFFICER; Manafort's primary liaison to Deripaska. An INTERMEDIARY/infrastructure node (Russian side), NOT an American recipient — excluded from the American scoreboard. Possible (qualified) connection to the GRU hack-and-leak."
+    },
+    {
+      "id": "papadopoulos",
+      "label": "George Papadopoulos",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "downstream",
+      "actor_class": "US_ACTOR",
+      "notes": "Trump campaign foreign-policy adviser. SSCI: a POTENTIAL VECTOR for Russian influence, NOT a witting cooperator of Russian intelligence."
+    },
+    {
+      "id": "carter_page",
+      "label": "Carter Page",
+      "layer": "us_political",
+      "type": "person_intermediary",
+      "us_class": "direct_state_connected",
+      "actor_class": "US_ACTOR",
+      "notes": "Trump campaign foreign-policy adviser; documented direct 2016 Moscow meetings with Russian officials/business figures (Dvorkovich, Baranov). Steele-derived 'intelligence conduit' allegations kept SEPARATE and contested."
+    },
+    {
+      "id": "mifsud",
+      "label": "Joseph Mifsud",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "actor_class": "INTERMEDIARY",
+      "notes": "Maltese academic; told Papadopoulos the Russians had 'dirt'/emails on Clinton; introduced him to Russian-linked contacts."
+    },
+    {
+      "id": "timofeev",
+      "label": "Ivan Timofeev",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "notes": "Russian International Affairs Council; connections to the Russian MFA. Communicated with Papadopoulos about a possible campaign-Russia meeting."
+    },
+    {
+      "id": "polonskaya",
+      "label": "Olga Polonskaya",
+      "layer": "intermediary",
+      "type": "person_intermediary",
+      "us_class": null,
+      "actor_class": "RUSSIAN_ORDINARY_PERSON",
+      "notes": "Introduced to Papadopoulos as connected to senior Russian officials; communicated about a Russia trip."
+    },
+    {
+      "id": "russian_mfa",
+      "label": "Russian Ministry of Foreign Affairs",
+      "layer": "russian_state",
+      "type": "government",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE"
+    },
+    {
+      "id": "dvorkovich",
+      "label": "Arkady Dvorkovich",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE",
+      "notes": "Then Russian Deputy Prime Minister; Page met him in Moscow 2016 (Page acknowledged)."
+    },
+    {
+      "id": "baranov",
+      "label": "Andrey Baranov",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "notes": "Rosneft investor-relations head; Page met him in Moscow 2016 (Page acknowledged)."
+    },
+    {
+      "id": "sechin",
+      "label": "Igor Sechin",
+      "layer": "russian_state",
+      "type": "person_state",
+      "us_class": null,
+      "actor_class": "RUSSIAN_STATE_LINKED_PRIVATE",
+      "notes": "Rosneft CEO, Putin ally. Alleged July-2016 Page meeting rests on Steele/Crossfire intelligence reporting — contested, not a clean primary."
     }
   ],
   "edges": [
@@ -7883,6 +7992,579 @@
         }
       ],
       "date": "2024",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_deripaska_manafort",
+      "source": "deripaska",
+      "target": "manafort",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "SSCI Vol 5: Manafort's relationship with Deripaska dates to ~2004 and involved implementing influence operations for Deripaska and Russian-aligned interests. A DIRECT Russian-side relationship.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "date": "2004",
+      "domain": "influence",
+      "relationship_type": "EMPLOYMENT",
+      "conduit": true,
+      "scoreboard": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kilimnik_manafort",
+      "source": "kilimnik",
+      "target": "manafort",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "SSCI Vol 5: Kilimnik (a Russian intelligence officer) was Manafort's primary liaison to Deripaska; the two communicated throughout the campaign.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "conduit": true,
+      "scoreboard": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_manafort_kilimnik_info",
+      "source": "manafort",
+      "target": "kilimnik",
+      "evidence_class": "documented_material_exchange",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "SSCI Vol 5: Manafort repeatedly sought to secretly share internal Trump campaign information — including polling data and campaign strategy — with Kilimnik. An observed campaign-information OUTFLOW to the Russian side.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "DIRECTION",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kilimnik_deripaska",
+      "source": "kilimnik",
+      "target": "deripaska",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "SSCI Vol 5: Kilimnik served as Manafort's liaison to Deripaska.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_kilimnik_gru_qualified",
+      "source": "kilimnik",
+      "target": "gru",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "communication",
+      "confidence": "low",
+      "claim": "SSCI Vol 5: information SUGGESTING Kilimnik may have been connected to the GRU hack-and-leak operation — a qualified/weaker finding, not established.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "D"
+    },
+    {
+      "id": "e_manafort_campaign",
+      "source": "manafort",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Manafort was Trump campaign chairman in 2016.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "domestic",
+      "relationship_type": "EMPLOYMENT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_mifsud_papadopoulos",
+      "source": "mifsud",
+      "target": "papadopoulos",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "very_high",
+      "claim": "Mueller: Mifsud told Papadopoulos the Russians had 'dirt' on Clinton (thousands of emails) and introduced him to Russian-linked contacts.",
+      "citation": {
+        "publisher": "Mueller Report (Wikisource)",
+        "title": "Russian Government Links To and Contacts With the Trump Campaign",
+        "date": "2019-03",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+        "primary": true,
+        "independence_group": "mueller"
+      },
+      "verification": "verified",
+      "date": "2016-04",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "conduit": true,
+      "scoreboard": true,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report (Wikisource)",
+          "title": "Russian Government Links To and Contacts With the Trump Campaign",
+          "date": "2019-03",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+          "primary": true,
+          "independence_group": "mueller"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_papadopoulos_timofeev",
+      "source": "papadopoulos",
+      "target": "timofeev",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "very_high",
+      "claim": "Mueller: Papadopoulos and Timofeev (RIAC / MFA-connected) communicated repeatedly about arranging a possible Trump campaign-Russian government meeting.",
+      "citation": {
+        "publisher": "Mueller Report (Wikisource)",
+        "title": "Russian Government Links To and Contacts With the Trump Campaign",
+        "date": "2019-03",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+        "primary": true,
+        "independence_group": "mueller"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report (Wikisource)",
+          "title": "Russian Government Links To and Contacts With the Trump Campaign",
+          "date": "2019-03",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+          "primary": true,
+          "independence_group": "mueller"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_timofeev_mfa",
+      "source": "timofeev",
+      "target": "russian_mfa",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "business_relationship",
+      "confidence": "high",
+      "claim": "Timofeev had connections to the Russian Ministry of Foreign Affairs.",
+      "citation": {
+        "publisher": "Mueller Report (Wikisource)",
+        "title": "Russian Government Links To and Contacts With the Trump Campaign",
+        "date": "2019-03",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+        "primary": true,
+        "independence_group": "mueller"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report (Wikisource)",
+          "title": "Russian Government Links To and Contacts With the Trump Campaign",
+          "date": "2019-03",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+          "primary": true,
+          "independence_group": "mueller"
+        }
+      ],
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_polonskaya_papadopoulos",
+      "source": "polonskaya",
+      "target": "papadopoulos",
+      "evidence_class": "documented_contact",
+      "mechanism": "introduction",
+      "confidence": "high",
+      "claim": "Mueller: Polonskaya, presented to Papadopoulos as connected to senior Russian officials, communicated with him about facilitating a Russia trip.",
+      "citation": {
+        "publisher": "DOJ / Mueller Report",
+        "title": "Report on the Investigation into Russian Interference (Stone-Guccifer 2.0 contact; Papadopoulos-Mifsud-Timofeev-Polonskaya)",
+        "date": "2019-03",
+        "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+        "primary": true,
+        "independence_group": "mueller"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "influence",
+      "relationship_type": "CONTACT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "DOJ / Mueller Report",
+          "title": "Report on the Investigation into Russian Interference (Stone-Guccifer 2.0 contact; Papadopoulos-Mifsud-Timofeev-Polonskaya)",
+          "date": "2019-03",
+          "url": "https://www.justice.gov/archives/sco/file/1373816/dl",
+          "primary": true,
+          "independence_group": "mueller"
+        }
+      ],
+      "evidence_quality": "B"
+    },
+    {
+      "id": "e_papadopoulos_campaign",
+      "source": "papadopoulos",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Papadopoulos was a Trump campaign foreign-policy adviser.",
+      "citation": {
+        "publisher": "Mueller Report (Wikisource)",
+        "title": "Russian Government Links To and Contacts With the Trump Campaign",
+        "date": "2019-03",
+        "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+        "primary": true,
+        "independence_group": "mueller"
+      },
+      "verification": "verified",
+      "date": "2016",
+      "domain": "domestic",
+      "relationship_type": "EMPLOYMENT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Mueller Report (Wikisource)",
+          "title": "Russian Government Links To and Contacts With the Trump Campaign",
+          "date": "2019-03",
+          "url": "https://en.wikisource.org/wiki/Report_On_The_Investigation_Into_Russian_Interference_In_The_2016_Presidential_Election/Russian_Government_Links_To_And_Contacts_With_The_Trump_Campaign",
+          "primary": true,
+          "independence_group": "mueller"
+        }
+      ],
+      "evidence_quality": "A"
+    },
+    {
+      "id": "e_papadopoulos_witting_DNC",
+      "source": "papadopoulos",
+      "target": "russian_intel",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Papadopoulos was a WITTING cooperator of Russian intelligence. SSCI characterizes him as a POTENTIAL VECTOR for Russian influence, not a witting cooperator. Documented mediated pathway (Mifsud/Timofeev) without a finding of knowing service to Russian intelligence.",
+      "citation": {
+        "publisher": "SSCI Vol 5",
+        "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+        "date": "2020-08-18",
+        "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+        "primary": true,
+        "independence_group": "ssci_vol5"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "SSCI Vol 5",
+          "title": "Bipartisan Russia report Vol 5 (Manafort-Deripaska since 2004; Kilimnik = Russian intelligence officer, Manafort's liaison; Manafort shared internal polling + strategy with Kilimnik; Kilimnik possible GRU hack-leak link)",
+          "date": "2020-08-18",
+          "url": "https://www.intelligence.senate.gov/sites/default/files/documents/report_volume5.pdf",
+          "primary": true,
+          "independence_group": "ssci_vol5"
+        }
+      ],
+      "date": "2020",
+      "evidence_quality": "N/A"
+    },
+    {
+      "id": "e_dvorkovich_page",
+      "source": "dvorkovich",
+      "target": "carter_page",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Page traveled to Moscow in 2016 and met then-Deputy PM Arkady Dvorkovich (Page acknowledged the meeting). A DIRECT contact with a senior Russian official.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+        "date": "2020",
+        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+        "primary": false,
+        "independence_group": "senate_judiciary"
+      },
+      "verification": "needs_primary",
+      "date": "2016-07",
+      "domain": "influence",
+      "relationship_type": "MEETING",
+      "relationship_class": "DIRECT_CONTACT",
+      "conduit": false,
+      "scoreboard": false,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+          "date": "2020",
+          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+          "primary": false,
+          "independence_group": "senate_judiciary"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_baranov_page",
+      "source": "baranov",
+      "target": "carter_page",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "high",
+      "claim": "Page met Rosneft's Andrey Baranov in Moscow 2016 (Page acknowledged). Direct contact with a Russian business figure.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+        "date": "2020",
+        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+        "primary": false,
+        "independence_group": "senate_judiciary"
+      },
+      "verification": "needs_primary",
+      "date": "2016-07",
+      "domain": "influence",
+      "relationship_type": "MEETING",
+      "relationship_class": "DIRECT_CONTACT",
+      "conduit": false,
+      "scoreboard": false,
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+          "date": "2020",
+          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+          "primary": false,
+          "independence_group": "senate_judiciary"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_page_campaign",
+      "source": "carter_page",
+      "target": "trump_campaign",
+      "evidence_class": "documented_contact",
+      "mechanism": "business_relationship",
+      "confidence": "very_high",
+      "claim": "Page was a Trump campaign foreign-policy adviser.",
+      "citation": {
+        "publisher": "Senate Judiciary Committee",
+        "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+        "date": "2020",
+        "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+        "primary": false,
+        "independence_group": "senate_judiciary"
+      },
+      "verification": "needs_primary",
+      "date": "2016",
+      "domain": "domestic",
+      "relationship_type": "EMPLOYMENT",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "Senate Judiciary Committee",
+          "title": "Page acknowledged 2016 Moscow meetings (Dvorkovich, Baranov)",
+          "date": "2020",
+          "url": "https://www.judiciary.senate.gov/press/dem/releases/analysis-refutes-criminal-referral-of-christopher-steele",
+          "primary": false,
+          "independence_group": "senate_judiciary"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_sechin_page_contested",
+      "source": "sechin",
+      "target": "carter_page",
+      "evidence_class": "documented_contact",
+      "mechanism": "communication",
+      "confidence": "medium",
+      "disputed": true,
+      "dispute_note": "Rests on Steele/Crossfire Hurricane intelligence reporting, not a clean contemporaneous primary; Page denies. Preserved as contested, not laundered into an observed meeting.",
+      "claim": "CONTESTED: an alleged July-2016 Page-Sechin meeting. Source is intelligence reporting (Steele/Crossfire), not a clean primary.",
+      "citation": {
+        "publisher": "FBI Crossfire Hurricane (vault)",
+        "title": "Reporting re a July 2016 Page-Sechin meeting — intelligence reporting, not a clean primary",
+        "date": "2016",
+        "url": "https://vault.fbi.gov/crossfire-hurricane-part-01/crossfire-hurricane-part-02",
+        "primary": false,
+        "independence_group": "steele_crossfire"
+      },
+      "verification": "pending",
+      "date": "2016-07",
+      "domain": "influence",
+      "relationship_type": "MEETING",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "FBI Crossfire Hurricane (vault)",
+          "title": "Reporting re a July 2016 Page-Sechin meeting — intelligence reporting, not a clean primary",
+          "date": "2016",
+          "url": "https://vault.fbi.gov/crossfire-hurricane-part-01/crossfire-hurricane-part-02",
+          "primary": false,
+          "independence_group": "steele_crossfire"
+        }
+      ],
+      "evidence_quality": "C"
+    },
+    {
+      "id": "e_page_intel_conduit_DNC",
+      "source": "russian_intel",
+      "target": "carter_page",
+      "evidence_class": "documented_state_connection",
+      "mechanism": "communication",
+      "confidence": "do_not_claim",
+      "claim": "NOT ESTABLISHED: that Page was a Russian-intelligence conduit. The strongest such claims derive from Steele reporting and are contested; they are NOT imported as observed edges. What IS documented is direct contact with Russian officials/business figures (Dvorkovich, Baranov).",
+      "citation": {
+        "publisher": "FBI Crossfire Hurricane (vault)",
+        "title": "Reporting re a July 2016 Page-Sechin meeting — intelligence reporting, not a clean primary",
+        "date": "2016",
+        "url": "https://vault.fbi.gov/crossfire-hurricane-part-01/crossfire-hurricane-part-02",
+        "primary": false,
+        "independence_group": "steele_crossfire"
+      },
+      "verification": "verified",
+      "domain": "influence",
+      "provenance": "observed",
+      "citations": [
+        {
+          "publisher": "FBI Crossfire Hurricane (vault)",
+          "title": "Reporting re a July 2016 Page-Sechin meeting — intelligence reporting, not a clean primary",
+          "date": "2016",
+          "url": "https://vault.fbi.gov/crossfire-hurricane-part-01/crossfire-hurricane-part-02",
+          "primary": false,
+          "independence_group": "steele_crossfire"
+        }
+      ],
+      "date": "2016",
       "evidence_quality": "N/A"
     }
   ]
