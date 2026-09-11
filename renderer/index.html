@@ -28,10 +28,15 @@
       <button class="layer on" id="ly-core" disabled title="always shown">PUBLIC CORE</button>
       <button class="layer ledger" id="ly-ledger">+ EVIDENCE LEDGER</button>
       <button class="layer research" id="ly-research">+ RESEARCH / CONDITIONAL</button>
+      <span style="width:16px"></span>
+      <span class="stat">view:</span>
+      <button class="mode on" id="mode-backbone">Backbone (9 architectures)</button>
+      <button class="mode" id="mode-full">Full database</button>
     </div>
   </header>
 
   <div id="stage">
+    <div id="banner" class="overlay"></div>
     <svg id="svg"><g id="view"><g id="edges"></g><g id="nodes"></g></g></svg>
     <div id="tools" class="overlay">
       <label><input type="checkbox" id="cb-dnc" checked> "not established" edges</label>
